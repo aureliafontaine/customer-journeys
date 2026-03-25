@@ -74,8 +74,35 @@
       );
     }
 
+    function CellTable({ title, rows }) {
+      // rows: [{ label, sub, price, priceOld }]
+      return (
+        <div>
+          {title && <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1.5">{title}</div>}
+          <table className="w-full text-xs border-collapse">
+            <tbody>
+              {rows.map((row, i) => (
+                <tr key={i} className={i < rows.length - 1 ? 'border-b border-gray-200' : ''}>
+                  <td className="py-1.5 pr-3 font-medium text-gray-800 whitespace-nowrap">
+                    {row.label}
+                    {row.sub && <span className="block text-gray-400 font-normal">{row.sub}</span>}
+                    {row.note && <span className="block text-gray-400 font-normal italic">{row.note}</span>}
+                  </td>
+                  <td className="py-1.5 text-right whitespace-nowrap">
+                    {row.priceOld && <span className="line-through text-gray-400 mr-1">{row.priceOld}</span>}
+                    {row.price && <span className="font-semibold text-gray-800">{row.price}</span>}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+    }
+
     function CellText({ value }) {
       if (!value || value === "" || (Array.isArray(value) && value.length === 0)) return null;
+      if (value && value.type === 'table') return <CellTable title={value.title} rows={value.rows} />;
       if (Array.isArray(value)) {
         return (
           <div className="flex flex-col gap-1.5">

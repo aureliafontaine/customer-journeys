@@ -181,6 +181,134 @@ window.JOURNEYS = [
     ]
   },
 
+  // ─── CONVERSION — PRODUCT SPECIFIC ─────────────────────────────────────────
+  {
+    id: "conversion-product-specific",
+    name: "Product Specific",
+    group: "Conversion",
+    steps: [
+      { id: "format",          label: "Step 1" },
+      { id: "addon",           label: "Step 2" },
+      { id: "purchase-option", label: "Step 3" },
+      { id: "add-to-cart",     label: "Step 4" },
+      { id: "view-cart",       label: "Step 5" },
+      { id: "quantity",        label: "Step 6" },
+      { id: "checkout",        label: "Step 7" },
+      { id: "purchase",        label: "Step 8" },
+    ],
+    lanes: [
+      {
+        id: "step-header",
+        label: "Étape",
+        type: "step",
+        cells: {
+          "format":          "Step 1",
+          "addon":           "Step 2",
+          "purchase-option": "Step 3",
+          "add-to-cart":     "Step 4",
+          "view-cart":       "Step 5",
+          "quantity":        "Step 6",
+          "checkout":        "Step 7",
+          "purchase":        "Step 8",
+        }
+      },
+      {
+        id: "mycuure",
+        label: "MyCuure",
+        type: "text",
+        cells: {
+          "format":          ["Select Products"],
+          "addon":           ["View Cart"],
+          "purchase-option": ["Select Quantity"],
+          "add-to-cart":     ["Checkout"],
+          "view-cart":       ["Purchase"],
+          "quantity":        [],
+          "checkout":        [],
+          "purchase":        [],
+        }
+      },
+      {
+        id: "fs3b",
+        label: "FS-3B",
+        type: "text",
+        cells: {
+          "format":          { type: "table", title: "Select Format Option", rows: [
+            { label: "Jar",    sub: "1 month",  priceOld: "59,90 €",  price: "49,90 €"  },
+            { label: "Pack",   sub: "3 months", priceOld: "179,70 €", price: "161,73 €" },
+            { label: "Refill", sub: "1 month",  priceOld: "59,90 €",  price: "49,90 €"  },
+          ]},
+          "addon":           ["Select Add-on"],
+          "purchase-option": { type: "table", title: "Select Purchase Option", rows: [
+            { label: "Subscription", sub: "-10€ per unit" },
+            { label: "OTP" },
+          ]},
+          "add-to-cart":     ["Select Quantity"],
+          "view-cart":       ["Add To Cart"],
+          "quantity":        ["View Cart"],
+          "checkout":        ["Checkout"],
+          "purchase":        ["Purchase"],
+        }
+      },
+      {
+        id: "ma05",
+        label: "MA-05",
+        type: "text",
+        cells: {
+          "format":          { type: "table", title: "Select Format Option", rows: [
+            { label: "Jar",    sub: "1 month",  priceOld: "59,90 €",  price: "49,90 €"  },
+            { label: "Pack",   sub: "3 months", priceOld: "179,70 €", price: "134,73 €" },
+            { label: "Pack",   sub: "6 months", priceOld: "359,40 €", price: "254,49 €" },
+            { label: "Refill", sub: "1 month",  priceOld: "59,90 €",  price: "49,90 €"  },
+          ]},
+          "addon":           { type: "table", title: "Select Purchase Option", rows: [
+            { label: "Subscription", sub: "-10€ per unit" },
+            { label: "OTP", note: "not for 1-month" },
+          ]},
+          "purchase-option": ["Select Quantity"],
+          "add-to-cart":     ["Add To Cart"],
+          "view-cart":       ["View Cart"],
+          "quantity":        ["Checkout"],
+          "checkout":        ["Purchase"],
+          "purchase":        [],
+        }
+      },
+      {
+        id: "onely",
+        label: "onely",
+        type: "text",
+        cells: {
+          "format":          { type: "table", title: "Select Format & Purchase Option", rows: [
+            { label: "Welcome Kit", sub: "1 month · Subscription",  priceOld: "89,90 €",  price: "79,90 €"  },
+            { label: "Welcome Kit", sub: "3 months · OTP",          priceOld: "269,70 €", price: "199,90 €" },
+            { label: "Refill",      sub: "1 month · OTP",           price: "89,90 €" },
+          ]},
+          "addon":           ["Select Quantity"],
+          "purchase-option": ["Add To Cart"],
+          "add-to-cart":     ["View Cart"],
+          "view-cart":       ["Checkout"],
+          "quantity":        ["Purchase"],
+          "checkout":        [],
+          "purchase":        [],
+        }
+      },
+      {
+        id: "essentials",
+        label: "Essentials",
+        type: "text",
+        cells: {
+          "format":          ["Select Format", "Select Flavour"],
+          "addon":           ["Select Purchase Option"],
+          "purchase-option": ["Select Quantity"],
+          "add-to-cart":     ["Add To Cart"],
+          "view-cart":       ["View Cart"],
+          "quantity":        ["Checkout"],
+          "checkout":        ["Purchase"],
+          "purchase":        [],
+        }
+      },
+    ]
+  },
+
   // ─── DISCOVERY — RETURNING ──────────────────────────────────────────────────
   {
     id: "discovery-returning",
