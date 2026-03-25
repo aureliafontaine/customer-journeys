@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "title": "Customer Journey Map",
+    "subtitle": "Parcours client — de la découverte à la fidélisation",
+    "lastUpdated": "2026-03-25"
+  },
+  "stages": [
+    {
+      "id": "awareness",
+      "name": "Découverte",
+      "emoji": "👀",
+      "color": "#6366f1",
+      "goal": "Le client découvre la marque pour la première fois",
+      "touchpoints": ["Instagram Ads", "TikTok", "Bouche à oreille", "Influenceurs"],
+      "channels": ["Social Media", "Paid Ads", "PR"],
+      "emotion": 3,
+      "emotionLabel": "Curieux",
+      "painPoints": ["Trop de choix sur le marché", "Manque de confiance envers les nouvelles marques"],
+      "opportunities": ["Contenu éducatif fort", "Social proof visible", "UGC authentique"]
+    },
+    {
+      "id": "consideration",
+      "name": "Considération",
+      "emoji": "🤔",
+      "color": "#8b5cf6",
+      "goal": "Le client compare et évalue l'offre",
+      "touchpoints": ["Site web", "Quiz personnalisé", "Avis clients", "FAQ", "Email de nurturing"],
+      "channels": ["SEO", "Email", "Landing pages"],
+      "emotion": 2,
+      "emotionLabel": "Hésitant",
+      "painPoints": ["Prix perçu comme élevé", "Doutes sur l'efficacité", "Complexité de l'offre"],
+      "opportunities": ["Quiz de recommandation personnalisé", "Garantie satisfait ou remboursé", "Témoignages avant/après"]
+    },
+    {
+      "id": "purchase",
+      "name": "Achat",
+      "emoji": "🛒",
+      "color": "#a855f7",
+      "goal": "Le client passe commande",
+      "touchpoints": ["Page produit", "Checkout", "Email de confirmation", "Page de remerciement"],
+      "channels": ["Site web", "Email transactionnel"],
+      "emotion": 4,
+      "emotionLabel": "Enthousiaste",
+      "painPoints": ["Friction au checkout", "Doutes de dernière minute", "Options de paiement limitées"],
+      "opportunities": ["Upsell intelligent", "Offre d'abonnement mise en avant", "Confirmation rassurante"]
+    },
+    {
+      "id": "onboarding",
+      "name": "Onboarding",
+      "emoji": "🎁",
+      "color": "#ec4899",
+      "goal": "Le client reçoit et commence à utiliser le produit",
+      "touchpoints": ["Email de bienvenue", "Packaging", "Notice d'utilisation", "SMS de suivi"],
+      "channels": ["Email", "SMS", "Packaging"],
+      "emotion": 5,
+      "emotionLabel": "Excité",
+      "painPoints": ["Délai de livraison trop long", "Utilisation pas claire", "Attentes trop élevées"],
+      "opportunities": ["Unboxing mémorable", "Onboarding email sequence", "Conseil d'utilisation personnalisé"]
+    },
+    {
+      "id": "retention",
+      "name": "Fidélisation",
+      "emoji": "❤️",
+      "color": "#f43f5e",
+      "goal": "Le client revient et s'abonne",
+      "touchpoints": ["Email de suivi J+15", "Programme de fidélité", "Renouvellement abonnement", "Contenu exclusif"],
+      "channels": ["Email", "SMS", "App", "CRM"],
+      "emotion": 4,
+      "emotionLabel": "Satisfait",
+      "painPoints": ["Oubli de prendre le produit", "Perte de motivation", "Meilleur prix ailleurs"],
+      "opportunities": ["Rappels intelligents", "Résultats visibles à partager", "Récompenses fidélité"]
+    },
+    {
+      "id": "advocacy",
+      "name": "Ambassadeur",
+      "emoji": "📣",
+      "color": "#f97316",
+      "goal": "Le client recommande la marque",
+      "touchpoints": ["Programme de parrainage", "Avis Google/Trustpilot", "Partage réseaux sociaux", "UGC"],
+      "channels": ["Referral", "Social Media", "Reviews"],
+      "emotion": 5,
+      "emotionLabel": "Fan",
+      "painPoints": ["Pas d'incentive à partager", "Processus de parrainage complexe"],
+      "opportunities": ["Parrainage avec récompense double", "Kit ambassador", "Mise en avant des clients"]
+    }
+  ]
+}
