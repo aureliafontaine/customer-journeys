@@ -38,9 +38,9 @@
 
   <style>
     body { margin: 0; font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-    /* Horizontal scroll on canvas only */
+    /* Horizontal scroll */
     .canvas-scroll { overflow-x: auto; }
-    /* Sticky first column */
+    /* Sticky first column — left: 0 du canvas-scroll (pas de padding offset) */
     .lane-label-cell { position: sticky; left: 0; z-index: 2; }
     /* Scrollbar styling */
     .canvas-scroll::-webkit-scrollbar { height: 6px; }
@@ -58,16 +58,24 @@
 
     // ─── LANE TYPE RENDERERS ────────────────────────────────────────────────
 
+    const STEP_COLORS = [
+      { bg: '#E8F5E9', text: '#2E7D32', dot: '#4CAF50' },
+      { bg: '#E3F2FD', text: '#1565C0', dot: '#2196F3' },
+      { bg: '#EDE7F6', text: '#4527A0', dot: '#7C3AED' },
+      { bg: '#FCE4EC', text: '#880E4F', dot: '#E91E63' },
+      { bg: '#FFF3E0', text: '#E65100', dot: '#EF7A1A' },
+    ];
+
     function CellStep({ value }) {
       return (
-        <div className="font-semibold text-sm text-orange-900 tracking-wide uppercase">
+        <span className="font-bold text-xs tracking-widest uppercase" style={{ color: '#92400E' }}>
           {value}
-        </div>
+        </span>
       );
     }
 
     function CellText({ value }) {
-      if (!value || value === "" || (Array.isArray(value) && value.length === 0)) return <span className="text-gray-300 text-xs italic">—</span>;
+      if (!value || value === "" || (Array.isArray(value) && value.length === 0)) return null;
       if (Array.isArray(value)) {
         return (
           <div className="flex flex-col gap-1.5">
@@ -85,7 +93,7 @@
     }
 
     function CellImage({ value }) {
-      if (!value) return <span className="text-gray-300 text-xs italic">—</span>;
+      if (!value) return null;
       return (
         <img
           src={value}
@@ -98,7 +106,7 @@
     }
 
     function CellLink({ value, onNavigate }) {
-      if (!value) return <span className="text-gray-300 text-xs italic">—</span>;
+      if (!value) return null;
       return (
         <button
           onClick={() => onNavigate(value.journeyId)}
@@ -113,7 +121,7 @@
     }
 
     function CellLinks({ value, onNavigate }) {
-      if (!value || value.length === 0) return <span className="text-gray-300 text-xs italic">—</span>;
+      if (!value || value.length === 0) return null;
       return (
         <div className="flex flex-col gap-1.5">
           {value.map(link => (
@@ -132,38 +140,74 @@
       );
     }
 
+    function isCellEmpty(type, value) {
+      if (value === null || value === undefined || value === '') return true;
+      if (Array.isArray(value) && value.length === 0) return true;
+      return false;
+    }
+
     // ─── LANE ROW ───────────────────────────────────────────────────────────
 
     function LaneRow({ lane, steps, isStep, onNavigate }) {
-      const labelBg = isStep ? 'bg-[#EF7A1A]' : 'bg-white';
-      const labelText = isStep ? 'text-white font-semibold text-xs tracking-widest uppercase' : 'text-gray-400 text-xs font-medium uppercase tracking-wide';
-      const cellBg = isStep ? 'bg-orange-50' : 'bg-white';
-      const borderBottom = 'border-b border-gray-100';
+      const tdBase = 'border-t border-b border-gray-200';
 
       return (
-        <tr className={borderBottom}>
+        <tr>
           {/* Lane label — sticky left */}
           <td
-            className={`lane-label-cell ${labelBg} ${borderBottom} border-r border-gray-200 px-4 py-3`}
-            style={{ minWidth: '160px', maxWidth: '160px', width: '160px' }}
+            className={`lane-label-cell ${tdBase} border-l border-r border-gray-200 bg-gray-50 px-4 py-3 rounded-l-xl`}
+            style={{ minWidth: '160px', maxWidth: '160px', width: '160px', verticalAlign: 'middle' }}
           >
-            <span className={labelText}>{lane.label}</span>
+            <span className="text-gray-500 text-xs font-semibold uppercase tracking-wide cell-text">{lane.label}</span>
           </td>
 
           {/* Cells */}
-          {steps.map(step => (
-            <td
-              key={step.id}
-              className={`${cellBg} border-r border-gray-100 px-4 py-3 align-top`}
-              style={{ minWidth: '220px', maxWidth: '300px', verticalAlign: 'top' }}
-            >
-              {lane.type === 'step'  && <CellStep  value={lane.cells[step.id]} />}
-              {lane.type === 'text'  && <CellText  value={lane.cells[step.id]} />}
-              {lane.type === 'image' && <CellImage value={lane.cells[step.id]} />}
-              {lane.type === 'link'  && <CellLink  value={lane.cells[step.id]} onNavigate={onNavigate} />}
-              {lane.type === 'links' && <CellLinks value={lane.cells[step.id]} onNavigate={onNavigate} />}
-            </td>
-          ))}
+          {steps.map((step, stepIndex) => {
+            const color = STEP_COLORS[stepIndex % STEP_COLORS.length];
+            const cellValue = lane.cells[step.id];
+            const isEmpty = !isStep && isCellEmpty(lane.type, cellValue);
+            const isChipCell = !isStep && !isEmpty && (
+              lane.type === 'links' ||
+              (lane.type === 'text' && Array.isArray(cellValue))
+            );
+            const isLastStep = stepIndex === steps.length - 1;
+
+            return (
+              <td
+                key={step.id}
+                className={`${tdBase} border-r border-gray-200 p-2 align-top bg-gray-50 ${isLastStep ? 'rounded-r-xl' : ''}`}
+                style={{ minWidth: '220px', maxWidth: '300px', verticalAlign: 'top' }}
+              >
+                <div
+                  className="h-full min-h-[52px] flex items-center"
+                  style={ isStep ? {
+                    background: 'linear-gradient(to right, #EF7A1A 0px, #EF7A1A 4px, #FFF7ED 4px)',
+                    clipPath: 'polygon(4px 0%, calc(100% - 14px) 0%, 100% 50%, calc(100% - 14px) 100%, 4px 100%, 0% calc(100% - 4px), 0% 4px)',
+                    filter: 'drop-shadow(1px 0 0 rgba(239,122,26,0.5)) drop-shadow(-1px 0 0 rgba(239,122,26,0.5)) drop-shadow(0 1px 0 rgba(239,122,26,0.5)) drop-shadow(0 -1px 0 rgba(239,122,26,0.5))',
+                    padding: '10px 32px 10px 14px',
+                  } : isEmpty ? {
+                    background: 'transparent',
+                  } : isChipCell ? {
+                    background: 'transparent',
+                    padding: '12px',
+                    alignItems: 'flex-start',
+                  } : {
+                    backgroundColor: '#ffffff',
+                    border: '1px solid #e5e7eb',
+                    borderRadius: '8px',
+                    padding: '12px',
+                    alignItems: 'flex-start',
+                  }}
+                >
+                  {lane.type === 'step'  && <CellStep  value={cellValue} color={color} />}
+                  {lane.type === 'text'  && <CellText  value={cellValue} />}
+                  {lane.type === 'image' && <CellImage value={cellValue} />}
+                  {lane.type === 'link'  && <CellLink  value={cellValue} onNavigate={onNavigate} />}
+                  {lane.type === 'links' && <CellLinks value={cellValue} onNavigate={onNavigate} />}
+                </div>
+              </td>
+            );
+          })}
         </tr>
       );
     }
@@ -245,9 +289,10 @@
             <p className="text-sm text-gray-400 mt-1">{journey.steps.length} étapes · {journey.lanes.length} lanes</p>
           </div>
 
-          {/* Grid */}
-          <div className="canvas-scroll flex-1 overflow-y-auto">
-            <table className="border-collapse" style={{ minWidth: '100%' }}>
+          {/* Grid — vertical scroll sur le wrapper, horizontal scroll sur canvas-scroll */}
+          <div className="flex-1 min-h-0 overflow-y-auto">
+            <div className="canvas-scroll p-6">
+            <table style={{ borderCollapse: 'separate', borderSpacing: '0 6px', minWidth: '100%' }}>
               <tbody>
                 {journey.lanes.map(lane => (
                   <LaneRow
@@ -260,6 +305,7 @@
                 ))}
               </tbody>
             </table>
+            </div>
           </div>
         </div>
       );
