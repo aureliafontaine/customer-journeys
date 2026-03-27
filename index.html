@@ -424,9 +424,9 @@
         }
       });
 
-      // Track open/closed folders — accordion: only one open at a time
-      const [openGroups, setOpenGroups] = useState(() => Object.fromEntries(groups.map((g, i) => [g, i === 0])));
-      const toggle = g => setOpenGroups(prev => Object.fromEntries(groups.map(grp => [grp, grp === g ? !prev[g] : false])));
+      // Accordion: track the single open group (null = all closed)
+      const [openGroup, setOpenGroup] = useState(null);
+      const toggle = g => setOpenGroup(prev => prev === g ? null : g);
 
       const btnClass = (id) => `w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
         id === activeId ? 'bg-[#EF7A1A] text-white font-medium' : 'text-gray-400 hover:text-white hover:bg-gray-800'
@@ -466,11 +466,11 @@
                   onClick={() => toggle(g)}
                   className="w-full flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider hover:text-gray-300 transition-colors"
                 >
-                  <span className="transition-transform" style={{ display: 'inline-block', transform: openGroups[g] ? 'rotate(90deg)' : 'rotate(0deg)' }}>▶</span>
+                  <span className="transition-transform" style={{ display: 'inline-block', transform: openGroup === g ? 'rotate(90deg)' : 'rotate(0deg)' }}>▶</span>
                   {g}
                 </button>
                 {/* Children */}
-                {openGroups[g] && (
+                {openGroup === g && (
                   <div className="space-y-0.5 ml-3 border-l border-gray-800 pl-2">
                     {groupMap[g].map(j => (
                       <button key={j.id} onClick={() => onSelect(j.id)} className={btnClass(j.id)}>
