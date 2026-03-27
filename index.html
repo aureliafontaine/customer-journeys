@@ -424,9 +424,9 @@
         }
       });
 
-      // Track open/closed folders (all open by default)
-      const [openGroups, setOpenGroups] = useState(() => Object.fromEntries(groups.map(g => [g, true])));
-      const toggle = g => setOpenGroups(prev => ({ ...prev, [g]: !prev[g] }));
+      // Track open/closed folders — accordion: only one open at a time
+      const [openGroups, setOpenGroups] = useState(() => Object.fromEntries(groups.map((g, i) => [g, i === 0])));
+      const toggle = g => setOpenGroups(prev => Object.fromEntries(groups.map(grp => [grp, grp === g ? !prev[g] : false])));
 
       const btnClass = (id) => `w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
         id === activeId ? 'bg-[#EF7A1A] text-white font-medium' : 'text-gray-400 hover:text-white hover:bg-gray-800'
