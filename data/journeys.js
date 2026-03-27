@@ -107,9 +107,9 @@ window.JOURNEYS = [
     name: "Prospects",
     group: "Discovery",
     steps: [
-      { id: "source",      label: "Source"      },
-      { id: "redirection", label: "Redirection" },
-      { id: "lp",          label: "LP"          },
+      { id: "source",      label: "Source",      type: "meta" },
+      { id: "redirection", label: "Redirection", type: "meta" },
+      { id: "lp",          label: "LP",          type: "meta" },
       { id: "step-1",      label: "Step 1"      },
       { id: "step-2",      label: "Step 2"      },
       { id: "step-3",      label: "Step 3"      },
@@ -595,9 +595,9 @@ window.JOURNEYS = [
     name: "Returning",
     group: "Discovery",
     steps: [
-      { id: "source",      label: "Source"      },
-      { id: "redirection", label: "Redirection" },
-      { id: "lp",          label: "LP"          },
+      { id: "source",      label: "Source",      type: "meta" },
+      { id: "redirection", label: "Redirection", type: "meta" },
+      { id: "lp",          label: "LP",          type: "meta" },
       { id: "step-1",      label: "Step 1"      },
       { id: "step-2",      label: "Step 2"      },
       { id: "step-3",      label: "Step 3"      },
@@ -664,23 +664,65 @@ window.JOURNEYS = [
     name: "OTP",
     group: "Repurchase",
     steps: [
-      { id: "same-products-refiller",    label: "Same products Refiller" },
-      { id: "upseller",                  label: "Upseller" },
-      { id: "change-seekers",            label: "Change seekers" },
-      { id: "convinced-to-subscription", label: "Convinced to subscription" },
+      { id: "step-1",  label: "Step 1"  },
+      { id: "step-2",  label: "Step 2"  },
+      { id: "step-3",  label: "Step 3"  },
+      { id: "step-4",  label: "Step 4"  },
+      { id: "step-5",  label: "Step 5"  },
+      { id: "step-6",  label: "Step 6"  },
+      { id: "step-7",  label: "Step 7"  },
+      { id: "step-8",  label: "Step 8"  },
+      { id: "step-9",  label: "Step 9"  },
+      { id: "step-10", label: "Step 10" },
     ],
     lanes: [
-      { id: "step-header", label: "Category", type: "step", cells: {
-          "same-products-refiller":    "Same products Refiller",
-          "upseller":                  "Upseller",
-          "change-seekers":            "Change seekers",
-          "convinced-to-subscription": "Convinced to subscription" } },
-      { id: "definition",  label: "Definition",  type: "text", cells: {
-          "same-products-refiller": [], "upseller": [], "change-seekers": [], "convinced-to-subscription": [] } },
-      { id: "coming-from", label: "Coming from", type: "text", cells: {
-          "same-products-refiller": [], "upseller": [], "change-seekers": [], "convinced-to-subscription": [] } },
-      { id: "steps",       label: "Steps",       type: "text", cells: {
-          "same-products-refiller": [], "upseller": [], "change-seekers": [], "convinced-to-subscription": [] } },
+      { id: "step-header", label: "Étape", type: "step", cells: {
+          "step-1": "Step 1", "step-2": "Step 2", "step-3": "Step 3", "step-4": "Step 4", "step-5": "Step 5",
+          "step-6": "Step 6", "step-7": "Step 7", "step-8": "Step 8", "step-9": "Step 9", "step-10": "Step 10" } },
+      { id: "same-products-refiller", label: "Same products Refiller", type: "text", cells: {
+          "step-1":  ["Open App", "Open Website"],
+          "step-2":  ["Login"],
+          "step-3":  ["Visit Catalog"],
+          "step-4":  ["Search Known Product"],
+          "step-5":  ["View PDP"],
+          "step-6":  ["Add to cart"],
+          "step-7":  ["View Cart"],
+          "step-8":  ["Adjust Quantity"],
+          "step-9":  ["Order now"],
+          "step-10": [] } },
+      { id: "upseller", label: "Upseller", type: "text", cells: {
+          "step-1":  ["Open App", "Open Website"],
+          "step-2":  ["Login"],
+          "step-3":  ["Visit Catalog"],
+          "step-4":  ["Search Known Product"],
+          "step-5":  ["View PDP"],
+          "step-6":  ["Add to cart"],
+          "step-7":  ["View Cart"],
+          "step-8":  ["Adjust Quantity"],
+          "step-9":  ["Add upsell product"],
+          "step-10": ["Order now"] } },
+      { id: "change-seekers", label: "Change seekers", type: "text", cells: {
+          "step-1":  ["Open App", "Open Website"],
+          "step-2":  ["Login"],
+          "step-3":  ["Take a test", "Visit «Products of the moment»"],
+          "step-4":  ["View PDP"],
+          "step-5":  ["Add to cart"],
+          "step-6":  ["View Cart"],
+          "step-7":  ["Adjust Quantity"],
+          "step-8":  ["Order now"],
+          "step-9":  [],
+          "step-10": [] } },
+      { id: "convinced-to-subscription", label: "Convinced to subscription", type: "text", cells: {
+          "step-1":  ["Open App", "Open Website"],
+          "step-2":  ["Login"],
+          "step-3":  ["Visit Catalog"],
+          "step-4":  ["Search Known Product"],
+          "step-5":  ["View PDP"],
+          "step-6":  ["Add to cart"],
+          "step-7":  ["View Cart"],
+          "step-8":  ["Adjust Quantity"],
+          "step-9":  ["Plan next order", "Activate subscription > Order Now"],
+          "step-10": [] } },
     ]
   },
 
@@ -690,27 +732,57 @@ window.JOURNEYS = [
     name: "Active Subscriber",
     group: "Repurchase",
     steps: [
-      { id: "repeat-auto",          label: "Repeat auto" },
-      { id: "upseller",             label: "Upseller" },
-      { id: "change-seekers",       label: "Change seekers" },
-      { id: "subscription-delayer", label: "Subscription Delayer" },
-      { id: "pause-subscription",   label: "Pause subscription" },
-      { id: "order-cancel",         label: "Order Cancel" },
+      { id: "step-1", label: "Step 1" },
+      { id: "step-2", label: "Step 2" },
+      { id: "step-3", label: "Step 3" },
+      { id: "step-4", label: "Step 4" },
+      { id: "step-5", label: "Step 5" },
+      { id: "step-6", label: "Step 6" },
+      { id: "step-7", label: "Step 7" },
     ],
     lanes: [
-      { id: "step-header", label: "Category", type: "step", cells: {
-          "repeat-auto":          "Repeat auto",
-          "upseller":             "Upseller",
-          "change-seekers":       "Change seekers",
-          "subscription-delayer": "Subscription Delayer",
-          "pause-subscription":   "Pause subscription",
-          "order-cancel":         "Order Cancel" } },
-      { id: "definition",  label: "Definition",  type: "text", cells: {
-          "repeat-auto": [], "upseller": [], "change-seekers": [], "subscription-delayer": [], "pause-subscription": [], "order-cancel": [] } },
-      { id: "coming-from", label: "Coming from", type: "text", cells: {
-          "repeat-auto": [], "upseller": [], "change-seekers": [], "subscription-delayer": [], "pause-subscription": [], "order-cancel": [] } },
-      { id: "steps",       label: "Steps",       type: "text", cells: {
-          "repeat-auto": [], "upseller": [], "change-seekers": [], "subscription-delayer": [], "pause-subscription": [], "order-cancel": [] } },
+      { id: "step-header", label: "Étape", type: "step", cells: {
+          "step-1": "Step 1", "step-2": "Step 2", "step-3": "Step 3", "step-4": "Step 4",
+          "step-5": "Step 5", "step-6": "Step 6", "step-7": "Step 7" } },
+      { id: "repeat-auto", label: "Repeat auto", type: "text", cells: {
+          "step-1": ["Email reminder"],
+          "step-2": ["Email confirmation"],
+          "step-3": [], "step-4": [], "step-5": [], "step-6": [], "step-7": [] } },
+      { id: "upseller", label: "Upseller", type: "flow-lane",
+        sharedCells: { "step-1": ["Email Reminder", "Open App", "Open Website"] },
+        flows: [
+          { id: "flow-a", cells: { "step-2": "View Cart", "step-3": "Add Upsell" } },
+          { id: "flow-b", cells: { "step-2": "View Catalog", "step-3": "View PDP", "step-4": "Add to cart" } },
+        ]},
+      { id: "change-seekers", label: "Change seekers", type: "flow-lane",
+        sharedCells: {
+          "step-1": ["Email Reminder", "Open App", "Open Website"],
+          "step-2": ["View Cart"]
+        },
+        flows: [
+          { id: "flow-standalone", standalone: true, cells: { "step-3": "Remove products" } },
+          { id: "flow-b", cells: { "step-3": "Take a test", "step-4": "View Recos", "step-5": "Add to cart" } },
+          { id: "flow-c", cells: { "step-3": "View Catalog", "step-4": "View PDP", "step-5": "Add to cart" } },
+        ]},
+      { id: "subscription-delayer", label: "Subscription Delayer", type: "text", cells: {
+          "step-1": ["Email Reminder", "Open App", "Open Website"],
+          "step-2": ["View Cart"],
+          "step-3": ["Delay Subscription"],
+          "step-4": [], "step-5": [], "step-6": [], "step-7": [] } },
+      { id: "pause-subscription", label: "Pause subscription", type: "text", cells: {
+          "step-1": ["Email Reminder", "Open App", "Open Website"],
+          "step-2": ["View Cart"],
+          "step-3": ["Pause Subscription"],
+          "step-4": ["Email Subscription Pause"],
+          "step-5": [], "step-6": [], "step-7": [] } },
+      { id: "order-cancel", label: "Order Cancel", type: "text", cells: {
+          "step-1": ["Confirmation email"],
+          "step-2": ["Open App", "Open Website"],
+          "step-3": ["Login"],
+          "step-4": ["Go to account"],
+          "step-5": ["Go to order history"],
+          "step-6": ["Cancel order"],
+          "step-7": ["Order Cancel Confirmation"] } },
     ]
   },
 
@@ -720,21 +792,77 @@ window.JOURNEYS = [
     name: "Paused Subscriber",
     group: "Repurchase",
     steps: [
-      { id: "reactivate-same-cart",      label: "Reactivate same cart" },
-      { id: "reactivate-upsell",         label: "Reactivate with upsell" },
-      { id: "reactivate-other-products", label: "Reactivate with other products" },
+      { id: "step-1", label: "Step 1" },
+      { id: "step-2", label: "Step 2" },
+      { id: "step-3", label: "Step 3" },
+      { id: "step-4", label: "Step 4" },
+      { id: "step-5", label: "Step 5" },
+      { id: "step-6", label: "Step 6" },
+      { id: "step-7", label: "Step 7" },
     ],
     lanes: [
-      { id: "step-header", label: "Category", type: "step", cells: {
-          "reactivate-same-cart":      "Reactivate same cart",
-          "reactivate-upsell":         "Reactivate with upsell",
-          "reactivate-other-products": "Reactivate with other products" } },
-      { id: "definition",  label: "Definition",  type: "text", cells: {
-          "reactivate-same-cart": [], "reactivate-upsell": [], "reactivate-other-products": [] } },
-      { id: "coming-from", label: "Coming from", type: "text", cells: {
-          "reactivate-same-cart": [], "reactivate-upsell": [], "reactivate-other-products": [] } },
-      { id: "steps",       label: "Steps",       type: "text", cells: {
-          "reactivate-same-cart": [], "reactivate-upsell": [], "reactivate-other-products": [] } },
+      { id: "step-header", label: "Étape", type: "step", cells: {
+          "step-1": "Step 1", "step-2": "Step 2", "step-3": "Step 3", "step-4": "Step 4",
+          "step-5": "Step 5", "step-6": "Step 6", "step-7": "Step 7" } },
+      { id: "reactivate-same-cart", label: "Reactivate same cart", type: "text", cells: {
+          "step-1": ["View Cart"],
+          "step-2": ["Activate Subscription"],
+          "step-3": ["Pick new Date", "Order Now"],
+          "step-4": [], "step-5": [], "step-6": [], "step-7": [] } },
+      { id: "reactivate-upsell", label: "Reactivate with upsell", type: "text", cells: {
+          "step-1": ["View Cart"],
+          "step-2": ["Add upsell"],
+          "step-3": ["Activate Subscription"],
+          "step-4": ["Pick new Date", "Order Now"],
+          "step-5": [], "step-6": [], "step-7": [] } },
+      { id: "reactivate-other", label: "Reactivate with other products", type: "text", cells: {
+          "step-1": ["View Catalog"],
+          "step-2": ["View PDP"],
+          "step-3": ["Add to cart"],
+          "step-4": ["View Cart"],
+          "step-5": ["Remove products"],
+          "step-6": ["Activate Subscription"],
+          "step-7": ["Pick new Date", "Order Now"] } },
+    ]
+  },
+
+  // ─── ENGAGEMENT — LOYALTY ─────────────────────────────────────────────────────
+  {
+    id: "engagement-loyalty",
+    name: "Loyalty",
+    group: "Engagement",
+    steps: [
+      { id: "step-1", label: "Step 1" },
+      { id: "step-2", label: "Step 2" },
+      { id: "step-3", label: "Step 3" },
+    ],
+    lanes: [
+      { id: "step-header",   label: "Étape",         type: "step", cells: { "step-1": "Step 1", "step-2": "Step 2", "step-3": "Step 3" } },
+      { id: "intaker",       label: "Intaker",        type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
+      { id: "status-lover",  label: "Status lover",   type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
+      { id: "referrer",      label: "Referrer",       type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
+      { id: "rewards-seeker",label: "Rewards seeker", type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
+      { id: "coupon-chaser", label: "Coupon chaser",  type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
+    ]
+  },
+
+  // ─── ENGAGEMENT — GUIDANCE ────────────────────────────────────────────────────
+  {
+    id: "engagement-guidance",
+    name: "Guidance",
+    group: "Engagement",
+    steps: [
+      { id: "step-1", label: "Step 1" },
+      { id: "step-2", label: "Step 2" },
+      { id: "step-3", label: "Step 3" },
+    ],
+    lanes: [
+      { id: "step-header",        label: "Étape",             type: "step", cells: { "step-1": "Step 1", "step-2": "Step 2", "step-3": "Step 3" } },
+      { id: "intaker",            label: "Intaker",            type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
+      { id: "content-reader",     label: "Content reader",     type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
+      { id: "advice-seeker",      label: "Advice seeker",      type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
+      { id: "innovation-curious", label: "Innovation curious", type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
+      { id: "data-optimizer",     label: "Data optimizer",     type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
     ]
   },
 
