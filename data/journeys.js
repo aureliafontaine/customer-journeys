@@ -41,7 +41,7 @@ window.DATA_PAGES = [
 window.JOURNEYS = [
   {
     id: "journey-cx",
-    name: "Customer Experience",
+    name: "Journeys",
     steps: [
       { id: "discovery",     label: "Discovery",     description: "New-comers visitors, entering the Cuure eco-system and looking for something.\nFrom Landing page to Product Discovery." },
       { id: "conversion",    label: "Conversion",    description: "Visitors purchasing the Cuure product.\nFrom Product Discovery to Purchase." },

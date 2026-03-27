@@ -446,14 +446,7 @@
           {/* Nav */}
           <nav className="flex-1 px-2 py-4 overflow-y-auto">
 
-            {/* Overview */}
-            <div className="mb-3">
-              <button onClick={() => onSelect('__overview__')} className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${'__overview__' === activeId ? 'bg-[#EF7A1A] text-white font-medium' : 'text-gray-400 hover:text-white hover:bg-gray-800'}`}>
-                Overview
-              </button>
-            </div>
 
-            <p className="px-3 mb-2 text-xs text-gray-600 uppercase tracking-wider font-medium">Journeys</p>
 
 
             {/* Ungrouped */}
@@ -489,19 +482,20 @@
               </div>
             ))}
 
-            {/* Data pages section */}
-            {window.DATA_PAGES && window.DATA_PAGES.length > 0 && (
-              <div className="mt-4">
-                <p className="px-3 mb-2 text-xs text-gray-600 uppercase tracking-wider font-medium">Data</p>
-                <div className="space-y-0.5">
-                  {window.DATA_PAGES.map(p => (
-                    <button key={p.id} onClick={() => onSelect('__data__:' + p.id)} className={btnClass('__data__:' + p.id)}>
-                      {p.name || p.title}
-                    </button>
-                  ))}
-                </div>
+            {/* Data section */}
+            <div className="mt-4">
+              <p className="px-3 mb-2 text-xs text-gray-600 uppercase tracking-wider font-medium">Data</p>
+              <div className="space-y-0.5">
+                <button onClick={() => onSelect('__overview__')} className={btnClass('__overview__')}>
+                  Context & Objectives
+                </button>
+                {(window.DATA_PAGES || []).map(p => (
+                  <button key={p.id} onClick={() => onSelect('__data__:' + p.id)} className={btnClass('__data__:' + p.id)}>
+                    {p.name || p.title}
+                  </button>
+                ))}
               </div>
-            )}
+            </div>
           </nav>
 
           {/* Footer */}
