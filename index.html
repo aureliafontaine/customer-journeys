@@ -58,6 +58,21 @@
 
     // ─── LANE TYPE RENDERERS ────────────────────────────────────────────────
 
+    const CHIP_STATUSES = {
+      bon:     { bg: '#F0FDF4', text: '#15803D', border: '#86EFAC', dashed: false },
+      ok:      { bg: '#FEFCE8', text: '#854D0E', border: '#FDE047', dashed: false },
+      moyen:   { bg: '#FFF7ED', text: '#92400E', border: '#FED7AA', dashed: false },
+      mauvais: { bg: '#FEF2F2', text: '#991B1B', border: '#FECACA', dashed: false },
+      absent:  { bg: '#FAF5FF', text: '#7E22CE', border: '#D8B4FE', dashed: true  },
+    };
+    const CHIP_STATUS_LIST = ['bon', 'ok', 'moyen', 'mauvais', 'absent'];
+
+    function chipStatus(str) {
+      let h = 0;
+      for (let i = 0; i < str.length; i++) h = (h * 31 + str.charCodeAt(i)) & 0xffff;
+      return CHIP_STATUSES[CHIP_STATUS_LIST[h % CHIP_STATUS_LIST.length]];
+    }
+
     const FLOW_COLORS = [
       { bg: '#FFF7ED', border: '#EF7A1A' },
       { bg: '#EFF6FF', border: '#3B82F6' },
@@ -138,17 +153,23 @@
       if (Array.isArray(value)) {
         return (
           <div className="flex flex-col gap-1.5">
-            {value.map((item, i) =>
-              item && item.type === 'flow'
-                ? <CellFlow key={i} steps={item.steps} />
-                : (
-                  <span key={i}
-                    className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium
-                               bg-gray-100 text-gray-700 border border-gray-200 w-fit">
-                    {item}
-                  </span>
-                )
-            )}
+            {value.map((item, i) => {
+              if (item && item.type === 'flow') return <CellFlow key={i} steps={item.steps} />;
+              const st = typeof item === 'string' ? chipStatus(item) : null;
+              return (
+                <span key={i}
+                  className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium w-fit"
+                  style={st ? {
+                    background: st.bg,
+                    color: st.text,
+                    border: `1px ${st.dashed ? 'dashed' : 'solid'} ${st.border}`,
+                  } : {
+                    background: '#f3f4f6', color: '#374151', border: '1px solid #e5e7eb',
+                  }}>
+                  {item}
+                </span>
+              );
+            })}
           </div>
         );
       }
