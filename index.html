@@ -67,11 +67,12 @@
     };
     const CHIP_STATUS_LIST = ['bon', 'ok', 'moyen', 'mauvais', 'absent'];
 
-    function chipStatus(str) {
+    function chipStatusName(str) {
       let h = 0;
       for (let i = 0; i < str.length; i++) h = (h * 31 + str.charCodeAt(i)) & 0xffff;
-      return CHIP_STATUSES[CHIP_STATUS_LIST[h % CHIP_STATUS_LIST.length]];
+      return CHIP_STATUS_LIST[h % CHIP_STATUS_LIST.length];
     }
+    function chipStatus(str) { return CHIP_STATUSES[chipStatusName(str)]; }
 
     const FLOW_COLORS = [
       { bg: '#FFF7ED', border: '#EF7A1A' },
@@ -146,7 +147,52 @@
       );
     }
 
-    function CellText({ value }) {
+    function ChipWithPicker({ text, chipOverrides, updateChipStatus }) {
+      const { useState } = React;
+      const sName = chipOverrides[text] || chipStatusName(text);
+      const st = CHIP_STATUSES[sName];
+      const [open, setOpen] = useState(false);
+      return (
+        <div style={{ position: 'relative', display: 'inline-flex' }}>
+          {open && <div style={{ position: 'fixed', inset: 0, zIndex: 40 }} onClick={() => setOpen(false)} />}
+          <span
+            onClick={() => setOpen(o => !o)}
+            className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium w-fit"
+            style={{ background: st.bg, color: st.text, border: `1px ${st.dashed ? 'dashed' : 'solid'} ${st.border}`, cursor: 'pointer', userSelect: 'none' }}
+          >
+            {st.emoji} {text}
+          </span>
+          {open && (
+            <div style={{
+              position: 'absolute', top: 'calc(100% + 4px)', left: 0, zIndex: 50,
+              background: 'white', border: '1px solid #e5e7eb', borderRadius: '10px',
+              boxShadow: '0 4px 16px rgba(0,0,0,0.12)', padding: '4px',
+              display: 'flex', flexDirection: 'column', minWidth: '130px',
+            }}>
+              {CHIP_STATUS_LIST.map(sn => {
+                const s = CHIP_STATUSES[sn];
+                const isActive = sn === sName;
+                return (
+                  <button key={sn}
+                    onClick={() => { updateChipStatus(text, sn); setOpen(false); }}
+                    style={{
+                      display: 'flex', alignItems: 'center', gap: '8px', padding: '6px 10px',
+                      borderRadius: '6px', border: 'none', cursor: 'pointer', fontSize: '12px',
+                      fontWeight: isActive ? '600' : '500', textAlign: 'left', width: '100%',
+                      background: isActive ? s.bg : 'transparent', color: isActive ? s.text : '#374151',
+                    }}
+                  >
+                    <span>{s.emoji}</span><span style={{ textTransform: 'capitalize' }}>{sn}</span>
+                  </button>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    function CellText({ value, chipOverrides, updateChipStatus }) {
       if (!value || value === "" || (Array.isArray(value) && value.length === 0)) return null;
       if (value && value.type === 'table') return <CellTable title={value.title} rows={value.rows} />;
       if (value && value.type === 'flow') return <CellFlow steps={value.steps} />;
@@ -155,17 +201,17 @@
           <div className="flex flex-col gap-1.5">
             {value.map((item, i) => {
               if (item && item.type === 'flow') return <CellFlow key={i} steps={item.steps} />;
+              if (typeof item === 'string' && chipOverrides !== undefined) {
+                return <ChipWithPicker key={i} text={item} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} />;
+              }
               const st = typeof item === 'string' ? chipStatus(item) : null;
               return (
                 <span key={i}
                   className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium w-fit"
                   style={st ? {
-                    background: st.bg,
-                    color: st.text,
+                    background: st.bg, color: st.text,
                     border: `1px ${st.dashed ? 'dashed' : 'solid'} ${st.border}`,
-                  } : {
-                    background: '#f3f4f6', color: '#374151', border: '1px solid #e5e7eb',
-                  }}>
+                  } : { background: '#f3f4f6', color: '#374151', border: '1px solid #e5e7eb' }}>
                   {st ? `${st.emoji} ${item}` : item}
                 </span>
               );
@@ -235,7 +281,7 @@
 
     // ─── LANE ROW ───────────────────────────────────────────────────────────
 
-    function LaneRow({ lane, steps, isStep, isOverview, onNavigate }) {
+    function LaneRow({ lane, steps, isStep, isOverview, onNavigate, chipOverrides, updateChipStatus }) {
       const tdBase = 'border-t border-b border-gray-200';
 
       return (
@@ -297,7 +343,7 @@
                 >
                   {lane.type === 'step' && !isMeta && <CellStep value={cellValue} isOverview={isOverview} />}
                   {lane.type === 'step' && isMeta  && <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide text-center">{cellValue}</span>}
-                  {lane.type === 'text'  && <CellText  value={cellValue} />}
+                  {lane.type === 'text'  && <CellText  value={cellValue} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} />}
                   {lane.type === 'image' && <CellImage value={cellValue} />}
                   {lane.type === 'link'  && <CellLink  value={cellValue} onNavigate={onNavigate} />}
                   {lane.type === 'links' && <CellLinks value={cellValue} onNavigate={onNavigate} />}
@@ -520,7 +566,7 @@
 
     // ─── CANVAS ─────────────────────────────────────────────────────────────
 
-    function Canvas({ journey, onNavigate }) {
+    function Canvas({ journey, onNavigate, chipOverrides, updateChipStatus }) {
       if (!journey) return (
         <div className="flex flex-1 items-center justify-center text-gray-400 text-sm">
           Journey introuvable — elle sera créée prochainement.
@@ -559,7 +605,7 @@
                       rows.push(...FlowLaneRows({ lane, steps: journey.steps }));
                     } else {
                       rows.push(
-                        <LaneRow key={lane.id} lane={lane} steps={journey.steps} isStep={lane.type === 'step'} isOverview={isOverview} onNavigate={onNavigate} />
+                        <LaneRow key={lane.id} lane={lane} steps={journey.steps} isStep={lane.type === 'step'} isOverview={isOverview} onNavigate={onNavigate} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} />
                       );
                     }
                     rows.push(
@@ -687,6 +733,16 @@
     function App() {
       const journeys = window.JOURNEYS;
       const [activeId, setActiveId] = useState(journeys[0].id);
+      const [chipOverrides, setChipOverrides] = useState(() => {
+        try { return JSON.parse(localStorage.getItem('cuure-chip-statuses') || '{}'); } catch { return {}; }
+      });
+      const updateChipStatus = (key, sName) => {
+        setChipOverrides(prev => {
+          const next = { ...prev, [key]: sName };
+          localStorage.setItem('cuure-chip-statuses', JSON.stringify(next));
+          return next;
+        });
+      };
 
       const activeJourney = journeys.find(j => j.id === activeId);
       const isDataPage = activeId.startsWith('__data__:');
@@ -706,7 +762,7 @@
               ? <ProjectPage />
               : isDataPage && activeDataPage
               ? <DataPage page={activeDataPage} onBack={() => setActiveId(journeys[0].id)} />
-              : <Canvas key={activeId} journey={activeJourney} onNavigate={setActiveId} />
+              : <Canvas key={activeId} journey={activeJourney} onNavigate={setActiveId} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} />
             }
           </main>
         </div>
