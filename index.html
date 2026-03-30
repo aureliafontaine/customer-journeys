@@ -59,11 +59,11 @@
     // ─── LANE TYPE RENDERERS ────────────────────────────────────────────────
 
     const CHIP_STATUSES = {
-      bon:     { bg: '#F0FDF4', text: '#15803D', border: '#86EFAC', dashed: false },
-      ok:      { bg: '#FEFCE8', text: '#854D0E', border: '#FDE047', dashed: false },
-      moyen:   { bg: '#FFF7ED', text: '#92400E', border: '#FED7AA', dashed: false },
-      mauvais: { bg: '#FEF2F2', text: '#991B1B', border: '#FECACA', dashed: false },
-      absent:  { bg: '#FAF5FF', text: '#7E22CE', border: '#D8B4FE', dashed: true  },
+      bon:     { bg: '#F0FDF4', text: '#15803D', border: '#86EFAC', dashed: false, emoji: '✅' },
+      ok:      { bg: '#FEFCE8', text: '#854D0E', border: '#FDE047', dashed: false, emoji: '🟡' },
+      moyen:   { bg: '#FFF7ED', text: '#92400E', border: '#FED7AA', dashed: false, emoji: '⚠️' },
+      mauvais: { bg: '#FEF2F2', text: '#991B1B', border: '#FECACA', dashed: false, emoji: '❌' },
+      absent:  { bg: '#FAF5FF', text: '#7E22CE', border: '#D8B4FE', dashed: true,  emoji: '⬜' },
     };
     const CHIP_STATUS_LIST = ['bon', 'ok', 'moyen', 'mauvais', 'absent'];
 
@@ -166,7 +166,7 @@
                   } : {
                     background: '#f3f4f6', color: '#374151', border: '1px solid #e5e7eb',
                   }}>
-                  {item}
+                  {st ? `${st.emoji} ${item}` : item}
                 </span>
               );
             })}
