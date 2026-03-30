@@ -558,7 +558,7 @@
     // ─── SIDEBAR ─────────────────────────────────────────────────────────────
 
     function Sidebar({ journeys, activeId, onSelect }) {
-      const { useState } = React;
+      const { useState, useEffect } = React;
 
       // Collect unique groups in order of appearance
       const groups = [];
@@ -576,6 +576,12 @@
       // Accordion: track the single open group (null = all closed)
       const [openGroup, setOpenGroup] = useState(null);
       const toggle = g => setOpenGroup(prev => prev === g ? null : g);
+
+      // Auto-open the group of the active journey
+      useEffect(() => {
+        const activeJourney = journeys.find(j => j.id === activeId);
+        if (activeJourney && activeJourney.group) setOpenGroup(activeJourney.group);
+      }, [activeId]);
 
       const btnClass = (id) => `w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
         id === activeId ? 'bg-[#EF7A1A] text-white font-medium' : 'text-gray-400 hover:text-white hover:bg-gray-800'
