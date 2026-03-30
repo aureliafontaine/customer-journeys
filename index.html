@@ -73,9 +73,9 @@
       { bg: '#FFF3E0', text: '#E65100', dot: '#EF7A1A' },
     ];
 
-    function CellStep({ value }) {
+    function CellStep({ value, isOverview }) {
       return (
-        <span className="font-bold text-xs tracking-widest uppercase" style={{ color: '#92400E' }}>
+        <span className="font-bold text-xs tracking-widest uppercase" style={{ color: isOverview ? '#3730A3' : '#92400E' }}>
           {value}
         </span>
       );
@@ -214,7 +214,7 @@
 
     // ─── LANE ROW ───────────────────────────────────────────────────────────
 
-    function LaneRow({ lane, steps, isStep, onNavigate }) {
+    function LaneRow({ lane, steps, isStep, isOverview, onNavigate }) {
       const tdBase = 'border-t border-b border-gray-200';
 
       return (
@@ -248,9 +248,13 @@
                 <div
                   className="h-full min-h-[52px] flex items-center"
                   style={ (isStep && !isMeta) ? {
-                    background: 'linear-gradient(to right, #EF7A1A 0px, #EF7A1A 4px, #FFF7ED 4px)',
+                    background: isOverview
+                      ? 'linear-gradient(to right, #4F46E5 0px, #4F46E5 4px, #EEF2FF 4px)'
+                      : 'linear-gradient(to right, #EF7A1A 0px, #EF7A1A 4px, #FFF7ED 4px)',
                     clipPath: 'polygon(4px 0%, calc(100% - 14px) 0%, 100% 50%, calc(100% - 14px) 100%, 4px 100%, 0% calc(100% - 4px), 0% 4px)',
-                    filter: 'drop-shadow(1px 0 0 rgba(239,122,26,0.5)) drop-shadow(-1px 0 0 rgba(239,122,26,0.5)) drop-shadow(0 1px 0 rgba(239,122,26,0.5)) drop-shadow(0 -1px 0 rgba(239,122,26,0.5))',
+                    filter: isOverview
+                      ? 'drop-shadow(1px 0 0 rgba(79,70,229,0.5)) drop-shadow(-1px 0 0 rgba(79,70,229,0.5)) drop-shadow(0 1px 0 rgba(79,70,229,0.5)) drop-shadow(0 -1px 0 rgba(79,70,229,0.5))'
+                      : 'drop-shadow(1px 0 0 rgba(239,122,26,0.5)) drop-shadow(-1px 0 0 rgba(239,122,26,0.5)) drop-shadow(0 1px 0 rgba(239,122,26,0.5)) drop-shadow(0 -1px 0 rgba(239,122,26,0.5))',
                     padding: '10px 32px 10px 14px',
                   } : (isStep && isMeta) ? {
                     background: 'transparent',
@@ -270,7 +274,7 @@
                     alignItems: 'flex-start',
                   }}
                 >
-                  {lane.type === 'step' && !isMeta && <CellStep value={cellValue} color={color} />}
+                  {lane.type === 'step' && !isMeta && <CellStep value={cellValue} isOverview={isOverview} />}
                   {lane.type === 'step' && isMeta  && <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide text-center">{cellValue}</span>}
                   {lane.type === 'text'  && <CellText  value={cellValue} />}
                   {lane.type === 'image' && <CellImage value={cellValue} />}
@@ -501,6 +505,7 @@
           Journey introuvable — elle sera créée prochainement.
         </div>
       );
+      const isOverview = journey.id === 'journey-cx';
       const isEmpty = !journey.steps || journey.steps.length === 0;
       if (isEmpty) return (
         <div className="flex flex-col h-full">
@@ -533,7 +538,7 @@
                       rows.push(...FlowLaneRows({ lane, steps: journey.steps }));
                     } else {
                       rows.push(
-                        <LaneRow key={lane.id} lane={lane} steps={journey.steps} isStep={lane.type === 'step'} onNavigate={onNavigate} />
+                        <LaneRow key={lane.id} lane={lane} steps={journey.steps} isStep={lane.type === 'step'} isOverview={isOverview} onNavigate={onNavigate} />
                       );
                     }
                     rows.push(
