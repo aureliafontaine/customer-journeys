@@ -222,6 +222,39 @@
       return <div className="cell-text text-sm text-gray-700 leading-relaxed">{value}</div>;
     }
 
+    function EditableCell({ value, chipOverrides, updateChipStatus, onAddChip }) {
+      const { useState } = React;
+      const [adding, setAdding] = useState(false);
+      const [draft, setDraft] = useState('');
+      const confirm = () => {
+        const t = draft.trim();
+        if (t) onAddChip(t);
+        setAdding(false); setDraft('');
+      };
+      return (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', width: '100%' }}>
+          <CellText value={value} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} />
+          {adding ? (
+            <div style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
+              <input
+                autoFocus value={draft} onChange={e => setDraft(e.target.value)}
+                onKeyDown={e => { if (e.key === 'Enter') confirm(); if (e.key === 'Escape') { setAdding(false); setDraft(''); } }}
+                placeholder="Nom du chip…"
+                style={{ fontSize: '11px', padding: '4px 8px', border: '1px solid #d1d5db', borderRadius: '6px', outline: 'none', flex: 1, fontFamily: 'inherit' }}
+              />
+              <button onClick={confirm} style={{ fontSize: '11px', padding: '4px 7px', background: '#EF7A1A', color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer' }}>✓</button>
+              <button onClick={() => { setAdding(false); setDraft(''); }} style={{ fontSize: '11px', padding: '4px 7px', background: 'transparent', color: '#9ca3af', border: 'none', cursor: 'pointer' }}>✕</button>
+            </div>
+          ) : (
+            <button onClick={() => setAdding(true)}
+              style={{ fontSize: '11px', color: '#9ca3af', background: 'transparent', border: '1px dashed #d1d5db', borderRadius: '6px', padding: '3px 8px', cursor: 'pointer', textAlign: 'left', width: 'fit-content' }}>
+              + Ajouter
+            </button>
+          )}
+        </div>
+      );
+    }
+
     function CellImage({ value }) {
       if (!value) return null;
       return (
@@ -281,7 +314,7 @@
 
     // ─── LANE ROW ───────────────────────────────────────────────────────────
 
-    function LaneRow({ lane, steps, isStep, isOverview, onNavigate, chipOverrides, updateChipStatus }) {
+    function LaneRow({ lane, steps, isStep, isOverview, onNavigate, chipOverrides, updateChipStatus, journeyId, chipAdditions, addChip }) {
       const tdBase = 'border-t border-b border-gray-200';
 
       return (
@@ -296,13 +329,17 @@
 
           {/* Cells */}
           {steps.map((step, stepIndex) => {
-            const color = STEP_COLORS[stepIndex % STEP_COLORS.length];
+            const cellKey = `${journeyId}:${lane.id}:${step.id}`;
             const cellValue = lane.cells[step.id];
+            const additions = (chipAdditions || {})[cellKey] || [];
+            const mergedValue = Array.isArray(cellValue)
+              ? [...cellValue, ...additions]
+              : additions.length > 0 ? additions : cellValue;
             const isMeta = step.type === 'meta';
-            const isEmpty = !isStep && isCellEmpty(lane.type, cellValue);
+            const isEmpty = !isStep && isCellEmpty(lane.type, mergedValue);
             const isChipCell = !isStep && !isEmpty && (
               lane.type === 'links' ||
-              (lane.type === 'text' && Array.isArray(cellValue))
+              (lane.type === 'text' && Array.isArray(mergedValue))
             );
             const isLastStep = stepIndex === steps.length - 1;
 
@@ -343,7 +380,8 @@
                 >
                   {lane.type === 'step' && !isMeta && <CellStep value={cellValue} isOverview={isOverview} />}
                   {lane.type === 'step' && isMeta  && <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide text-center">{cellValue}</span>}
-                  {lane.type === 'text'  && <CellText  value={cellValue} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} />}
+                  {lane.type === 'text'  && !isOverview && <EditableCell value={mergedValue} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} onAddChip={t => addChip(cellKey, t)} />}
+                  {lane.type === 'text'  &&  isOverview && <CellText value={mergedValue} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} />}
                   {lane.type === 'image' && <CellImage value={cellValue} />}
                   {lane.type === 'link'  && <CellLink  value={cellValue} onNavigate={onNavigate} />}
                   {lane.type === 'links' && <CellLinks value={cellValue} onNavigate={onNavigate} />}
@@ -566,7 +604,7 @@
 
     // ─── CANVAS ─────────────────────────────────────────────────────────────
 
-    function Canvas({ journey, onNavigate, chipOverrides, updateChipStatus }) {
+    function Canvas({ journey, onNavigate, chipOverrides, updateChipStatus, chipAdditions, addChip }) {
       if (!journey) return (
         <div className="flex flex-1 items-center justify-center text-gray-400 text-sm">
           Journey introuvable — elle sera créée prochainement.
@@ -605,7 +643,7 @@
                       rows.push(...FlowLaneRows({ lane, steps: journey.steps }));
                     } else {
                       rows.push(
-                        <LaneRow key={lane.id} lane={lane} steps={journey.steps} isStep={lane.type === 'step'} isOverview={isOverview} onNavigate={onNavigate} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} />
+                        <LaneRow key={lane.id} lane={lane} steps={journey.steps} isStep={lane.type === 'step'} isOverview={isOverview} onNavigate={onNavigate} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} journeyId={journey.id} chipAdditions={chipAdditions} addChip={addChip} />
                       );
                     }
                     rows.push(
@@ -743,6 +781,16 @@
           return next;
         });
       };
+      const [chipAdditions, setChipAdditions] = useState(() => {
+        try { return JSON.parse(localStorage.getItem('cuure-chip-additions') || '{}'); } catch { return {}; }
+      });
+      const addChip = (cellKey, text) => {
+        setChipAdditions(prev => {
+          const next = { ...prev, [cellKey]: [...(prev[cellKey] || []), text] };
+          localStorage.setItem('cuure-chip-additions', JSON.stringify(next));
+          return next;
+        });
+      };
 
       const activeJourney = journeys.find(j => j.id === activeId);
       const isDataPage = activeId.startsWith('__data__:');
@@ -762,7 +810,7 @@
               ? <ProjectPage />
               : isDataPage && activeDataPage
               ? <DataPage page={activeDataPage} onBack={() => setActiveId(journeys[0].id)} />
-              : <Canvas key={activeId} journey={activeJourney} onNavigate={setActiveId} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} />
+              : <Canvas key={activeId} journey={activeJourney} onNavigate={setActiveId} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} chipAdditions={chipAdditions} addChip={addChip} />
             }
           </main>
         </div>
