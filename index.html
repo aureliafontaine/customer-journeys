@@ -662,7 +662,7 @@
 
     // ─── SIDEBAR ─────────────────────────────────────────────────────────────
 
-    function Sidebar({ journeys, activeId, onSelect }) {
+    function Sidebar({ journeys, activeId, onSelect, editMode }) {
       const { useState, useEffect } = React;
 
       // Collect unique groups in order of appearance
@@ -760,7 +760,10 @@
 
           {/* Footer */}
           <div className="px-5 py-4 border-t border-gray-800">
-            <span className="text-xs text-gray-700">Éditable via Claude Code</span>
+            {editMode
+              ? <span className="text-xs text-[#EF7A1A]">✎ Mode édition actif</span>
+              : <span className="text-xs text-gray-700">Éditable via Claude Code</span>
+            }
           </div>
         </aside>
       );
@@ -769,8 +772,27 @@
     // ─── APP ─────────────────────────────────────────────────────────────────
 
     function App() {
+      const { useState, useEffect } = React;
       const journeys = window.JOURNEYS;
       const [activeId, setActiveId] = useState(journeys[0].id);
+
+      // ── Edit mode (owner-only, toggled via Ctrl+Shift+E) ──────────────────
+      const [editMode, setEditMode] = useState(() => localStorage.getItem('cuure-edit-mode') === 'true');
+      useEffect(() => {
+        const onKey = (e) => {
+          if (e.ctrlKey && e.shiftKey && e.key === 'E') {
+            setEditMode(prev => {
+              const next = !prev;
+              localStorage.setItem('cuure-edit-mode', next);
+              return next;
+            });
+          }
+        };
+        window.addEventListener('keydown', onKey);
+        return () => window.removeEventListener('keydown', onKey);
+      }, []);
+
+      // ── Chip statuses (overrides) ─────────────────────────────────────────
       const [chipOverrides, setChipOverrides] = useState(() => {
         try { return JSON.parse(localStorage.getItem('cuure-chip-statuses') || '{}'); } catch { return {}; }
       });
@@ -781,6 +803,8 @@
           return next;
         });
       };
+
+      // ── Chip additions ────────────────────────────────────────────────────
       const [chipAdditions, setChipAdditions] = useState(() => {
         try { return JSON.parse(localStorage.getItem('cuure-chip-additions') || '{}'); } catch { return {}; }
       });
@@ -798,19 +822,18 @@
         ? (window.DATA_PAGES || []).find(p => p.id === activeId.slice('__data__:'.length))
         : null;
 
+      // Only expose edit props when edit mode is active
+      const editProps = editMode ? { chipOverrides, updateChipStatus, chipAdditions, addChip } : { chipOverrides };
+
       return (
         <div className="flex h-screen w-screen overflow-hidden">
-          <Sidebar
-            journeys={journeys}
-            activeId={activeId}
-            onSelect={setActiveId}
-          />
+          <Sidebar journeys={journeys} activeId={activeId} onSelect={setActiveId} editMode={editMode} />
           <main className="flex-1 flex flex-col overflow-hidden bg-white">
             {activeId === '__overview__'
               ? <ProjectPage />
               : isDataPage && activeDataPage
               ? <DataPage page={activeDataPage} onBack={() => setActiveId(journeys[0].id)} />
-              : <Canvas key={activeId} journey={activeJourney} onNavigate={setActiveId} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} chipAdditions={chipAdditions} addChip={addChip} />
+              : <Canvas key={activeId} journey={activeJourney} onNavigate={setActiveId} {...editProps} />
             }
           </main>
         </div>
