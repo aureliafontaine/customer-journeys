@@ -93,7 +93,7 @@ window.JOURNEYS = [
         cells: {
           discovery:       [{ journeyId: "discovery-prospects",            journeyName: "Prospects" },         { journeyId: "discovery-returning",             journeyName: "Returning" }],
           conversion:      [{ journeyId: "conversion", journeyName: "Conversion" }, { journeyId: "conversion-multi-range", journeyName: "Multi-range" }],
-          "post-purchase": [{ journeyId: "post-purchase", journeyName: "Single-range" }, { journeyId: "post-purchase-multi-range", journeyName: "Multi-range" }],
+          "post-purchase": [{ journeyId: "post-purchase-mycuure", journeyName: "MyCuure" }, { journeyId: "post-purchase-fs3b", journeyName: "FS-3B" }, { journeyId: "post-purchase-ma05", journeyName: "MA-05" }, { journeyId: "post-purchase-onely", journeyName: "onely" }, { journeyId: "post-purchase-essentials", journeyName: "Essentials" }, { journeyId: "post-purchase-multi-range", journeyName: "Multi-range" }],
           repurchase:      [{ journeyId: "repurchase-otp",                 journeyName: "OTP" },               { journeyId: "repurchase-active-subscriber",    journeyName: "Active Subscriber" },  { journeyId: "repurchase-paused-subscriber", journeyName: "Paused Subscriber" }],
           engagement:      [{ journeyId: "engagement-loyalty",             journeyName: "Loyalty" },           { journeyId: "engagement-guidance",             journeyName: "Guidance" }]
         }
@@ -319,10 +319,10 @@ window.JOURNEYS = [
     ]
   },
 
-  // ─── POST-PURCHASE — VUE FUSIONNÉE (MyCuure · FS-3B · MA-05 · onely · Essentials) ──
+  // ─── POST-PURCHASE — MYCUURE ─────────────────────────────────────────────────
   {
-    id: "post-purchase",
-    name: "Single-range",
+    id: "post-purchase-mycuure",
+    name: "MyCuure",
     group: "Post-purchase",
     steps: [
       { id: "definition",         label: "Définition", type: "meta" },
@@ -342,18 +342,143 @@ window.JOURNEYS = [
           "tracking-email": "Tracking E-mail", "unboxing": "Unboxing",
           "brochure": "Personalised Brochure", "app-download": "App Download",
           "first-intake": "First Intake", "next-order": "Next Order Planned" } },
-      { id: "mycuure",    label: "MyCuure",  type: "text", cells: {
+      { id: "box",    label: "Box",    type: "text", cells: {
           "confirmation-page": [], "confirmation-email": [], "tracking-email": [],
           "unboxing": [], "brochure": [], "app-download": [], "first-intake": [], "next-order": [] } },
-      { id: "fs3b",       label: "FS-3B",    type: "text", cells: {
+      { id: "reload", label: "Reload", type: "text", cells: {
           "confirmation-page": [], "confirmation-email": [], "tracking-email": [],
           "unboxing": [], "brochure": [], "app-download": [], "first-intake": [], "next-order": [] } },
-      { id: "ma05",       label: "MA-05",    type: "text", cells: {
+    ]
+  },
+
+  // ─── POST-PURCHASE — FS-3B ───────────────────────────────────────────────────
+  {
+    id: "post-purchase-fs3b",
+    name: "FS-3B",
+    group: "Post-purchase",
+    steps: [
+      { id: "definition",         label: "Définition", type: "meta" },
+      { id: "source",             label: "Source",     type: "meta" },
+      { id: "confirmation-page",  label: "Step 1" },
+      { id: "confirmation-email", label: "Step 2" },
+      { id: "tracking-email",     label: "Step 3" },
+      { id: "unboxing",           label: "Step 4" },
+      { id: "brochure",           label: "Step 5" },
+      { id: "app-download",       label: "Step 6" },
+      { id: "first-intake",       label: "Step 7" },
+      { id: "next-order",         label: "Step 8" },
+    ],
+    lanes: [
+      { id: "step-header", label: "Étape", type: "step", cells: {
+          "confirmation-page": "Confirmation Page", "confirmation-email": "Confirmation E-mail",
+          "tracking-email": "Tracking E-mail", "unboxing": "Unboxing",
+          "brochure": "Personalised Brochure", "app-download": "App Download",
+          "first-intake": "First Intake", "next-order": "Next Order Planned" } },
+      { id: "bottle", label: "Bottle — 1 month",  type: "text", cells: {
           "confirmation-page": [], "confirmation-email": [], "tracking-email": [],
           "unboxing": [], "brochure": [], "app-download": [], "first-intake": [], "next-order": [] } },
-      { id: "onely",      label: "onely",    type: "text", cells: {
+      { id: "pack",   label: "Pack — 3 months",   type: "text", cells: {
           "confirmation-page": [], "confirmation-email": [], "tracking-email": [],
           "unboxing": [], "brochure": [], "app-download": [], "first-intake": [], "next-order": [] } },
+      { id: "refill", label: "Refill — 1 month",  type: "text", cells: {
+          "confirmation-page": [], "confirmation-email": [], "tracking-email": [],
+          "unboxing": [], "brochure": [], "app-download": [], "first-intake": [], "next-order": [] } },
+    ]
+  },
+
+  // ─── POST-PURCHASE — MA-05 ───────────────────────────────────────────────────
+  {
+    id: "post-purchase-ma05",
+    name: "MA-05",
+    group: "Post-purchase",
+    steps: [
+      { id: "definition",         label: "Définition", type: "meta" },
+      { id: "source",             label: "Source",     type: "meta" },
+      { id: "confirmation-page",  label: "Step 1" },
+      { id: "confirmation-email", label: "Step 2" },
+      { id: "tracking-email",     label: "Step 3" },
+      { id: "unboxing",           label: "Step 4" },
+      { id: "brochure",           label: "Step 5" },
+      { id: "app-download",       label: "Step 6" },
+      { id: "first-intake",       label: "Step 7" },
+      { id: "next-order",         label: "Step 8" },
+    ],
+    lanes: [
+      { id: "step-header", label: "Étape", type: "step", cells: {
+          "confirmation-page": "Confirmation Page", "confirmation-email": "Confirmation E-mail",
+          "tracking-email": "Tracking E-mail", "unboxing": "Unboxing",
+          "brochure": "Personalised Brochure", "app-download": "App Download",
+          "first-intake": "First Intake", "next-order": "Next Order Planned" } },
+      { id: "bottle",  label: "Bottle — 1 month",  type: "text", cells: {
+          "confirmation-page": [], "confirmation-email": [], "tracking-email": [],
+          "unboxing": [], "brochure": [], "app-download": [], "first-intake": [], "next-order": [] } },
+      { id: "pack-3m", label: "Pack — 3 months",   type: "text", cells: {
+          "confirmation-page": [], "confirmation-email": [], "tracking-email": [],
+          "unboxing": [], "brochure": [], "app-download": [], "first-intake": [], "next-order": [] } },
+      { id: "pack-6m", label: "Pack — 6 months",   type: "text", cells: {
+          "confirmation-page": [], "confirmation-email": [], "tracking-email": [],
+          "unboxing": [], "brochure": [], "app-download": [], "first-intake": [], "next-order": [] } },
+      { id: "refill",  label: "Refill — 1 month",  type: "text", cells: {
+          "confirmation-page": [], "confirmation-email": [], "tracking-email": [],
+          "unboxing": [], "brochure": [], "app-download": [], "first-intake": [], "next-order": [] } },
+    ]
+  },
+
+  // ─── POST-PURCHASE — ONELY ───────────────────────────────────────────────────
+  {
+    id: "post-purchase-onely",
+    name: "onely",
+    group: "Post-purchase",
+    steps: [
+      { id: "definition",         label: "Définition", type: "meta" },
+      { id: "source",             label: "Source",     type: "meta" },
+      { id: "confirmation-page",  label: "Step 1" },
+      { id: "confirmation-email", label: "Step 2" },
+      { id: "tracking-email",     label: "Step 3" },
+      { id: "unboxing",           label: "Step 4" },
+      { id: "brochure",           label: "Step 5" },
+      { id: "app-download",       label: "Step 6" },
+      { id: "first-intake",       label: "Step 7" },
+      { id: "next-order",         label: "Step 8" },
+    ],
+    lanes: [
+      { id: "step-header", label: "Étape", type: "step", cells: {
+          "confirmation-page": "Confirmation Page", "confirmation-email": "Confirmation E-mail",
+          "tracking-email": "Tracking E-mail", "unboxing": "Unboxing",
+          "brochure": "Personalised Brochure", "app-download": "App Download",
+          "first-intake": "First Intake", "next-order": "Next Order Planned" } },
+      { id: "kit",    label: "Kit",    type: "text", cells: {
+          "confirmation-page": [], "confirmation-email": [], "tracking-email": [],
+          "unboxing": [], "brochure": [], "app-download": [], "first-intake": [], "next-order": [] } },
+      { id: "reload", label: "Reload", type: "text", cells: {
+          "confirmation-page": [], "confirmation-email": [], "tracking-email": [],
+          "unboxing": [], "brochure": [], "app-download": [], "first-intake": [], "next-order": [] } },
+    ]
+  },
+
+  // ─── POST-PURCHASE — ESSENTIALS ──────────────────────────────────────────────
+  {
+    id: "post-purchase-essentials",
+    name: "Essentials",
+    group: "Post-purchase",
+    steps: [
+      { id: "definition",         label: "Définition", type: "meta" },
+      { id: "source",             label: "Source",     type: "meta" },
+      { id: "confirmation-page",  label: "Step 1" },
+      { id: "confirmation-email", label: "Step 2" },
+      { id: "tracking-email",     label: "Step 3" },
+      { id: "unboxing",           label: "Step 4" },
+      { id: "brochure",           label: "Step 5" },
+      { id: "app-download",       label: "Step 6" },
+      { id: "first-intake",       label: "Step 7" },
+      { id: "next-order",         label: "Step 8" },
+    ],
+    lanes: [
+      { id: "step-header", label: "Étape", type: "step", cells: {
+          "confirmation-page": "Confirmation Page", "confirmation-email": "Confirmation E-mail",
+          "tracking-email": "Tracking E-mail", "unboxing": "Unboxing",
+          "brochure": "Personalised Brochure", "app-download": "App Download",
+          "first-intake": "First Intake", "next-order": "Next Order Planned" } },
       { id: "essentials", label: "Essentials", type: "text", cells: {
           "confirmation-page": [], "confirmation-email": [], "tracking-email": [],
           "unboxing": [], "brochure": [], "app-download": [], "first-intake": [], "next-order": [] } },
