@@ -330,7 +330,7 @@
           {/* Cells */}
           {steps.map((step, stepIndex) => {
             const cellKey = `${journeyId}:${lane.id}:${step.id}`;
-            const cellValue = lane.cells[step.id];
+            const cellValue = lane.cells[step.id] ?? (isStep ? step.label : undefined);
             const additions = (chipAdditions || {})[cellKey] || [];
             const mergedValue = Array.isArray(cellValue)
               ? [...cellValue, ...additions]

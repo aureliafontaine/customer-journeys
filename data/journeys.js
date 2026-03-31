@@ -107,6 +107,7 @@ window.JOURNEYS = [
     name: "Prospects",
     group: "Discovery",
     steps: [
+      { id: "definition",  label: "Définition",  type: "meta" },
       { id: "source",      label: "Source",      type: "meta" },
       { id: "redirection", label: "Redirection", type: "meta" },
       { id: "lp",          label: "LP",          type: "meta" },
@@ -130,8 +131,6 @@ window.JOURNEYS = [
           "step-4":    "Step 4",
         }
       },
-      { id: "definition", label: "Définition", type: "text", cells: {
-          source: "", redirection: "", lp: "", "step-1": "", "step-2": "", "step-3": "", "step-4": "" } },
       {
         id: "general-curious",
         label: "General / curious visitors",
@@ -211,6 +210,7 @@ window.JOURNEYS = [
     name: "MyCuure",
     group: "Conversion",
     steps: [
+      { id: "definition",      label: "Définition", type: "meta" },
       { id: "format",          label: "Step 1" },
       { id: "addon",           label: "Step 2" },
       { id: "purchase-option", label: "Step 3" },
@@ -222,8 +222,6 @@ window.JOURNEYS = [
           "format": "Step 1", "addon": "Step 2", "purchase-option": "Step 3",
           "add-to-cart": "Step 4", "view-cart": "Step 5",
       }},
-      { id: "definition", label: "Définition", type: "text", cells: {
-          format: "", addon: "", "purchase-option": "", "add-to-cart": "", "view-cart": "" } },
       { id: "mycuure", label: "MyCuure", type: "text", cells: {
           "format":          ["Select Products"],
           "addon":           ["View Cart"],
@@ -239,6 +237,7 @@ window.JOURNEYS = [
     name: "FS-3B",
     group: "Conversion",
     steps: [
+      { id: "definition",      label: "Définition", type: "meta" },
       { id: "format",          label: "Step 1" },
       { id: "addon",           label: "Step 2" },
       { id: "purchase-option", label: "Step 3" },
@@ -254,8 +253,6 @@ window.JOURNEYS = [
           "add-to-cart": "Step 4", "view-cart": "Step 5", "quantity": "Step 6",
           "checkout": "Step 7", "purchase": "Step 8",
       }},
-      { id: "definition", label: "Définition", type: "text", cells: {
-          format: "", addon: "", "purchase-option": "", "add-to-cart": "", "view-cart": "", quantity: "", checkout: "", purchase: "" } },
       { id: "fs3b", label: "FS-3B", type: "text", cells: {
           "format":          { type: "table", title: "Select Format Option", rows: [
             { label: "Bottle", sub: "1 month",  priceOld: "59,90 €",  price: "49,90 €"  },
@@ -286,6 +283,7 @@ window.JOURNEYS = [
     name: "MA-05",
     group: "Conversion",
     steps: [
+      { id: "definition",      label: "Définition", type: "meta" },
       { id: "format",          label: "Step 1" },
       { id: "addon",           label: "Step 2" },
       { id: "purchase-option", label: "Step 3" },
@@ -300,8 +298,6 @@ window.JOURNEYS = [
           "add-to-cart": "Step 4", "view-cart": "Step 5", "quantity": "Step 6",
           "checkout": "Step 7",
       }},
-      { id: "definition", label: "Définition", type: "text", cells: {
-          format: "", addon: "", "purchase-option": "", "add-to-cart": "", "view-cart": "", quantity: "", checkout: "" } },
       { id: "ma05", label: "MA-05", type: "text", cells: {
           "format":          { type: "table", title: "Select Format Option", rows: [
             { label: "Bottle", sub: "1 month",  priceOld: "59,90 €",  price: "49,90 €"  },
@@ -327,6 +323,7 @@ window.JOURNEYS = [
     name: "onely",
     group: "Conversion",
     steps: [
+      { id: "definition",      label: "Définition", type: "meta" },
       { id: "format",          label: "Step 1" },
       { id: "addon",           label: "Step 2" },
       { id: "purchase-option", label: "Step 3" },
@@ -339,8 +336,6 @@ window.JOURNEYS = [
           "format": "Step 1", "addon": "Step 2", "purchase-option": "Step 3",
           "add-to-cart": "Step 4", "view-cart": "Step 5", "quantity": "Step 6",
       }},
-      { id: "definition", label: "Définition", type: "text", cells: {
-          format: "", addon: "", "purchase-option": "", "add-to-cart": "", "view-cart": "", quantity: "" } },
       { id: "onely", label: "onely", type: "text", cells: {
           "format":          { type: "table", title: "Select Format & Purchase Option", rows: [
             { label: "Welcome Kit", sub: "1 month · Subscription",  priceOld: "89,90 €",  price: "79,90 €"  },
@@ -361,6 +356,7 @@ window.JOURNEYS = [
     name: "Essentials",
     group: "Conversion",
     steps: [
+      { id: "definition",      label: "Définition", type: "meta" },
       { id: "format",          label: "Step 1" },
       { id: "addon",           label: "Step 2" },
       { id: "purchase-option", label: "Step 3" },
@@ -375,8 +371,6 @@ window.JOURNEYS = [
           "add-to-cart": "Step 4", "view-cart": "Step 5", "quantity": "Step 6",
           "checkout": "Step 7",
       }},
-      { id: "definition", label: "Définition", type: "text", cells: {
-          format: "", addon: "", "purchase-option": "", "add-to-cart": "", "view-cart": "", quantity: "", checkout: "" } },
       { id: "essentials", label: "Essentials", type: "text", cells: {
           "format":          ["Select Format", "Select Flavour"],
           "addon":           ["Select Purchase Option"],
@@ -395,6 +389,7 @@ window.JOURNEYS = [
     name: "Multi-range",
     group: "Conversion",
     steps: [
+      { id: "definition", label: "Définition", type: "meta" },
       { id: "step-1", label: "Step 1" },
       { id: "step-2", label: "Step 2" },
       { id: "step-3", label: "Step 3" },
@@ -408,8 +403,6 @@ window.JOURNEYS = [
       { id: "step-header", label: "Étape", type: "step", cells: {
           "step-1": "Step 1", "step-2": "Step 2", "step-3": "Step 3", "step-4": "Step 4",
           "step-5": "Step 5", "step-6": "Step 6", "step-7": "Step 7", "step-8": "Step 8" } },
-      { id: "definition", label: "Définition", type: "text", cells: {
-          "step-1": "", "step-2": "", "step-3": "", "step-4": "", "step-5": "", "step-6": "", "step-7": "", "step-8": "" } },
       { id: "multi-range", label: "Multi-range", type: "text", cells: {
           "step-1": [], "step-2": [], "step-3": [], "step-4": [],
           "step-5": [], "step-6": [], "step-7": [], "step-8": [] } },
@@ -426,6 +419,7 @@ window.JOURNEYS = [
     name: "MyCuure",
     group: "Post-purchase",
     steps: [
+      { id: "definition",         label: "Définition", type: "meta" },
       { id: "confirmation-page",  label: "Step 1" },
       { id: "confirmation-email", label: "Step 2" },
       { id: "tracking-email",     label: "Step 3" },
@@ -441,9 +435,6 @@ window.JOURNEYS = [
           "tracking-email": "Tracking E-mail", "unboxing": "Unboxing",
           "brochure": "Personalised Brochure", "app-download": "App Download",
           "first-intake": "First Intake", "next-order": "Next Order Planned" } },
-      { id: "definition", label: "Définition", type: "text", cells: {
-          "confirmation-page": "", "confirmation-email": "", "tracking-email": "", "unboxing": "",
-          "brochure": "", "app-download": "", "first-intake": "", "next-order": "" } },
       { id: "box",    label: "Box",    type: "text", cells: {
           "confirmation-page": [], "confirmation-email": [], "tracking-email": [],
           "unboxing": [], "brochure": [], "app-download": [], "first-intake": [], "next-order": [] } },
@@ -459,6 +450,7 @@ window.JOURNEYS = [
     name: "FS-3B",
     group: "Post-purchase",
     steps: [
+      { id: "definition",         label: "Définition", type: "meta" },
       { id: "confirmation-page",  label: "Step 1" },
       { id: "confirmation-email", label: "Step 2" },
       { id: "tracking-email",     label: "Step 3" },
@@ -474,9 +466,6 @@ window.JOURNEYS = [
           "tracking-email": "Tracking E-mail", "unboxing": "Unboxing",
           "brochure": "Personalised Brochure", "app-download": "App Download",
           "first-intake": "First Intake", "next-order": "Next Order Planned" } },
-      { id: "definition", label: "Définition", type: "text", cells: {
-          "confirmation-page": "", "confirmation-email": "", "tracking-email": "", "unboxing": "",
-          "brochure": "", "app-download": "", "first-intake": "", "next-order": "" } },
       { id: "bottle", label: "Bottle — 1 month",  type: "text", cells: {
           "confirmation-page": [], "confirmation-email": [], "tracking-email": [],
           "unboxing": [], "brochure": [], "app-download": [], "first-intake": [], "next-order": [] } },
@@ -495,6 +484,7 @@ window.JOURNEYS = [
     name: "MA-05",
     group: "Post-purchase",
     steps: [
+      { id: "definition",         label: "Définition", type: "meta" },
       { id: "confirmation-page",  label: "Step 1" },
       { id: "confirmation-email", label: "Step 2" },
       { id: "tracking-email",     label: "Step 3" },
@@ -510,9 +500,6 @@ window.JOURNEYS = [
           "tracking-email": "Tracking E-mail", "unboxing": "Unboxing",
           "brochure": "Personalised Brochure", "app-download": "App Download",
           "first-intake": "First Intake", "next-order": "Next Order Planned" } },
-      { id: "definition", label: "Définition", type: "text", cells: {
-          "confirmation-page": "", "confirmation-email": "", "tracking-email": "", "unboxing": "",
-          "brochure": "", "app-download": "", "first-intake": "", "next-order": "" } },
       { id: "bottle",   label: "Bottle — 1 month",  type: "text", cells: {
           "confirmation-page": [], "confirmation-email": [], "tracking-email": [],
           "unboxing": [], "brochure": [], "app-download": [], "first-intake": [], "next-order": [] } },
@@ -534,6 +521,7 @@ window.JOURNEYS = [
     name: "onely",
     group: "Post-purchase",
     steps: [
+      { id: "definition",         label: "Définition", type: "meta" },
       { id: "confirmation-page",  label: "Step 1" },
       { id: "confirmation-email", label: "Step 2" },
       { id: "tracking-email",     label: "Step 3" },
@@ -549,9 +537,6 @@ window.JOURNEYS = [
           "tracking-email": "Tracking E-mail", "unboxing": "Unboxing",
           "brochure": "Personalised Brochure", "app-download": "App Download",
           "first-intake": "First Intake", "next-order": "Next Order Planned" } },
-      { id: "definition", label: "Définition", type: "text", cells: {
-          "confirmation-page": "", "confirmation-email": "", "tracking-email": "", "unboxing": "",
-          "brochure": "", "app-download": "", "first-intake": "", "next-order": "" } },
       { id: "kit",    label: "Kit",    type: "text", cells: {
           "confirmation-page": [], "confirmation-email": [], "tracking-email": [],
           "unboxing": [], "brochure": [], "app-download": [], "first-intake": [], "next-order": [] } },
@@ -567,6 +552,7 @@ window.JOURNEYS = [
     name: "Essentials",
     group: "Post-purchase",
     steps: [
+      { id: "definition",         label: "Définition", type: "meta" },
       { id: "confirmation-page",  label: "Step 1" },
       { id: "confirmation-email", label: "Step 2" },
       { id: "tracking-email",     label: "Step 3" },
@@ -582,9 +568,6 @@ window.JOURNEYS = [
           "tracking-email": "Tracking E-mail", "unboxing": "Unboxing",
           "brochure": "Personalised Brochure", "app-download": "App Download",
           "first-intake": "First Intake", "next-order": "Next Order Planned" } },
-      { id: "definition", label: "Définition", type: "text", cells: {
-          "confirmation-page": "", "confirmation-email": "", "tracking-email": "", "unboxing": "",
-          "brochure": "", "app-download": "", "first-intake": "", "next-order": "" } },
       { id: "essentials", label: "Essentials", type: "text", cells: {
           "confirmation-page": [], "confirmation-email": [], "tracking-email": [],
           "unboxing": [], "brochure": [], "app-download": [], "first-intake": [], "next-order": [] } },
@@ -597,6 +580,7 @@ window.JOURNEYS = [
     name: "Multi-range",
     group: "Post-purchase",
     steps: [
+      { id: "definition",         label: "Définition", type: "meta" },
       { id: "confirmation-page",  label: "Step 1" },
       { id: "confirmation-email", label: "Step 2" },
       { id: "tracking-email",     label: "Step 3" },
@@ -612,9 +596,6 @@ window.JOURNEYS = [
           "tracking-email": "Tracking E-mail", "unboxing": "Unboxing",
           "brochure": "Personalised Brochure", "app-download": "App Download",
           "first-intake": "First Intake", "next-order": "Next Order Planned" } },
-      { id: "definition", label: "Définition", type: "text", cells: {
-          "confirmation-page": "", "confirmation-email": "", "tracking-email": "", "unboxing": "",
-          "brochure": "", "app-download": "", "first-intake": "", "next-order": "" } },
       { id: "multi-range", label: "Multi-range", type: "text", cells: {
           "confirmation-page": [], "confirmation-email": [], "tracking-email": [],
           "unboxing": [], "brochure": [], "app-download": [], "first-intake": [], "next-order": [] } },
@@ -627,6 +608,7 @@ window.JOURNEYS = [
     name: "Returning",
     group: "Discovery",
     steps: [
+      { id: "definition",  label: "Définition",  type: "meta" },
       { id: "source",      label: "Source",      type: "meta" },
       { id: "redirection", label: "Redirection", type: "meta" },
       { id: "lp",          label: "LP",          type: "meta" },
@@ -648,8 +630,6 @@ window.JOURNEYS = [
           "step-3":    "Step 3",
         }
       },
-      { id: "definition", label: "Définition", type: "text", cells: {
-          source: "", redirection: "", lp: "", "step-1": "", "step-2": "", "step-3": "" } },
       {
         id: "crm-led",
         label: "CRM-led / offers",
@@ -698,6 +678,7 @@ window.JOURNEYS = [
     name: "OTP",
     group: "Repurchase",
     steps: [
+      { id: "definition", label: "Définition", type: "meta" },
       { id: "step-1",  label: "Step 1"  },
       { id: "step-2",  label: "Step 2"  },
       { id: "step-3",  label: "Step 3"  },
@@ -713,9 +694,6 @@ window.JOURNEYS = [
       { id: "step-header", label: "Étape", type: "step", cells: {
           "step-1": "Step 1", "step-2": "Step 2", "step-3": "Step 3", "step-4": "Step 4", "step-5": "Step 5",
           "step-6": "Step 6", "step-7": "Step 7", "step-8": "Step 8", "step-9": "Step 9", "step-10": "Step 10" } },
-      { id: "definition", label: "Définition", type: "text", cells: {
-          "step-1": "", "step-2": "", "step-3": "", "step-4": "", "step-5": "",
-          "step-6": "", "step-7": "", "step-8": "", "step-9": "", "step-10": "" } },
       { id: "same-products-refiller", label: "Same products Refiller", type: "text", cells: {
           "step-1":  ["Open App", "Open Website"],
           "step-2":  ["Login"],
@@ -769,6 +747,7 @@ window.JOURNEYS = [
     name: "Active Subscriber",
     group: "Repurchase",
     steps: [
+      { id: "definition", label: "Définition", type: "meta" },
       { id: "step-1", label: "Step 1" },
       { id: "step-2", label: "Step 2" },
       { id: "step-3", label: "Step 3" },
@@ -781,8 +760,6 @@ window.JOURNEYS = [
       { id: "step-header", label: "Étape", type: "step", cells: {
           "step-1": "Step 1", "step-2": "Step 2", "step-3": "Step 3", "step-4": "Step 4",
           "step-5": "Step 5", "step-6": "Step 6", "step-7": "Step 7" } },
-      { id: "definition", label: "Définition", type: "text", cells: {
-          "step-1": "", "step-2": "", "step-3": "", "step-4": "", "step-5": "", "step-6": "", "step-7": "" } },
       { id: "repeat-auto", label: "Repeat auto", type: "text", cells: {
           "step-1": ["Email reminder"],
           "step-2": ["Email confirmation"],
@@ -831,6 +808,7 @@ window.JOURNEYS = [
     name: "Paused Subscriber",
     group: "Repurchase",
     steps: [
+      { id: "definition", label: "Définition", type: "meta" },
       { id: "step-1", label: "Step 1" },
       { id: "step-2", label: "Step 2" },
       { id: "step-3", label: "Step 3" },
@@ -843,8 +821,6 @@ window.JOURNEYS = [
       { id: "step-header", label: "Étape", type: "step", cells: {
           "step-1": "Step 1", "step-2": "Step 2", "step-3": "Step 3", "step-4": "Step 4",
           "step-5": "Step 5", "step-6": "Step 6", "step-7": "Step 7" } },
-      { id: "definition", label: "Définition", type: "text", cells: {
-          "step-1": "", "step-2": "", "step-3": "", "step-4": "", "step-5": "", "step-6": "", "step-7": "" } },
       { id: "reactivate-same-cart", label: "Reactivate same cart", type: "text", cells: {
           "step-1": ["View Cart"],
           "step-2": ["Activate Subscription"],
@@ -873,13 +849,13 @@ window.JOURNEYS = [
     name: "Loyalty",
     group: "Engagement",
     steps: [
+      { id: "definition", label: "Définition", type: "meta" },
       { id: "step-1", label: "Step 1" },
       { id: "step-2", label: "Step 2" },
       { id: "step-3", label: "Step 3" },
     ],
     lanes: [
       { id: "step-header",   label: "Étape",         type: "step", cells: { "step-1": "Step 1", "step-2": "Step 2", "step-3": "Step 3" } },
-      { id: "definition", label: "Définition", type: "text", cells: { "step-1": "", "step-2": "", "step-3": "" } },
       { id: "intaker",       label: "Intaker",        type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
       { id: "status-lover",  label: "Status lover",   type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
       { id: "referrer",      label: "Referrer",       type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
@@ -894,13 +870,13 @@ window.JOURNEYS = [
     name: "Guidance",
     group: "Engagement",
     steps: [
+      { id: "definition", label: "Définition", type: "meta" },
       { id: "step-1", label: "Step 1" },
       { id: "step-2", label: "Step 2" },
       { id: "step-3", label: "Step 3" },
     ],
     lanes: [
       { id: "step-header",        label: "Étape",             type: "step", cells: { "step-1": "Step 1", "step-2": "Step 2", "step-3": "Step 3" } },
-      { id: "definition", label: "Définition", type: "text", cells: { "step-1": "", "step-2": "", "step-3": "" } },
       { id: "intaker",            label: "Intaker",            type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
       { id: "content-reader",     label: "Content reader",     type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
       { id: "advice-seeker",      label: "Advice seeker",      type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
