@@ -230,7 +230,7 @@
       return <div className="cell-text text-sm text-gray-700 leading-relaxed">{value}</div>;
     }
 
-    function EditableCell({ value, extraChips, chipOverrides, updateChipStatus, onAddChip, onRemoveChip }) {
+    function EditableCell({ value, extraChips, chipOverrides, updateChipStatus, onAddChip, onRemoveChip, deletedChips }) {
       const { useState } = React;
       const [adding, setAdding] = useState(false);
       const [draft, setDraft] = useState('');
@@ -241,9 +241,10 @@
       };
       // For table cells: render title as chip above the white-boxed table
       const isTable = value && value.type === 'table';
-      const tableTitle = isTable && value.title ? (
+      const titleDeleted = isTable && value.title && deletedChips && deletedChips.has(value.title);
+      const tableTitle = isTable && value.title && !titleDeleted ? (
         chipOverrides !== undefined
-          ? <ChipWithPicker text={value.title} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} />
+          ? <ChipWithPicker text={value.title} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} onRemove={onRemoveChip ? () => onRemoveChip(value.title) : undefined} />
           : (() => { const st = chipStatus(value.title); return (
               <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium w-fit"
                 style={{ background: st.bg, color: st.text, border: `1px ${st.dashed ? 'dashed' : 'solid'} ${st.border}`, gap: '4px' }}>
@@ -447,7 +448,7 @@
                 >
                   {lane.type === 'step' && !isMeta && <CellStep value={cellValue} isOverview={isOverview} />}
                   {lane.type === 'step' && isMeta  && <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide text-center">{cellValue}</span>}
-                  {lane.type === 'text'  && !isOverview && !isMeta && <EditableCell value={mergedValue} extraChips={extraChips} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} onAddChip={t => addChip && addChip(cellKey, t)} onRemoveChip={removeChip ? t => removeChip(cellKey, t) : undefined} />}
+                  {lane.type === 'text'  && !isOverview && !isMeta && <EditableCell value={mergedValue} extraChips={extraChips} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} onAddChip={t => addChip && addChip(cellKey, t)} onRemoveChip={removeChip ? t => removeChip(cellKey, t) : undefined} deletedChips={deletions} />}
                   {lane.type === 'text'  && !isOverview &&  isMeta && <MetaCell value={(metaValues || {})[cellKey] || ''} onSave={v => setMetaValue && setMetaValue(cellKey, v)} editMode={!!setMetaValue} />}
                   {lane.type === 'text'  &&  isOverview && <CellText value={mergedValue} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} />}
                   {lane.type === 'image' && <CellImage value={cellValue} />}
