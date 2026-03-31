@@ -92,7 +92,7 @@ window.JOURNEYS = [
         type: "links",
         cells: {
           discovery:       [{ journeyId: "discovery-prospects",            journeyName: "Prospects" },         { journeyId: "discovery-returning",             journeyName: "Returning" }],
-          conversion:      [{ journeyId: "conversion-mycuure", journeyName: "MyCuure" }, { journeyId: "conversion-fs3b", journeyName: "FS-3B" }, { journeyId: "conversion-ma05", journeyName: "MA-05" }, { journeyId: "conversion-onely", journeyName: "onely" }, { journeyId: "conversion-essentials", journeyName: "Essentials" }, { journeyId: "conversion-multi-range", journeyName: "Multi-range" }],
+          conversion:      [{ journeyId: "conversion", journeyName: "Conversion" }, { journeyId: "conversion-multi-range", journeyName: "Multi-range" }],
           "post-purchase": [{ journeyId: "post-purchase-mycuure", journeyName: "MyCuure" }, { journeyId: "post-purchase-fs3b", journeyName: "FS-3B" }, { journeyId: "post-purchase-ma05", journeyName: "MA-05" }, { journeyId: "post-purchase-onely", journeyName: "onely" }, { journeyId: "post-purchase-essentials", journeyName: "Essentials" }, { journeyId: "post-purchase-multi-range", journeyName: "Multi-range" }],
           repurchase:      [{ journeyId: "repurchase-otp",                 journeyName: "OTP" },               { journeyId: "repurchase-active-subscriber",    journeyName: "Active Subscriber" },  { journeyId: "repurchase-paused-subscriber", journeyName: "Paused Subscriber" }],
           engagement:      [{ journeyId: "engagement-loyalty",             journeyName: "Loyalty" },           { journeyId: "engagement-guidance",             journeyName: "Guidance" }]
@@ -205,41 +205,13 @@ window.JOURNEYS = [
   },
 
   {
-  // ─── CONVERSION — MYCUURE ──────────────────────────────────────────────────
-    id: "conversion-mycuure",
-    name: "MyCuure",
+  // ─── CONVERSION — VUE FUSIONNÉE (MyCuure · FS-3B · MA-05 · onely · Essentials) ──
+    id: "conversion",
+    name: "Conversion",
     group: "Conversion",
     steps: [
-      { id: "definition",      label: "Définition", type: "meta" },
-      { id: "source",          label: "Source",      type: "meta" },
-      { id: "format",          label: "Step 1" },
-      { id: "addon",           label: "Step 2" },
-      { id: "purchase-option", label: "Step 3" },
-      { id: "add-to-cart",     label: "Step 4" },
-      { id: "view-cart",       label: "Step 5" },
-    ],
-    lanes: [
-      { id: "step-header", label: "Étape", type: "step", cells: {
-          "format": "Step 1", "addon": "Step 2", "purchase-option": "Step 3",
-          "add-to-cart": "Step 4", "view-cart": "Step 5",
-      }},
-      { id: "mycuure", label: "MyCuure", type: "text", cells: {
-          "format":          ["Select Products"],
-          "addon":           ["View Cart"],
-          "purchase-option": ["Select Quantity"],
-          "add-to-cart":     ["Checkout"],
-          "view-cart":       ["Purchase"],
-      }},
-    ]
-  },
-  {
-  // ─── CONVERSION — FS-3B ────────────────────────────────────────────────────
-    id: "conversion-fs3b",
-    name: "FS-3B",
-    group: "Conversion",
-    steps: [
-      { id: "definition",      label: "Définition", type: "meta" },
-      { id: "source",          label: "Source",      type: "meta" },
+      { id: "definition",      label: "Définition",  type: "meta" },
+      { id: "source",          label: "Source",       type: "meta" },
       { id: "format",          label: "Step 1" },
       { id: "addon",           label: "Step 2" },
       { id: "purchase-option", label: "Step 3" },
@@ -254,6 +226,13 @@ window.JOURNEYS = [
           "format": "Step 1", "addon": "Step 2", "purchase-option": "Step 3",
           "add-to-cart": "Step 4", "view-cart": "Step 5", "quantity": "Step 6",
           "checkout": "Step 7", "purchase": "Step 8",
+      }},
+      { id: "mycuure", label: "MyCuure", type: "text", cells: {
+          "format":          ["Select Products"],
+          "addon":           ["View Cart"],
+          "purchase-option": ["Select Quantity"],
+          "add-to-cart":     ["Checkout"],
+          "view-cart":       ["Purchase"],
       }},
       { id: "fs3b", label: "FS-3B", type: "text", cells: {
           "format":          { type: "table", title: "Select Format Option", rows: [
@@ -272,35 +251,6 @@ window.JOURNEYS = [
           "checkout":        ["Checkout"],
           "purchase":        ["Purchase"],
       }},
-      { id: "insights", label: "Insights", type: "links", cells: {
-          "format":          [{ dataPageId: "fs3b-format-purchase-rates", label: "FS-3B Format & Purchase Rates" }],
-          "addon": [], "purchase-option": [], "add-to-cart": [],
-          "view-cart": [], "quantity": [], "checkout": [], "purchase": [],
-      }},
-    ]
-  },
-  {
-  // ─── CONVERSION — MA-05 ────────────────────────────────────────────────────
-    id: "conversion-ma05",
-    name: "MA-05",
-    group: "Conversion",
-    steps: [
-      { id: "definition",      label: "Définition", type: "meta" },
-      { id: "source",          label: "Source",      type: "meta" },
-      { id: "format",          label: "Step 1" },
-      { id: "addon",           label: "Step 2" },
-      { id: "purchase-option", label: "Step 3" },
-      { id: "add-to-cart",     label: "Step 4" },
-      { id: "view-cart",       label: "Step 5" },
-      { id: "quantity",        label: "Step 6" },
-      { id: "checkout",        label: "Step 7" },
-    ],
-    lanes: [
-      { id: "step-header", label: "Étape", type: "step", cells: {
-          "format": "Step 1", "addon": "Step 2", "purchase-option": "Step 3",
-          "add-to-cart": "Step 4", "view-cart": "Step 5", "quantity": "Step 6",
-          "checkout": "Step 7",
-      }},
       { id: "ma05", label: "MA-05", type: "text", cells: {
           "format":          { type: "table", title: "Select Format Option", rows: [
             { label: "Bottle", sub: "1 month",  priceOld: "59,90 €",  price: "49,90 €"  },
@@ -318,28 +268,6 @@ window.JOURNEYS = [
           "quantity":        ["Checkout"],
           "checkout":        ["Purchase"],
       }},
-    ]
-  },
-  {
-  // ─── CONVERSION — ONELY ────────────────────────────────────────────────────
-    id: "conversion-onely",
-    name: "onely",
-    group: "Conversion",
-    steps: [
-      { id: "definition",      label: "Définition", type: "meta" },
-      { id: "source",          label: "Source",      type: "meta" },
-      { id: "format",          label: "Step 1" },
-      { id: "addon",           label: "Step 2" },
-      { id: "purchase-option", label: "Step 3" },
-      { id: "add-to-cart",     label: "Step 4" },
-      { id: "view-cart",       label: "Step 5" },
-      { id: "quantity",        label: "Step 6" },
-    ],
-    lanes: [
-      { id: "step-header", label: "Étape", type: "step", cells: {
-          "format": "Step 1", "addon": "Step 2", "purchase-option": "Step 3",
-          "add-to-cart": "Step 4", "view-cart": "Step 5", "quantity": "Step 6",
-      }},
       { id: "onely", label: "onely", type: "text", cells: {
           "format":          { type: "table", title: "Select Format & Purchase Option", rows: [
             { label: "Welcome Kit", sub: "1 month · Subscription",  priceOld: "89,90 €",  price: "79,90 €"  },
@@ -351,30 +279,6 @@ window.JOURNEYS = [
           "add-to-cart":     ["View Cart"],
           "view-cart":       ["Checkout"],
           "quantity":        ["Purchase"],
-      }},
-    ]
-  },
-  {
-  // ─── CONVERSION — ESSENTIALS ───────────────────────────────────────────────
-    id: "conversion-essentials",
-    name: "Essentials",
-    group: "Conversion",
-    steps: [
-      { id: "definition",      label: "Définition", type: "meta" },
-      { id: "source",          label: "Source",      type: "meta" },
-      { id: "format",          label: "Step 1" },
-      { id: "addon",           label: "Step 2" },
-      { id: "purchase-option", label: "Step 3" },
-      { id: "add-to-cart",     label: "Step 4" },
-      { id: "view-cart",       label: "Step 5" },
-      { id: "quantity",        label: "Step 6" },
-      { id: "checkout",        label: "Step 7" },
-    ],
-    lanes: [
-      { id: "step-header", label: "Étape", type: "step", cells: {
-          "format": "Step 1", "addon": "Step 2", "purchase-option": "Step 3",
-          "add-to-cart": "Step 4", "view-cart": "Step 5", "quantity": "Step 6",
-          "checkout": "Step 7",
       }},
       { id: "essentials", label: "Essentials", type: "text", cells: {
           "format":          ["Select Format", "Select Flavour"],
