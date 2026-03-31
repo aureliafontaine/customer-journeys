@@ -68,9 +68,7 @@
     const CHIP_STATUS_LIST = ['bon', 'ok', 'moyen', 'mauvais', 'non existant'];
 
     function chipStatusName(str) {
-      let h = 0;
-      for (let i = 0; i < str.length; i++) h = (h * 31 + str.charCodeAt(i)) & 0xffff;
-      return CHIP_STATUS_LIST[h % CHIP_STATUS_LIST.length];
+      return 'non existant';
     }
     function chipStatus(str) { return CHIP_STATUSES[chipStatusName(str)]; }
 
