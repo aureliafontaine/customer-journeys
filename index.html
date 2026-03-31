@@ -34,7 +34,7 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
   <!-- Data -->
-  <script src="data/journeys.js?v=8"></script>
+  <script src="data/journeys.js?v=9"></script>
 
   <style>
     body { margin: 0; font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
@@ -384,7 +384,7 @@
             const isEmpty = !isStep && isCellEmpty(lane.type, mergedValue);
             const isChipCell = !isStep && !isEmpty && (
               lane.type === 'links' ||
-              (lane.type === 'text' && Array.isArray(mergedValue))
+              (lane.type === 'text' && (Array.isArray(mergedValue) || (mergedValue && mergedValue.type === 'table') || isMeta))
             );
             const isLastStep = stepIndex === steps.length - 1;
 
