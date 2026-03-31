@@ -461,7 +461,7 @@
                   {lane.type === 'step' && !isMeta && <CellStep value={cellValue} isOverview={isOverview} />}
                   {lane.type === 'step' && isMeta  && <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide text-center">{cellValue}</span>}
                   {lane.type === 'text'  && !isOverview && !isMeta && <EditableCell value={mergedValue} extraChips={extraChips} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} onAddChip={t => addChip && addChip(cellKey, t)} onRemoveChip={removeChip ? t => removeChip(cellKey, t) : undefined} deletedChips={deletions} />}
-                  {lane.type === 'text'  && !isOverview &&  isMeta && <MetaCell value={(metaValues || {})[cellKey] || ''} onSave={v => setMetaValue && setMetaValue(cellKey, v)} editMode={!!setMetaValue} />}
+                  {lane.type === 'text'  && !isOverview &&  isMeta && <MetaCell value={(metaValues || {})[cellKey] || (typeof cellValue === 'string' ? cellValue : '')} onSave={v => setMetaValue && setMetaValue(cellKey, v)} editMode={!!setMetaValue} />}
                   {lane.type === 'text'  &&  isOverview && <CellText value={mergedValue} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} />}
                   {lane.type === 'image' && <CellImage value={cellValue} />}
                   {lane.type === 'link'  && <CellLink  value={cellValue} onNavigate={onNavigate} />}
