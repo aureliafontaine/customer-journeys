@@ -211,6 +211,7 @@ window.JOURNEYS = [
     group: "Conversion",
     steps: [
       { id: "definition",      label: "Définition", type: "meta" },
+      { id: "source",          label: "Source",      type: "meta" },
       { id: "format",          label: "Step 1" },
       { id: "addon",           label: "Step 2" },
       { id: "purchase-option", label: "Step 3" },
@@ -238,6 +239,7 @@ window.JOURNEYS = [
     group: "Conversion",
     steps: [
       { id: "definition",      label: "Définition", type: "meta" },
+      { id: "source",          label: "Source",      type: "meta" },
       { id: "format",          label: "Step 1" },
       { id: "addon",           label: "Step 2" },
       { id: "purchase-option", label: "Step 3" },
@@ -284,6 +286,7 @@ window.JOURNEYS = [
     group: "Conversion",
     steps: [
       { id: "definition",      label: "Définition", type: "meta" },
+      { id: "source",          label: "Source",      type: "meta" },
       { id: "format",          label: "Step 1" },
       { id: "addon",           label: "Step 2" },
       { id: "purchase-option", label: "Step 3" },
@@ -324,6 +327,7 @@ window.JOURNEYS = [
     group: "Conversion",
     steps: [
       { id: "definition",      label: "Définition", type: "meta" },
+      { id: "source",          label: "Source",      type: "meta" },
       { id: "format",          label: "Step 1" },
       { id: "addon",           label: "Step 2" },
       { id: "purchase-option", label: "Step 3" },
@@ -357,6 +361,7 @@ window.JOURNEYS = [
     group: "Conversion",
     steps: [
       { id: "definition",      label: "Définition", type: "meta" },
+      { id: "source",          label: "Source",      type: "meta" },
       { id: "format",          label: "Step 1" },
       { id: "addon",           label: "Step 2" },
       { id: "purchase-option", label: "Step 3" },
@@ -390,6 +395,7 @@ window.JOURNEYS = [
     group: "Conversion",
     steps: [
       { id: "definition", label: "Définition", type: "meta" },
+      { id: "source",     label: "Source",      type: "meta" },
       { id: "step-1", label: "Step 1" },
       { id: "step-2", label: "Step 2" },
       { id: "step-3", label: "Step 3" },
@@ -420,6 +426,7 @@ window.JOURNEYS = [
     group: "Post-purchase",
     steps: [
       { id: "definition",         label: "Définition", type: "meta" },
+      { id: "source",             label: "Source",     type: "meta" },
       { id: "confirmation-page",  label: "Step 1" },
       { id: "confirmation-email", label: "Step 2" },
       { id: "tracking-email",     label: "Step 3" },
@@ -451,6 +458,7 @@ window.JOURNEYS = [
     group: "Post-purchase",
     steps: [
       { id: "definition",         label: "Définition", type: "meta" },
+      { id: "source",             label: "Source",     type: "meta" },
       { id: "confirmation-page",  label: "Step 1" },
       { id: "confirmation-email", label: "Step 2" },
       { id: "tracking-email",     label: "Step 3" },
@@ -485,6 +493,7 @@ window.JOURNEYS = [
     group: "Post-purchase",
     steps: [
       { id: "definition",         label: "Définition", type: "meta" },
+      { id: "source",             label: "Source",     type: "meta" },
       { id: "confirmation-page",  label: "Step 1" },
       { id: "confirmation-email", label: "Step 2" },
       { id: "tracking-email",     label: "Step 3" },
@@ -522,6 +531,7 @@ window.JOURNEYS = [
     group: "Post-purchase",
     steps: [
       { id: "definition",         label: "Définition", type: "meta" },
+      { id: "source",             label: "Source",     type: "meta" },
       { id: "confirmation-page",  label: "Step 1" },
       { id: "confirmation-email", label: "Step 2" },
       { id: "tracking-email",     label: "Step 3" },
@@ -553,6 +563,7 @@ window.JOURNEYS = [
     group: "Post-purchase",
     steps: [
       { id: "definition",         label: "Définition", type: "meta" },
+      { id: "source",             label: "Source",     type: "meta" },
       { id: "confirmation-page",  label: "Step 1" },
       { id: "confirmation-email", label: "Step 2" },
       { id: "tracking-email",     label: "Step 3" },
@@ -581,6 +592,7 @@ window.JOURNEYS = [
     group: "Post-purchase",
     steps: [
       { id: "definition",         label: "Définition", type: "meta" },
+      { id: "source",             label: "Source",     type: "meta" },
       { id: "confirmation-page",  label: "Step 1" },
       { id: "confirmation-email", label: "Step 2" },
       { id: "tracking-email",     label: "Step 3" },
@@ -679,6 +691,7 @@ window.JOURNEYS = [
     group: "Repurchase",
     steps: [
       { id: "definition", label: "Définition", type: "meta" },
+      { id: "source",    label: "Source",      type: "meta" },
       { id: "step-1",  label: "Step 1"  },
       { id: "step-2",  label: "Step 2"  },
       { id: "step-3",  label: "Step 3"  },
@@ -748,6 +761,7 @@ window.JOURNEYS = [
     group: "Repurchase",
     steps: [
       { id: "definition", label: "Définition", type: "meta" },
+      { id: "source",     label: "Source",      type: "meta" },
       { id: "step-1", label: "Step 1" },
       { id: "step-2", label: "Step 2" },
       { id: "step-3", label: "Step 3" },
@@ -809,6 +823,7 @@ window.JOURNEYS = [
     group: "Repurchase",
     steps: [
       { id: "definition", label: "Définition", type: "meta" },
+      { id: "source",     label: "Source",      type: "meta" },
       { id: "step-1", label: "Step 1" },
       { id: "step-2", label: "Step 2" },
       { id: "step-3", label: "Step 3" },
@@ -850,6 +865,7 @@ window.JOURNEYS = [
     group: "Engagement",
     steps: [
       { id: "definition", label: "Définition", type: "meta" },
+      { id: "source",     label: "Source",      type: "meta" },
       { id: "step-1", label: "Step 1" },
       { id: "step-2", label: "Step 2" },
       { id: "step-3", label: "Step 3" },
@@ -871,6 +887,7 @@ window.JOURNEYS = [
     group: "Engagement",
     steps: [
       { id: "definition", label: "Définition", type: "meta" },
+      { id: "source",     label: "Source",      type: "meta" },
       { id: "step-1", label: "Step 1" },
       { id: "step-2", label: "Step 2" },
       { id: "step-3", label: "Step 3" },
