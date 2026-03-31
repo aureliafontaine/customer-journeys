@@ -261,10 +261,24 @@
                 <span style={st.grayEmoji ? { filter: 'grayscale(1)' } : {}}>{st.emoji}</span>{chip}
               </span>); })()
       );
+      const tableDeleted = isTable && deletedChips && deletedChips.has('__table__');
       return (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', width: '100%' }}>
           {tableTitle}
-          <CellText value={value} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} onRemoveChip={onRemoveChip} />
+          {isTable && !tableDeleted ? (
+            <div style={{ position: 'relative' }}>
+              <CellText value={value} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} onRemoveChip={onRemoveChip} />
+              {onRemoveChip && (
+                <button
+                  onClick={() => onRemoveChip('__table__')}
+                  title="Supprimer le tableau"
+                  style={{ position: 'absolute', top: '4px', right: '6px', background: 'transparent', border: 'none', cursor: 'pointer', color: '#9ca3af', fontSize: '13px', fontWeight: '700', lineHeight: 1, padding: '0' }}
+                >×</button>
+              )}
+            </div>
+          ) : !isTable ? (
+            <CellText value={value} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} onRemoveChip={onRemoveChip} />
+          ) : null}
           {extraChipNodes}
           {adding ? (
             <div style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
