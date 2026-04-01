@@ -334,7 +334,7 @@
                     🔗 Lier
                   </button>
                   {linkPickerOpen && (
-                    <div style={{ position: 'absolute', bottom: 'calc(100% + 4px)', left: 0, zIndex: 200, background: 'white', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 4px 16px rgba(0,0,0,0.12)', minWidth: '200px', maxHeight: '260px', overflowY: 'auto', padding: '4px' }}>
+                    <div style={{ position: 'absolute', top: 'calc(100% + 4px)', left: 0, zIndex: 200, background: 'white', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 4px 16px rgba(0,0,0,0.12)', minWidth: '200px', maxHeight: '260px', overflowY: 'auto', padding: '4px' }}>
                       {(allJourneys || []).map(j => (
                         <button key={j.id}
                           onClick={() => { onAddJourneyLink({ journeyId: j.id, journeyName: j.name }); setLinkPickerOpen(false); }}
