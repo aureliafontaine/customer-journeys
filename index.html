@@ -87,11 +87,74 @@
       { bg: '#FFF3E0', text: '#E65100', dot: '#EF7A1A' },
     ];
 
-    function CellStep({ value, isOverview }) {
+    function CellStep({ value, isOverview, stepLink, onNavigate, editMode, onSetLink, allJourneys, cellKey }) {
+      const { useState, useRef, useEffect } = React;
+      const [pickerOpen, setPickerOpen] = useState(false);
+      const pickerRef = useRef(null);
+
+      useEffect(() => {
+        if (!pickerOpen) return;
+        const handler = (e) => { if (pickerRef.current && !pickerRef.current.contains(e.target)) setPickerOpen(false); };
+        document.addEventListener('mousedown', handler);
+        return () => document.removeEventListener('mousedown', handler);
+      }, [pickerOpen]);
+
+      const accentColor = isOverview ? '#3730A3' : '#92400E';
+      const accentBg    = isOverview ? '#EEF2FF' : '#FFF7ED';
+      const accentBdr   = isOverview ? '#C7D2FE' : '#FED7AA';
+
       return (
-        <span className="font-bold text-xs tracking-widest uppercase" style={{ color: isOverview ? '#3730A3' : '#92400E' }}>
-          {value}
-        </span>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', width: '100%' }}>
+          <span className="font-bold text-xs tracking-widest uppercase" style={{ color: accentColor }}>
+            {value}
+          </span>
+
+          {/* Lien vers une autre journey — lecture seule */}
+          {stepLink && !editMode && (
+            <button
+              onClick={(e) => { e.stopPropagation(); onNavigate && onNavigate(stepLink.journeyId); }}
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', background: accentBg, border: `1px solid ${accentBdr}`, borderRadius: '4px', padding: '2px 7px', fontSize: '10px', cursor: 'pointer', color: accentColor, fontWeight: 600, alignSelf: 'flex-start' }}
+              title={`Voir : ${stepLink.journeyName}`}
+            >
+              🔗 {stepLink.journeyName}
+            </button>
+          )}
+
+          {/* Mode édition : bouton + picker */}
+          {editMode && (
+            <div style={{ position: 'relative', alignSelf: 'flex-start' }} ref={pickerRef}>
+              <button
+                onClick={(e) => { e.stopPropagation(); setPickerOpen(p => !p); }}
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', background: stepLink ? accentBg : '#f3f4f6', border: `1px solid ${stepLink ? accentBdr : '#e5e7eb'}`, borderRadius: '4px', padding: '2px 7px', fontSize: '10px', cursor: 'pointer', color: stepLink ? accentColor : '#6b7280', fontWeight: 600 }}
+                title="Lier une journey"
+              >
+                🔗 {stepLink ? stepLink.journeyName : 'Lier…'}
+              </button>
+              {pickerOpen && (
+                <div style={{ position: 'absolute', top: 'calc(100% + 4px)', left: 0, zIndex: 200, background: 'white', border: '1px solid #e5e7eb', borderRadius: '8px', boxShadow: '0 4px 16px rgba(0,0,0,0.12)', minWidth: '200px', maxHeight: '260px', overflowY: 'auto', padding: '4px' }}
+                  onClick={e => e.stopPropagation()}>
+                  {stepLink && (
+                    <button
+                      onClick={() => { onSetLink && onSetLink(cellKey, null); setPickerOpen(false); }}
+                      style={{ width: '100%', textAlign: 'left', padding: '6px 10px', fontSize: '11px', color: '#ef4444', background: 'none', border: 'none', cursor: 'pointer', borderRadius: '4px' }}
+                    >
+                      × Supprimer le lien
+                    </button>
+                  )}
+                  {(allJourneys || []).map(j => (
+                    <button
+                      key={j.id}
+                      onClick={() => { onSetLink && onSetLink(cellKey, { journeyId: j.id, journeyName: j.name }); setPickerOpen(false); }}
+                      style={{ width: '100%', textAlign: 'left', padding: '6px 10px', fontSize: '11px', color: '#374151', background: stepLink && stepLink.journeyId === j.id ? accentBg : 'none', border: 'none', cursor: 'pointer', borderRadius: '4px', fontWeight: stepLink && stepLink.journeyId === j.id ? 600 : 400 }}
+                    >
+                      {j.name}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+        </div>
       );
     }
 
@@ -391,7 +454,7 @@
 
     // ─── LANE ROW ───────────────────────────────────────────────────────────
 
-    function LaneRow({ lane, steps, isStep, isOverview, onNavigate, chipOverrides, updateChipStatus, journeyId, chipAdditions, addChip, chipDeletions, removeChip, metaValues, setMetaValue }) {
+    function LaneRow({ lane, steps, isStep, isOverview, onNavigate, chipOverrides, updateChipStatus, journeyId, chipAdditions, addChip, chipDeletions, removeChip, metaValues, setMetaValue, stepLinks, setStepLink, editMode, allJourneys }) {
       const tdBase = 'border-t border-b border-gray-200';
 
       return (
@@ -459,7 +522,7 @@
                     alignItems: 'flex-start',
                   }}
                 >
-                  {lane.type === 'step' && !isMeta && <CellStep value={cellValue} isOverview={isOverview} />}
+                  {lane.type === 'step' && !isMeta && <CellStep value={cellValue} isOverview={isOverview} stepLink={(stepLinks || {})[cellKey]} onNavigate={onNavigate} editMode={editMode} onSetLink={setStepLink} allJourneys={allJourneys} cellKey={cellKey} />}
                   {lane.type === 'step' && isMeta  && <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide text-center">{cellValue}</span>}
                   {lane.type === 'text'  && !isOverview && !isMeta && <EditableCell value={mergedValue} extraChips={extraChips} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} onAddChip={t => addChip && addChip(cellKey, t)} onRemoveChip={removeChip ? t => removeChip(cellKey, t) : undefined} deletedChips={deletions} cellKey={cellKey} />}
                   {lane.type === 'text'  && !isOverview &&  isMeta && <MetaCell value={(metaValues || {})[cellKey] || (typeof cellValue === 'string' ? cellValue : '')} onSave={v => setMetaValue && setMetaValue(cellKey, v)} editMode={!!setMetaValue} />}
@@ -686,7 +749,7 @@
 
     // ─── CANVAS ─────────────────────────────────────────────────────────────
 
-    function Canvas({ journey, onNavigate, chipOverrides, updateChipStatus, chipAdditions, addChip, chipDeletions, removeChip, metaValues, setMetaValue }) {
+    function Canvas({ journey, onNavigate, chipOverrides, updateChipStatus, chipAdditions, addChip, chipDeletions, removeChip, metaValues, setMetaValue, stepLinks, setStepLink, editMode }) {
       if (!journey) return (
         <div className="flex flex-1 items-center justify-center text-gray-400 text-sm">
           Journey introuvable — elle sera créée prochainement.
@@ -725,7 +788,7 @@
                       rows.push(...FlowLaneRows({ lane, steps: journey.steps }));
                     } else {
                       rows.push(
-                        <LaneRow key={lane.id} lane={lane} steps={journey.steps} isStep={lane.type === 'step'} isOverview={isOverview} onNavigate={onNavigate} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} journeyId={journey.id} chipAdditions={chipAdditions} addChip={addChip} chipDeletions={chipDeletions} removeChip={removeChip} metaValues={metaValues} setMetaValue={setMetaValue} />
+                        <LaneRow key={lane.id} lane={lane} steps={journey.steps} isStep={lane.type === 'step'} isOverview={isOverview} onNavigate={onNavigate} chipOverrides={chipOverrides} updateChipStatus={updateChipStatus} journeyId={journey.id} chipAdditions={chipAdditions} addChip={addChip} chipDeletions={chipDeletions} removeChip={removeChip} metaValues={metaValues} setMetaValue={setMetaValue} stepLinks={stepLinks} setStepLink={setStepLink} editMode={editMode} allJourneys={window.JOURNEYS} />
                       );
                     }
                     rows.push(
@@ -926,6 +989,20 @@
         });
       };
 
+      // ── Step links (liens vers d'autres journeys depuis les cellules step) ──
+      const [stepLinks, setStepLinksState] = useState(() => {
+        try { return JSON.parse(localStorage.getItem('cuure-step-links') || '{}'); } catch { return {}; }
+      });
+      const setStepLink = (cellKey, link) => {
+        setStepLinksState(prev => {
+          const next = link
+            ? { ...prev, [cellKey]: link }
+            : Object.fromEntries(Object.entries(prev).filter(([k]) => k !== cellKey));
+          localStorage.setItem('cuure-step-links', JSON.stringify(next));
+          return next;
+        });
+      };
+
       // ── Chip deletions ────────────────────────────────────────────────────
       const [chipDeletions, setChipDeletions] = useState(() => {
         try { return JSON.parse(localStorage.getItem('cuure-chip-deletions') || '{}'); } catch { return {}; }
@@ -957,6 +1034,7 @@
               return merged;
             });
             setMetaValues(prev => ({ ...(pub.metaValues || {}), ...prev }));
+            setStepLinksState(prev => ({ ...(pub.stepLinks || {}), ...prev }));
           })
           .catch(() => {});
       }, []);
@@ -969,6 +1047,7 @@
         chipAdditions: chipAdditions,
         chipDeletions: chipDeletions,
         metaValues: metaValues,
+        stepLinks: stepLinks,
       }, null, 2);
       const handleCopy = () => {
         navigator.clipboard.writeText(buildPublishPayload()).then(() => {
@@ -985,8 +1064,8 @@
 
       // Only expose edit props when edit mode is active
       const editProps = editMode
-        ? { chipOverrides, updateChipStatus, chipAdditions, addChip, chipDeletions, removeChip, metaValues, setMetaValue }
-        : { chipOverrides, chipDeletions, metaValues };
+        ? { chipOverrides, updateChipStatus, chipAdditions, addChip, chipDeletions, removeChip, metaValues, setMetaValue, stepLinks, setStepLink, editMode: true }
+        : { chipOverrides, chipDeletions, metaValues, stepLinks };
 
       return (
         <div className="flex h-screen w-screen overflow-hidden">
