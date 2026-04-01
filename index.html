@@ -744,7 +744,7 @@
 
     // ─── SIDEBAR ─────────────────────────────────────────────────────────────
 
-    function Sidebar({ journeys, activeId, onSelect, editMode }) {
+    function Sidebar({ journeys, activeId, onSelect, editMode, onPublish }) {
       const { useState, useEffect } = React;
 
       // Collect unique groups in order of appearance
@@ -841,11 +841,20 @@
           </nav>
 
           {/* Footer */}
-          <div className="px-5 py-4 border-t border-gray-800">
-            {editMode
-              ? <span className="text-xs text-[#EF7A1A]">✎ Mode édition actif</span>
-              : <span className="text-xs text-gray-700">Éditable via Claude Code</span>
-            }
+          <div className="px-5 py-4 border-t border-gray-800 flex flex-col gap-2">
+            {editMode ? (
+              <>
+                <span className="text-xs text-[#EF7A1A]">✎ Mode édition actif</span>
+                <button
+                  onClick={onPublish}
+                  style={{ background: '#EF7A1A', color: 'white', border: 'none', borderRadius: '6px', padding: '5px 10px', fontSize: '11px', fontWeight: '600', cursor: 'pointer', textAlign: 'center' }}
+                >
+                  ↑ Publier les modifications
+                </button>
+              </>
+            ) : (
+              <span className="text-xs text-gray-700">Éditable via Claude Code</span>
+            )}
           </div>
         </aside>
       );
@@ -924,6 +933,43 @@
         });
       };
 
+      // ── Fetch published overrides (data/overrides.json) ──────────────────
+      useEffect(() => {
+        fetch('data/overrides.json?t=' + Date.now())
+          .then(r => r.json())
+          .then(pub => {
+            setChipOverrides(prev => ({ ...(pub.chipStatuses || {}), ...prev }));
+            setChipAdditions(prev => {
+              const merged = { ...(pub.chipAdditions || {}) };
+              Object.keys(prev).forEach(k => { merged[k] = prev[k]; });
+              return merged;
+            });
+            setChipDeletions(prev => {
+              const merged = { ...(pub.chipDeletions || {}) };
+              Object.keys(prev).forEach(k => { merged[k] = prev[k]; });
+              return merged;
+            });
+            setMetaValues(prev => ({ ...(pub.metaValues || {}), ...prev }));
+          })
+          .catch(() => {});
+      }, []);
+
+      // ── Publish modal ─────────────────────────────────────────────────────
+      const [publishModal, setPublishModal] = useState(false);
+      const [copied, setCopied] = useState(false);
+      const buildPublishPayload = () => JSON.stringify({
+        chipStatuses: chipOverrides,
+        chipAdditions: chipAdditions,
+        chipDeletions: chipDeletions,
+        metaValues: metaValues,
+      }, null, 2);
+      const handleCopy = () => {
+        navigator.clipboard.writeText(buildPublishPayload()).then(() => {
+          setCopied(true);
+          setTimeout(() => setCopied(false), 2000);
+        });
+      };
+
       const activeJourney = journeys.find(j => j.id === activeId);
       const isDataPage = activeId.startsWith('__data__:');
       const activeDataPage = isDataPage
@@ -937,7 +983,7 @@
 
       return (
         <div className="flex h-screen w-screen overflow-hidden">
-          <Sidebar journeys={journeys} activeId={activeId} onSelect={setActiveId} editMode={editMode} />
+          <Sidebar journeys={journeys} activeId={activeId} onSelect={setActiveId} editMode={editMode} onPublish={() => setPublishModal(true)} />
           <main className="flex-1 flex flex-col overflow-hidden bg-white">
             {activeId === '__overview__'
               ? <ProjectPage />
@@ -946,6 +992,28 @@
               : <Canvas key={activeId} journey={activeJourney} onNavigate={setActiveId} {...editProps} />
             }
           </main>
+          {publishModal && (
+            <div style={{ position: 'fixed', inset: 0, zIndex: 100, background: 'rgba(0,0,0,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+              onClick={() => setPublishModal(false)}>
+              <div style={{ background: 'white', borderRadius: '12px', padding: '24px', width: '560px', maxWidth: '90vw', maxHeight: '80vh', display: 'flex', flexDirection: 'column', gap: '12px' }}
+                onClick={e => e.stopPropagation()}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <span style={{ fontWeight: '600', fontSize: '14px', color: '#111827' }}>Publier les modifications</span>
+                  <button onClick={() => setPublishModal(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '18px', color: '#9ca3af', lineHeight: 1 }}>×</button>
+                </div>
+                <p style={{ fontSize: '12px', color: '#6b7280', margin: 0 }}>
+                  Copie ce JSON et colle-le à Aurelia / Claude Code pour mettre à jour <code>data/overrides.json</code>.
+                </p>
+                <textarea readOnly value={buildPublishPayload()}
+                  style={{ fontFamily: 'monospace', fontSize: '11px', border: '1px solid #e5e7eb', borderRadius: '8px', padding: '10px', flex: 1, minHeight: '300px', resize: 'vertical', color: '#374151', background: '#f9fafb' }}
+                />
+                <button onClick={handleCopy}
+                  style={{ background: copied ? '#16a34a' : '#EF7A1A', color: 'white', border: 'none', borderRadius: '8px', padding: '8px 16px', fontSize: '13px', fontWeight: '600', cursor: 'pointer' }}>
+                  {copied ? '✓ Copié !' : 'Copier le JSON'}
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       );
     }
