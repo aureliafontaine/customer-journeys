@@ -551,15 +551,28 @@ window.JOURNEYS = [
         }
       },
       {
-        id: "crm-led",
-        label: "CRM-led / offers",
+        id: "crm-led-reviews-product",
+        label: "CRM-led — Reviews Page // Product Page",
         type: "text",
         cells: {
           source:      "Offer specific communication",
           redirection: "Offer banner",
           lp:          "Offer Landing Page",
-          "step-1":    ["Range experience"],
-          "step-2":    ["Add To Cart"],
+          "step-1":    [],
+          "step-2":    [],
+          "step-3":    [],
+        }
+      },
+      {
+        id: "crm-led-product",
+        label: "CRM-led — Product Page",
+        type: "text",
+        cells: {
+          source:      "Offer specific communication",
+          redirection: "Offer banner",
+          lp:          "Offer Landing Page",
+          "step-1":    [],
+          "step-2":    [],
           "step-3":    [],
         }
       },
