@@ -115,6 +115,7 @@ window.JOURNEYS = [
       { id: "step-2",      label: "Step 2"      },
       { id: "step-3",      label: "Step 3"      },
       { id: "step-4",      label: "Step 4"      },
+      { id: "step-5",      label: "Step 5"      },
     ],
     lanes: [
       {
@@ -129,6 +130,7 @@ window.JOURNEYS = [
           "step-2":    "Step 2",
           "step-3":    "Step 3",
           "step-4":    "Step 4",
+          "step-5":    "Step 5",
         }
       },
       {
@@ -143,6 +145,7 @@ window.JOURNEYS = [
           "step-2":    ["Survey"],
           "step-3":    ["Recommendations"],
           "step-4":    [],
+          "step-5":    [],
         }
       },
       {
@@ -157,6 +160,7 @@ window.JOURNEYS = [
           "step-2":    [],
           "step-3":    [],
           "step-4":    [],
+          "step-5":    [],
         }
       },
       {
@@ -171,6 +175,7 @@ window.JOURNEYS = [
           "step-2":    ["Recommendations"],
           "step-3":    ["Product information"],
           "step-4":    ["Secondary information"],
+          "step-5":    [],
         }
       },
       {
@@ -185,6 +190,7 @@ window.JOURNEYS = [
           "step-2":    ["Add To Cart"],
           "step-3":    ["Related Product", "Catalog Filter", "Search Product"],
           "step-4":    [],
+          "step-5":    [],
         }
       },
       {
@@ -199,6 +205,7 @@ window.JOURNEYS = [
           "step-2":    ["Navigate through FS-3B pages"],
           "step-3":    ["Add To Cart"],
           "step-4":    [],
+          "step-5":    [],
         }
       },
     ]
