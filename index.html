@@ -917,6 +917,13 @@
           localStorage.setItem('cuure-chip-additions', JSON.stringify(next));
           return next;
         });
+        setChipDeletions(prev => {
+          const existing = prev[cellKey] || [];
+          if (!existing.includes(text)) return prev;
+          const next = { ...prev, [cellKey]: existing.filter(x => x !== text) };
+          localStorage.setItem('cuure-chip-deletions', JSON.stringify(next));
+          return next;
+        });
       };
 
       // ── Chip deletions ────────────────────────────────────────────────────
