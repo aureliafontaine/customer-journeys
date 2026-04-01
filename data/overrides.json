@@ -9,18 +9,48 @@
     "discovery-prospects:need-driven:step-2:Need PLP": "bon",
     "discovery-prospects:need-driven:step-2:Product LP": "bon",
     "discovery-prospects:need-driven:step-2:Product PP": "bon",
-    "discovery-prospects:need-driven:step-2:Survey": "bon"
+    "discovery-prospects:need-driven:step-2:Survey": "bon",
+    "discovery-prospects:general-health:step-1:Home Page": "bon",
+    "discovery-prospects:general-health:step-2:Survey": "bon",
+    "discovery-prospects:general-health:step-3:Recommendations MyCuure": "bon",
+    "discovery-prospects:general-curious:step-1:Home Page Scroll": "bon",
+    "discovery-prospects:general-health:step-4:Product Information": "bon",
+    "discovery-prospects:general-health:step-5:Secondary Information": "ok",
+    "discovery-prospects:product-comparator:step-1:Product Page": "moyen",
+    "discovery-prospects:product-comparator:step-1:Scroll Product Page": "moyen",
+    "discovery-prospects:product-comparator:step-2:Add To Cart": "ok",
+    "discovery-prospects:product-comparator:step-3:Related Product": "ok",
+    "discovery-prospects:product-comparator:step-3:Catalog Filter": "ok",
+    "discovery-prospects:product-comparator:step-3:Search Product": "ok",
+    "discovery-prospects:product-innovation:step-1:Scroll Landing Page": "ok"
   },
   "chipAdditions": {
-    "discovery-prospects:general-curious:step-1": ["Home Page"],
+    "discovery-prospects:general-curious:step-1": ["Home Page", "Home Page Scroll"],
     "discovery-prospects:general-curious:step-3": ["Recommendations MyCuure", "Other Recommendations"],
     "discovery-prospects:need-driven:step-1": ["Burger Menu Navigation"],
-    "discovery-prospects:need-driven:step-2": ["Product LP", "Product PP", "Survey", "Need PLP"]
+    "discovery-prospects:need-driven:step-2": ["Product LP", "Product PP", "Survey", "Need PLP"],
+    "discovery-prospects:general-health:step-1": ["Home Page"],
+    "discovery-prospects:general-health:step-2": ["Survey"],
+    "discovery-prospects:general-health:step-3": ["Recommendations MyCuure", "Orther Recommendations"],
+    "discovery-prospects:general-health:step-4": ["Product Information"],
+    "discovery-prospects:general-health:step-5": ["Secondary Information"],
+    "discovery-prospects:product-comparator:step-1": ["Product Page"],
+    "discovery-prospects:product-comparator:step-2": ["Scroll Product Page"],
+    "discovery-prospects:product-innovation:step-1": ["Product LP", "Product LP", "Product LP"]
   },
   "chipDeletions": {
-    "discovery-prospects:general-curious:step-1": ["Scroll HP"],
+    "discovery-prospects:general-curious:step-1": ["Scroll HP", "Home Page"],
     "discovery-prospects:general-curious:step-3": ["Recommendations"],
-    "discovery-prospects:need-driven:step-1": ["Select NPD", "Select Essential", "Select Survey"]
+    "discovery-prospects:need-driven:step-1": ["Select NPD", "Select Essential", "Select Survey"],
+    "discovery-prospects:general-health:step-1": ["Survey"],
+    "discovery-prospects:general-health:step-2": ["Recommendations"],
+    "discovery-prospects:general-health:step-3": ["Product information", "Orther Recommendations"],
+    "discovery-prospects:general-health:step-4": ["Secondary information"],
+    "discovery-prospects:product-comparator:step-2": ["Scroll Product Page"],
+    "discovery-prospects:product-comparator:step-1": ["Product Page"],
+    "discovery-prospects:product-innovation:step-1": ["Scroll Landing Page", "Product LP"],
+    "discovery-prospects:product-innovation:step-2": ["Navigate through FS-3B pages"],
+    "discovery-prospects:product-innovation:step-3": ["Add To Cart"]
   },
   "metaValues": {}
 }
