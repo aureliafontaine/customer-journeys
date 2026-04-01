@@ -466,7 +466,7 @@
             // For array values: merge additions inline then filter deletions.
             // For other values (table, string…): keep original intact, filter additions separately.
             const mergedValue = Array.isArray(cellValue)
-              ? [...cellValue, ...additions].filter(item => typeof item !== 'string' || !deletions.has(item))
+              ? [...new Map([...cellValue, ...additions].filter(item => typeof item !== 'string' || !deletions.has(item)).map(i => [typeof i === 'string' ? i : JSON.stringify(i), i])).values()]
               : cellValue;
             const extraChips = Array.isArray(cellValue) ? [] : additions.filter(c => !deletions.has(c));
             const isMeta = step.type === 'meta';
