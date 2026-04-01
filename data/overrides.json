@@ -1,6 +1,26 @@
 {
-  "chipStatuses": {},
-  "chipAdditions": {},
-  "chipDeletions": {},
+  "chipStatuses": {
+    "discovery-prospects:general-curious:step-1:Home Page": "bon",
+    "discovery-prospects:general-curious:step-2:Survey": "bon",
+    "discovery-prospects:general-curious:step-3:Other Recommendations": "non existant",
+    "discovery-prospects:general-curious:step-3:Recommendations": "moyen",
+    "discovery-prospects:general-curious:step-3:Recommendations MyCuure": "bon",
+    "discovery-prospects:need-driven:step-1:Burger Menu Navigation": "bon",
+    "discovery-prospects:need-driven:step-2:Need PLP": "bon",
+    "discovery-prospects:need-driven:step-2:Product LP": "bon",
+    "discovery-prospects:need-driven:step-2:Product PP": "bon",
+    "discovery-prospects:need-driven:step-2:Survey": "bon"
+  },
+  "chipAdditions": {
+    "discovery-prospects:general-curious:step-1": ["Home Page"],
+    "discovery-prospects:general-curious:step-3": ["Recommendations MyCuure", "Other Recommendations"],
+    "discovery-prospects:need-driven:step-1": ["Burger Menu Navigation"],
+    "discovery-prospects:need-driven:step-2": ["Product LP", "Product PP", "Survey", "Need PLP"]
+  },
+  "chipDeletions": {
+    "discovery-prospects:general-curious:step-1": ["Scroll HP"],
+    "discovery-prospects:general-curious:step-3": ["Recommendations"],
+    "discovery-prospects:need-driven:step-1": ["Select NPD", "Select Essential", "Select Survey"]
+  },
   "metaValues": {}
 }
