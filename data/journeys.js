@@ -109,8 +109,6 @@ window.JOURNEYS = [
     steps: [
       { id: "definition",  label: "Définition",  type: "meta" },
       { id: "source",      label: "Source",      type: "meta" },
-      { id: "redirection", label: "Redirection", type: "meta" },
-      { id: "lp",          label: "LP",          type: "meta" },
       { id: "step-1",      label: "Step 1"      },
       { id: "step-2",      label: "Step 2"      },
       { id: "step-3",      label: "Step 3"      },
@@ -123,14 +121,12 @@ window.JOURNEYS = [
         label: "Étape",
         type: "step",
         cells: {
-          source:      "Source",
-          redirection: "Redirection",
-          lp:          "LP",
-          "step-1":    "Step 1",
-          "step-2":    "Step 2",
-          "step-3":    "Step 3",
-          "step-4":    "Step 4",
-          "step-5":    "Step 5",
+          source:   "Source",
+          "step-1": "Step 1",
+          "step-2": "Step 2",
+          "step-3": "Step 3",
+          "step-4": "Step 4",
+          "step-5": "Step 5",
         }
       },
       {
@@ -138,14 +134,12 @@ window.JOURNEYS = [
         label: "General / curious visitors",
         type: "text",
         cells: {
-          source:      'Search "Cuure" on Google',
-          redirection: "/",
-          lp:          "Home Page",
-          "step-1":    ["Scroll HP"],
-          "step-2":    ["Survey"],
-          "step-3":    ["Recommendations"],
-          "step-4":    [],
-          "step-5":    [],
+          source:   'Search "Cuure" on Google',
+          "step-1": ["Scroll HP"],
+          "step-2": ["Survey"],
+          "step-3": ["Recommendations"],
+          "step-4": [],
+          "step-5": [],
         }
       },
       {
@@ -153,14 +147,12 @@ window.JOURNEYS = [
         label: "Need-driven visitor",
         type: "text",
         cells: {
-          source:      "Need-based Ad / SEO",
-          redirection: "Burger Menu > Need",
-          lp:          "Need Landing Page",
-          "step-1":    ["Select NPD", "Select Essential", "Select Survey"],
-          "step-2":    [],
-          "step-3":    [],
-          "step-4":    [],
-          "step-5":    [],
+          source:   "Need-based Ad / SEO",
+          "step-1": ["Select NPD", "Select Essential", "Select Survey"],
+          "step-2": [],
+          "step-3": [],
+          "step-4": [],
+          "step-5": [],
         }
       },
       {
@@ -168,14 +160,12 @@ window.JOURNEYS = [
         label: "General health driven",
         type: "text",
         cells: {
-          source:      "General Ad / SEO",
-          redirection: "/",
-          lp:          "Home Page",
-          "step-1":    ["Survey"],
-          "step-2":    ["Recommendations"],
-          "step-3":    ["Product information"],
-          "step-4":    ["Secondary information"],
-          "step-5":    [],
+          source:   "General Ad / SEO",
+          "step-1": ["Survey"],
+          "step-2": ["Recommendations"],
+          "step-3": ["Product information"],
+          "step-4": ["Secondary information"],
+          "step-5": [],
         }
       },
       {
@@ -183,14 +173,12 @@ window.JOURNEYS = [
         label: "Product comparator",
         type: "text",
         cells: {
-          source:      "Product-based Ad / SEO",
-          redirection: "Search > Product",
-          lp:          "Product Page",
-          "step-1":    ["Scroll Product Page"],
-          "step-2":    ["Add To Cart"],
-          "step-3":    ["Related Product", "Catalog Filter", "Search Product"],
-          "step-4":    [],
-          "step-5":    [],
+          source:   "Product-based Ad / SEO",
+          "step-1": ["Scroll Product Page"],
+          "step-2": ["Add To Cart"],
+          "step-3": ["Related Product", "Catalog Filter", "Search Product"],
+          "step-4": [],
+          "step-5": [],
         }
       },
       {
@@ -198,14 +186,12 @@ window.JOURNEYS = [
         label: "Product innovation\n(ex: FS-3B)",
         type: "text",
         cells: {
-          source:      'Search "FS-3B" on Google',
-          redirection: "HP > FS-3B\nBurger Menu > FS-3B",
-          lp:          "FS-3B Landing Page",
-          "step-1":    ["Scroll Landing Page"],
-          "step-2":    ["Navigate through FS-3B pages"],
-          "step-3":    ["Add To Cart"],
-          "step-4":    [],
-          "step-5":    [],
+          source:   'Search "FS-3B" on Google',
+          "step-1": ["Scroll Landing Page"],
+          "step-2": ["Navigate through FS-3B pages"],
+          "step-3": ["Add To Cart"],
+          "step-4": [],
+          "step-5": [],
         }
       },
     ]
@@ -566,8 +552,6 @@ window.JOURNEYS = [
     steps: [
       { id: "definition",  label: "Définition",  type: "meta" },
       { id: "source",      label: "Source",      type: "meta" },
-      { id: "redirection", label: "Redirection", type: "meta" },
-      { id: "lp",          label: "LP",          type: "meta" },
       { id: "step-1",      label: "Step 1"      },
       { id: "step-2",      label: "Step 2"      },
       { id: "step-3",      label: "Step 3"      },
@@ -578,12 +562,10 @@ window.JOURNEYS = [
         label: "Étape",
         type: "step",
         cells: {
-          source:      "Source",
-          redirection: "Redirection",
-          lp:          "LP",
-          "step-1":    "Step 1",
-          "step-2":    "Step 2",
-          "step-3":    "Step 3",
+          source:   "Source",
+          "step-1": "Step 1",
+          "step-2": "Step 2",
+          "step-3": "Step 3",
         }
       },
       {
@@ -591,12 +573,10 @@ window.JOURNEYS = [
         label: "CRM-led / offers",
         type: "text",
         cells: {
-          source:      "Offer specific communication",
-          redirection: "Offer banner",
-          lp:          "Offer Landing Page",
-          "step-1":    ["Range experience"],
-          "step-2":    ["Add To Cart"],
-          "step-3":    [],
+          source:   "Offer specific communication",
+          "step-1": ["Range experience"],
+          "step-2": ["Add To Cart"],
+          "step-3": [],
         }
       },
       {
@@ -604,12 +584,10 @@ window.JOURNEYS = [
         label: "Reviews seekers",
         type: "text",
         cells: {
-          source:      'Search "Cuure avis" on Google',
-          redirection: "PP > Scroll to Reviews",
-          lp:          "Reviews or Catalog",
-          "step-1":    ["PP > Scroll to Reviews"],
-          "step-2":    ["Add to cart"],
-          "step-3":    [],
+          source:   'Search "Cuure avis" on Google',
+          "step-1": ["PP > Scroll to Reviews"],
+          "step-2": ["Add to cart"],
+          "step-3": [],
         }
       },
       {
@@ -617,12 +595,10 @@ window.JOURNEYS = [
         label: "Information seekers",
         type: "text",
         cells: {
-          source:      "Anything",
-          redirection: "Burger Menu > PP\nBurger Menu > Secondary Pages",
-          lp:          "/",
-          "step-1":    ["Scroll PP"],
-          "step-2":    ["Scroll Secondary Pages"],
-          "step-3":    ["Add To cart"],
+          source:   "Anything",
+          "step-1": ["Scroll PP"],
+          "step-2": ["Scroll Secondary Pages"],
+          "step-3": ["Add To cart"],
         }
       },
     ]
