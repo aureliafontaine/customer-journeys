@@ -922,7 +922,24 @@
     function App() {
       const { useState, useEffect } = React;
       const journeys = window.JOURNEYS;
-      const [activeId, setActiveId] = useState(journeys[0].id);
+      const allIds = new Set(journeys.map(j => j.id));
+      const isValidId = (h) => allIds.has(h) || h === '__overview__' || h.startsWith('__data__:');
+      const idFromHash = () => {
+        const h = decodeURIComponent(window.location.hash.replace('#', ''));
+        return isValidId(h) ? h : journeys[0].id;
+      };
+      const [activeId, setActiveId] = useState(idFromHash);
+
+      // ── URL sync ──────────────────────────────────────────────────────────
+      const navigate = (id) => {
+        setActiveId(id);
+        window.history.pushState(null, '', '#' + id);
+      };
+      useEffect(() => {
+        const onHash = () => setActiveId(idFromHash());
+        window.addEventListener('hashchange', onHash);
+        return () => window.removeEventListener('hashchange', onHash);
+      }, []);
 
       // ── Edit mode (owner-only, toggled via Ctrl+Shift+E) ──────────────────
       const [editMode, setEditMode] = useState(() => localStorage.getItem('cuure-edit-mode') === 'true');
@@ -1075,13 +1092,13 @@
 
       return (
         <div className="flex h-screen w-screen overflow-hidden">
-          <Sidebar journeys={journeys} activeId={activeId} onSelect={setActiveId} editMode={editMode} onPublish={() => setPublishModal(true)} />
+          <Sidebar journeys={journeys} activeId={activeId} onSelect={navigate} editMode={editMode} onPublish={() => setPublishModal(true)} />
           <main className="flex-1 flex flex-col overflow-hidden bg-white">
             {activeId === '__overview__'
               ? <ProjectPage />
               : isDataPage && activeDataPage
-              ? <DataPage page={activeDataPage} onBack={() => setActiveId(journeys[0].id)} />
-              : <Canvas key={activeId} journey={activeJourney} onNavigate={setActiveId} {...editProps} />
+              ? <DataPage page={activeDataPage} onBack={() => navigate(journeys[0].id)} />
+              : <Canvas key={activeId} journey={activeJourney} onNavigate={navigate} {...editProps} />
             }
           </main>
           {publishModal && (
