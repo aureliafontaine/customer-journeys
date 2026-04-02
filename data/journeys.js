@@ -134,7 +134,8 @@ window.JOURNEYS = [
         label: "General / curious visitors",
         type: "text",
         cells: {
-          source:   'Search "Cuure" on Google',
+          definition: "A first-time visitor entering the Cuure ecosystem with no prior purchase history.",
+          source:     "Organic search, paid ads, direct traffic, brand discovery",
           "step-1": ["Scroll HP"],
           "step-2": ["Survey"],
           "step-3": ["Recommendations"],
@@ -147,7 +148,8 @@ window.JOURNEYS = [
         label: "Need-driven visitor",
         type: "text",
         cells: {
-          source:   "Need-based Ad / SEO",
+          definition: "A first-time visitor entering the Cuure ecosystem with no prior purchase history.",
+          source:     "Organic search, paid ads, direct traffic, brand discovery",
           "step-1": ["Select NPD", "Select Essential", "Select Survey"],
           "step-2": [],
           "step-3": [],
@@ -160,7 +162,8 @@ window.JOURNEYS = [
         label: "General health driven",
         type: "text",
         cells: {
-          source:   "General Ad / SEO",
+          definition: "A first-time visitor entering the Cuure ecosystem with no prior purchase history.",
+          source:     "Organic search, paid ads, direct traffic, brand discovery",
           "step-1": ["Survey"],
           "step-2": ["Recommendations"],
           "step-3": ["Product information"],
@@ -173,7 +176,8 @@ window.JOURNEYS = [
         label: "Product comparator",
         type: "text",
         cells: {
-          source:   "Product-based Ad / SEO",
+          definition: "A first-time visitor entering the Cuure ecosystem with no prior purchase history.",
+          source:     "Organic search, paid ads, direct traffic, brand discovery",
           "step-1": ["Scroll Product Page"],
           "step-2": ["Add To Cart"],
           "step-3": ["Related Product", "Catalog Filter", "Search Product"],
@@ -186,7 +190,8 @@ window.JOURNEYS = [
         label: "Product innovation\n(ex: FS-3B)",
         type: "text",
         cells: {
-          source:   'Search "FS-3B" on Google',
+          definition: "A first-time visitor entering the Cuure ecosystem with no prior purchase history.",
+          source:     "Organic search, paid ads, direct traffic, brand discovery",
           "step-1": ["Scroll Landing Page"],
           "step-2": ["Navigate through FS-3B pages"],
           "step-3": ["Add To Cart"],
@@ -225,6 +230,8 @@ window.JOURNEYS = [
           "step-9": "Step 9", "step-10": "Step 10", "step-11": "Step 11",
       }},
       { id: "mycuure", label: "MyCuure", type: "text", cells: {
+          definition: "A visitor in the process of purchasing a single Cuure product range (MyCuure, FS-3B, MA-05, onely, Essentials).",
+          source:     "Product page, landing page, survey recommendations",
           "format":          ["Select Products"],
           "addon":           ["View Cart"],
           "purchase-option": ["Select Quantity"],
@@ -232,6 +239,8 @@ window.JOURNEYS = [
           "view-cart":       ["Purchase"],
       }},
       { id: "fs3b", label: "FS-3B", type: "text", cells: {
+          definition: "A visitor in the process of purchasing a single Cuure product range (MyCuure, FS-3B, MA-05, onely, Essentials).",
+          source:     "Product page, landing page, survey recommendations",
           "format":          { type: "table", title: "Select Format Option", rows: [
             { label: "Bottle", sub: "1 month",  priceOld: "59,90 €",  price: "49,90 €"  },
             { label: "Pack",   sub: "3 months", priceOld: "179,70 €", price: "161,73 €" },
@@ -249,6 +258,8 @@ window.JOURNEYS = [
           "purchase":        ["Purchase"],
       }},
       { id: "ma05", label: "MA-05", type: "text", cells: {
+          definition: "A visitor in the process of purchasing a single Cuure product range (MyCuure, FS-3B, MA-05, onely, Essentials).",
+          source:     "Product page, landing page, survey recommendations",
           "format":          { type: "table", title: "Select Format Option", rows: [
             { label: "Bottle", sub: "1 month",  priceOld: "59,90 €",  price: "49,90 €"  },
             { label: "Pack",   sub: "3 months", priceOld: "179,70 €", price: "134,73 €" },
@@ -266,6 +277,8 @@ window.JOURNEYS = [
           "checkout":        ["Purchase"],
       }},
       { id: "onely", label: "onely", type: "text", cells: {
+          definition: "A visitor in the process of purchasing a single Cuure product range (MyCuure, FS-3B, MA-05, onely, Essentials).",
+          source:     "Product page, landing page, survey recommendations",
           "format":          { type: "table", title: "Select Format & Purchase Option", rows: [
             { label: "Welcome Kit", sub: "1 month · Subscription",  priceOld: "89,90 €",  price: "79,90 €"  },
             { label: "Welcome Kit", sub: "3 months · OTP",          priceOld: "269,70 €", price: "199,90 €" },
@@ -278,6 +291,8 @@ window.JOURNEYS = [
           "quantity":        ["Purchase"],
       }},
       { id: "essentials", label: "Essentials", type: "text", cells: {
+          definition: "A visitor in the process of purchasing a single Cuure product range (MyCuure, FS-3B, MA-05, onely, Essentials).",
+          source:     "Product page, landing page, survey recommendations",
           "format":          ["Select Format", "Select Flavour"],
           "addon":           ["Select Purchase Option"],
           "purchase-option": ["Select Quantity"],
@@ -316,6 +331,8 @@ window.JOURNEYS = [
           "step-5": "Step 5", "step-6": "Step 6", "step-7": "Step 7", "step-8": "Step 8",
           "step-9": "Step 9", "step-10": "Step 10", "step-11": "Step 11", "step-12": "Step 12" } },
       { id: "multi-range", label: "Multi-range", type: "text", cells: {
+          definition: "A visitor purchasing multiple Cuure product ranges in a single order.",
+          source:     "Catalog, survey, recommendation engine",
           "step-1": [], "step-2": [], "step-3": [], "step-4": [],
           "step-5": [], "step-6": [], "step-7": [], "step-8": [],
           "step-9": [], "step-10": [], "step-11": [], "step-12": [] } },
@@ -346,11 +363,15 @@ window.JOURNEYS = [
           "brochure": "Step 5", "app-download": "Step 6",
           "first-intake": "Step 7", "next-order": "Step 8" } },
       { id: "box",    label: "Box",    type: "text", cells: {
+          definition: "A customer who just purchased the MyCuure personalized nutrition box.",
+          source:     "Confirmation page → App",
           "confirmation-page": ["Confirmation Page"], "confirmation-email": ["Confirmation E-mail"],
           "tracking-email": ["Tracking E-mail"], "unboxing": ["Unboxing"],
           "brochure": ["Personalised Brochure"], "app-download": ["App Download"],
           "first-intake": ["First Intake"], "next-order": ["Next Order Planned"] } },
       { id: "reload", label: "Reload", type: "text", cells: {
+          definition: "A customer who just purchased the MyCuure personalized nutrition box.",
+          source:     "Confirmation page → App",
           "confirmation-page": ["Confirmation Page"], "confirmation-email": ["Confirmation E-mail"],
           "tracking-email": ["Tracking E-mail"], "unboxing": ["Unboxing"],
           "brochure": ["Personalised Brochure"], "app-download": ["App Download"],
@@ -382,16 +403,22 @@ window.JOURNEYS = [
           "brochure": "Step 5", "app-download": "Step 6",
           "first-intake": "Step 7", "next-order": "Step 8" } },
       { id: "bottle", label: "Bottle — 1 month",  type: "text", cells: {
+          definition: "A customer who just purchased the FS-3B collagen product (Bottle, Pack or Refill).",
+          source:     "Confirmation page → App",
           "confirmation-page": ["Confirmation Page"], "confirmation-email": ["Confirmation E-mail"],
           "tracking-email": ["Tracking E-mail"], "unboxing": ["Unboxing"],
           "brochure": ["Personalised Brochure"], "app-download": ["App Download"],
           "first-intake": ["First Intake"], "next-order": ["Next Order Planned"] } },
       { id: "pack",   label: "Pack — 3 months",   type: "text", cells: {
+          definition: "A customer who just purchased the FS-3B collagen product (Bottle, Pack or Refill).",
+          source:     "Confirmation page → App",
           "confirmation-page": ["Confirmation Page"], "confirmation-email": ["Confirmation E-mail"],
           "tracking-email": ["Tracking E-mail"], "unboxing": ["Unboxing"],
           "brochure": ["Personalised Brochure"], "app-download": ["App Download"],
           "first-intake": ["First Intake"], "next-order": ["Next Order Planned"] } },
       { id: "refill", label: "Refill — 1 month",  type: "text", cells: {
+          definition: "A customer who just purchased the FS-3B collagen product (Bottle, Pack or Refill).",
+          source:     "Confirmation page → App",
           "confirmation-page": ["Confirmation Page"], "confirmation-email": ["Confirmation E-mail"],
           "tracking-email": ["Tracking E-mail"], "unboxing": ["Unboxing"],
           "brochure": ["Personalised Brochure"], "app-download": ["App Download"],
@@ -423,21 +450,29 @@ window.JOURNEYS = [
           "brochure": "Step 5", "app-download": "Step 6",
           "first-intake": "Step 7", "next-order": "Step 8" } },
       { id: "bottle",  label: "Bottle — 1 month",  type: "text", cells: {
+          definition: "A customer who just purchased MA-05 (Bottle, Pack 3M/6M or Refill).",
+          source:     "Confirmation page → App",
           "confirmation-page": ["Confirmation Page"], "confirmation-email": ["Confirmation E-mail"],
           "tracking-email": ["Tracking E-mail"], "unboxing": ["Unboxing"],
           "brochure": ["Personalised Brochure"], "app-download": ["App Download"],
           "first-intake": ["First Intake"], "next-order": ["Next Order Planned"] } },
       { id: "pack-3m", label: "Pack — 3 months",   type: "text", cells: {
+          definition: "A customer who just purchased MA-05 (Bottle, Pack 3M/6M or Refill).",
+          source:     "Confirmation page → App",
           "confirmation-page": ["Confirmation Page"], "confirmation-email": ["Confirmation E-mail"],
           "tracking-email": ["Tracking E-mail"], "unboxing": ["Unboxing"],
           "brochure": ["Personalised Brochure"], "app-download": ["App Download"],
           "first-intake": ["First Intake"], "next-order": ["Next Order Planned"] } },
       { id: "pack-6m", label: "Pack — 6 months",   type: "text", cells: {
+          definition: "A customer who just purchased MA-05 (Bottle, Pack 3M/6M or Refill).",
+          source:     "Confirmation page → App",
           "confirmation-page": ["Confirmation Page"], "confirmation-email": ["Confirmation E-mail"],
           "tracking-email": ["Tracking E-mail"], "unboxing": ["Unboxing"],
           "brochure": ["Personalised Brochure"], "app-download": ["App Download"],
           "first-intake": ["First Intake"], "next-order": ["Next Order Planned"] } },
       { id: "refill",  label: "Refill — 1 month",  type: "text", cells: {
+          definition: "A customer who just purchased MA-05 (Bottle, Pack 3M/6M or Refill).",
+          source:     "Confirmation page → App",
           "confirmation-page": ["Confirmation Page"], "confirmation-email": ["Confirmation E-mail"],
           "tracking-email": ["Tracking E-mail"], "unboxing": ["Unboxing"],
           "brochure": ["Personalised Brochure"], "app-download": ["App Download"],
@@ -469,11 +504,15 @@ window.JOURNEYS = [
           "brochure": "Step 5", "app-download": "Step 6",
           "first-intake": "Step 7", "next-order": "Step 8" } },
       { id: "kit",    label: "Kit",    type: "text", cells: {
+          definition: "A customer who just purchased the onely product (Kit or Reload).",
+          source:     "Confirmation page → App",
           "confirmation-page": ["Confirmation Page"], "confirmation-email": ["Confirmation E-mail"],
           "tracking-email": ["Tracking E-mail"], "unboxing": ["Unboxing"],
           "brochure": ["Personalised Brochure"], "app-download": ["App Download"],
           "first-intake": ["First Intake"], "next-order": ["Next Order Planned"] } },
       { id: "reload", label: "Reload", type: "text", cells: {
+          definition: "A customer who just purchased the onely product (Kit or Reload).",
+          source:     "Confirmation page → App",
           "confirmation-page": ["Confirmation Page"], "confirmation-email": ["Confirmation E-mail"],
           "tracking-email": ["Tracking E-mail"], "unboxing": ["Unboxing"],
           "brochure": ["Personalised Brochure"], "app-download": ["App Download"],
@@ -505,6 +544,8 @@ window.JOURNEYS = [
           "brochure": "Step 5", "app-download": "Step 6",
           "first-intake": "Step 7", "next-order": "Step 8" } },
       { id: "essentials", label: "Essentials", type: "text", cells: {
+          definition: "A customer who just purchased an Essentials product.",
+          source:     "Confirmation page → App",
           "confirmation-page": ["Confirmation Page"], "confirmation-email": ["Confirmation E-mail"],
           "tracking-email": ["Tracking E-mail"], "unboxing": ["Unboxing"],
           "brochure": ["Personalised Brochure"], "app-download": ["App Download"],
@@ -537,6 +578,8 @@ window.JOURNEYS = [
           "brochure": "Step 5", "app-download": "Step 6",
           "first-intake": "Step 7", "next-order": "Step 8" } },
       { id: "multi-range", label: "Multi-range", type: "text", cells: {
+          definition: "A customer who just purchased multiple ranges in a single order.",
+          source:     "Confirmation page → App",
           "confirmation-page": ["Confirmation Page"], "confirmation-email": ["Confirmation E-mail"],
           "tracking-email": ["Tracking E-mail"], "unboxing": ["Unboxing"],
           "brochure": ["Personalised Brochure"], "app-download": ["App Download"],
@@ -573,7 +616,8 @@ window.JOURNEYS = [
         label: "CRM-led / offers",
         type: "text",
         cells: {
-          source:   "Offer specific communication",
+          definition: "A visitor who has previously explored Cuure but has not yet converted, coming back to reconsider.",
+          source:     "CRM campaigns, Google search, organic",
           "step-1": ["Range experience"],
           "step-2": ["Add To Cart"],
           "step-3": [],
@@ -584,7 +628,8 @@ window.JOURNEYS = [
         label: "Reviews seekers",
         type: "text",
         cells: {
-          source:   'Search "Cuure avis" on Google',
+          definition: "A visitor who has previously explored Cuure but has not yet converted, coming back to reconsider.",
+          source:     "CRM campaigns, Google search, organic",
           "step-1": ["PP > Scroll to Reviews"],
           "step-2": ["Add to cart"],
           "step-3": [],
@@ -595,7 +640,8 @@ window.JOURNEYS = [
         label: "Information seekers",
         type: "text",
         cells: {
-          source:   "Anything",
+          definition: "A visitor who has previously explored Cuure but has not yet converted, coming back to reconsider.",
+          source:     "CRM campaigns, Google search, organic",
           "step-1": ["Scroll PP"],
           "step-2": ["Scroll Secondary Pages"],
           "step-3": ["Add To cart"],
@@ -628,6 +674,8 @@ window.JOURNEYS = [
           "step-1": "Step 1", "step-2": "Step 2", "step-3": "Step 3", "step-4": "Step 4", "step-5": "Step 5",
           "step-6": "Step 6", "step-7": "Step 7", "step-8": "Step 8", "step-9": "Step 9", "step-10": "Step 10" } },
       { id: "same-products-refiller", label: "Same products Refiller", type: "text", cells: {
+          definition: "A customer who purchased once (one-time payment) and returns to buy again.",
+          source:     "App, website, CRM re-engagement",
           "step-1":  ["Open App", "Open Website"],
           "step-2":  ["Login"],
           "step-3":  ["Visit Catalog"],
@@ -639,6 +687,8 @@ window.JOURNEYS = [
           "step-9":  ["Order now"],
           "step-10": [] } },
       { id: "upseller", label: "Upseller", type: "text", cells: {
+          definition: "A customer who purchased once (one-time payment) and returns to buy again.",
+          source:     "App, website, CRM re-engagement",
           "step-1":  ["Open App", "Open Website"],
           "step-2":  ["Login"],
           "step-3":  ["Visit Catalog"],
@@ -650,6 +700,8 @@ window.JOURNEYS = [
           "step-9":  ["Add upsell product"],
           "step-10": ["Order now"] } },
       { id: "change-seekers", label: "Change seekers", type: "text", cells: {
+          definition: "A customer who purchased once (one-time payment) and returns to buy again.",
+          source:     "App, website, CRM re-engagement",
           "step-1":  ["Open App", "Open Website"],
           "step-2":  ["Login"],
           "step-3":  ["Take a test", "Visit «Products of the moment»"],
@@ -661,6 +713,8 @@ window.JOURNEYS = [
           "step-9":  [],
           "step-10": [] } },
       { id: "convinced-to-subscription", label: "Convinced to subscription", type: "text", cells: {
+          definition: "A customer who purchased once (one-time payment) and returns to buy again.",
+          source:     "App, website, CRM re-engagement",
           "step-1":  ["Open App", "Open Website"],
           "step-2":  ["Login"],
           "step-3":  ["Visit Catalog"],
@@ -695,25 +749,37 @@ window.JOURNEYS = [
           "step-1": "Step 1", "step-2": "Step 2", "step-3": "Step 3", "step-4": "Step 4",
           "step-5": "Step 5", "step-6": "Step 6", "step-7": "Step 7" } },
       { id: "repeat-auto", label: "Repeat auto", type: "text", cells: {
+          definition: "A customer with an active subscription managing their recurring order.",
+          source:     "Email reminder, app, website",
           "step-1": ["Email reminder"],
           "step-2": ["Email confirmation"],
           "step-3": [], "step-4": [], "step-5": [], "step-6": [], "step-7": [] } },
       { id: "upseller", label: "Upseller", type: "text", cells: {
+          definition: "A customer with an active subscription managing their recurring order.",
+          source:     "Email reminder, app, website",
           "step-1": [], "step-2": [], "step-3": [], "step-4": [], "step-5": [], "step-6": [], "step-7": [] } },
       { id: "change-seekers", label: "Change seekers", type: "text", cells: {
+          definition: "A customer with an active subscription managing their recurring order.",
+          source:     "Email reminder, app, website",
           "step-1": [], "step-2": [], "step-3": [], "step-4": [], "step-5": [], "step-6": [], "step-7": [] } },
       { id: "subscription-delayer", label: "Subscription Delayer", type: "text", cells: {
+          definition: "A customer with an active subscription managing their recurring order.",
+          source:     "Email reminder, app, website",
           "step-1": ["Email Reminder", "Open App", "Open Website"],
           "step-2": ["View Cart"],
           "step-3": ["Delay Subscription"],
           "step-4": [], "step-5": [], "step-6": [], "step-7": [] } },
       { id: "pause-subscription", label: "Pause subscription", type: "text", cells: {
+          definition: "A customer with an active subscription managing their recurring order.",
+          source:     "Email reminder, app, website",
           "step-1": ["Email Reminder", "Open App", "Open Website"],
           "step-2": ["View Cart"],
           "step-3": ["Pause Subscription"],
           "step-4": ["Email Subscription Pause"],
           "step-5": [], "step-6": [], "step-7": [] } },
       { id: "order-cancel", label: "Order Cancel", type: "text", cells: {
+          definition: "A customer with an active subscription managing their recurring order.",
+          source:     "Email reminder, app, website",
           "step-1": ["Confirmation email"],
           "step-2": ["Open App", "Open Website"],
           "step-3": ["Login"],
@@ -745,17 +811,23 @@ window.JOURNEYS = [
           "step-1": "Step 1", "step-2": "Step 2", "step-3": "Step 3", "step-4": "Step 4",
           "step-5": "Step 5", "step-6": "Step 6", "step-7": "Step 7" } },
       { id: "reactivate-same-cart", label: "Reactivate same cart", type: "text", cells: {
+          definition: "A customer whose subscription is paused, returning to reactivate it.",
+          source:     "Email re-engagement, app, website",
           "step-1": ["View Cart"],
           "step-2": ["Activate Subscription"],
           "step-3": ["Pick new Date", "Order Now"],
           "step-4": [], "step-5": [], "step-6": [], "step-7": [] } },
       { id: "reactivate-upsell", label: "Reactivate with upsell", type: "text", cells: {
+          definition: "A customer whose subscription is paused, returning to reactivate it.",
+          source:     "Email re-engagement, app, website",
           "step-1": ["View Cart"],
           "step-2": ["Add upsell"],
           "step-3": ["Activate Subscription"],
           "step-4": ["Pick new Date", "Order Now"],
           "step-5": [], "step-6": [], "step-7": [] } },
       { id: "reactivate-other", label: "Reactivate with other products", type: "text", cells: {
+          definition: "A customer whose subscription is paused, returning to reactivate it.",
+          source:     "Email re-engagement, app, website",
           "step-1": ["View Catalog"],
           "step-2": ["View PDP"],
           "step-3": ["Add to cart"],
@@ -780,11 +852,11 @@ window.JOURNEYS = [
     ],
     lanes: [
       { id: "step-header",   label: "Étape",         type: "step", cells: { "step-1": "Step 1", "step-2": "Step 2", "step-3": "Step 3" } },
-      { id: "intaker",       label: "Intaker",        type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
-      { id: "status-lover",  label: "Status lover",   type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
-      { id: "referrer",      label: "Referrer",       type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
-      { id: "rewards-seeker",label: "Rewards seeker", type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
-      { id: "coupon-chaser", label: "Coupon chaser",  type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
+      { id: "intaker",       label: "Intaker",        type: "text", cells: { definition: "A customer engaging with Cuure's loyalty program (rewards, referral, status).", source: "App, CRM, loyalty program notifications", "step-1": [], "step-2": [], "step-3": [] } },
+      { id: "status-lover",  label: "Status lover",   type: "text", cells: { definition: "A customer engaging with Cuure's loyalty program (rewards, referral, status).", source: "App, CRM, loyalty program notifications", "step-1": [], "step-2": [], "step-3": [] } },
+      { id: "referrer",      label: "Referrer",       type: "text", cells: { definition: "A customer engaging with Cuure's loyalty program (rewards, referral, status).", source: "App, CRM, loyalty program notifications", "step-1": [], "step-2": [], "step-3": [] } },
+      { id: "rewards-seeker",label: "Rewards seeker", type: "text", cells: { definition: "A customer engaging with Cuure's loyalty program (rewards, referral, status).", source: "App, CRM, loyalty program notifications", "step-1": [], "step-2": [], "step-3": [] } },
+      { id: "coupon-chaser", label: "Coupon chaser",  type: "text", cells: { definition: "A customer engaging with Cuure's loyalty program (rewards, referral, status).", source: "App, CRM, loyalty program notifications", "step-1": [], "step-2": [], "step-3": [] } },
     ]
   },
 
@@ -802,11 +874,11 @@ window.JOURNEYS = [
     ],
     lanes: [
       { id: "step-header",        label: "Étape",             type: "step", cells: { "step-1": "Step 1", "step-2": "Step 2", "step-3": "Step 3" } },
-      { id: "intaker",            label: "Intaker",            type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
-      { id: "content-reader",     label: "Content reader",     type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
-      { id: "advice-seeker",      label: "Advice seeker",      type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
-      { id: "innovation-curious", label: "Innovation curious", type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
-      { id: "data-optimizer",     label: "Data optimizer",     type: "text", cells: { "step-1": [], "step-2": [], "step-3": [] } },
+      { id: "intaker",            label: "Intaker",            type: "text", cells: { definition: "A customer seeking health guidance, content or advice from Cuure.", source: "App, blog, CRM, in-app notifications", "step-1": [], "step-2": [], "step-3": [] } },
+      { id: "content-reader",     label: "Content reader",     type: "text", cells: { definition: "A customer seeking health guidance, content or advice from Cuure.", source: "App, blog, CRM, in-app notifications", "step-1": [], "step-2": [], "step-3": [] } },
+      { id: "advice-seeker",      label: "Advice seeker",      type: "text", cells: { definition: "A customer seeking health guidance, content or advice from Cuure.", source: "App, blog, CRM, in-app notifications", "step-1": [], "step-2": [], "step-3": [] } },
+      { id: "innovation-curious", label: "Innovation curious", type: "text", cells: { definition: "A customer seeking health guidance, content or advice from Cuure.", source: "App, blog, CRM, in-app notifications", "step-1": [], "step-2": [], "step-3": [] } },
+      { id: "data-optimizer",     label: "Data optimizer",     type: "text", cells: { definition: "A customer seeking health guidance, content or advice from Cuure.", source: "App, blog, CRM, in-app notifications", "step-1": [], "step-2": [], "step-3": [] } },
     ]
   },
 

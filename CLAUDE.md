@@ -13,7 +13,7 @@ Stack : React + Tailwind CSS via CDN, pas de build step.
 Données hardcodées dans `data/journeys.js`.
 
 Cache busting : incrémenter `?v=N` dans `index.html` à chaque modif de `journeys.js`.
-Version actuelle : `?v=20`
+Version actuelle : `?v=21`
 
 ---
 
@@ -119,7 +119,7 @@ La navigation met à jour le hash automatiquement. Le bouton retour du navigateu
 | Journeys (vue d'ensemble) | ✅ Complet |
 | Conversion | ✅ Complet (Single-range fusionné) |
 | Discovery | ✅ Structure + Définitions & Sources complètes |
-| Post-purchase | 🔲 Journeys créées, contenu vide |
-| Repurchase | 🔲 Journeys créées, contenu vide (Active Sub : lanes Upseller & Change Seekers vides intentionnellement) |
+| Post-purchase | ✅ Complet |
+| Repurchase | ✅ Complet |
 | Engagement | 🔲 Journeys créées, contenu vide |
 | Pages Data | 🔲 Structure créée, données vides |
