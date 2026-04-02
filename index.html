@@ -970,7 +970,9 @@
       };
       const addChip = (cellKey, text) => {
         setChipAdditions(prev => {
-          const next = { ...prev, [cellKey]: [...(prev[cellKey] || []), text] };
+          const existing = prev[cellKey] || [];
+          if (existing.includes(text)) return prev; // déjà présent, on ignore
+          const next = { ...prev, [cellKey]: [...existing, text] };
           localStorage.setItem('cuure-chip-additions', JSON.stringify(next));
           return next;
         });
