@@ -1071,7 +1071,7 @@
       // Only expose edit props when edit mode is active
       const editProps = editMode
         ? { chipOverrides, updateChipStatus, chipAdditions, addChip, chipDeletions, removeChip, metaValues, setMetaValue, cellJourneyLinks, addJourneyLink, removeJourneyLink, editMode: true }
-        : { chipOverrides, chipDeletions, metaValues, cellJourneyLinks };
+        : { chipOverrides, chipAdditions, chipDeletions, metaValues, cellJourneyLinks };
 
       return (
         <div className="flex h-screen w-screen overflow-hidden">
