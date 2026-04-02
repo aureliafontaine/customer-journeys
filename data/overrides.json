@@ -22,7 +22,18 @@
     "discovery-prospects:product-comparator:step-3:Related Product": "ok",
     "discovery-prospects:product-comparator:step-3:Catalog Filter": "ok",
     "discovery-prospects:product-comparator:step-3:Search Product": "ok",
-    "discovery-prospects:product-innovation:step-1:Scroll Landing Page": "ok"
+    "discovery-prospects:product-innovation:step-1:Scroll Landing Page": "ok",
+    "discovery-prospects:product-innovation:step-1:Product LP": "bon",
+    "discovery-returning:crm-led:step-1:Product Page": "bon",
+    "discovery-returning:crm-led:step-1:Product LP": "bon",
+    "discovery-returning:reviews-seekers:step-1:Reviews Page": "bon",
+    "discovery-returning:reviews-seekers:step-1:Product Page": "bon",
+    "discovery-returning:crm-led:step-1:Offer Banner": "bon",
+    "discovery-returning:reviews-seekers:step-2:Product Page": "bon",
+    "discovery-returning:information-seekers:step-1:Landing Page": "bon",
+    "discovery-returning:information-seekers:step-1:Product Page": "bon",
+    "discovery-returning:reviews-seekers:step-1:Product Page Reviews": "bon",
+    "discovery-returning:reviews-seekers:step-1:Catalog Filtered by Rating": "bon"
   },
   "chipAdditions": {
     "discovery-prospects:general-curious:step-1": ["Home Page", "Home Page Scroll"],
@@ -36,7 +47,11 @@
     "discovery-prospects:general-health:step-5": ["Secondary Information"],
     "discovery-prospects:product-comparator:step-1": ["Product Page"],
     "discovery-prospects:product-comparator:step-2": ["Scroll Product Page"],
-    "discovery-prospects:product-innovation:step-1": ["Product LP"]
+    "discovery-prospects:product-innovation:step-1": ["Product LP"],
+    "discovery-returning:crm-led:step-1": ["Product Page", "Product LP", "Offer Banner", "Offer Page"],
+    "discovery-returning:reviews-seekers:step-1": ["Reviews Page", "Product Page", "Product Page Reviews", "Catalog Filtered by Rating"],
+    "discovery-returning:reviews-seekers:step-2": ["Product Page"],
+    "discovery-returning:information-seekers:step-1": ["Landing Page", "Product Page", "Secondary Pages"]
   },
   "chipDeletions": {
     "discovery-prospects:general-curious:step-1": ["Scroll HP", "Home Page"],
@@ -44,13 +59,30 @@
     "discovery-prospects:need-driven:step-1": ["Select NPD", "Select Essential", "Select Survey"],
     "discovery-prospects:general-health:step-1": ["Survey"],
     "discovery-prospects:general-health:step-2": ["Recommendations"],
-    "discovery-prospects:general-health:step-3": ["Product information"],
+    "discovery-prospects:general-health:step-3": ["Product information", "Other Recommendations"],
     "discovery-prospects:general-health:step-4": ["Secondary information"],
     "discovery-prospects:product-comparator:step-2": ["Scroll Product Page"],
     "discovery-prospects:product-comparator:step-1": ["Product Page"],
     "discovery-prospects:product-innovation:step-1": ["Scroll Landing Page"],
     "discovery-prospects:product-innovation:step-2": ["Navigate through FS-3B pages"],
-    "discovery-prospects:product-innovation:step-3": ["Add To Cart"]
+    "discovery-prospects:product-innovation:step-3": ["Add To Cart"],
+    "discovery-returning:crm-led:step-1": ["Range experience"],
+    "discovery-returning:crm-led:step-2": ["Add To Cart"],
+    "discovery-returning:reviews-seekers:step-1": ["PP > Scroll to Reviews", "Product Page"],
+    "discovery-returning:reviews-seekers:step-2": ["Add to cart"],
+    "discovery-returning:information-seekers:step-1": ["Scroll PP"],
+    "discovery-returning:information-seekers:step-2": ["Scroll Secondary Pages"],
+    "discovery-returning:information-seekers:step-3": ["Add To cart"]
   },
-  "metaValues": {}
+  "metaValues": {},
+  "cellJourneyLinks": {
+    "discovery-prospects:product-innovation:step-2": [{ "journeyId": "conversion", "journeyName": "Single-range" }],
+    "discovery-prospects:need-driven:step-3": [{ "journeyId": "conversion", "journeyName": "Single-range" }],
+    "discovery-prospects:general-health:step-3": [{ "journeyId": "conversion", "journeyName": "Single-range" }],
+    "discovery-prospects:product-comparator:step-4": [{ "journeyId": "conversion-multi-range", "journeyName": "Multi-range" }],
+    "discovery-prospects:general-curious:step-4": [{ "journeyId": "conversion", "journeyName": "Single-range" }],
+    "discovery-returning:crm-led:step-2": [{ "journeyId": "conversion", "journeyName": "Single-range" }],
+    "discovery-returning:reviews-seekers:step-3": [{ "journeyId": "conversion", "journeyName": "Single-range" }],
+    "discovery-returning:information-seekers:step-2": [{ "journeyId": "conversion", "journeyName": "Single-range" }]
+  }
 }
