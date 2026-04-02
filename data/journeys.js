@@ -227,12 +227,16 @@ window.JOURNEYS = [
       { id: "quantity",        label: "Step 6" },
       { id: "checkout",        label: "Step 7" },
       { id: "purchase",        label: "Step 8" },
+      { id: "step-9",          label: "Step 9" },
+      { id: "step-10",         label: "Step 10" },
+      { id: "step-11",         label: "Step 11" },
     ],
     lanes: [
       { id: "step-header", label: "Étape", type: "step", cells: {
           "format": "Step 1", "addon": "Step 2", "purchase-option": "Step 3",
           "add-to-cart": "Step 4", "view-cart": "Step 5", "quantity": "Step 6",
           "checkout": "Step 7", "purchase": "Step 8",
+          "step-9": "Step 9", "step-10": "Step 10", "step-11": "Step 11",
       }},
       { id: "mycuure", label: "MyCuure", type: "text", cells: {
           "format":          ["Select Products"],
