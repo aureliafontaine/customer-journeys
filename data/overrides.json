@@ -33,7 +33,15 @@
     "discovery-returning:information-seekers:step-1:Landing Page": "bon",
     "discovery-returning:information-seekers:step-1:Product Page": "bon",
     "discovery-returning:reviews-seekers:step-1:Product Page Reviews": "bon",
-    "discovery-returning:reviews-seekers:step-1:Catalog Filtered by Rating": "bon"
+    "discovery-returning:reviews-seekers:step-1:Catalog Filtered by Rating": "bon",
+    "conversion:mycuure:format:Survey MyCuure": "ok",
+    "conversion:mycuure:addon:Recos MyCuure": "ok",
+    "conversion:mycuure:purchase-option:Select MyCuure Products": "bon",
+    "conversion:mycuure:add-to-cart:View Cart": "bon",
+    "conversion:mycuure:view-cart:Choose Quantity (1, 2, 3)": "bon",
+    "conversion:mycuure:quantity:Catalog MyCuure (Optional)": "bon",
+    "conversion:mycuure:checkout:Product Page MyCuure (Optional)": "bon",
+    "conversion:mycuure:purchase:Add To Cart (Optional)": "bon"
   },
   "chipAdditions": {
     "discovery-prospects:general-curious:step-1": ["Home Page", "Home Page Scroll"],
@@ -51,7 +59,15 @@
     "discovery-returning:crm-led:step-1": ["Product Page", "Product LP", "Offer Banner", "Offer Page"],
     "discovery-returning:reviews-seekers:step-1": ["Reviews Page", "Product Page", "Product Page Reviews", "Catalog Filtered by Rating"],
     "discovery-returning:reviews-seekers:step-2": ["Product Page"],
-    "discovery-returning:information-seekers:step-1": ["Landing Page", "Product Page", "Secondary Pages"]
+    "discovery-returning:information-seekers:step-1": ["Landing Page", "Product Page", "Secondary Pages"],
+    "conversion:mycuure:format": ["Survey MyCuure"],
+    "conversion:mycuure:addon": ["Recos MyCuure"],
+    "conversion:mycuure:purchase-option": ["Select MyCuure Products"],
+    "conversion:mycuure:add-to-cart": ["View Cart"],
+    "conversion:mycuure:view-cart": ["Choose Quantity (1, 2, 3)"],
+    "conversion:mycuure:quantity": ["Catalog MyCuure (Optional)"],
+    "conversion:mycuure:checkout": ["Product Page MyCuure (Optional)"],
+    "conversion:mycuure:purchase": ["Add To Cart (Optional)"]
   },
   "chipDeletions": {
     "discovery-prospects:general-curious:step-1": ["Scroll HP", "Home Page"],
@@ -72,9 +88,16 @@
     "discovery-returning:reviews-seekers:step-2": ["Add to cart"],
     "discovery-returning:information-seekers:step-1": ["Scroll PP"],
     "discovery-returning:information-seekers:step-2": ["Scroll Secondary Pages"],
-    "discovery-returning:information-seekers:step-3": ["Add To cart"]
+    "discovery-returning:information-seekers:step-3": ["Add To cart"],
+    "conversion:mycuure:format": ["Select Products"],
+    "conversion:mycuure:addon": ["View Cart"],
+    "conversion:mycuure:purchase-option": ["Select Quantity"],
+    "conversion:mycuure:add-to-cart": ["Checkout"],
+    "conversion:mycuure:view-cart": ["Purchase"]
   },
-  "metaValues": {},
+  "metaValues": {
+    "conversion:mycuure:source": "Home Page (banner, solutions) /\nBurger Menu / \nCatalog"
+  },
   "cellJourneyLinks": {
     "discovery-prospects:product-innovation:step-2": [{ "journeyId": "conversion", "journeyName": "Single-range" }],
     "discovery-prospects:need-driven:step-3": [{ "journeyId": "conversion", "journeyName": "Single-range" }],
