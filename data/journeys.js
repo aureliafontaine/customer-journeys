@@ -317,16 +317,22 @@ window.JOURNEYS = [
       { id: "step-4", label: "Step 4" },
       { id: "step-5", label: "Step 5" },
       { id: "step-6", label: "Step 6" },
-      { id: "step-7", label: "Step 7" },
-      { id: "step-8", label: "Step 8" },
+      { id: "step-7",  label: "Step 7" },
+      { id: "step-8",  label: "Step 8" },
+      { id: "step-9",  label: "Step 9" },
+      { id: "step-10", label: "Step 10" },
+      { id: "step-11", label: "Step 11" },
+      { id: "step-12", label: "Step 12" },
     ],
     lanes: [
       { id: "step-header", label: "Étape", type: "step", cells: {
           "step-1": "Step 1", "step-2": "Step 2", "step-3": "Step 3", "step-4": "Step 4",
-          "step-5": "Step 5", "step-6": "Step 6", "step-7": "Step 7", "step-8": "Step 8" } },
+          "step-5": "Step 5", "step-6": "Step 6", "step-7": "Step 7", "step-8": "Step 8",
+          "step-9": "Step 9", "step-10": "Step 10", "step-11": "Step 11", "step-12": "Step 12" } },
       { id: "multi-range", label: "Multi-range", type: "text", cells: {
           "step-1": [], "step-2": [], "step-3": [], "step-4": [],
-          "step-5": [], "step-6": [], "step-7": [], "step-8": [] } },
+          "step-5": [], "step-6": [], "step-7": [], "step-8": [],
+          "step-9": [], "step-10": [], "step-11": [], "step-12": [] } },
     ]
   },
 
