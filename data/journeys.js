@@ -722,22 +722,10 @@ window.JOURNEYS = [
           "step-1": ["Email reminder"],
           "step-2": ["Email confirmation"],
           "step-3": [], "step-4": [], "step-5": [], "step-6": [], "step-7": [] } },
-      { id: "upseller", label: "Upseller", type: "flow-lane",
-        sharedCells: { "step-1": ["Email Reminder", "Open App", "Open Website"] },
-        flows: [
-          { id: "flow-a", cells: { "step-2": "View Cart", "step-3": "Add Upsell" } },
-          { id: "flow-b", cells: { "step-2": "View Catalog", "step-3": "View PDP", "step-4": "Add to cart" } },
-        ]},
-      { id: "change-seekers", label: "Change seekers", type: "flow-lane",
-        sharedCells: {
-          "step-1": ["Email Reminder", "Open App", "Open Website"],
-          "step-2": ["View Cart"]
-        },
-        flows: [
-          { id: "flow-standalone", standalone: true, cells: { "step-3": "Remove products" } },
-          { id: "flow-b", cells: { "step-3": "Take a test", "step-4": "View Recos", "step-5": "Add to cart" } },
-          { id: "flow-c", cells: { "step-3": "View Catalog", "step-4": "View PDP", "step-5": "Add to cart" } },
-        ]},
+      { id: "upseller", label: "Upseller", type: "text", cells: {
+          "step-1": [], "step-2": [], "step-3": [], "step-4": [], "step-5": [], "step-6": [], "step-7": [] } },
+      { id: "change-seekers", label: "Change seekers", type: "text", cells: {
+          "step-1": [], "step-2": [], "step-3": [], "step-4": [], "step-5": [], "step-6": [], "step-7": [] } },
       { id: "subscription-delayer", label: "Subscription Delayer", type: "text", cells: {
           "step-1": ["Email Reminder", "Open App", "Open Website"],
           "step-2": ["View Cart"],
