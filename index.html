@@ -243,10 +243,14 @@
         return () => document.removeEventListener('mousedown', handler);
       }, [linkPickerOpen]);
 
+      const confirmRef = React.useRef(false);
       const confirm = () => {
+        if (confirmRef.current) return;
+        confirmRef.current = true;
         const t = draft.trim();
         if (t) onAddChip(t);
         setAdding(false); setDraft('');
+        setTimeout(() => { confirmRef.current = false; }, 300);
       };
       // For table cells: render title as chip above the white-boxed table
       const isTable = value && value.type === 'table';
@@ -314,11 +318,11 @@
             <div style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
               <input
                 autoFocus value={draft} onChange={e => setDraft(e.target.value)}
-                onKeyDown={e => { if (e.key === 'Enter') confirm(); if (e.key === 'Escape') { setAdding(false); setDraft(''); } }}
+                onKeyDown={e => { if (e.key === 'Enter') { e.preventDefault(); e.stopPropagation(); confirm(); } if (e.key === 'Escape') { setAdding(false); setDraft(''); } }}
                 placeholder="Nom du chip…"
                 style={{ fontSize: '11px', padding: '4px 8px', border: '1px solid #d1d5db', borderRadius: '6px', outline: 'none', flex: 1, fontFamily: 'inherit' }}
               />
-              <button onClick={confirm} style={{ fontSize: '11px', padding: '4px 7px', background: '#EF7A1A', color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer' }}>✓</button>
+              <button type="button" onClick={confirm} style={{ fontSize: '11px', padding: '4px 7px', background: '#EF7A1A', color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer' }}>✓</button>
               <button onClick={() => { setAdding(false); setDraft(''); }} style={{ fontSize: '11px', padding: '4px 7px', background: 'transparent', color: '#9ca3af', border: 'none', cursor: 'pointer' }}>✕</button>
             </div>
           ) : (
