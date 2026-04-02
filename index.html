@@ -472,7 +472,7 @@
             const mergedValue = Array.isArray(cellValue)
               ? [...new Map([...cellValue, ...additions].filter(item => typeof item !== 'string' || !deletions.has(item)).map(i => [typeof i === 'string' ? i : JSON.stringify(i), i])).values()]
               : cellValue;
-            const extraChips = Array.isArray(cellValue) ? [] : additions.filter(c => !deletions.has(c));
+            const extraChips = Array.isArray(cellValue) ? [] : [...new Set(additions.filter(c => !deletions.has(c)))];
             const isMeta = step.type === 'meta';
             const isEmpty = !isStep && isCellEmpty(lane.type, mergedValue);
             const isChipCell = !isStep && !isEmpty && (
