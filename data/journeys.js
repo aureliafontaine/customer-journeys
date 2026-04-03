@@ -844,7 +844,7 @@ window.JOURNEYS = [
           "step-3": ["Activate Subscription"],
           "step-4": ["Pick new Date", "Order Now"],
           "step-5": [], "step-6": [], "step-7": [] } },
-      { id: "reactivate-other", label: "Reactivate with other products", type: "text", cells: {
+      { id: "reactivate-other", label: "Change seekers", type: "text", cells: {
           definition: "A customer whose subscription is paused, returning to reactivate it.",
           source:     "Email re-engagement, app, website",
           "step-1": ["View Catalog"],
