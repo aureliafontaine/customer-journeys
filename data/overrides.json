@@ -254,289 +254,1011 @@
     "repurchase-paused-subscriber:reactivate-other:step-5:View Cart": "bon",
     "repurchase-paused-subscriber:reactivate-other:step-6:Activate Subscription": "bon",
     "repurchase-paused-subscriber:reactivate-other:step-7:Order Now": "bon",
-    "repurchase-paused-subscriber:reactivate-other:step-7:Plan Next Order": "bon"
+    "repurchase-paused-subscriber:reactivate-other:step-7:Plan Next Order": "bon",
+    "discovery-prospects:need-driven:step-2:Dedicated LP": "bon",
+    "discovery-prospects:need-driven:step-2:Dedicated PP": "bon",
+    "discovery-prospects:need-driven:step-2:Dedicated Survey": "bon",
+    "repurchase-otp:same-products-refiller:step-3:View Cart": "bon",
+    "repurchase-otp:same-products-refiller:step-4:Purchase": "bon",
+    "repurchase-otp:upseller:step-1:Searchbar (Optional)": "bon",
+    "repurchase-otp:upseller:step-2:Product Page": "bon",
+    "repurchase-otp:upseller:step-5:Purchase": "bon",
+    "repurchase-otp:upseller:step-4:View Cart": "bon",
+    "repurchase-otp:upseller:step-3:Add To Cart": "bon",
+    "repurchase-otp:same-products-refiller:step-5:Purchase": "bon",
+    "repurchase-otp:change-seekers:step-1:App Highlights": "bon",
+    "repurchase-otp:change-seekers:step-1:Browse Website": "bon",
+    "repurchase-otp:change-seekers:step-2:Dedicated Survey": "bon",
+    "repurchase-otp:change-seekers:step-5:Purchase": "bon",
+    "repurchase-otp:same-products-refiller:step-1:Order History": "mauvais",
+    "repurchase-otp:convinced-to-subscription:step-2:Add To Cart": "bon",
+    "repurchase-otp:convinced-to-subscription:step-3:View Cart": "bon",
+    "repurchase-otp:convinced-to-subscription:step-4:Add Upsell (Optional)": "bon",
+    "repurchase-otp:convinced-to-subscription:step-5:Activate Subscription": "bon",
+    "repurchase-otp:convinced-to-subscription:step-6:Purchase": "bon",
+    "repurchase-otp:convinced-to-subscription:step-6:Plan Next Order": "bon",
+    "repurchase-otp:same-products-refiller:step-2:Add To Cart": "mauvais",
+    "repurchase-otp:same-products-refiller:step-4:Add Upsell (Optional)": "mauvais",
+    "repurchase-otp:convinced-to-subscription:step-1:Order History": "mauvais",
+    "repurchase-otp:change-seekers:step-1:Master Survey": "mauvais",
+    "repurchase-otp:change-seekers:step-2:Master Recos": "mauvais"
   },
   "chipAdditions": {
-    "conversion:fs3b:add-to-cart": ["Product Page FS-3B", "Select Format"],
-    "conversion:fs3b:addon": ["Survey FS-3B (Optional)", "Product Page FS-3B (Optional)"],
-    "conversion:fs3b:checkout": ["Add To Cart"],
-    "conversion:fs3b:format": ["LP FS-3B"],
-    "conversion:fs3b:purchase": ["View Cart"],
-    "conversion:fs3b:purchase-option": ["Recos FS-3B (Optional)"],
-    "conversion:fs3b:quantity": ["Select Purchase Option"],
-    "conversion:fs3b:step-10": ["Purchase"],
-    "conversion:fs3b:step-9": ["Checkout"],
-    "conversion:fs3b:view-cart": ["Add-to-cart", "Add Add-On"],
-    "conversion:ma05:add-to-cart": ["Select Format"],
-    "conversion:ma05:addon": ["Survey MA-05 (Optional)", "Product Page MA-05 (Optional)"],
-    "conversion:ma05:checkout": ["Add To Cart"],
-    "conversion:ma05:format": ["LP MA-05"],
-    "conversion:ma05:purchase-option": ["Recos MA-05 (Optional)"],
-    "conversion:ma05:purchase": ["View Cart"],
-    "conversion:ma05:quantity": ["Select Purchase Option"],
-    "conversion:ma05:step-10": ["Purchase"],
-    "conversion:ma05:step-9": ["Checkout"],
-    "conversion:ma05:view-cart": ["Add Add-On"],
-    "conversion:mycuure:add-to-cart": ["View Cart"],
-    "conversion:mycuure:addon": ["Recos MyCuure"],
-    "conversion:mycuure:checkout": ["Product Page MyCuure (Optional)"],
-    "conversion:mycuure:format": ["Survey MyCuure"],
-    "conversion:mycuure:purchase": ["Add To Cart (Optional)"],
-    "conversion:mycuure:purchase-option": ["Select MyCuure Products"],
-    "conversion:mycuure:quantity": ["Catalog MyCuure (Optional)"],
-    "conversion:mycuure:step-10": ["Checkout"],
-    "conversion:mycuure:step-11": ["Purchase"],
-    "conversion:mycuure:step-9": ["View Cart"],
-    "conversion:mycuure:view-cart": ["Choose Quantity (1, 2, 3)"],
-    "conversion:onely:add-to-cart": ["Select Format"],
-    "conversion:onely:addon": ["Survey Onely (Optional)", "Product Page Onely (Optional)"],
-    "conversion:onely:checkout": ["View Cart"],
-    "conversion:onely:format": ["LP Onely"],
-    "conversion:onely:purchase": ["Checkout"],
-    "conversion:onely:purchase-option": ["Recos Onely (Optional)"],
-    "conversion:onely:quantity": ["Add To Cart"],
-    "conversion:onely:step-9": ["Purchase"],
-    "conversion:onely:view-cart": ["Select Purchase Option"],
-    "conversion-multi-range:multi-range:step-1": ["Catalog", "Search"],
-    "conversion-multi-range:multi-range:step-2": ["Filters & Sort", "Product Page"],
-    "conversion-multi-range:multi-range:step-3": ["Product Page"],
-    "conversion-multi-range:multi-range:step-4": ["Select Format / Flavour"],
-    "conversion-multi-range:multi-range:step-5": ["Add Add-On"],
-    "conversion-multi-range:multi-range:step-6": ["Select Purchase Option"],
-    "conversion-multi-range:multi-range:step-7": ["Select Quantity"],
-    "conversion-multi-range:multi-range:step-8": ["Add To Cart"],
-    "conversion-multi-range:multi-range:step-9": ["View Cart"],
-    "conversion-multi-range:multi-range:step-10": ["Upsell"],
-    "conversion-multi-range:multi-range:step-11": ["Checkout"],
-    "conversion-multi-range:multi-range:step-12": ["Purchase"],
-    "discovery-prospects:general-curious:step-1": ["Home Page"],
-    "discovery-prospects:general-curious:step-3": ["Recommendations MyCuure", "Other Recommendations"],
-    "discovery-prospects:general-health:step-1": ["Home Page"],
-    "discovery-prospects:general-health:step-2": ["Survey"],
-    "discovery-prospects:general-health:step-3": ["Recommendations MyCuure"],
-    "discovery-prospects:general-health:step-4": ["Product Information"],
-    "discovery-prospects:general-health:step-5": ["Secondary Information"],
-    "discovery-prospects:need-driven:step-1": ["Burger Menu Navigation (via Need)"],
-    "discovery-prospects:need-driven:step-2": ["Product LP", "Dedicated LP", "Dedicated PP", "Dedicated Survey", "Dedicated PLP"],
-    "discovery-prospects:product-comparator:step-1": ["Product Page"],
-    "discovery-prospects:product-innovation:step-1": ["Product LP"],
-    "discovery-returning:crm-led:step-1": ["Product Page", "Product LP", "Offer Banner", "Offer Page"],
-    "discovery-returning:information-seekers:step-1": ["Landing Page", "Product Page", "Secondary Pages"],
-    "discovery-returning:reviews-seekers:step-1": ["Reviews Page", "Product Page", "Product Page Reviews", "Catalog Filtered by Rating"],
-    "discovery-returning:reviews-seekers:step-2": ["Product Page"],
-    "post-purchase-mycuure:box:first-intake": ["App On-Boarding"],
-    "post-purchase-mycuure:reload:first-intake": ["App On-Boarding"],
-    "post-purchase-fs3b:bottle:app-download": ["App Download"],
-    "post-purchase-fs3b:pack:app-download": ["App Download"],
-    "post-purchase-fs3b:refill:app-download": ["App Download"],
-    "post-purchase-fs3b:bottle:first-intake": ["App On-Boarding"],
-    "post-purchase-fs3b:pack:first-intake": ["App On-Boarding"],
-    "post-purchase-fs3b:refill:first-intake": ["App On-Boarding"],
-    "post-purchase-ma05:bottle:app-download": ["App Download"],
-    "post-purchase-ma05:pack-3m:app-download": ["App Download"],
-    "post-purchase-ma05:pack-6m:app-download": ["App Download"],
-    "post-purchase-ma05:refill:app-download": ["App Download"],
-    "post-purchase-ma05:bottle:first-intake": ["App On-Boarding"],
-    "post-purchase-ma05:pack-3m:first-intake": ["App On-Boarding"],
-    "post-purchase-ma05:pack-6m:first-intake": ["App On-Boarding"],
-    "post-purchase-ma05:refill:first-intake": ["App On-Boarding"],
-    "post-purchase-onely:kit:app-download": ["App Download"],
-    "post-purchase-onely:reload:app-download": ["App Download"],
-    "post-purchase-onely:kit:first-intake": ["App On-Boarding"],
-    "post-purchase-onely:reload:first-intake": ["App On-Boarding"],
-    "post-purchase-essentials:essentials:app-download": ["App Download"],
-    "post-purchase-essentials:essentials:first-intake": ["App On-Boarding"],
-    "post-purchase-multi-range:multi-range:first-intake": ["App On-Boarding"],
-    "repurchase-otp:same-products-refiller:step-1": ["Catalog", "Re-order"],
-    "repurchase-otp:same-products-refiller:step-2": ["Filters / Sort", "Searchbar"],
-    "repurchase-otp:same-products-refiller:step-3": ["View PDP"],
-    "repurchase-otp:same-products-refiller:step-4": ["Add To Cart"],
-    "repurchase-otp:same-products-refiller:step-5": ["View Cart"],
-    "repurchase-otp:same-products-refiller:step-6": ["Order Now"],
-    "repurchase-otp:upseller:step-1": ["Catalog", "Same Products Refiller XP"],
-    "repurchase-otp:upseller:step-2": ["View Cart"],
-    "repurchase-otp:upseller:step-3": ["Add Upsell", "View Upsell"],
-    "repurchase-otp:upseller:step-4": ["Add Upsell"],
-    "repurchase-otp:upseller:step-5": ["View Cart"],
-    "repurchase-otp:upseller:step-6": ["Order Now"],
-    "repurchase-otp:change-seekers:step-1": ["Dedicated Survey", "Visit \"Products of the moment\"", "Catalog", "Master Survey"],
-    "repurchase-otp:change-seekers:step-2": ["Dedicated Recos", "Product Page", "Master Recos"],
-    "repurchase-otp:change-seekers:step-3": ["Add To Cart"],
-    "repurchase-otp:change-seekers:step-4": ["View Cart"],
-    "repurchase-otp:change-seekers:step-5": ["Order Now"],
-    "repurchase-otp:convinced-to-subscription:step-1": ["Same Products Refiller XP"],
-    "repurchase-otp:convinced-to-subscription:step-2": ["Activate Subscription"],
-    "repurchase-otp:convinced-to-subscription:step-3": ["Plan Next Order", "Order Now"],
-    "repurchase-active-subscriber:upseller:step-1": ["View Cart"],
-    "repurchase-active-subscriber:upseller:step-2": ["View Upsell"],
-    "repurchase-active-subscriber:upseller:step-3": ["Add Upsell"],
-    "repurchase-active-subscriber:change-seekers:step-1": ["Dedicated Survey", "Catalog", "Master Survey"],
-    "repurchase-active-subscriber:change-seekers:step-2": ["Dedicated Recos", "Product Page", "Master Recos"],
-    "repurchase-active-subscriber:change-seekers:step-3": ["Add To Cart"],
-    "repurchase-active-subscriber:change-seekers:step-4": ["View Cart"],
-    "repurchase-active-subscriber:subscription-delayer:step-1": ["View Cart"],
-    "repurchase-active-subscriber:subscription-delayer:step-2": ["Delay Subscription"],
-    "repurchase-active-subscriber:pause-subscription:step-1": ["View Cart"],
-    "repurchase-active-subscriber:pause-subscription:step-2": ["Pause Subscription"],
-    "repurchase-active-subscriber:order-cancel:step-1": ["Account"],
-    "repurchase-active-subscriber:order-cancel:step-2": ["Order History"],
-    "repurchase-active-subscriber:order-cancel:step-3": ["Cancel Order"],
-    "repurchase-paused-subscriber:reactivate-same-cart:step-3": ["Plan Next Order", "Order Now"],
-    "repurchase-paused-subscriber:reactivate-upsell:step-2": ["View Upsell"],
-    "repurchase-paused-subscriber:reactivate-upsell:step-3": ["Add Upsell"],
-    "repurchase-paused-subscriber:reactivate-upsell:step-4": ["Activate Subscription"],
-    "repurchase-paused-subscriber:reactivate-upsell:step-5": ["Order Now", "Plan Next Order"],
-    "repurchase-paused-subscriber:reactivate-other:step-1": ["Catalog"],
-    "repurchase-paused-subscriber:reactivate-other:step-2": ["Filters / Sort", "Searchbar"],
-    "repurchase-paused-subscriber:reactivate-other:step-3": ["Product Page"],
-    "repurchase-paused-subscriber:reactivate-other:step-4": ["Add To Cart"],
-    "repurchase-paused-subscriber:reactivate-other:step-5": ["View Cart"],
-    "repurchase-paused-subscriber:reactivate-other:step-6": ["Activate Subscription"],
-    "repurchase-paused-subscriber:reactivate-other:step-7": ["Order Now", "Plan Next Order"]
+    "conversion:fs3b:add-to-cart": [
+      "Product Page FS-3B",
+      "Select Format"
+    ],
+    "conversion:fs3b:addon": [
+      "Survey FS-3B (Optional)",
+      "Product Page FS-3B (Optional)"
+    ],
+    "conversion:fs3b:checkout": [
+      "Add To Cart"
+    ],
+    "conversion:fs3b:format": [
+      "LP FS-3B"
+    ],
+    "conversion:fs3b:purchase": [
+      "View Cart"
+    ],
+    "conversion:fs3b:purchase-option": [
+      "Recos FS-3B (Optional)"
+    ],
+    "conversion:fs3b:quantity": [
+      "Select Purchase Option"
+    ],
+    "conversion:fs3b:step-10": [
+      "Purchase"
+    ],
+    "conversion:fs3b:step-9": [
+      "Checkout"
+    ],
+    "conversion:fs3b:view-cart": [
+      "Add-to-cart",
+      "Add Add-On"
+    ],
+    "conversion:ma05:add-to-cart": [
+      "Select Format"
+    ],
+    "conversion:ma05:addon": [
+      "Survey MA-05 (Optional)",
+      "Product Page MA-05 (Optional)"
+    ],
+    "conversion:ma05:checkout": [
+      "Add To Cart"
+    ],
+    "conversion:ma05:format": [
+      "LP MA-05"
+    ],
+    "conversion:ma05:purchase-option": [
+      "Recos MA-05 (Optional)"
+    ],
+    "conversion:ma05:purchase": [
+      "View Cart"
+    ],
+    "conversion:ma05:quantity": [
+      "Select Purchase Option"
+    ],
+    "conversion:ma05:step-10": [
+      "Purchase"
+    ],
+    "conversion:ma05:step-9": [
+      "Checkout"
+    ],
+    "conversion:ma05:view-cart": [
+      "Add Add-On"
+    ],
+    "conversion:mycuure:add-to-cart": [
+      "View Cart"
+    ],
+    "conversion:mycuure:addon": [
+      "Recos MyCuure"
+    ],
+    "conversion:mycuure:checkout": [
+      "Product Page MyCuure (Optional)"
+    ],
+    "conversion:mycuure:format": [
+      "Survey MyCuure"
+    ],
+    "conversion:mycuure:purchase": [
+      "Add To Cart (Optional)"
+    ],
+    "conversion:mycuure:purchase-option": [
+      "Select MyCuure Products"
+    ],
+    "conversion:mycuure:quantity": [
+      "Catalog MyCuure (Optional)"
+    ],
+    "conversion:mycuure:step-10": [
+      "Checkout"
+    ],
+    "conversion:mycuure:step-11": [
+      "Purchase"
+    ],
+    "conversion:mycuure:step-9": [
+      "View Cart"
+    ],
+    "conversion:mycuure:view-cart": [
+      "Choose Quantity (1, 2, 3)"
+    ],
+    "conversion:onely:add-to-cart": [
+      "Select Format"
+    ],
+    "conversion:onely:addon": [
+      "Survey Onely (Optional)",
+      "Product Page Onely (Optional)"
+    ],
+    "conversion:onely:checkout": [
+      "View Cart"
+    ],
+    "conversion:onely:format": [
+      "LP Onely"
+    ],
+    "conversion:onely:purchase": [
+      "Checkout"
+    ],
+    "conversion:onely:purchase-option": [
+      "Recos Onely (Optional)"
+    ],
+    "conversion:onely:quantity": [
+      "Add To Cart"
+    ],
+    "conversion:onely:step-9": [
+      "Purchase"
+    ],
+    "conversion:onely:view-cart": [
+      "Select Purchase Option"
+    ],
+    "conversion-multi-range:multi-range:step-1": [
+      "Catalog",
+      "Search"
+    ],
+    "conversion-multi-range:multi-range:step-2": [
+      "Filters & Sort",
+      "Product Page"
+    ],
+    "conversion-multi-range:multi-range:step-3": [
+      "Product Page"
+    ],
+    "conversion-multi-range:multi-range:step-4": [
+      "Select Format / Flavour"
+    ],
+    "conversion-multi-range:multi-range:step-5": [
+      "Add Add-On"
+    ],
+    "conversion-multi-range:multi-range:step-6": [
+      "Select Purchase Option"
+    ],
+    "conversion-multi-range:multi-range:step-7": [
+      "Select Quantity"
+    ],
+    "conversion-multi-range:multi-range:step-8": [
+      "Add To Cart"
+    ],
+    "conversion-multi-range:multi-range:step-9": [
+      "View Cart"
+    ],
+    "conversion-multi-range:multi-range:step-10": [
+      "Upsell"
+    ],
+    "conversion-multi-range:multi-range:step-11": [
+      "Checkout"
+    ],
+    "conversion-multi-range:multi-range:step-12": [
+      "Purchase"
+    ],
+    "discovery-prospects:general-curious:step-1": [
+      "Home Page"
+    ],
+    "discovery-prospects:general-curious:step-3": [
+      "Recommendations MyCuure",
+      "Other Recommendations"
+    ],
+    "discovery-prospects:general-health:step-1": [
+      "Home Page"
+    ],
+    "discovery-prospects:general-health:step-2": [
+      "Survey"
+    ],
+    "discovery-prospects:general-health:step-3": [
+      "Recommendations MyCuure"
+    ],
+    "discovery-prospects:general-health:step-4": [
+      "Product Information"
+    ],
+    "discovery-prospects:general-health:step-5": [
+      "Secondary Information"
+    ],
+    "discovery-prospects:need-driven:step-1": [
+      "Burger Menu Navigation (via Need)"
+    ],
+    "discovery-prospects:need-driven:step-2": [
+      "Product LP",
+      "Dedicated LP",
+      "Dedicated PP",
+      "Dedicated Survey",
+      "Dedicated PLP"
+    ],
+    "discovery-prospects:product-comparator:step-1": [
+      "Product Page"
+    ],
+    "discovery-prospects:product-innovation:step-1": [
+      "Product LP"
+    ],
+    "discovery-returning:crm-led:step-1": [
+      "Product Page",
+      "Product LP",
+      "Offer Banner",
+      "Offer Page"
+    ],
+    "discovery-returning:information-seekers:step-1": [
+      "Landing Page",
+      "Product Page",
+      "Secondary Pages"
+    ],
+    "discovery-returning:reviews-seekers:step-1": [
+      "Reviews Page",
+      "Product Page",
+      "Product Page Reviews",
+      "Catalog Filtered by Rating"
+    ],
+    "discovery-returning:reviews-seekers:step-2": [
+      "Product Page"
+    ],
+    "post-purchase-mycuure:box:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-mycuure:reload:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-fs3b:bottle:app-download": [
+      "App Download"
+    ],
+    "post-purchase-fs3b:pack:app-download": [
+      "App Download"
+    ],
+    "post-purchase-fs3b:refill:app-download": [
+      "App Download"
+    ],
+    "post-purchase-fs3b:bottle:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-fs3b:pack:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-fs3b:refill:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-ma05:bottle:app-download": [
+      "App Download"
+    ],
+    "post-purchase-ma05:pack-3m:app-download": [
+      "App Download"
+    ],
+    "post-purchase-ma05:pack-6m:app-download": [
+      "App Download"
+    ],
+    "post-purchase-ma05:refill:app-download": [
+      "App Download"
+    ],
+    "post-purchase-ma05:bottle:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-ma05:pack-3m:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-ma05:pack-6m:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-ma05:refill:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-onely:kit:app-download": [
+      "App Download"
+    ],
+    "post-purchase-onely:reload:app-download": [
+      "App Download"
+    ],
+    "post-purchase-onely:kit:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-onely:reload:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-essentials:essentials:app-download": [
+      "App Download"
+    ],
+    "post-purchase-essentials:essentials:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-multi-range:multi-range:first-intake": [
+      "App On-Boarding"
+    ],
+    "repurchase-otp:same-products-refiller:step-1": [
+      "Catalog",
+      "Re-order",
+      "Order History"
+    ],
+    "repurchase-otp:same-products-refiller:step-2": [
+      "Filters / Sort",
+      "Searchbar",
+      "Re-order",
+      "Add To Cart"
+    ],
+    "repurchase-otp:same-products-refiller:step-3": [
+      "View PDP",
+      "View Cart"
+    ],
+    "repurchase-otp:same-products-refiller:step-4": [
+      "Add To Cart",
+      "Purchase",
+      "Order Now",
+      "Add Upsell (Optional)"
+    ],
+    "repurchase-otp:same-products-refiller:step-5": [
+      "View Cart",
+      "Purchase"
+    ],
+    "repurchase-otp:same-products-refiller:step-6": [
+      "Order Now"
+    ],
+    "repurchase-otp:upseller:step-1": [
+      "Catalog",
+      "Same Products Refiller XP",
+      "Searchbar",
+      "Product Page",
+      "Searchbar (Optional)"
+    ],
+    "repurchase-otp:upseller:step-2": [
+      "View Cart",
+      "Product Page"
+    ],
+    "repurchase-otp:upseller:step-3": [
+      "Add Upsell",
+      "View Upsell",
+      "Add To Cart"
+    ],
+    "repurchase-otp:upseller:step-4": [
+      "Add Upsell",
+      "View Cart"
+    ],
+    "repurchase-otp:upseller:step-5": [
+      "View Cart",
+      "Purchase"
+    ],
+    "repurchase-otp:upseller:step-6": [
+      "Order Now"
+    ],
+    "repurchase-otp:change-seekers:step-1": [
+      "Dedicated Survey",
+      "Visit \"Products of the moment\"",
+      "Catalog",
+      "Master Survey",
+      "App Highlights",
+      "Browse Website"
+    ],
+    "repurchase-otp:change-seekers:step-2": [
+      "Dedicated Recos",
+      "Product Page",
+      "Master Recos",
+      "Dedicated Survey"
+    ],
+    "repurchase-otp:change-seekers:step-3": [
+      "Add To Cart"
+    ],
+    "repurchase-otp:change-seekers:step-4": [
+      "View Cart"
+    ],
+    "repurchase-otp:change-seekers:step-5": [
+      "Order Now",
+      "Purchase"
+    ],
+    "repurchase-otp:convinced-to-subscription:step-1": [
+      "Same Products Refiller XP",
+      "Order History"
+    ],
+    "repurchase-otp:convinced-to-subscription:step-2": [
+      "Activate Subscription",
+      "Add To Cart"
+    ],
+    "repurchase-otp:convinced-to-subscription:step-3": [
+      "Plan Next Order",
+      "Order Now",
+      "View Cart"
+    ],
+    "repurchase-active-subscriber:upseller:step-1": [
+      "View Cart"
+    ],
+    "repurchase-active-subscriber:upseller:step-2": [
+      "View Upsell"
+    ],
+    "repurchase-active-subscriber:upseller:step-3": [
+      "Add Upsell"
+    ],
+    "repurchase-active-subscriber:change-seekers:step-1": [
+      "Dedicated Survey",
+      "Catalog",
+      "Master Survey"
+    ],
+    "repurchase-active-subscriber:change-seekers:step-2": [
+      "Dedicated Recos",
+      "Product Page",
+      "Master Recos"
+    ],
+    "repurchase-active-subscriber:change-seekers:step-3": [
+      "Add To Cart"
+    ],
+    "repurchase-active-subscriber:change-seekers:step-4": [
+      "View Cart"
+    ],
+    "repurchase-active-subscriber:subscription-delayer:step-1": [
+      "View Cart"
+    ],
+    "repurchase-active-subscriber:subscription-delayer:step-2": [
+      "Delay Subscription"
+    ],
+    "repurchase-active-subscriber:pause-subscription:step-1": [
+      "View Cart"
+    ],
+    "repurchase-active-subscriber:pause-subscription:step-2": [
+      "Pause Subscription"
+    ],
+    "repurchase-active-subscriber:order-cancel:step-1": [
+      "Account"
+    ],
+    "repurchase-active-subscriber:order-cancel:step-2": [
+      "Order History"
+    ],
+    "repurchase-active-subscriber:order-cancel:step-3": [
+      "Cancel Order"
+    ],
+    "repurchase-paused-subscriber:reactivate-same-cart:step-3": [
+      "Plan Next Order",
+      "Order Now"
+    ],
+    "repurchase-paused-subscriber:reactivate-upsell:step-2": [
+      "View Upsell"
+    ],
+    "repurchase-paused-subscriber:reactivate-upsell:step-3": [
+      "Add Upsell"
+    ],
+    "repurchase-paused-subscriber:reactivate-upsell:step-4": [
+      "Activate Subscription"
+    ],
+    "repurchase-paused-subscriber:reactivate-upsell:step-5": [
+      "Order Now",
+      "Plan Next Order"
+    ],
+    "repurchase-paused-subscriber:reactivate-other:step-1": [
+      "Catalog"
+    ],
+    "repurchase-paused-subscriber:reactivate-other:step-2": [
+      "Filters / Sort",
+      "Searchbar"
+    ],
+    "repurchase-paused-subscriber:reactivate-other:step-3": [
+      "Product Page"
+    ],
+    "repurchase-paused-subscriber:reactivate-other:step-4": [
+      "Add To Cart"
+    ],
+    "repurchase-paused-subscriber:reactivate-other:step-5": [
+      "View Cart"
+    ],
+    "repurchase-paused-subscriber:reactivate-other:step-6": [
+      "Activate Subscription"
+    ],
+    "repurchase-paused-subscriber:reactivate-other:step-7": [
+      "Order Now",
+      "Plan Next Order"
+    ],
+    "repurchase-otp:convinced-to-subscription:step-4": [
+      "Add Upsell (Optional)"
+    ],
+    "repurchase-otp:convinced-to-subscription:step-5": [
+      "Activate Subscription"
+    ],
+    "repurchase-otp:convinced-to-subscription:step-6": [
+      "Purchase",
+      "Plan Next Order"
+    ]
   },
   "chipDeletions": {
-    "conversion:fs3b:add-to-cart": ["Select Quantity", "Product Page FS-3B"],
-    "conversion:fs3b:addon": ["Select Add-on", "Survey FS-3B", "Product Page FS-3B"],
-    "conversion:fs3b:checkout": ["Checkout"],
-    "conversion:fs3b:format": ["Select Format Option", "__table__"],
-    "conversion:fs3b:purchase": ["Purchase"],
-    "conversion:fs3b:purchase-option": ["__table__", "Select Purchase Option", "Recos FS-3B"],
-    "conversion:fs3b:quantity": ["View Cart"],
-    "conversion:fs3b:view-cart": ["Add To Cart"],
-    "conversion:ma05:add-to-cart": ["Add To Cart"],
-    "conversion:ma05:addon": ["__table__", "Select Purchase Option", "Product Page MA-05", "Survey MA-05"],
-    "conversion:ma05:checkout": ["Purchase"],
-    "conversion:ma05:format": ["__table__", "Select Format Option"],
-    "conversion:ma05:purchase-option": ["Select Quantity"],
-    "conversion:ma05:quantity": ["Checkout"],
-    "conversion:ma05:view-cart": ["View Cart"],
-    "conversion:mycuure:add-to-cart": ["Checkout"],
-    "conversion:mycuure:addon": ["View Cart"],
-    "conversion:mycuure:format": ["Select Products"],
-    "conversion:mycuure:purchase-option": ["Select Quantity"],
-    "conversion:mycuure:quantity": ["Catalog MyCuure (Optionnel)", "Catalog MyCuure (Optionnal)"],
-    "conversion:mycuure:view-cart": ["Purchase"],
-    "conversion:onely:addon": ["Select Quantity", "Survey onely", "Survey Onely"],
-    "conversion:onely:add-to-cart": ["View Cart"],
-    "conversion:onely:checkout": ["Checkout"],
-    "conversion:onely:format": ["Select Format & Purchase Option", "__table__", "LP onely"],
-    "conversion:onely:purchase-option": ["Add To Cart"],
-    "conversion:onely:purchase": ["Purchase"],
-    "conversion:onely:quantity": ["Purchase"],
-    "conversion:onely:view-cart": ["Checkout"],
-    "conversion:essentials:add-to-cart": ["Add To Cart"],
-    "conversion:essentials:addon": ["Select Purchase Option"],
-    "conversion:essentials:checkout": ["Purchase"],
-    "conversion:essentials:format": ["Select Format", "Select Flavour"],
-    "conversion:essentials:purchase-option": ["Select Quantity"],
-    "conversion:essentials:quantity": ["Checkout"],
-    "conversion:essentials:view-cart": ["View Cart"],
-    "conversion-multi-range:multi-range:step-5": ["Select Purchase Option"],
-    "conversion-multi-range:multi-range:step-6": ["Add To Cart"],
-    "conversion-multi-range:multi-range:step-7": ["View Cart"],
-    "discovery-prospects:general-curious:step-1": ["Scroll HP"],
-    "discovery-prospects:general-curious:step-3": ["Recommendations"],
-    "discovery-prospects:general-health:step-1": ["Survey"],
-    "discovery-prospects:general-health:step-2": ["Recommendations"],
-    "discovery-prospects:general-health:step-3": ["Product information"],
-    "discovery-prospects:general-health:step-4": ["Secondary information"],
-    "discovery-prospects:need-driven:step-1": ["Select NPD", "Select Essential", "Select Survey"],
-    "discovery-prospects:product-comparator:step-2": ["Scroll Product Page"],
-    "discovery-prospects:product-innovation:step-1": ["Scroll Landing Page"],
-    "discovery-prospects:product-innovation:step-2": ["Navigate through FS-3B pages"],
-    "discovery-prospects:product-innovation:step-3": ["Add To Cart"],
-    "discovery-returning:crm-led:step-1": ["Range experience"],
-    "discovery-returning:crm-led:step-2": ["Add To Cart"],
-    "discovery-returning:information-seekers:step-1": ["Scroll PP"],
-    "discovery-returning:information-seekers:step-2": ["Scroll Secondary Pages"],
-    "discovery-returning:information-seekers:step-3": ["Add To cart"],
-    "discovery-returning:reviews-seekers:step-1": ["PP > Scroll to Reviews", "Product Page"],
-    "discovery-returning:reviews-seekers:step-2": ["Add to cart"],
-    "post-purchase-mycuure:box:first-intake": ["First Intake"],
-    "post-purchase-mycuure:box:next-order": ["Next Order Planned"],
-    "post-purchase-mycuure:reload:first-intake": ["First Intake"],
-    "post-purchase-mycuure:reload:next-order": ["Next Order Planned"],
-    "post-purchase-fs3b:bottle:first-intake": ["First Intake"],
-    "post-purchase-fs3b:pack:first-intake": ["First Intake"],
-    "post-purchase-fs3b:refill:first-intake": ["First Intake"],
-    "post-purchase-fs3b:bottle:next-order": ["Next Order Planned"],
-    "post-purchase-fs3b:pack:next-order": ["Next Order Planned"],
-    "post-purchase-fs3b:refill:next-order": ["Next Order Planned"],
-    "post-purchase-ma05:bottle:first-intake": ["First Intake"],
-    "post-purchase-ma05:pack-3m:first-intake": ["First Intake"],
-    "post-purchase-ma05:pack-6m:first-intake": ["First Intake"],
-    "post-purchase-ma05:refill:first-intake": ["First Intake"],
-    "post-purchase-ma05:bottle:next-order": ["Next Order Planned"],
-    "post-purchase-ma05:pack-3m:next-order": ["Next Order Planned"],
-    "post-purchase-ma05:pack-6m:next-order": ["Next Order Planned"],
-    "post-purchase-ma05:refill:next-order": ["Next Order Planned"],
-    "post-purchase-onely:kit:first-intake": ["First Intake"],
-    "post-purchase-onely:reload:first-intake": ["First Intake"],
-    "post-purchase-onely:kit:next-order": ["Next Order Planned"],
-    "post-purchase-onely:reload:next-order": ["Next Order Planned"],
-    "post-purchase-essentials:essentials:first-intake": ["First Intake"],
-    "post-purchase-essentials:essentials:next-order": ["Next Order Planned"],
-    "post-purchase-multi-range:multi-range:first-intake": ["First Intake"],
-    "post-purchase-multi-range:multi-range:next-order": ["Next Order Planned"],
-    "repurchase-otp:same-products-refiller:step-1": ["Open App", "Open Website"],
-    "repurchase-otp:same-products-refiller:step-2": ["Login"],
-    "repurchase-otp:same-products-refiller:step-3": ["Visit Catalog"],
-    "repurchase-otp:same-products-refiller:step-4": ["Search Known Product"],
-    "repurchase-otp:same-products-refiller:step-5": ["View PDP"],
-    "repurchase-otp:same-products-refiller:step-6": ["Add to cart"],
-    "repurchase-otp:same-products-refiller:step-7": ["View Cart"],
-    "repurchase-otp:same-products-refiller:step-8": ["Adjust Quantity"],
-    "repurchase-otp:same-products-refiller:step-9": ["Order now"],
-    "repurchase-otp:upseller:step-1": ["Open App", "Open Website"],
-    "repurchase-otp:upseller:step-2": ["Login"],
-    "repurchase-otp:upseller:step-3": ["Visit Catalog"],
-    "repurchase-otp:upseller:step-4": ["Search Known Product", "Order Now"],
-    "repurchase-otp:upseller:step-5": ["View PDP"],
-    "repurchase-otp:upseller:step-6": ["Add to cart"],
-    "repurchase-otp:upseller:step-7": ["View Cart"],
-    "repurchase-otp:upseller:step-8": ["Adjust Quantity"],
-    "repurchase-otp:upseller:step-9": ["Add upsell product"],
-    "repurchase-otp:upseller:step-10": ["Order now"],
-    "repurchase-otp:change-seekers:step-1": ["Open App", "Open Website"],
-    "repurchase-otp:change-seekers:step-2": ["Login"],
-    "repurchase-otp:change-seekers:step-3": ["Take a test", "Visit «Products of the moment»"],
-    "repurchase-otp:change-seekers:step-4": ["View PDP"],
-    "repurchase-otp:change-seekers:step-5": ["Add to cart"],
-    "repurchase-otp:change-seekers:step-6": ["View Cart"],
-    "repurchase-otp:change-seekers:step-7": ["Adjust Quantity"],
-    "repurchase-otp:convinced-to-subscription:step-1": ["Open App", "Open Website"],
-    "repurchase-otp:convinced-to-subscription:step-2": ["Login"],
-    "repurchase-otp:convinced-to-subscription:step-3": ["Visit Catalog"],
-    "repurchase-otp:convinced-to-subscription:step-4": ["Search Known Product"],
-    "repurchase-otp:convinced-to-subscription:step-5": ["View PDP"],
-    "repurchase-otp:convinced-to-subscription:step-6": ["Add to cart"],
-    "repurchase-otp:convinced-to-subscription:step-7": ["View Cart"],
-    "repurchase-otp:convinced-to-subscription:step-8": ["Adjust Quantity"],
-    "repurchase-otp:convinced-to-subscription:step-9": ["Plan next order", "Activate subscription > Order Now"],
-    "repurchase-active-subscriber:repeat-auto:step-1": ["Email reminder"],
-    "repurchase-active-subscriber:repeat-auto:step-2": ["Email confirmation"],
-    "repurchase-active-subscriber:subscription-delayer:step-1": ["Email Reminder", "Open App", "Open Website"],
-    "repurchase-active-subscriber:subscription-delayer:step-2": ["View Cart"],
-    "repurchase-active-subscriber:subscription-delayer:step-3": ["Delay Subscription"],
-    "repurchase-active-subscriber:pause-subscription:step-1": ["Email Reminder", "Open App", "Open Website"],
-    "repurchase-active-subscriber:pause-subscription:step-2": ["View Cart"],
-    "repurchase-active-subscriber:pause-subscription:step-3": ["Pause Subscription"],
-    "repurchase-active-subscriber:pause-subscription:step-4": ["Email Subscription Pause"],
-    "repurchase-active-subscriber:order-cancel:step-1": ["Confirmation email"],
-    "repurchase-active-subscriber:order-cancel:step-2": ["Open App", "Open Website"],
-    "repurchase-active-subscriber:order-cancel:step-3": ["Login"],
-    "repurchase-active-subscriber:order-cancel:step-4": ["Go to account"],
-    "repurchase-active-subscriber:order-cancel:step-5": ["Go to order history"],
-    "repurchase-paused-subscriber:reactivate-same-cart:step-3": ["Pick new Date"],
-    "repurchase-paused-subscriber:reactivate-upsell:step-2": ["Add upsell"],
-    "repurchase-paused-subscriber:reactivate-upsell:step-3": ["Activate Subscription"],
-    "repurchase-paused-subscriber:reactivate-upsell:step-4": ["Pick new Date", "Order Now"],
-    "repurchase-paused-subscriber:reactivate-other:step-1": ["View Catalog"],
-    "repurchase-paused-subscriber:reactivate-other:step-2": ["View PDP"],
-    "repurchase-paused-subscriber:reactivate-other:step-3": ["Add to cart"],
-    "repurchase-paused-subscriber:reactivate-other:step-4": ["View Cart"],
-    "repurchase-paused-subscriber:reactivate-other:step-5": ["Remove products"],
-    "repurchase-paused-subscriber:reactivate-other:step-7": ["Pick new Date"]
+    "conversion:fs3b:add-to-cart": [
+      "Select Quantity",
+      "Product Page FS-3B"
+    ],
+    "conversion:fs3b:addon": [
+      "Select Add-on",
+      "Survey FS-3B",
+      "Product Page FS-3B"
+    ],
+    "conversion:fs3b:checkout": [
+      "Checkout"
+    ],
+    "conversion:fs3b:format": [
+      "Select Format Option",
+      "__table__"
+    ],
+    "conversion:fs3b:purchase": [
+      "Purchase"
+    ],
+    "conversion:fs3b:purchase-option": [
+      "__table__",
+      "Select Purchase Option",
+      "Recos FS-3B"
+    ],
+    "conversion:fs3b:quantity": [
+      "View Cart"
+    ],
+    "conversion:fs3b:view-cart": [
+      "Add To Cart"
+    ],
+    "conversion:ma05:add-to-cart": [
+      "Add To Cart"
+    ],
+    "conversion:ma05:addon": [
+      "__table__",
+      "Select Purchase Option",
+      "Product Page MA-05",
+      "Survey MA-05"
+    ],
+    "conversion:ma05:checkout": [
+      "Purchase"
+    ],
+    "conversion:ma05:format": [
+      "__table__",
+      "Select Format Option"
+    ],
+    "conversion:ma05:purchase-option": [
+      "Select Quantity"
+    ],
+    "conversion:ma05:quantity": [
+      "Checkout"
+    ],
+    "conversion:ma05:view-cart": [
+      "View Cart"
+    ],
+    "conversion:mycuure:add-to-cart": [
+      "Checkout"
+    ],
+    "conversion:mycuure:addon": [
+      "View Cart"
+    ],
+    "conversion:mycuure:format": [
+      "Select Products"
+    ],
+    "conversion:mycuure:purchase-option": [
+      "Select Quantity"
+    ],
+    "conversion:mycuure:quantity": [
+      "Catalog MyCuure (Optionnel)",
+      "Catalog MyCuure (Optionnal)"
+    ],
+    "conversion:mycuure:view-cart": [
+      "Purchase"
+    ],
+    "conversion:onely:addon": [
+      "Select Quantity",
+      "Survey onely",
+      "Survey Onely"
+    ],
+    "conversion:onely:add-to-cart": [
+      "View Cart"
+    ],
+    "conversion:onely:checkout": [
+      "Checkout"
+    ],
+    "conversion:onely:format": [
+      "Select Format & Purchase Option",
+      "__table__",
+      "LP onely"
+    ],
+    "conversion:onely:purchase-option": [
+      "Add To Cart"
+    ],
+    "conversion:onely:purchase": [
+      "Purchase"
+    ],
+    "conversion:onely:quantity": [
+      "Purchase"
+    ],
+    "conversion:onely:view-cart": [
+      "Checkout"
+    ],
+    "conversion:essentials:add-to-cart": [
+      "Add To Cart"
+    ],
+    "conversion:essentials:addon": [
+      "Select Purchase Option"
+    ],
+    "conversion:essentials:checkout": [
+      "Purchase"
+    ],
+    "conversion:essentials:format": [
+      "Select Format",
+      "Select Flavour"
+    ],
+    "conversion:essentials:purchase-option": [
+      "Select Quantity"
+    ],
+    "conversion:essentials:quantity": [
+      "Checkout"
+    ],
+    "conversion:essentials:view-cart": [
+      "View Cart"
+    ],
+    "conversion-multi-range:multi-range:step-5": [
+      "Select Purchase Option"
+    ],
+    "conversion-multi-range:multi-range:step-6": [
+      "Add To Cart"
+    ],
+    "conversion-multi-range:multi-range:step-7": [
+      "View Cart"
+    ],
+    "discovery-prospects:general-curious:step-1": [
+      "Scroll HP"
+    ],
+    "discovery-prospects:general-curious:step-3": [
+      "Recommendations"
+    ],
+    "discovery-prospects:general-health:step-1": [
+      "Survey"
+    ],
+    "discovery-prospects:general-health:step-2": [
+      "Recommendations"
+    ],
+    "discovery-prospects:general-health:step-3": [
+      "Product information"
+    ],
+    "discovery-prospects:general-health:step-4": [
+      "Secondary information"
+    ],
+    "discovery-prospects:need-driven:step-1": [
+      "Select NPD",
+      "Select Essential",
+      "Select Survey"
+    ],
+    "discovery-prospects:product-comparator:step-2": [
+      "Scroll Product Page"
+    ],
+    "discovery-prospects:product-innovation:step-1": [
+      "Scroll Landing Page"
+    ],
+    "discovery-prospects:product-innovation:step-2": [
+      "Navigate through FS-3B pages"
+    ],
+    "discovery-prospects:product-innovation:step-3": [
+      "Add To Cart"
+    ],
+    "discovery-returning:crm-led:step-1": [
+      "Range experience"
+    ],
+    "discovery-returning:crm-led:step-2": [
+      "Add To Cart"
+    ],
+    "discovery-returning:information-seekers:step-1": [
+      "Scroll PP"
+    ],
+    "discovery-returning:information-seekers:step-2": [
+      "Scroll Secondary Pages"
+    ],
+    "discovery-returning:information-seekers:step-3": [
+      "Add To cart"
+    ],
+    "discovery-returning:reviews-seekers:step-1": [
+      "PP > Scroll to Reviews",
+      "Product Page"
+    ],
+    "discovery-returning:reviews-seekers:step-2": [
+      "Add to cart"
+    ],
+    "post-purchase-mycuure:box:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-mycuure:box:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-mycuure:reload:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-mycuure:reload:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-fs3b:bottle:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-fs3b:pack:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-fs3b:refill:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-fs3b:bottle:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-fs3b:pack:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-fs3b:refill:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-ma05:bottle:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-ma05:pack-3m:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-ma05:pack-6m:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-ma05:refill:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-ma05:bottle:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-ma05:pack-3m:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-ma05:pack-6m:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-ma05:refill:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-onely:kit:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-onely:reload:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-onely:kit:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-onely:reload:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-essentials:essentials:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-essentials:essentials:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-multi-range:multi-range:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-multi-range:multi-range:next-order": [
+      "Next Order Planned"
+    ],
+    "repurchase-otp:same-products-refiller:step-1": [
+      "Open App",
+      "Open Website",
+      "Re-order",
+      "Catalog"
+    ],
+    "repurchase-otp:same-products-refiller:step-2": [
+      "Login",
+      "Searchbar",
+      "Filters / Sort",
+      "Re-order"
+    ],
+    "repurchase-otp:same-products-refiller:step-3": [
+      "Visit Catalog",
+      "View PDP"
+    ],
+    "repurchase-otp:same-products-refiller:step-4": [
+      "Search Known Product",
+      "Add To Cart",
+      "Order Now",
+      "Purchase"
+    ],
+    "repurchase-otp:same-products-refiller:step-5": [
+      "View PDP",
+      "View Cart"
+    ],
+    "repurchase-otp:same-products-refiller:step-6": [
+      "Add to cart",
+      "Order Now"
+    ],
+    "repurchase-otp:same-products-refiller:step-7": [
+      "View Cart"
+    ],
+    "repurchase-otp:same-products-refiller:step-8": [
+      "Adjust Quantity"
+    ],
+    "repurchase-otp:same-products-refiller:step-9": [
+      "Order now"
+    ],
+    "repurchase-otp:upseller:step-1": [
+      "Open App",
+      "Open Website",
+      "Same Products Refiller XP",
+      "Catalog",
+      "Product Page",
+      "Searchbar"
+    ],
+    "repurchase-otp:upseller:step-2": [
+      "Login",
+      "View Cart"
+    ],
+    "repurchase-otp:upseller:step-3": [
+      "Visit Catalog",
+      "Add Upsell",
+      "View Upsell"
+    ],
+    "repurchase-otp:upseller:step-4": [
+      "Search Known Product",
+      "Order Now",
+      "Add Upsell"
+    ],
+    "repurchase-otp:upseller:step-5": [
+      "View PDP",
+      "View Cart"
+    ],
+    "repurchase-otp:upseller:step-6": [
+      "Add to cart",
+      "Order Now"
+    ],
+    "repurchase-otp:upseller:step-7": [
+      "View Cart"
+    ],
+    "repurchase-otp:upseller:step-8": [
+      "Adjust Quantity"
+    ],
+    "repurchase-otp:upseller:step-9": [
+      "Add upsell product"
+    ],
+    "repurchase-otp:upseller:step-10": [
+      "Order now"
+    ],
+    "repurchase-otp:change-seekers:step-1": [
+      "Open App",
+      "Open Website",
+      "Visit \"Products of the moment\"",
+      "Dedicated Survey",
+      "Catalog"
+    ],
+    "repurchase-otp:change-seekers:step-2": [
+      "Login",
+      "Dedicated Recos"
+    ],
+    "repurchase-otp:change-seekers:step-3": [
+      "Take a test",
+      "Visit «Products of the moment»"
+    ],
+    "repurchase-otp:change-seekers:step-4": [
+      "View PDP"
+    ],
+    "repurchase-otp:change-seekers:step-5": [
+      "Add to cart",
+      "Order Now"
+    ],
+    "repurchase-otp:change-seekers:step-6": [
+      "View Cart"
+    ],
+    "repurchase-otp:change-seekers:step-7": [
+      "Adjust Quantity"
+    ],
+    "repurchase-otp:change-seekers:step-8": [
+      "Order now"
+    ],
+    "repurchase-otp:convinced-to-subscription:step-1": [
+      "Open App",
+      "Open Website",
+      "Same Products Refiller XP"
+    ],
+    "repurchase-otp:convinced-to-subscription:step-2": [
+      "Login",
+      "Activate Subscription"
+    ],
+    "repurchase-otp:convinced-to-subscription:step-3": [
+      "Visit Catalog",
+      "Plan Next Order",
+      "Order Now"
+    ],
+    "repurchase-otp:convinced-to-subscription:step-4": [
+      "Search Known Product"
+    ],
+    "repurchase-otp:convinced-to-subscription:step-5": [
+      "View PDP"
+    ],
+    "repurchase-otp:convinced-to-subscription:step-6": [
+      "Add to cart"
+    ],
+    "repurchase-otp:convinced-to-subscription:step-7": [
+      "View Cart"
+    ],
+    "repurchase-otp:convinced-to-subscription:step-8": [
+      "Adjust Quantity"
+    ],
+    "repurchase-otp:convinced-to-subscription:step-9": [
+      "Plan next order",
+      "Activate subscription > Order Now"
+    ],
+    "repurchase-active-subscriber:repeat-auto:step-1": [
+      "Email reminder"
+    ],
+    "repurchase-active-subscriber:repeat-auto:step-2": [
+      "Email confirmation"
+    ],
+    "repurchase-active-subscriber:subscription-delayer:step-1": [
+      "Email Reminder",
+      "Open App",
+      "Open Website"
+    ],
+    "repurchase-active-subscriber:subscription-delayer:step-2": [
+      "View Cart"
+    ],
+    "repurchase-active-subscriber:subscription-delayer:step-3": [
+      "Delay Subscription"
+    ],
+    "repurchase-active-subscriber:pause-subscription:step-1": [
+      "Email Reminder",
+      "Open App",
+      "Open Website"
+    ],
+    "repurchase-active-subscriber:pause-subscription:step-2": [
+      "View Cart"
+    ],
+    "repurchase-active-subscriber:pause-subscription:step-3": [
+      "Pause Subscription"
+    ],
+    "repurchase-active-subscriber:pause-subscription:step-4": [
+      "Email Subscription Pause"
+    ],
+    "repurchase-active-subscriber:order-cancel:step-1": [
+      "Confirmation email"
+    ],
+    "repurchase-active-subscriber:order-cancel:step-2": [
+      "Open App",
+      "Open Website"
+    ],
+    "repurchase-active-subscriber:order-cancel:step-3": [
+      "Login"
+    ],
+    "repurchase-active-subscriber:order-cancel:step-4": [
+      "Go to account"
+    ],
+    "repurchase-active-subscriber:order-cancel:step-5": [
+      "Go to order history"
+    ],
+    "repurchase-paused-subscriber:reactivate-same-cart:step-3": [
+      "Pick new Date"
+    ],
+    "repurchase-paused-subscriber:reactivate-upsell:step-2": [
+      "Add upsell"
+    ],
+    "repurchase-paused-subscriber:reactivate-upsell:step-3": [
+      "Activate Subscription"
+    ],
+    "repurchase-paused-subscriber:reactivate-upsell:step-4": [
+      "Pick new Date",
+      "Order Now"
+    ],
+    "repurchase-paused-subscriber:reactivate-other:step-1": [
+      "View Catalog"
+    ],
+    "repurchase-paused-subscriber:reactivate-other:step-2": [
+      "View PDP"
+    ],
+    "repurchase-paused-subscriber:reactivate-other:step-3": [
+      "Add to cart"
+    ],
+    "repurchase-paused-subscriber:reactivate-other:step-4": [
+      "View Cart"
+    ],
+    "repurchase-paused-subscriber:reactivate-other:step-5": [
+      "Remove products"
+    ],
+    "repurchase-paused-subscriber:reactivate-other:step-7": [
+      "Pick new Date"
+    ],
+    "discovery-prospects:need-driven:step-2": [
+      "Product LP",
+      "Dedicated PLP"
+    ]
   },
   "metaValues": {
     "discovery-prospects:general-curious:definition": "Visitor entering the Cuure ecosystem with no specific purchase intent, driven by curiosity or brand discovery.",
@@ -578,25 +1300,25 @@
     "post-purchase-fs3b:refill:definition": "Customer who ordered a 1-month FS-3B refill.",
     "post-purchase-fs3b:refill:source": "Confirmation Page / Email",
     "repurchase-otp:same-products-refiller:definition": "OTP customer looking to reorder the exact same products as before.",
-    "repurchase-otp:same-products-refiller:source": "Catalog / Re-order",
-    "repurchase-otp:upseller:definition": "OTP customer presented with an upsell opportunity to increase basket size before checkout.",
-    "repurchase-otp:upseller:source": "Same Products Refiller flow + Upsell",
+    "repurchase-otp:same-products-refiller:source": "Direct / Organic",
+    "repurchase-otp:upseller:definition": "OTP customer wanting to try out a new product.",
+    "repurchase-otp:upseller:source": "Communication\n / Direct / Organic",
     "repurchase-otp:change-seekers:definition": "OTP customer wanting to explore new products or update their routine.",
-    "repurchase-otp:change-seekers:source": "Dedicated Survey / \"Products of the moment\" / Catalog",
-    "repurchase-otp:convinced-to-subscription:definition": "OTP customer converted to a subscription during the checkout experience.",
-    "repurchase-otp:convinced-to-subscription:source": "Same Products Refiller flow + Subscription activation",
+    "repurchase-otp:change-seekers:source": "Direct / Organic",
+    "repurchase-otp:convinced-to-subscription:definition": "OTP customer converted to a subscription",
+    "repurchase-otp:convinced-to-subscription:source": "Direct / Organic",
     "repurchase-active-subscriber:repeat-auto:definition": "Active subscriber whose order renews automatically without any action needed.",
     "repurchase-active-subscriber:repeat-auto:source": "Automatic",
     "repurchase-active-subscriber:upseller:definition": "Active subscriber presented with an upsell offer at renewal time.",
-    "repurchase-active-subscriber:upseller:source": "View Cart",
+    "repurchase-active-subscriber:upseller:source": "Direct / Organic\n",
     "repurchase-active-subscriber:change-seekers:definition": "Active subscriber wanting to change their product selection.",
-    "repurchase-active-subscriber:change-seekers:source": "Dedicated Survey / Catalog",
+    "repurchase-active-subscriber:change-seekers:source": "Direct / Organic",
     "repurchase-active-subscriber:subscription-delayer:definition": "Active subscriber looking to postpone their next delivery date.",
-    "repurchase-active-subscriber:subscription-delayer:source": "View Cart > Delay Subscription",
+    "repurchase-active-subscriber:subscription-delayer:source": "Subscription Notification",
     "repurchase-active-subscriber:pause-subscription:definition": "Active subscriber temporarily pausing their subscription.",
-    "repurchase-active-subscriber:pause-subscription:source": "View Cart > Pause Subscription",
+    "repurchase-active-subscriber:pause-subscription:source": "Subscription Notification",
     "repurchase-active-subscriber:order-cancel:definition": "Active subscriber cancelling an upcoming order.",
-    "repurchase-active-subscriber:order-cancel:source": "Account > Order History > Cancel Order",
+    "repurchase-active-subscriber:order-cancel:source": "Order Confirmation",
     "repurchase-paused-subscriber:reactivate-same-cart:definition": "Paused subscriber reactivating their subscription with the same products as before.",
     "repurchase-paused-subscriber:reactivate-same-cart:source": "View Cart",
     "repurchase-paused-subscriber:reactivate-upsell:definition": "Paused subscriber reactivating with a proposed upsell added to the cart.",
@@ -615,14 +1337,59 @@
     "engagement-loyalty:coupon-chaser:source": "To be defined"
   },
   "cellJourneyLinks": {
-    "conversion:essentials:format": [{ "journeyId": "conversion-multi-range", "journeyName": "Multi-range" }],
-    "discovery-prospects:general-curious:step-4": [{ "journeyId": "conversion", "journeyName": "Single-range" }],
-    "discovery-prospects:general-health:step-3": [{ "journeyId": "conversion", "journeyName": "Single-range" }],
-    "discovery-prospects:need-driven:step-3": [{ "journeyId": "conversion", "journeyName": "Single-range" }],
-    "discovery-prospects:product-comparator:step-4": [{ "journeyId": "conversion-multi-range", "journeyName": "Multi-range" }],
-    "discovery-prospects:product-innovation:step-2": [{ "journeyId": "conversion", "journeyName": "Single-range" }],
-    "discovery-returning:crm-led:step-2": [{ "journeyId": "conversion", "journeyName": "Single-range" }],
-    "discovery-returning:information-seekers:step-2": [{ "journeyId": "conversion", "journeyName": "Single-range" }],
-    "discovery-returning:reviews-seekers:step-3": [{ "journeyId": "conversion", "journeyName": "Single-range" }]
+    "conversion:essentials:format": [
+      {
+        "journeyId": "conversion-multi-range",
+        "journeyName": "Multi-range"
+      }
+    ],
+    "discovery-prospects:general-curious:step-4": [
+      {
+        "journeyId": "conversion",
+        "journeyName": "Single-range"
+      }
+    ],
+    "discovery-prospects:general-health:step-3": [
+      {
+        "journeyId": "conversion",
+        "journeyName": "Single-range"
+      }
+    ],
+    "discovery-prospects:need-driven:step-3": [
+      {
+        "journeyId": "conversion",
+        "journeyName": "Single-range"
+      }
+    ],
+    "discovery-prospects:product-comparator:step-4": [
+      {
+        "journeyId": "conversion-multi-range",
+        "journeyName": "Multi-range"
+      }
+    ],
+    "discovery-prospects:product-innovation:step-2": [
+      {
+        "journeyId": "conversion",
+        "journeyName": "Single-range"
+      }
+    ],
+    "discovery-returning:crm-led:step-2": [
+      {
+        "journeyId": "conversion",
+        "journeyName": "Single-range"
+      }
+    ],
+    "discovery-returning:information-seekers:step-2": [
+      {
+        "journeyId": "conversion",
+        "journeyName": "Single-range"
+      }
+    ],
+    "discovery-returning:reviews-seekers:step-3": [
+      {
+        "journeyId": "conversion",
+        "journeyName": "Single-range"
+      }
+    ]
   }
 }
