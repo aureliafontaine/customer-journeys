@@ -231,7 +231,6 @@
     "conversion-multi-range:multi-range:step-4:Checkout": "bon",
     "conversion-multi-range:multi-range:step-5:Purchase": "bon",
     "post-purchase-mycuure:box:tracking-email:Shipping Tracking": "mauvais",
-    "post-purchase-mycuure:box:confirmation-email:On-boarding": "bon",
     "repurchase-active-subscriber:repeat-auto:step-1:Email Reminder": "ok",
     "repurchase-active-subscriber:subscription-delayer:step-3:Delay Subscription": "moyen",
     "repurchase-active-subscriber:pause-subscription:step-3:Delay Subscription": "moyen",
@@ -289,7 +288,6 @@
     "post-purchase-mycuure:reload:first-intake:App On-Boarding": "moyen",
     "post-purchase-mycuure:reload:first-intake:First Intake": "ok",
     "post-purchase-mycuure:reload:tracking-email:Shipping Tracking": "mauvais",
-    "post-purchase-mycuure:reload:confirmation-email:On-boarding": "bon",
     "post-purchase-mycuure:multi-box:confirmation-page:Confirmation Page": "bon",
     "post-purchase-mycuure:multi-box:confirmation-email:Confirmation E-mail": "bon",
     "post-purchase-mycuure:multi-box:tracking-email:Tracking E-mail": "bon",
@@ -299,7 +297,6 @@
     "post-purchase-mycuure:multi-box:first-intake:App On-Boarding": "moyen",
     "post-purchase-mycuure:multi-box:first-intake:First Intake": "ok",
     "post-purchase-mycuure:multi-box:tracking-email:Shipping Tracking": "mauvais",
-    "post-purchase-mycuure:multi-box:confirmation-email:On-boarding": "bon",
     "post-purchase-fs3b:bottle:confirmation-page:Confirmation Page": "bon",
     "post-purchase-fs3b:bottle:confirmation-email:Confirmation E-mail": "bon",
     "post-purchase-fs3b:bottle:tracking-email:Tracking E-mail": "bon",
@@ -309,7 +306,6 @@
     "post-purchase-fs3b:bottle:first-intake:App On-Boarding": "moyen",
     "post-purchase-fs3b:bottle:first-intake:First Intake": "ok",
     "post-purchase-fs3b:bottle:tracking-email:Shipping Tracking": "mauvais",
-    "post-purchase-fs3b:bottle:confirmation-email:On-boarding": "bon",
     "post-purchase-fs3b:pack:confirmation-page:Confirmation Page": "bon",
     "post-purchase-fs3b:pack:confirmation-email:Confirmation E-mail": "bon",
     "post-purchase-fs3b:pack:tracking-email:Tracking E-mail": "bon",
@@ -319,7 +315,6 @@
     "post-purchase-fs3b:pack:first-intake:App On-Boarding": "moyen",
     "post-purchase-fs3b:pack:first-intake:First Intake": "ok",
     "post-purchase-fs3b:pack:tracking-email:Shipping Tracking": "mauvais",
-    "post-purchase-fs3b:pack:confirmation-email:On-boarding": "bon",
     "post-purchase-fs3b:refill:confirmation-page:Confirmation Page": "bon",
     "post-purchase-fs3b:refill:confirmation-email:Confirmation E-mail": "bon",
     "post-purchase-fs3b:refill:tracking-email:Tracking E-mail": "bon",
@@ -329,7 +324,6 @@
     "post-purchase-fs3b:refill:first-intake:App On-Boarding": "moyen",
     "post-purchase-fs3b:refill:first-intake:First Intake": "ok",
     "post-purchase-fs3b:refill:tracking-email:Shipping Tracking": "mauvais",
-    "post-purchase-fs3b:refill:confirmation-email:On-boarding": "bon",
     "post-purchase-ma05:bottle:confirmation-page:Confirmation Page": "bon",
     "post-purchase-ma05:bottle:confirmation-email:Confirmation E-mail": "bon",
     "post-purchase-ma05:bottle:tracking-email:Tracking E-mail": "bon",
@@ -339,7 +333,6 @@
     "post-purchase-ma05:bottle:first-intake:App On-Boarding": "moyen",
     "post-purchase-ma05:bottle:first-intake:First Intake": "ok",
     "post-purchase-ma05:bottle:tracking-email:Shipping Tracking": "mauvais",
-    "post-purchase-ma05:bottle:confirmation-email:On-boarding": "bon",
     "post-purchase-ma05:pack-3m:confirmation-page:Confirmation Page": "bon",
     "post-purchase-ma05:pack-3m:confirmation-email:Confirmation E-mail": "bon",
     "post-purchase-ma05:pack-3m:tracking-email:Tracking E-mail": "bon",
@@ -349,7 +342,6 @@
     "post-purchase-ma05:pack-3m:first-intake:App On-Boarding": "moyen",
     "post-purchase-ma05:pack-3m:first-intake:First Intake": "ok",
     "post-purchase-ma05:pack-3m:tracking-email:Shipping Tracking": "mauvais",
-    "post-purchase-ma05:pack-3m:confirmation-email:On-boarding": "bon",
     "post-purchase-ma05:pack-6m:confirmation-page:Confirmation Page": "bon",
     "post-purchase-ma05:pack-6m:confirmation-email:Confirmation E-mail": "bon",
     "post-purchase-ma05:pack-6m:tracking-email:Tracking E-mail": "bon",
@@ -359,7 +351,6 @@
     "post-purchase-ma05:pack-6m:first-intake:App On-Boarding": "moyen",
     "post-purchase-ma05:pack-6m:first-intake:First Intake": "ok",
     "post-purchase-ma05:pack-6m:tracking-email:Shipping Tracking": "mauvais",
-    "post-purchase-ma05:pack-6m:confirmation-email:On-boarding": "bon",
     "post-purchase-ma05:refill:confirmation-page:Confirmation Page": "bon",
     "post-purchase-ma05:refill:confirmation-email:Confirmation E-mail": "bon",
     "post-purchase-ma05:refill:tracking-email:Tracking E-mail": "bon",
@@ -369,7 +360,6 @@
     "post-purchase-ma05:refill:first-intake:App On-Boarding": "moyen",
     "post-purchase-ma05:refill:first-intake:First Intake": "ok",
     "post-purchase-ma05:refill:tracking-email:Shipping Tracking": "mauvais",
-    "post-purchase-ma05:refill:confirmation-email:On-boarding": "bon",
     "post-purchase-onely:kit:confirmation-page:Confirmation Page": "bon",
     "post-purchase-onely:kit:confirmation-email:Confirmation E-mail": "bon",
     "post-purchase-onely:kit:tracking-email:Tracking E-mail": "bon",
@@ -379,7 +369,6 @@
     "post-purchase-onely:kit:first-intake:App On-Boarding": "moyen",
     "post-purchase-onely:kit:first-intake:First Intake": "ok",
     "post-purchase-onely:kit:tracking-email:Shipping Tracking": "mauvais",
-    "post-purchase-onely:kit:confirmation-email:On-boarding": "bon",
     "post-purchase-onely:reload:confirmation-page:Confirmation Page": "bon",
     "post-purchase-onely:reload:confirmation-email:Confirmation E-mail": "bon",
     "post-purchase-onely:reload:tracking-email:Tracking E-mail": "bon",
@@ -389,7 +378,6 @@
     "post-purchase-onely:reload:first-intake:App On-Boarding": "moyen",
     "post-purchase-onely:reload:first-intake:First Intake": "ok",
     "post-purchase-onely:reload:tracking-email:Shipping Tracking": "mauvais",
-    "post-purchase-onely:reload:confirmation-email:On-boarding": "bon",
     "post-purchase-essentials:essentials:confirmation-page:Confirmation Page": "bon",
     "post-purchase-essentials:essentials:confirmation-email:Confirmation E-mail": "bon",
     "post-purchase-essentials:essentials:tracking-email:Tracking E-mail": "bon",
@@ -399,7 +387,6 @@
     "post-purchase-essentials:essentials:first-intake:App On-Boarding": "moyen",
     "post-purchase-essentials:essentials:first-intake:First Intake": "ok",
     "post-purchase-essentials:essentials:tracking-email:Shipping Tracking": "mauvais",
-    "post-purchase-essentials:essentials:confirmation-email:On-boarding": "bon",
     "post-purchase-multi-range:multi-range:confirmation-page:Confirmation Page": "bon",
     "post-purchase-multi-range:multi-range:confirmation-email:Confirmation E-mail": "bon",
     "post-purchase-multi-range:multi-range:tracking-email:Tracking E-mail": "bon",
@@ -409,9 +396,7 @@
     "post-purchase-multi-range:multi-range:first-intake:App On-Boarding": "moyen",
     "post-purchase-multi-range:multi-range:first-intake:First Intake": "ok",
     "post-purchase-multi-range:multi-range:tracking-email:Shipping Tracking": "mauvais",
-    "post-purchase-multi-range:multi-range:confirmation-email:On-boarding": "bon",
     "post-purchase-mycuure:multi-box:confirmation-email:Confirmation E-Mal": "bon",
-    "post-purchase-mycuure:multi-box:confirmation-email:On-Boarding": "bon",
     "post-purchase-mycuure:box:app-download:App On-Boarding": "moyen",
     "post-purchase-mycuure:reload:app-download:App On-Boarding": "moyen",
     "post-purchase-mycuure:multi-box:app-download:App On-Boarding": "moyen",
@@ -425,7 +410,21 @@
     "post-purchase-onely:kit:app-download:App On-Boarding": "moyen",
     "post-purchase-onely:reload:app-download:App On-Boarding": "moyen",
     "post-purchase-essentials:essentials:app-download:App On-Boarding": "moyen",
-    "post-purchase-multi-range:multi-range:app-download:App On-Boarding": "moyen"
+    "post-purchase-multi-range:multi-range:app-download:App On-Boarding": "moyen",
+    "post-purchase-mycuure:box:onboarding-email:On-boarding": "bon",
+    "post-purchase-mycuure:reload:onboarding-email:On-boarding": "bon",
+    "post-purchase-mycuure:multi-box:onboarding-email:On-boarding": "bon",
+    "post-purchase-fs3b:bottle:onboarding-email:On-boarding": "bon",
+    "post-purchase-fs3b:pack:onboarding-email:On-boarding": "bon",
+    "post-purchase-fs3b:refill:onboarding-email:On-boarding": "bon",
+    "post-purchase-ma05:bottle:onboarding-email:On-boarding": "bon",
+    "post-purchase-ma05:pack-3m:onboarding-email:On-boarding": "bon",
+    "post-purchase-ma05:pack-6m:onboarding-email:On-boarding": "bon",
+    "post-purchase-ma05:refill:onboarding-email:On-boarding": "bon",
+    "post-purchase-onely:kit:onboarding-email:On-boarding": "bon",
+    "post-purchase-onely:reload:onboarding-email:On-boarding": "bon",
+    "post-purchase-essentials:essentials:onboarding-email:On-boarding": "bon",
+    "post-purchase-multi-range:multi-range:onboarding-email:On-boarding": "bon"
   },
   "chipAdditions": {
     "conversion:fs3b:add-to-cart": [
@@ -959,9 +958,6 @@
       "Tracking Notification",
       "Shipping Tracking"
     ],
-    "post-purchase-mycuure:box:confirmation-email": [
-      "On-boarding"
-    ],
     "repurchase-active-subscriber:repeat-auto:step-1": [
       "Email Reminder"
     ],
@@ -988,9 +984,6 @@
       "Tracking Notification",
       "Shipping Tracking"
     ],
-    "post-purchase-mycuure:reload:confirmation-email": [
-      "On-boarding"
-    ],
     "post-purchase-mycuure:multi-box:first-intake": [
       "App On-Boarding"
     ],
@@ -998,11 +991,6 @@
       "Tracking Whatsapp",
       "Tracking Notification",
       "Shipping Tracking"
-    ],
-    "post-purchase-mycuure:multi-box:confirmation-email": [
-      "On-boarding",
-      "On-Boaring",
-      "On-Boarding"
     ],
     "post-purchase-fs3b:bottle:first-intake": [
       "App On-Boarding"
@@ -1012,9 +1000,6 @@
       "Tracking Notification",
       "Shipping Tracking"
     ],
-    "post-purchase-fs3b:bottle:confirmation-email": [
-      "On-boarding"
-    ],
     "post-purchase-fs3b:pack:first-intake": [
       "App On-Boarding"
     ],
@@ -1022,9 +1007,6 @@
       "Tracking Whatsapp",
       "Tracking Notification",
       "Shipping Tracking"
-    ],
-    "post-purchase-fs3b:pack:confirmation-email": [
-      "On-boarding"
     ],
     "post-purchase-fs3b:refill:first-intake": [
       "App On-Boarding"
@@ -1034,9 +1016,6 @@
       "Tracking Notification",
       "Shipping Tracking"
     ],
-    "post-purchase-fs3b:refill:confirmation-email": [
-      "On-boarding"
-    ],
     "post-purchase-ma05:bottle:first-intake": [
       "App On-Boarding"
     ],
@@ -1044,9 +1023,6 @@
       "Tracking Whatsapp",
       "Tracking Notification",
       "Shipping Tracking"
-    ],
-    "post-purchase-ma05:bottle:confirmation-email": [
-      "On-boarding"
     ],
     "post-purchase-ma05:pack-3m:first-intake": [
       "App On-Boarding"
@@ -1056,9 +1032,6 @@
       "Tracking Notification",
       "Shipping Tracking"
     ],
-    "post-purchase-ma05:pack-3m:confirmation-email": [
-      "On-boarding"
-    ],
     "post-purchase-ma05:pack-6m:first-intake": [
       "App On-Boarding"
     ],
@@ -1066,9 +1039,6 @@
       "Tracking Whatsapp",
       "Tracking Notification",
       "Shipping Tracking"
-    ],
-    "post-purchase-ma05:pack-6m:confirmation-email": [
-      "On-boarding"
     ],
     "post-purchase-ma05:refill:first-intake": [
       "App On-Boarding"
@@ -1078,9 +1048,6 @@
       "Tracking Notification",
       "Shipping Tracking"
     ],
-    "post-purchase-ma05:refill:confirmation-email": [
-      "On-boarding"
-    ],
     "post-purchase-onely:kit:first-intake": [
       "App On-Boarding"
     ],
@@ -1088,9 +1055,6 @@
       "Tracking Whatsapp",
       "Tracking Notification",
       "Shipping Tracking"
-    ],
-    "post-purchase-onely:kit:confirmation-email": [
-      "On-boarding"
     ],
     "post-purchase-onely:reload:first-intake": [
       "App On-Boarding"
@@ -1100,9 +1064,6 @@
       "Tracking Notification",
       "Shipping Tracking"
     ],
-    "post-purchase-onely:reload:confirmation-email": [
-      "On-boarding"
-    ],
     "post-purchase-essentials:essentials:first-intake": [
       "App On-Boarding"
     ],
@@ -1111,9 +1072,6 @@
       "Tracking Notification",
       "Shipping Tracking"
     ],
-    "post-purchase-essentials:essentials:confirmation-email": [
-      "On-boarding"
-    ],
     "post-purchase-multi-range:multi-range:first-intake": [
       "App On-Boarding"
     ],
@@ -1121,9 +1079,6 @@
       "Tracking Whatsapp",
       "Tracking Notification",
       "Shipping Tracking"
-    ],
-    "post-purchase-multi-range:multi-range:confirmation-email": [
-      "On-boarding"
     ],
     "post-purchase-mycuure:multi-box:confirmation-page": [
       "Confirmation Page"
