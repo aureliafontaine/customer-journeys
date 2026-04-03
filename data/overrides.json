@@ -135,9 +135,6 @@
     "repurchase-otp:convinced-to-subscription:step-3:Plan Next Order": "bon",
     "repurchase-otp:convinced-to-subscription:step-3:Order Now": "bon",
     "post-purchase-mycuure:box:first-intake:First Intake": "ok",
-    "repurchase-active-subscriber:upseller:step-1:View Cart": "bon",
-    "repurchase-active-subscriber:upseller:step-2:View Upsell": "mauvais",
-    "repurchase-active-subscriber:upseller:step-3:Add Upsell": "mauvais",
     "repurchase-active-subscriber:change-seekers:step-1:Dedicated Survey": "bon",
     "repurchase-active-subscriber:change-seekers:step-1:Catalog": "bon",
     "repurchase-active-subscriber:change-seekers:step-2:Dedicated Recos": "bon",
@@ -424,7 +421,20 @@
     "post-purchase-onely:kit:onboarding-email:On-boarding": "bon",
     "post-purchase-onely:reload:onboarding-email:On-boarding": "bon",
     "post-purchase-essentials:essentials:onboarding-email:On-boarding": "bon",
-    "post-purchase-multi-range:multi-range:onboarding-email:On-boarding": "bon"
+    "post-purchase-multi-range:multi-range:onboarding-email:On-boarding": "bon",
+    "repurchase-active-subscriber:upseller:step-1:Catalog": "bon",
+    "repurchase-active-subscriber:upseller:step-1:Same Products Refiller XP": "ok",
+    "repurchase-active-subscriber:upseller:step-2:View Cart": "bon",
+    "repurchase-active-subscriber:upseller:step-3:Add Upsell": "mauvais",
+    "repurchase-active-subscriber:upseller:step-3:View Upsell": "mauvais",
+    "repurchase-active-subscriber:upseller:step-4:Add Upsell": "mauvais",
+    "repurchase-active-subscriber:upseller:step-5:View Cart": "bon",
+    "repurchase-active-subscriber:upseller:step-6:Order Now": "bon",
+    "repurchase-active-subscriber:upseller:step-1:Searchbar (Optional)": "bon",
+    "repurchase-active-subscriber:upseller:step-2:Product Page": "bon",
+    "repurchase-active-subscriber:upseller:step-5:Purchase": "bon",
+    "repurchase-active-subscriber:upseller:step-4:View Cart": "bon",
+    "repurchase-active-subscriber:upseller:step-3:Add To Cart": "bon"
   },
   "chipAdditions": {
     "conversion:fs3b:add-to-cart": [
@@ -799,15 +809,6 @@
       "Order Now",
       "View Cart"
     ],
-    "repurchase-active-subscriber:upseller:step-1": [
-      "View Cart"
-    ],
-    "repurchase-active-subscriber:upseller:step-2": [
-      "View Upsell"
-    ],
-    "repurchase-active-subscriber:upseller:step-3": [
-      "Add Upsell"
-    ],
     "repurchase-active-subscriber:change-seekers:step-1": [
       "Dedicated Survey",
       "Catalog",
@@ -1131,6 +1132,33 @@
     ],
     "post-purchase-multi-range:multi-range:app-download": [
       "App On-Boarding"
+    ],
+    "repurchase-active-subscriber:upseller:step-1": [
+      "Catalog",
+      "Same Products Refiller XP",
+      "Searchbar",
+      "Product Page",
+      "Searchbar (Optional)"
+    ],
+    "repurchase-active-subscriber:upseller:step-2": [
+      "View Cart",
+      "Product Page"
+    ],
+    "repurchase-active-subscriber:upseller:step-3": [
+      "Add Upsell",
+      "View Upsell",
+      "Add To Cart"
+    ],
+    "repurchase-active-subscriber:upseller:step-4": [
+      "Add Upsell",
+      "View Cart"
+    ],
+    "repurchase-active-subscriber:upseller:step-5": [
+      "View Cart",
+      "Purchase"
+    ],
+    "repurchase-active-subscriber:upseller:step-6": [
+      "Order Now"
     ]
   },
   "chipDeletions": {
@@ -1671,15 +1699,6 @@
       "App Download",
       "App On-boarding"
     ],
-    "repurchase-active-subscriber:upseller:step-1": [
-      "View Cart"
-    ],
-    "repurchase-active-subscriber:upseller:step-2": [
-      "View Upsell"
-    ],
-    "repurchase-active-subscriber:upseller:step-3": [
-      "Add Upsell"
-    ],
     "repurchase-active-subscriber:order-cancel:step-6": [
       "Cancel order"
     ],
@@ -1924,6 +1943,39 @@
     "post-purchase-mycuure:multi-box:confirmation-email": [
       "On-boarding",
       "On-Boaring"
+    ],
+    "repurchase-active-subscriber:upseller:step-1": [
+      "Open App",
+      "Open Website",
+      "Same Products Refiller XP",
+      "Catalog",
+      "Product Page",
+      "Searchbar"
+    ],
+    "repurchase-active-subscriber:upseller:step-2": [
+      "Login",
+      "View Cart"
+    ],
+    "repurchase-active-subscriber:upseller:step-3": [
+      "Visit Catalog",
+      "Add Upsell",
+      "View Upsell"
+    ],
+    "repurchase-active-subscriber:upseller:step-4": [
+      "Search Known Product",
+      "Order Now",
+      "Add Upsell"
+    ],
+    "repurchase-active-subscriber:upseller:step-5": [
+      "View PDP",
+      "View Cart"
+    ],
+    "repurchase-active-subscriber:upseller:step-6": [
+      "Add to cart",
+      "Order Now"
+    ],
+    "repurchase-active-subscriber:upseller:step-7": [
+      "View Cart"
     ]
   },
   "metaValues": {

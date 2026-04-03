@@ -770,7 +770,13 @@ window.JOURNEYS = [
       { id: "upseller", label: "Upseller", type: "text", cells: {
           definition: "A customer with an active subscription managing their recurring order.",
           source:     "Email reminder, app, website",
-          "step-1": [], "step-2": [], "step-3": [], "step-4": [], "step-5": [], "step-6": [], "step-7": [] } },
+          "step-1": ["Open App", "Open Website"],
+          "step-2": ["Login"],
+          "step-3": ["Visit Catalog"],
+          "step-4": ["Search Known Product"],
+          "step-5": ["View PDP"],
+          "step-6": ["Add to cart"],
+          "step-7": ["View Cart"] } },
       { id: "change-seekers", label: "Change seekers", type: "text", cells: {
           definition: "A customer with an active subscription managing their recurring order.",
           source:     "Email reminder, app, website",
