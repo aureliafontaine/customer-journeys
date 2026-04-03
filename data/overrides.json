@@ -1,56 +1,49 @@
 {
   "chipStatuses": {
-    "conversion:fs3b:add-to-cart:Product Page FS-3B": "bon",
-    "conversion:fs3b:add-to-cart:Select Format": "bon",
-    "conversion:fs3b:addon:Product Page FS-3B": "bon",
-    "conversion:fs3b:addon:Product Page FS-3B (Optional)": "bon",
-    "conversion:fs3b:addon:Survey FS-3B": "ok",
-    "conversion:fs3b:addon:Survey FS-3B (Optional)": "ok",
-    "conversion:fs3b:checkout:Add To Cart": "bon",
-    "conversion:fs3b:format:LP FS-3B": "bon",
-    "conversion:fs3b:purchase-option:Recos FS-3B": "ok",
-    "conversion:fs3b:purchase-option:Recos FS-3B (Optional)": "ok",
-    "conversion:fs3b:purchase:View Cart": "ok",
-    "conversion:fs3b:quantity:Select Purchase Option": "bon",
-    "conversion:fs3b:step-10:Purchase": "bon",
-    "conversion:fs3b:step-9:Checkout": "bon",
-    "conversion:fs3b:view-cart:Add Add-On": "ok",
-    "conversion:fs3b:view-cart:Add-to-cart": "bon",
-    "conversion:ma05:add-to-cart:Select Format": "bon",
-    "conversion:ma05:addon:Product Page MA-05": "bon",
-    "conversion:ma05:addon:Product Page MA-05 (Optional)": "bon",
-    "conversion:ma05:addon:Survey MA-05": "bon",
-    "conversion:ma05:addon:Survey MA-05 (Optional)": "bon",
-    "conversion:ma05:checkout:Add To Cart": "bon",
-    "conversion:ma05:format:LP MA-05": "bon",
-    "conversion:ma05:purchase-option:Recos MA-05 (Optional)": "bon",
-    "conversion:ma05:purchase:View Cart": "ok",
-    "conversion:ma05:quantity:Select Purchase Option": "ok",
-    "conversion:ma05:step-10:Purchase": "bon",
-    "conversion:ma05:step-9:Checkout": "bon",
-    "conversion:ma05:view-cart:Add Add-On": "non existant",
-    "conversion:mycuure:add-to-cart:View Cart": "bon",
-    "conversion:mycuure:addon:Recos MyCuure": "ok",
-    "conversion:mycuure:checkout:Product Page MyCuure (Optional)": "bon",
-    "conversion:mycuure:format:Survey MyCuure": "ok",
-    "conversion:mycuure:purchase-option:Select MyCuure Products": "bon",
-    "conversion:mycuure:purchase:Add To Cart (Optional)": "bon",
-    "conversion:mycuure:quantity:Catalog MyCuure (Optional)": "bon",
-    "conversion:mycuure:step-10:Checkout": "bon",
-    "conversion:mycuure:step-11:Purchase": "bon",
-    "conversion:mycuure:step-9:View Cart": "ok",
-    "conversion:mycuure:view-cart:Choose Quantity (1, 2, 3)": "bon",
-    "conversion:onely:add-to-cart:Select Format": "bon",
-    "conversion:onely:addon:Product Page Onely (Optional)": "ok",
-    "conversion:onely:addon:Survey Onely": "ok",
-    "conversion:onely:addon:Survey Onely (Optional)": "ok",
-    "conversion:onely:checkout:View Cart": "ok",
-    "conversion:onely:format:LP Onely": "ok",
-    "conversion:onely:purchase-option:Recos Onely (Optional)": "ok",
-    "conversion:onely:purchase:Checkout": "bon",
-    "conversion:onely:quantity:Add To Cart": "bon",
-    "conversion:onely:step-9:Purchase": "bon",
-    "conversion:onely:view-cart:Select Purchase Option": "moyen",
+    "conversion:fs3b:checkout:Product Page FS-3B": "bon",
+    "conversion:fs3b:checkout:Select Format": "bon",
+    "conversion:fs3b:view-cart:Product Page FS-3B": "bon",
+    "conversion:fs3b:view-cart:Product Page FS-3B (Optional)": "bon",
+    "conversion:fs3b:view-cart:Survey FS-3B": "ok",
+    "conversion:fs3b:view-cart:Survey FS-3B (Optional)": "ok",
+    "conversion:fs3b:step-10:Add To Cart": "bon",
+    "conversion:fs3b:add-to-cart:LP FS-3B": "bon",
+    "conversion:fs3b:quantity:Recos FS-3B": "ok",
+    "conversion:fs3b:quantity:Recos FS-3B (Optional)": "ok",
+    "conversion:fs3b:step-11:View Cart": "ok",
+    "conversion:fs3b:step-9:Select Purchase Option": "bon",
+    "conversion:fs3b:purchase:Add Add-On": "ok",
+    "conversion:fs3b:purchase:Add-to-cart": "bon",
+    "conversion:ma05:checkout:Select Format": "bon",
+    "conversion:ma05:view-cart:Product Page MA-05": "bon",
+    "conversion:ma05:view-cart:Product Page MA-05 (Optional)": "bon",
+    "conversion:ma05:view-cart:Survey MA-05": "bon",
+    "conversion:ma05:view-cart:Survey MA-05 (Optional)": "bon",
+    "conversion:ma05:step-10:Add To Cart": "bon",
+    "conversion:ma05:add-to-cart:LP MA-05": "bon",
+    "conversion:ma05:quantity:Recos MA-05 (Optional)": "bon",
+    "conversion:ma05:step-11:View Cart": "ok",
+    "conversion:ma05:step-9:Select Purchase Option": "ok",
+    "conversion:ma05:purchase:Add Add-On": "non existant",
+    "conversion:mycuure:quantity:View Cart": "bon",
+    "conversion:mycuure:add-to-cart:Recos MyCuure": "ok",
+    "conversion:mycuure:step-9:Product Page MyCuure (Optional)": "bon",
+    "conversion:mycuure:purchase-option:Survey MyCuure": "ok",
+    "conversion:mycuure:view-cart:Select MyCuure Products": "bon",
+    "conversion:mycuure:step-10:Add To Cart (Optional)": "bon",
+    "conversion:mycuure:purchase:Catalog MyCuure (Optional)": "bon",
+    "conversion:mycuure:step-11:View Cart": "ok",
+    "conversion:mycuure:checkout:Choose Quantity (1, 2, 3)": "bon",
+    "conversion:onely:checkout:Select Format": "bon",
+    "conversion:onely:view-cart:Product Page Onely (Optional)": "ok",
+    "conversion:onely:view-cart:Survey Onely": "ok",
+    "conversion:onely:view-cart:Survey Onely (Optional)": "ok",
+    "conversion:onely:step-10:View Cart": "ok",
+    "conversion:onely:add-to-cart:LP Onely": "ok",
+    "conversion:onely:quantity:Recos Onely (Optional)": "ok",
+    "conversion:onely:step-11:Checkout": "bon",
+    "conversion:onely:step-9:Add To Cart": "bon",
+    "conversion:onely:purchase:Select Purchase Option": "moyen",
     "conversion-multi-range:multi-range:step-1:Catalog": "bon",
     "conversion-multi-range:multi-range:step-1:Search": "bon",
     "conversion-multi-range:multi-range:step-2:Filters & Sort": "bon",
@@ -299,8 +292,8 @@
     "discovery-returning:information-seekers:step-1:Home Page": "ok",
     "discovery-returning:information-seekers:step-2:Secondary Page": "moyen",
     "discovery-returning:information-seekers:step-3:Product Page": "moyen",
-    "conversion:fs3b:add-to-cart:Select Add-on": "bon",
-    "conversion:fs3b:view-cart:Select Add-on": "ok",
+    "conversion:fs3b:checkout:Select Add-on": "bon",
+    "conversion:fs3b:purchase:Select Add-on": "ok",
     "conversion-multi-range:multi-range:step-1:Add to Cart": "bon",
     "conversion-multi-range:multi-range:step-3:Catalog": "bon",
     "conversion:essentials:add-to-cart:View Cart": "ok",
@@ -338,133 +331,112 @@
     "discovery-prospects:product-innovation:step-3:Recos Onely": "ok"
   },
   "chipAdditions": {
-    "conversion:fs3b:add-to-cart": [
+    "conversion:fs3b:checkout": [
       "Product Page FS-3B",
       "Select Format",
       "Select Add-on"
     ],
-    "conversion:fs3b:addon": [
+    "conversion:fs3b:view-cart": [
       "Survey FS-3B (Optional)",
       "Product Page FS-3B (Optional)"
     ],
-    "conversion:fs3b:checkout": [
+    "conversion:fs3b:step-10": [
       "Add To Cart"
     ],
-    "conversion:fs3b:format": [
+    "conversion:fs3b:add-to-cart": [
       "LP FS-3B"
     ],
-    "conversion:fs3b:purchase": [
+    "conversion:fs3b:step-11": [
       "View Cart"
     ],
-    "conversion:fs3b:purchase-option": [
+    "conversion:fs3b:quantity": [
       "Recos FS-3B (Optional)"
     ],
-    "conversion:fs3b:quantity": [
+    "conversion:fs3b:step-9": [
       "Select Purchase Option"
     ],
-    "conversion:fs3b:step-10": [
-      "Purchase"
-    ],
-    "conversion:fs3b:step-9": [
-      "Checkout"
-    ],
-    "conversion:fs3b:view-cart": [
+    "conversion:fs3b:purchase": [
       "Add-to-cart",
       "Add Add-On",
       "Select Add-on"
     ],
-    "conversion:ma05:add-to-cart": [
+    "conversion:ma05:checkout": [
       "Select Format",
       "Select Add-on"
     ],
-    "conversion:ma05:addon": [
+    "conversion:ma05:view-cart": [
       "Survey MA-05 (Optional)",
       "Product Page MA-05 (Optional)"
     ],
-    "conversion:ma05:checkout": [
+    "conversion:ma05:step-10": [
       "Add To Cart"
     ],
-    "conversion:ma05:format": [
+    "conversion:ma05:add-to-cart": [
       "LP MA-05"
     ],
-    "conversion:ma05:purchase-option": [
+    "conversion:ma05:quantity": [
       "Recos MA-05 (Optional)"
     ],
-    "conversion:ma05:purchase": [
+    "conversion:ma05:step-11": [
       "View Cart"
     ],
-    "conversion:ma05:quantity": [
+    "conversion:ma05:step-9": [
       "Select Purchase Option"
     ],
-    "conversion:ma05:step-10": [
-      "Purchase"
-    ],
-    "conversion:ma05:step-9": [
-      "Checkout"
-    ],
-    "conversion:ma05:view-cart": [
+    "conversion:ma05:purchase": [
       "Add Add-On",
       "Select Add-on"
     ],
-    "conversion:mycuure:add-to-cart": [
+    "conversion:mycuure:quantity": [
       "View Cart"
     ],
-    "conversion:mycuure:addon": [
+    "conversion:mycuure:add-to-cart": [
       "Recos MyCuure"
     ],
-    "conversion:mycuure:checkout": [
+    "conversion:mycuure:step-9": [
       "Product Page MyCuure (Optional)"
     ],
-    "conversion:mycuure:format": [
+    "conversion:mycuure:purchase-option": [
       "Survey MyCuure"
     ],
-    "conversion:mycuure:purchase": [
+    "conversion:mycuure:step-10": [
       "Add To Cart (Optional)"
     ],
-    "conversion:mycuure:purchase-option": [
+    "conversion:mycuure:view-cart": [
       "Select MyCuure Products"
     ],
-    "conversion:mycuure:quantity": [
+    "conversion:mycuure:purchase": [
       "Catalog MyCuure (Optional)"
     ],
-    "conversion:mycuure:step-10": [
-      "Checkout"
-    ],
     "conversion:mycuure:step-11": [
-      "Purchase"
-    ],
-    "conversion:mycuure:step-9": [
       "View Cart"
     ],
-    "conversion:mycuure:view-cart": [
+    "conversion:mycuure:checkout": [
       "Choose Quantity (1, 2, 3)"
     ],
-    "conversion:onely:add-to-cart": [
+    "conversion:onely:checkout": [
       "Select Format"
     ],
-    "conversion:onely:addon": [
+    "conversion:onely:view-cart": [
       "Survey Onely (Optional)",
       "Product Page Onely (Optional)"
     ],
-    "conversion:onely:checkout": [
+    "conversion:onely:step-10": [
       "View Cart"
     ],
-    "conversion:onely:format": [
+    "conversion:onely:add-to-cart": [
       "LP Onely"
     ],
-    "conversion:onely:purchase": [
+    "conversion:onely:step-11": [
       "Checkout"
     ],
-    "conversion:onely:purchase-option": [
+    "conversion:onely:quantity": [
       "Recos Onely (Optional)"
     ],
-    "conversion:onely:quantity": [
+    "conversion:onely:step-9": [
       "Add To Cart"
     ],
-    "conversion:onely:step-9": [
-      "Purchase"
-    ],
-    "conversion:onely:view-cart": [
+    "conversion:onely:purchase": [
       "Select Purchase Option"
     ],
     "conversion-multi-range:multi-range:step-1": [
@@ -931,48 +903,48 @@
     ]
   },
   "chipDeletions": {
-    "conversion:fs3b:add-to-cart": [
+    "conversion:fs3b:checkout": [
       "Select Quantity",
       "Product Page FS-3B",
       "Select Add-on"
     ],
-    "conversion:fs3b:addon": [
+    "conversion:fs3b:view-cart": [
       "Select Add-on",
       "Survey FS-3B",
       "Product Page FS-3B",
       "Survey FS-3B (Optional)",
       "Product Page FS-3B (Optional)"
     ],
-    "conversion:fs3b:checkout": [
+    "conversion:fs3b:step-10": [
       "Checkout"
     ],
-    "conversion:fs3b:format": [
+    "conversion:fs3b:add-to-cart": [
       "Select Format Option",
       "__table__",
       "LP FS-3B"
     ],
-    "conversion:fs3b:purchase": [
+    "conversion:fs3b:step-11": [
       "Purchase"
     ],
-    "conversion:fs3b:purchase-option": [
+    "conversion:fs3b:quantity": [
       "__table__",
       "Select Purchase Option",
       "Recos FS-3B",
       "Recos FS-3B (Optional)"
     ],
-    "conversion:fs3b:quantity": [
+    "conversion:fs3b:step-9": [
       "View Cart"
     ],
-    "conversion:fs3b:view-cart": [
+    "conversion:fs3b:purchase": [
       "Add To Cart",
       "Add Add-On",
       "Add-to-cart"
     ],
-    "conversion:ma05:add-to-cart": [
+    "conversion:ma05:checkout": [
       "Add To Cart",
       "Select Add-on"
     ],
-    "conversion:ma05:addon": [
+    "conversion:ma05:view-cart": [
       "__table__",
       "Select Purchase Option",
       "Product Page MA-05",
@@ -980,76 +952,76 @@
       "Survey MA-05 (Optional)",
       "Product Page MA-05 (Optional)"
     ],
-    "conversion:ma05:checkout": [
+    "conversion:ma05:step-10": [
       "Purchase"
     ],
-    "conversion:ma05:format": [
+    "conversion:ma05:add-to-cart": [
       "__table__",
       "Select Format Option",
       "LP MA-05"
     ],
-    "conversion:ma05:purchase-option": [
+    "conversion:ma05:quantity": [
       "Select Quantity",
       "Recos MA-05 (Optional)"
     ],
-    "conversion:ma05:quantity": [
+    "conversion:ma05:step-9": [
       "Checkout"
     ],
-    "conversion:ma05:view-cart": [
+    "conversion:ma05:purchase": [
       "View Cart",
       "Add Add-On"
     ],
-    "conversion:mycuure:add-to-cart": [
+    "conversion:mycuure:quantity": [
       "Checkout"
     ],
-    "conversion:mycuure:addon": [
+    "conversion:mycuure:add-to-cart": [
       "View Cart",
       "Recos MyCuure"
     ],
-    "conversion:mycuure:format": [
+    "conversion:mycuure:purchase-option": [
       "Select Products",
       "Survey MyCuure"
     ],
-    "conversion:mycuure:purchase-option": [
+    "conversion:mycuure:view-cart": [
       "Select Quantity"
     ],
-    "conversion:mycuure:quantity": [
+    "conversion:mycuure:purchase": [
       "Catalog MyCuure (Optionnel)",
       "Catalog MyCuure (Optionnal)"
     ],
-    "conversion:mycuure:view-cart": [
+    "conversion:mycuure:checkout": [
       "Purchase"
     ],
-    "conversion:onely:addon": [
+    "conversion:onely:view-cart": [
       "Select Quantity",
       "Survey onely",
       "Survey Onely",
       "Survey Onely (Optional)",
       "Product Page Onely (Optional)"
     ],
-    "conversion:onely:add-to-cart": [
+    "conversion:onely:checkout": [
       "View Cart"
     ],
-    "conversion:onely:checkout": [
+    "conversion:onely:step-10": [
       "Checkout"
     ],
-    "conversion:onely:format": [
+    "conversion:onely:add-to-cart": [
       "Select Format & Purchase Option",
       "__table__",
       "LP onely",
       "LP Onely"
     ],
-    "conversion:onely:purchase-option": [
+    "conversion:onely:quantity": [
       "Add To Cart",
       "Recos Onely (Optional)"
     ],
+    "conversion:onely:step-11": [
+      "Purchase"
+    ],
+    "conversion:onely:step-9": [
+      "Purchase"
+    ],
     "conversion:onely:purchase": [
-      "Purchase"
-    ],
-    "conversion:onely:quantity": [
-      "Purchase"
-    ],
-    "conversion:onely:view-cart": [
       "Checkout"
     ],
     "conversion:essentials:add-to-cart": [
@@ -1559,7 +1531,7 @@
     "discovery-returning:crm-led:source": "Email",
     "discovery-returning:reviews-seekers:definition": "Visitor returning to read customer reviews before (re)ordering.",
     "discovery-returning:reviews-seekers:source": "SEA / SEO",
-    "discovery-returning:information-seekers:definition": "Visitor returning to find additional information (ingredients, usage, FAQ\u2026).",
+    "discovery-returning:information-seekers:definition": "Visitor returning to find additional information (ingredients, usage, FAQ…).",
     "discovery-returning:information-seekers:source": "Organic",
     "conversion:mycuure:definition": "Customer going through the personalised MyCuure recommendation flow to find the right supplements.",
     "conversion:mycuure:source": "Home Page (banner, solutions) /\nBurger Menu / \nCatalog",
