@@ -106,90 +106,6 @@
     "post-purchase-mycuure:box:brochure:Personalised Brochure": "ok",
     "post-purchase-mycuure:box:app-download:App Download": "bon",
     "post-purchase-mycuure:box:first-intake:App On-Boarding": "moyen",
-    "post-purchase-mycuure:reload:confirmation-page:Confirmation Page": "bon",
-    "post-purchase-mycuure:reload:confirmation-email:Confirmation E-mail": "bon",
-    "post-purchase-mycuure:reload:tracking-email:Tracking E-mail": "bon",
-    "post-purchase-mycuure:reload:unboxing:Unboxing": "bon",
-    "post-purchase-mycuure:reload:brochure:Personalised Brochure": "ok",
-    "post-purchase-mycuure:reload:app-download:App Download": "bon",
-    "post-purchase-mycuure:reload:first-intake:App On-Boarding": "moyen",
-    "post-purchase-fs3b:bottle:confirmation-page:Confirmation Page": "ok",
-    "post-purchase-fs3b:pack:confirmation-page:Confirmation Page": "ok",
-    "post-purchase-fs3b:refill:confirmation-page:Confirmation Page": "ok",
-    "post-purchase-fs3b:bottle:confirmation-email:Confirmation E-mail": "bon",
-    "post-purchase-fs3b:pack:confirmation-email:Confirmation E-mail": "bon",
-    "post-purchase-fs3b:refill:confirmation-email:Confirmation E-mail": "bon",
-    "post-purchase-fs3b:bottle:tracking-email:Tracking E-mail": "bon",
-    "post-purchase-fs3b:pack:tracking-email:Tracking E-mail": "bon",
-    "post-purchase-fs3b:refill:tracking-email:Tracking E-mail": "bon",
-    "post-purchase-fs3b:bottle:unboxing:Unboxing": "bon",
-    "post-purchase-fs3b:pack:unboxing:Unboxing": "bon",
-    "post-purchase-fs3b:refill:unboxing:Unboxing": "bon",
-    "post-purchase-fs3b:bottle:brochure:Personalised Brochure": "ok",
-    "post-purchase-fs3b:pack:brochure:Personalised Brochure": "ok",
-    "post-purchase-fs3b:refill:brochure:Personalised Brochure": "ok",
-    "post-purchase-fs3b:bottle:app-download:App Download": "moyen",
-    "post-purchase-fs3b:pack:app-download:App Download": "moyen",
-    "post-purchase-fs3b:refill:app-download:App Download": "moyen",
-    "post-purchase-fs3b:bottle:first-intake:App On-Boarding": "mauvais",
-    "post-purchase-fs3b:pack:first-intake:App On-Boarding": "mauvais",
-    "post-purchase-fs3b:refill:first-intake:App On-Boarding": "mauvais",
-    "post-purchase-ma05:bottle:confirmation-page:Confirmation Page": "ok",
-    "post-purchase-ma05:pack-3m:confirmation-page:Confirmation Page": "ok",
-    "post-purchase-ma05:pack-6m:confirmation-page:Confirmation Page": "ok",
-    "post-purchase-ma05:refill:confirmation-page:Confirmation Page": "ok",
-    "post-purchase-ma05:bottle:confirmation-email:Confirmation E-mail": "bon",
-    "post-purchase-ma05:pack-3m:confirmation-email:Confirmation E-mail": "bon",
-    "post-purchase-ma05:pack-6m:confirmation-email:Confirmation E-mail": "bon",
-    "post-purchase-ma05:refill:confirmation-email:Confirmation E-mail": "bon",
-    "post-purchase-ma05:bottle:tracking-email:Tracking E-mail": "bon",
-    "post-purchase-ma05:pack-3m:tracking-email:Tracking E-mail": "bon",
-    "post-purchase-ma05:pack-6m:tracking-email:Tracking E-mail": "bon",
-    "post-purchase-ma05:refill:tracking-email:Tracking E-mail": "bon",
-    "post-purchase-ma05:bottle:unboxing:Unboxing": "bon",
-    "post-purchase-ma05:pack-3m:unboxing:Unboxing": "bon",
-    "post-purchase-ma05:pack-6m:unboxing:Unboxing": "bon",
-    "post-purchase-ma05:refill:unboxing:Unboxing": "bon",
-    "post-purchase-ma05:bottle:brochure:Personalised Brochure": "bon",
-    "post-purchase-ma05:pack-3m:brochure:Personalised Brochure": "bon",
-    "post-purchase-ma05:pack-6m:brochure:Personalised Brochure": "bon",
-    "post-purchase-ma05:refill:brochure:Personalised Brochure": "bon",
-    "post-purchase-ma05:bottle:app-download:App Download": "moyen",
-    "post-purchase-ma05:pack-3m:app-download:App Download": "moyen",
-    "post-purchase-ma05:pack-6m:app-download:App Download": "moyen",
-    "post-purchase-ma05:refill:app-download:App Download": "moyen",
-    "post-purchase-ma05:bottle:first-intake:App On-Boarding": "mauvais",
-    "post-purchase-ma05:pack-3m:first-intake:App On-Boarding": "mauvais",
-    "post-purchase-ma05:pack-6m:first-intake:App On-Boarding": "mauvais",
-    "post-purchase-ma05:refill:first-intake:App On-Boarding": "mauvais",
-    "post-purchase-onely:kit:confirmation-page:Confirmation Page": "ok",
-    "post-purchase-onely:reload:confirmation-page:Confirmation Page": "ok",
-    "post-purchase-onely:kit:confirmation-email:Confirmation E-mail": "bon",
-    "post-purchase-onely:reload:confirmation-email:Confirmation E-mail": "bon",
-    "post-purchase-onely:kit:tracking-email:Tracking E-mail": "bon",
-    "post-purchase-onely:reload:tracking-email:Tracking E-mail": "bon",
-    "post-purchase-onely:kit:unboxing:Unboxing": "bon",
-    "post-purchase-onely:reload:unboxing:Unboxing": "bon",
-    "post-purchase-onely:kit:brochure:Personalised Brochure": "bon",
-    "post-purchase-onely:reload:brochure:Personalised Brochure": "bon",
-    "post-purchase-onely:kit:app-download:App Download": "moyen",
-    "post-purchase-onely:reload:app-download:App Download": "moyen",
-    "post-purchase-onely:kit:first-intake:App On-Boarding": "mauvais",
-    "post-purchase-onely:reload:first-intake:App On-Boarding": "mauvais",
-    "post-purchase-essentials:essentials:confirmation-page:Confirmation Page": "bon",
-    "post-purchase-essentials:essentials:confirmation-email:Confirmation E-mail": "bon",
-    "post-purchase-essentials:essentials:tracking-email:Tracking E-mail": "bon",
-    "post-purchase-essentials:essentials:unboxing:Unboxing": "bon",
-    "post-purchase-essentials:essentials:brochure:Personalised Brochure": "ok",
-    "post-purchase-essentials:essentials:app-download:App Download": "moyen",
-    "post-purchase-essentials:essentials:first-intake:App On-Boarding": "mauvais",
-    "post-purchase-multi-range:multi-range:confirmation-page:Confirmation Page": "bon",
-    "post-purchase-multi-range:multi-range:confirmation-email:Confirmation E-mail": "bon",
-    "post-purchase-multi-range:multi-range:tracking-email:Tracking E-mail": "bon",
-    "post-purchase-multi-range:multi-range:unboxing:Unboxing": "bon",
-    "post-purchase-multi-range:multi-range:brochure:Personalised Brochure": "ok",
-    "post-purchase-multi-range:multi-range:app-download:App Download": "moyen",
-    "post-purchase-multi-range:multi-range:first-intake:App On-Boarding": "mauvais",
     "repurchase-otp:same-products-refiller:step-1:Catalog": "bon",
     "repurchase-otp:same-products-refiller:step-1:Re-order": "non existant",
     "repurchase-otp:same-products-refiller:step-2:Searchbar": "ok",
@@ -219,7 +135,6 @@
     "repurchase-otp:convinced-to-subscription:step-3:Plan Next Order": "bon",
     "repurchase-otp:convinced-to-subscription:step-3:Order Now": "bon",
     "post-purchase-mycuure:box:first-intake:First Intake": "ok",
-    "post-purchase-multi-range:multi-range:first-intake:First Intake": "ok",
     "repurchase-active-subscriber:upseller:step-1:View Cart": "bon",
     "repurchase-active-subscriber:upseller:step-2:View Upsell": "mauvais",
     "repurchase-active-subscriber:upseller:step-3:Add Upsell": "mauvais",
@@ -316,9 +231,7 @@
     "conversion-multi-range:multi-range:step-4:Checkout": "bon",
     "conversion-multi-range:multi-range:step-5:Purchase": "bon",
     "post-purchase-mycuure:box:tracking-email:Shipping Tracking": "mauvais",
-    "post-purchase-mycuure:reload:tracking-email:Shipping Tracking": "mauvais",
     "post-purchase-mycuure:box:confirmation-email:On-boarding": "bon",
-    "post-purchase-mycuure:reload:confirmation-email:On-boarding": "bon",
     "repurchase-active-subscriber:repeat-auto:step-1:Email Reminder": "ok",
     "repurchase-active-subscriber:subscription-delayer:step-3:Delay Subscription": "moyen",
     "repurchase-active-subscriber:pause-subscription:step-3:Delay Subscription": "moyen",
@@ -366,7 +279,137 @@
     "conversion:onely:quantity:Purchase": "bon",
     "repurchase-paused-subscriber:reactivate-upsell:step-3:View Cart": "ok",
     "repurchase-paused-subscriber:reactivate-upsell:step-2:Add To Cart": "bon",
-    "repurchase-paused-subscriber:reactivate-upsell:step-1:Product Page": "ok"
+    "repurchase-paused-subscriber:reactivate-upsell:step-1:Product Page": "ok",
+    "post-purchase-mycuure:reload:confirmation-page:Confirmation Page": "bon",
+    "post-purchase-mycuure:reload:confirmation-email:Confirmation E-mail": "bon",
+    "post-purchase-mycuure:reload:tracking-email:Tracking E-mail": "bon",
+    "post-purchase-mycuure:reload:unboxing:Unboxing": "bon",
+    "post-purchase-mycuure:reload:brochure:Personalised Brochure": "ok",
+    "post-purchase-mycuure:reload:app-download:App Download": "bon",
+    "post-purchase-mycuure:reload:first-intake:App On-Boarding": "moyen",
+    "post-purchase-mycuure:reload:first-intake:First Intake": "ok",
+    "post-purchase-mycuure:reload:tracking-email:Shipping Tracking": "mauvais",
+    "post-purchase-mycuure:reload:confirmation-email:On-boarding": "bon",
+    "post-purchase-mycuure:multi-box:confirmation-page:Confirmation Page": "bon",
+    "post-purchase-mycuure:multi-box:confirmation-email:Confirmation E-mail": "bon",
+    "post-purchase-mycuure:multi-box:tracking-email:Tracking E-mail": "bon",
+    "post-purchase-mycuure:multi-box:unboxing:Unboxing": "bon",
+    "post-purchase-mycuure:multi-box:brochure:Personalised Brochure": "ok",
+    "post-purchase-mycuure:multi-box:app-download:App Download": "bon",
+    "post-purchase-mycuure:multi-box:first-intake:App On-Boarding": "moyen",
+    "post-purchase-mycuure:multi-box:first-intake:First Intake": "ok",
+    "post-purchase-mycuure:multi-box:tracking-email:Shipping Tracking": "mauvais",
+    "post-purchase-mycuure:multi-box:confirmation-email:On-boarding": "bon",
+    "post-purchase-fs3b:bottle:confirmation-page:Confirmation Page": "bon",
+    "post-purchase-fs3b:bottle:confirmation-email:Confirmation E-mail": "bon",
+    "post-purchase-fs3b:bottle:tracking-email:Tracking E-mail": "bon",
+    "post-purchase-fs3b:bottle:unboxing:Unboxing": "bon",
+    "post-purchase-fs3b:bottle:brochure:Personalised Brochure": "ok",
+    "post-purchase-fs3b:bottle:app-download:App Download": "bon",
+    "post-purchase-fs3b:bottle:first-intake:App On-Boarding": "moyen",
+    "post-purchase-fs3b:bottle:first-intake:First Intake": "ok",
+    "post-purchase-fs3b:bottle:tracking-email:Shipping Tracking": "mauvais",
+    "post-purchase-fs3b:bottle:confirmation-email:On-boarding": "bon",
+    "post-purchase-fs3b:pack:confirmation-page:Confirmation Page": "bon",
+    "post-purchase-fs3b:pack:confirmation-email:Confirmation E-mail": "bon",
+    "post-purchase-fs3b:pack:tracking-email:Tracking E-mail": "bon",
+    "post-purchase-fs3b:pack:unboxing:Unboxing": "bon",
+    "post-purchase-fs3b:pack:brochure:Personalised Brochure": "ok",
+    "post-purchase-fs3b:pack:app-download:App Download": "bon",
+    "post-purchase-fs3b:pack:first-intake:App On-Boarding": "moyen",
+    "post-purchase-fs3b:pack:first-intake:First Intake": "ok",
+    "post-purchase-fs3b:pack:tracking-email:Shipping Tracking": "mauvais",
+    "post-purchase-fs3b:pack:confirmation-email:On-boarding": "bon",
+    "post-purchase-fs3b:refill:confirmation-page:Confirmation Page": "bon",
+    "post-purchase-fs3b:refill:confirmation-email:Confirmation E-mail": "bon",
+    "post-purchase-fs3b:refill:tracking-email:Tracking E-mail": "bon",
+    "post-purchase-fs3b:refill:unboxing:Unboxing": "bon",
+    "post-purchase-fs3b:refill:brochure:Personalised Brochure": "ok",
+    "post-purchase-fs3b:refill:app-download:App Download": "bon",
+    "post-purchase-fs3b:refill:first-intake:App On-Boarding": "moyen",
+    "post-purchase-fs3b:refill:first-intake:First Intake": "ok",
+    "post-purchase-fs3b:refill:tracking-email:Shipping Tracking": "mauvais",
+    "post-purchase-fs3b:refill:confirmation-email:On-boarding": "bon",
+    "post-purchase-ma05:bottle:confirmation-page:Confirmation Page": "bon",
+    "post-purchase-ma05:bottle:confirmation-email:Confirmation E-mail": "bon",
+    "post-purchase-ma05:bottle:tracking-email:Tracking E-mail": "bon",
+    "post-purchase-ma05:bottle:unboxing:Unboxing": "bon",
+    "post-purchase-ma05:bottle:brochure:Personalised Brochure": "ok",
+    "post-purchase-ma05:bottle:app-download:App Download": "bon",
+    "post-purchase-ma05:bottle:first-intake:App On-Boarding": "moyen",
+    "post-purchase-ma05:bottle:first-intake:First Intake": "ok",
+    "post-purchase-ma05:bottle:tracking-email:Shipping Tracking": "mauvais",
+    "post-purchase-ma05:bottle:confirmation-email:On-boarding": "bon",
+    "post-purchase-ma05:pack-3m:confirmation-page:Confirmation Page": "bon",
+    "post-purchase-ma05:pack-3m:confirmation-email:Confirmation E-mail": "bon",
+    "post-purchase-ma05:pack-3m:tracking-email:Tracking E-mail": "bon",
+    "post-purchase-ma05:pack-3m:unboxing:Unboxing": "bon",
+    "post-purchase-ma05:pack-3m:brochure:Personalised Brochure": "ok",
+    "post-purchase-ma05:pack-3m:app-download:App Download": "bon",
+    "post-purchase-ma05:pack-3m:first-intake:App On-Boarding": "moyen",
+    "post-purchase-ma05:pack-3m:first-intake:First Intake": "ok",
+    "post-purchase-ma05:pack-3m:tracking-email:Shipping Tracking": "mauvais",
+    "post-purchase-ma05:pack-3m:confirmation-email:On-boarding": "bon",
+    "post-purchase-ma05:pack-6m:confirmation-page:Confirmation Page": "bon",
+    "post-purchase-ma05:pack-6m:confirmation-email:Confirmation E-mail": "bon",
+    "post-purchase-ma05:pack-6m:tracking-email:Tracking E-mail": "bon",
+    "post-purchase-ma05:pack-6m:unboxing:Unboxing": "bon",
+    "post-purchase-ma05:pack-6m:brochure:Personalised Brochure": "ok",
+    "post-purchase-ma05:pack-6m:app-download:App Download": "bon",
+    "post-purchase-ma05:pack-6m:first-intake:App On-Boarding": "moyen",
+    "post-purchase-ma05:pack-6m:first-intake:First Intake": "ok",
+    "post-purchase-ma05:pack-6m:tracking-email:Shipping Tracking": "mauvais",
+    "post-purchase-ma05:pack-6m:confirmation-email:On-boarding": "bon",
+    "post-purchase-ma05:refill:confirmation-page:Confirmation Page": "bon",
+    "post-purchase-ma05:refill:confirmation-email:Confirmation E-mail": "bon",
+    "post-purchase-ma05:refill:tracking-email:Tracking E-mail": "bon",
+    "post-purchase-ma05:refill:unboxing:Unboxing": "bon",
+    "post-purchase-ma05:refill:brochure:Personalised Brochure": "ok",
+    "post-purchase-ma05:refill:app-download:App Download": "bon",
+    "post-purchase-ma05:refill:first-intake:App On-Boarding": "moyen",
+    "post-purchase-ma05:refill:first-intake:First Intake": "ok",
+    "post-purchase-ma05:refill:tracking-email:Shipping Tracking": "mauvais",
+    "post-purchase-ma05:refill:confirmation-email:On-boarding": "bon",
+    "post-purchase-onely:kit:confirmation-page:Confirmation Page": "bon",
+    "post-purchase-onely:kit:confirmation-email:Confirmation E-mail": "bon",
+    "post-purchase-onely:kit:tracking-email:Tracking E-mail": "bon",
+    "post-purchase-onely:kit:unboxing:Unboxing": "bon",
+    "post-purchase-onely:kit:brochure:Personalised Brochure": "ok",
+    "post-purchase-onely:kit:app-download:App Download": "bon",
+    "post-purchase-onely:kit:first-intake:App On-Boarding": "moyen",
+    "post-purchase-onely:kit:first-intake:First Intake": "ok",
+    "post-purchase-onely:kit:tracking-email:Shipping Tracking": "mauvais",
+    "post-purchase-onely:kit:confirmation-email:On-boarding": "bon",
+    "post-purchase-onely:reload:confirmation-page:Confirmation Page": "bon",
+    "post-purchase-onely:reload:confirmation-email:Confirmation E-mail": "bon",
+    "post-purchase-onely:reload:tracking-email:Tracking E-mail": "bon",
+    "post-purchase-onely:reload:unboxing:Unboxing": "bon",
+    "post-purchase-onely:reload:brochure:Personalised Brochure": "ok",
+    "post-purchase-onely:reload:app-download:App Download": "bon",
+    "post-purchase-onely:reload:first-intake:App On-Boarding": "moyen",
+    "post-purchase-onely:reload:first-intake:First Intake": "ok",
+    "post-purchase-onely:reload:tracking-email:Shipping Tracking": "mauvais",
+    "post-purchase-onely:reload:confirmation-email:On-boarding": "bon",
+    "post-purchase-essentials:essentials:confirmation-page:Confirmation Page": "bon",
+    "post-purchase-essentials:essentials:confirmation-email:Confirmation E-mail": "bon",
+    "post-purchase-essentials:essentials:tracking-email:Tracking E-mail": "bon",
+    "post-purchase-essentials:essentials:unboxing:Unboxing": "bon",
+    "post-purchase-essentials:essentials:brochure:Personalised Brochure": "ok",
+    "post-purchase-essentials:essentials:app-download:App Download": "bon",
+    "post-purchase-essentials:essentials:first-intake:App On-Boarding": "moyen",
+    "post-purchase-essentials:essentials:first-intake:First Intake": "ok",
+    "post-purchase-essentials:essentials:tracking-email:Shipping Tracking": "mauvais",
+    "post-purchase-essentials:essentials:confirmation-email:On-boarding": "bon",
+    "post-purchase-multi-range:multi-range:confirmation-page:Confirmation Page": "bon",
+    "post-purchase-multi-range:multi-range:confirmation-email:Confirmation E-mail": "bon",
+    "post-purchase-multi-range:multi-range:tracking-email:Tracking E-mail": "bon",
+    "post-purchase-multi-range:multi-range:unboxing:Unboxing": "bon",
+    "post-purchase-multi-range:multi-range:brochure:Personalised Brochure": "ok",
+    "post-purchase-multi-range:multi-range:app-download:App Download": "bon",
+    "post-purchase-multi-range:multi-range:first-intake:App On-Boarding": "moyen",
+    "post-purchase-multi-range:multi-range:first-intake:First Intake": "ok",
+    "post-purchase-multi-range:multi-range:tracking-email:Shipping Tracking": "mauvais",
+    "post-purchase-multi-range:multi-range:confirmation-email:On-boarding": "bon"
   },
   "chipAdditions": {
     "conversion:fs3b:add-to-cart": [
@@ -649,72 +692,6 @@
     "post-purchase-mycuure:box:first-intake": [
       "App On-Boarding"
     ],
-    "post-purchase-mycuure:reload:first-intake": [
-      "App On-Boarding"
-    ],
-    "post-purchase-fs3b:bottle:app-download": [
-      "App Download"
-    ],
-    "post-purchase-fs3b:pack:app-download": [
-      "App Download"
-    ],
-    "post-purchase-fs3b:refill:app-download": [
-      "App Download"
-    ],
-    "post-purchase-fs3b:bottle:first-intake": [
-      "App On-Boarding"
-    ],
-    "post-purchase-fs3b:pack:first-intake": [
-      "App On-Boarding"
-    ],
-    "post-purchase-fs3b:refill:first-intake": [
-      "App On-Boarding"
-    ],
-    "post-purchase-ma05:bottle:app-download": [
-      "App Download"
-    ],
-    "post-purchase-ma05:pack-3m:app-download": [
-      "App Download"
-    ],
-    "post-purchase-ma05:pack-6m:app-download": [
-      "App Download"
-    ],
-    "post-purchase-ma05:refill:app-download": [
-      "App Download"
-    ],
-    "post-purchase-ma05:bottle:first-intake": [
-      "App On-Boarding"
-    ],
-    "post-purchase-ma05:pack-3m:first-intake": [
-      "App On-Boarding"
-    ],
-    "post-purchase-ma05:pack-6m:first-intake": [
-      "App On-Boarding"
-    ],
-    "post-purchase-ma05:refill:first-intake": [
-      "App On-Boarding"
-    ],
-    "post-purchase-onely:kit:app-download": [
-      "App Download"
-    ],
-    "post-purchase-onely:reload:app-download": [
-      "App Download"
-    ],
-    "post-purchase-onely:kit:first-intake": [
-      "App On-Boarding"
-    ],
-    "post-purchase-onely:reload:first-intake": [
-      "App On-Boarding"
-    ],
-    "post-purchase-essentials:essentials:app-download": [
-      "App Download"
-    ],
-    "post-purchase-essentials:essentials:first-intake": [
-      "App On-Boarding"
-    ],
-    "post-purchase-multi-range:multi-range:first-intake": [
-      "App On-Boarding"
-    ],
     "repurchase-otp:same-products-refiller:step-1": [
       "Catalog",
       "Re-order",
@@ -966,15 +943,7 @@
       "Tracking Notification",
       "Shipping Tracking"
     ],
-    "post-purchase-mycuure:reload:tracking-email": [
-      "Tracking Whatsapp",
-      "Tracking Notification",
-      "Shipping Tracking"
-    ],
     "post-purchase-mycuure:box:confirmation-email": [
-      "On-boarding"
-    ],
-    "post-purchase-mycuure:reload:confirmation-email": [
       "On-boarding"
     ],
     "repurchase-active-subscriber:repeat-auto:step-1": [
@@ -994,6 +963,149 @@
     ],
     "repurchase-paused-subscriber:reactivate-upsell:step-1": [
       "Product Page"
+    ],
+    "post-purchase-mycuure:reload:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-mycuure:reload:tracking-email": [
+      "Tracking Whatsapp",
+      "Tracking Notification",
+      "Shipping Tracking"
+    ],
+    "post-purchase-mycuure:reload:confirmation-email": [
+      "On-boarding"
+    ],
+    "post-purchase-mycuure:multi-box:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-mycuure:multi-box:tracking-email": [
+      "Tracking Whatsapp",
+      "Tracking Notification",
+      "Shipping Tracking"
+    ],
+    "post-purchase-mycuure:multi-box:confirmation-email": [
+      "On-boarding"
+    ],
+    "post-purchase-fs3b:bottle:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-fs3b:bottle:tracking-email": [
+      "Tracking Whatsapp",
+      "Tracking Notification",
+      "Shipping Tracking"
+    ],
+    "post-purchase-fs3b:bottle:confirmation-email": [
+      "On-boarding"
+    ],
+    "post-purchase-fs3b:pack:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-fs3b:pack:tracking-email": [
+      "Tracking Whatsapp",
+      "Tracking Notification",
+      "Shipping Tracking"
+    ],
+    "post-purchase-fs3b:pack:confirmation-email": [
+      "On-boarding"
+    ],
+    "post-purchase-fs3b:refill:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-fs3b:refill:tracking-email": [
+      "Tracking Whatsapp",
+      "Tracking Notification",
+      "Shipping Tracking"
+    ],
+    "post-purchase-fs3b:refill:confirmation-email": [
+      "On-boarding"
+    ],
+    "post-purchase-ma05:bottle:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-ma05:bottle:tracking-email": [
+      "Tracking Whatsapp",
+      "Tracking Notification",
+      "Shipping Tracking"
+    ],
+    "post-purchase-ma05:bottle:confirmation-email": [
+      "On-boarding"
+    ],
+    "post-purchase-ma05:pack-3m:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-ma05:pack-3m:tracking-email": [
+      "Tracking Whatsapp",
+      "Tracking Notification",
+      "Shipping Tracking"
+    ],
+    "post-purchase-ma05:pack-3m:confirmation-email": [
+      "On-boarding"
+    ],
+    "post-purchase-ma05:pack-6m:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-ma05:pack-6m:tracking-email": [
+      "Tracking Whatsapp",
+      "Tracking Notification",
+      "Shipping Tracking"
+    ],
+    "post-purchase-ma05:pack-6m:confirmation-email": [
+      "On-boarding"
+    ],
+    "post-purchase-ma05:refill:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-ma05:refill:tracking-email": [
+      "Tracking Whatsapp",
+      "Tracking Notification",
+      "Shipping Tracking"
+    ],
+    "post-purchase-ma05:refill:confirmation-email": [
+      "On-boarding"
+    ],
+    "post-purchase-onely:kit:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-onely:kit:tracking-email": [
+      "Tracking Whatsapp",
+      "Tracking Notification",
+      "Shipping Tracking"
+    ],
+    "post-purchase-onely:kit:confirmation-email": [
+      "On-boarding"
+    ],
+    "post-purchase-onely:reload:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-onely:reload:tracking-email": [
+      "Tracking Whatsapp",
+      "Tracking Notification",
+      "Shipping Tracking"
+    ],
+    "post-purchase-onely:reload:confirmation-email": [
+      "On-boarding"
+    ],
+    "post-purchase-essentials:essentials:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-essentials:essentials:tracking-email": [
+      "Tracking Whatsapp",
+      "Tracking Notification",
+      "Shipping Tracking"
+    ],
+    "post-purchase-essentials:essentials:confirmation-email": [
+      "On-boarding"
+    ],
+    "post-purchase-multi-range:multi-range:first-intake": [
+      "App On-Boarding"
+    ],
+    "post-purchase-multi-range:multi-range:tracking-email": [
+      "Tracking Whatsapp",
+      "Tracking Notification",
+      "Shipping Tracking"
+    ],
+    "post-purchase-multi-range:multi-range:confirmation-email": [
+      "On-boarding"
     ]
   },
   "chipDeletions": {
@@ -1242,78 +1354,6 @@
       "First Intake"
     ],
     "post-purchase-mycuure:box:next-order": [
-      "Next Order Planned"
-    ],
-    "post-purchase-mycuure:reload:first-intake": [
-      "First Intake"
-    ],
-    "post-purchase-mycuure:reload:next-order": [
-      "Next Order Planned"
-    ],
-    "post-purchase-fs3b:bottle:first-intake": [
-      "First Intake"
-    ],
-    "post-purchase-fs3b:pack:first-intake": [
-      "First Intake"
-    ],
-    "post-purchase-fs3b:refill:first-intake": [
-      "First Intake"
-    ],
-    "post-purchase-fs3b:bottle:next-order": [
-      "Next Order Planned"
-    ],
-    "post-purchase-fs3b:pack:next-order": [
-      "Next Order Planned"
-    ],
-    "post-purchase-fs3b:refill:next-order": [
-      "Next Order Planned"
-    ],
-    "post-purchase-ma05:bottle:first-intake": [
-      "First Intake"
-    ],
-    "post-purchase-ma05:pack-3m:first-intake": [
-      "First Intake"
-    ],
-    "post-purchase-ma05:pack-6m:first-intake": [
-      "First Intake"
-    ],
-    "post-purchase-ma05:refill:first-intake": [
-      "First Intake"
-    ],
-    "post-purchase-ma05:bottle:next-order": [
-      "Next Order Planned"
-    ],
-    "post-purchase-ma05:pack-3m:next-order": [
-      "Next Order Planned"
-    ],
-    "post-purchase-ma05:pack-6m:next-order": [
-      "Next Order Planned"
-    ],
-    "post-purchase-ma05:refill:next-order": [
-      "Next Order Planned"
-    ],
-    "post-purchase-onely:kit:first-intake": [
-      "First Intake"
-    ],
-    "post-purchase-onely:reload:first-intake": [
-      "First Intake"
-    ],
-    "post-purchase-onely:kit:next-order": [
-      "Next Order Planned"
-    ],
-    "post-purchase-onely:reload:next-order": [
-      "Next Order Planned"
-    ],
-    "post-purchase-essentials:essentials:first-intake": [
-      "First Intake"
-    ],
-    "post-purchase-essentials:essentials:next-order": [
-      "Next Order Planned"
-    ],
-    "post-purchase-multi-range:multi-range:first-intake": [
-      "First Intake"
-    ],
-    "post-purchase-multi-range:multi-range:next-order": [
       "Next Order Planned"
     ],
     "repurchase-otp:same-products-refiller:step-1": [
@@ -1601,15 +1641,7 @@
       "Tracking Whatsapp",
       "Tracking Notification"
     ],
-    "post-purchase-mycuure:reload:tracking-email": [
-      "Tracking E-mail",
-      "Tracking Whatsapp",
-      "Tracking Notification"
-    ],
     "post-purchase-mycuure:box:app-download": [
-      "App Download"
-    ],
-    "post-purchase-mycuure:reload:app-download": [
       "App Download"
     ],
     "repurchase-active-subscriber:upseller:step-1": [
@@ -1666,6 +1698,188 @@
     "repurchase-paused-subscriber:reactivate-upsell:step-5": [],
     "repurchase-paused-subscriber:reactivate-other:step-6": [
       "Activate Subscription"
+    ],
+    "post-purchase-mycuure:reload:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-mycuure:reload:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-mycuure:reload:tracking-email": [
+      "Tracking E-mail",
+      "Tracking Whatsapp",
+      "Tracking Notification"
+    ],
+    "post-purchase-mycuure:reload:app-download": [
+      "App Download"
+    ],
+    "post-purchase-mycuure:multi-box:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-mycuure:multi-box:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-mycuure:multi-box:tracking-email": [
+      "Tracking E-mail",
+      "Tracking Whatsapp",
+      "Tracking Notification"
+    ],
+    "post-purchase-mycuure:multi-box:app-download": [
+      "App Download"
+    ],
+    "post-purchase-fs3b:bottle:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-fs3b:bottle:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-fs3b:bottle:tracking-email": [
+      "Tracking E-mail",
+      "Tracking Whatsapp",
+      "Tracking Notification"
+    ],
+    "post-purchase-fs3b:bottle:app-download": [
+      "App Download"
+    ],
+    "post-purchase-fs3b:pack:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-fs3b:pack:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-fs3b:pack:tracking-email": [
+      "Tracking E-mail",
+      "Tracking Whatsapp",
+      "Tracking Notification"
+    ],
+    "post-purchase-fs3b:pack:app-download": [
+      "App Download"
+    ],
+    "post-purchase-fs3b:refill:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-fs3b:refill:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-fs3b:refill:tracking-email": [
+      "Tracking E-mail",
+      "Tracking Whatsapp",
+      "Tracking Notification"
+    ],
+    "post-purchase-fs3b:refill:app-download": [
+      "App Download"
+    ],
+    "post-purchase-ma05:bottle:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-ma05:bottle:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-ma05:bottle:tracking-email": [
+      "Tracking E-mail",
+      "Tracking Whatsapp",
+      "Tracking Notification"
+    ],
+    "post-purchase-ma05:bottle:app-download": [
+      "App Download"
+    ],
+    "post-purchase-ma05:pack-3m:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-ma05:pack-3m:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-ma05:pack-3m:tracking-email": [
+      "Tracking E-mail",
+      "Tracking Whatsapp",
+      "Tracking Notification"
+    ],
+    "post-purchase-ma05:pack-3m:app-download": [
+      "App Download"
+    ],
+    "post-purchase-ma05:pack-6m:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-ma05:pack-6m:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-ma05:pack-6m:tracking-email": [
+      "Tracking E-mail",
+      "Tracking Whatsapp",
+      "Tracking Notification"
+    ],
+    "post-purchase-ma05:pack-6m:app-download": [
+      "App Download"
+    ],
+    "post-purchase-ma05:refill:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-ma05:refill:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-ma05:refill:tracking-email": [
+      "Tracking E-mail",
+      "Tracking Whatsapp",
+      "Tracking Notification"
+    ],
+    "post-purchase-ma05:refill:app-download": [
+      "App Download"
+    ],
+    "post-purchase-onely:kit:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-onely:kit:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-onely:kit:tracking-email": [
+      "Tracking E-mail",
+      "Tracking Whatsapp",
+      "Tracking Notification"
+    ],
+    "post-purchase-onely:kit:app-download": [
+      "App Download"
+    ],
+    "post-purchase-onely:reload:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-onely:reload:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-onely:reload:tracking-email": [
+      "Tracking E-mail",
+      "Tracking Whatsapp",
+      "Tracking Notification"
+    ],
+    "post-purchase-onely:reload:app-download": [
+      "App Download"
+    ],
+    "post-purchase-essentials:essentials:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-essentials:essentials:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-essentials:essentials:tracking-email": [
+      "Tracking E-mail",
+      "Tracking Whatsapp",
+      "Tracking Notification"
+    ],
+    "post-purchase-essentials:essentials:app-download": [
+      "App Download"
+    ],
+    "post-purchase-multi-range:multi-range:first-intake": [
+      "First Intake"
+    ],
+    "post-purchase-multi-range:multi-range:next-order": [
+      "Next Order Planned"
+    ],
+    "post-purchase-multi-range:multi-range:tracking-email": [
+      "Tracking E-mail",
+      "Tracking Whatsapp",
+      "Tracking Notification"
+    ],
+    "post-purchase-multi-range:multi-range:app-download": [
+      "App Download"
     ]
   },
   "metaValues": {
