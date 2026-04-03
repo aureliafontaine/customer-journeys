@@ -409,7 +409,23 @@
     "post-purchase-multi-range:multi-range:first-intake:App On-Boarding": "moyen",
     "post-purchase-multi-range:multi-range:first-intake:First Intake": "ok",
     "post-purchase-multi-range:multi-range:tracking-email:Shipping Tracking": "mauvais",
-    "post-purchase-multi-range:multi-range:confirmation-email:On-boarding": "bon"
+    "post-purchase-multi-range:multi-range:confirmation-email:On-boarding": "bon",
+    "post-purchase-mycuure:multi-box:confirmation-email:Confirmation E-Mal": "bon",
+    "post-purchase-mycuure:multi-box:confirmation-email:On-Boarding": "bon",
+    "post-purchase-mycuure:box:app-download:App On-Boarding": "moyen",
+    "post-purchase-mycuure:reload:app-download:App On-Boarding": "moyen",
+    "post-purchase-mycuure:multi-box:app-download:App On-Boarding": "moyen",
+    "post-purchase-fs3b:bottle:app-download:App On-Boarding": "moyen",
+    "post-purchase-fs3b:pack:app-download:App On-Boarding": "moyen",
+    "post-purchase-fs3b:refill:app-download:App On-Boarding": "moyen",
+    "post-purchase-ma05:refill:app-download:App On-Boarding": "moyen",
+    "post-purchase-ma05:pack-6m:app-download:App On-Boarding": "moyen",
+    "post-purchase-ma05:pack-3m:app-download:App On-Boarding": "moyen",
+    "post-purchase-ma05:bottle:app-download:App On-Boarding": "moyen",
+    "post-purchase-onely:kit:app-download:App On-Boarding": "moyen",
+    "post-purchase-onely:reload:app-download:App On-Boarding": "moyen",
+    "post-purchase-essentials:essentials:app-download:App On-Boarding": "moyen",
+    "post-purchase-multi-range:multi-range:app-download:App On-Boarding": "moyen"
   },
   "chipAdditions": {
     "conversion:fs3b:add-to-cart": [
@@ -984,7 +1000,9 @@
       "Shipping Tracking"
     ],
     "post-purchase-mycuure:multi-box:confirmation-email": [
-      "On-boarding"
+      "On-boarding",
+      "On-Boaring",
+      "On-Boarding"
     ],
     "post-purchase-fs3b:bottle:first-intake": [
       "App On-Boarding"
@@ -1106,6 +1124,58 @@
     ],
     "post-purchase-multi-range:multi-range:confirmation-email": [
       "On-boarding"
+    ],
+    "post-purchase-mycuure:multi-box:confirmation-page": [
+      "Confirmation Page"
+    ],
+    "post-purchase-mycuure:multi-box:unboxing": [
+      "Unboxing"
+    ],
+    "post-purchase-mycuure:multi-box:brochure": [
+      "Personalised Brochure"
+    ],
+    "post-purchase-mycuure:box:app-download": [
+      "App On-boarding",
+      "App On-Boarding"
+    ],
+    "post-purchase-mycuure:reload:app-download": [
+      "App On-Boarding"
+    ],
+    "post-purchase-mycuure:multi-box:app-download": [
+      "App On-Boarding"
+    ],
+    "post-purchase-fs3b:bottle:app-download": [
+      "App On-Boarding"
+    ],
+    "post-purchase-fs3b:pack:app-download": [
+      "App On-Boarding"
+    ],
+    "post-purchase-fs3b:refill:app-download": [
+      "App On-Boarding"
+    ],
+    "post-purchase-ma05:bottle:app-download": [
+      "App On-Boarding"
+    ],
+    "post-purchase-ma05:pack-3m:app-download": [
+      "App On-Boarding"
+    ],
+    "post-purchase-ma05:pack-6m:app-download": [
+      "App On-Boarding"
+    ],
+    "post-purchase-ma05:refill:app-download": [
+      "App On-Boarding"
+    ],
+    "post-purchase-onely:kit:app-download": [
+      "App On-Boarding"
+    ],
+    "post-purchase-onely:reload:app-download": [
+      "App On-Boarding"
+    ],
+    "post-purchase-essentials:essentials:app-download": [
+      "App On-Boarding"
+    ],
+    "post-purchase-multi-range:multi-range:app-download": [
+      "App On-Boarding"
     ]
   },
   "chipDeletions": {
@@ -1351,7 +1421,8 @@
       "Add to cart"
     ],
     "post-purchase-mycuure:box:first-intake": [
-      "First Intake"
+      "First Intake",
+      "App On-Boarding"
     ],
     "post-purchase-mycuure:box:next-order": [
       "Next Order Planned"
@@ -1642,7 +1713,8 @@
       "Tracking Notification"
     ],
     "post-purchase-mycuure:box:app-download": [
-      "App Download"
+      "App Download",
+      "App On-boarding"
     ],
     "repurchase-active-subscriber:upseller:step-1": [
       "View Cart"
@@ -1700,7 +1772,8 @@
       "Activate Subscription"
     ],
     "post-purchase-mycuure:reload:first-intake": [
-      "First Intake"
+      "First Intake",
+      "App On-Boarding"
     ],
     "post-purchase-mycuure:reload:next-order": [
       "Next Order Planned"
@@ -1714,7 +1787,8 @@
       "App Download"
     ],
     "post-purchase-mycuure:multi-box:first-intake": [
-      "First Intake"
+      "First Intake",
+      "App On-Boarding"
     ],
     "post-purchase-mycuure:multi-box:next-order": [
       "Next Order Planned"
@@ -1728,7 +1802,8 @@
       "App Download"
     ],
     "post-purchase-fs3b:bottle:first-intake": [
-      "First Intake"
+      "First Intake",
+      "App On-Boarding"
     ],
     "post-purchase-fs3b:bottle:next-order": [
       "Next Order Planned"
@@ -1742,7 +1817,8 @@
       "App Download"
     ],
     "post-purchase-fs3b:pack:first-intake": [
-      "First Intake"
+      "First Intake",
+      "App On-Boarding"
     ],
     "post-purchase-fs3b:pack:next-order": [
       "Next Order Planned"
@@ -1756,7 +1832,8 @@
       "App Download"
     ],
     "post-purchase-fs3b:refill:first-intake": [
-      "First Intake"
+      "First Intake",
+      "App On-Boarding"
     ],
     "post-purchase-fs3b:refill:next-order": [
       "Next Order Planned"
@@ -1770,7 +1847,8 @@
       "App Download"
     ],
     "post-purchase-ma05:bottle:first-intake": [
-      "First Intake"
+      "First Intake",
+      "App On-Boarding"
     ],
     "post-purchase-ma05:bottle:next-order": [
       "Next Order Planned"
@@ -1784,7 +1862,8 @@
       "App Download"
     ],
     "post-purchase-ma05:pack-3m:first-intake": [
-      "First Intake"
+      "First Intake",
+      "App On-Boarding"
     ],
     "post-purchase-ma05:pack-3m:next-order": [
       "Next Order Planned"
@@ -1798,7 +1877,8 @@
       "App Download"
     ],
     "post-purchase-ma05:pack-6m:first-intake": [
-      "First Intake"
+      "First Intake",
+      "App On-Boarding"
     ],
     "post-purchase-ma05:pack-6m:next-order": [
       "Next Order Planned"
@@ -1812,7 +1892,8 @@
       "App Download"
     ],
     "post-purchase-ma05:refill:first-intake": [
-      "First Intake"
+      "First Intake",
+      "App On-Boarding"
     ],
     "post-purchase-ma05:refill:next-order": [
       "Next Order Planned"
@@ -1826,7 +1907,8 @@
       "App Download"
     ],
     "post-purchase-onely:kit:first-intake": [
-      "First Intake"
+      "First Intake",
+      "App On-Boarding"
     ],
     "post-purchase-onely:kit:next-order": [
       "Next Order Planned"
@@ -1840,7 +1922,8 @@
       "App Download"
     ],
     "post-purchase-onely:reload:first-intake": [
-      "First Intake"
+      "First Intake",
+      "App On-Boarding"
     ],
     "post-purchase-onely:reload:next-order": [
       "Next Order Planned"
@@ -1854,7 +1937,8 @@
       "App Download"
     ],
     "post-purchase-essentials:essentials:first-intake": [
-      "First Intake"
+      "First Intake",
+      "App On-Boarding"
     ],
     "post-purchase-essentials:essentials:next-order": [
       "Next Order Planned"
@@ -1868,7 +1952,8 @@
       "App Download"
     ],
     "post-purchase-multi-range:multi-range:first-intake": [
-      "First Intake"
+      "First Intake",
+      "App On-Boarding"
     ],
     "post-purchase-multi-range:multi-range:next-order": [
       "Next Order Planned"
@@ -1880,6 +1965,10 @@
     ],
     "post-purchase-multi-range:multi-range:app-download": [
       "App Download"
+    ],
+    "post-purchase-mycuure:multi-box:confirmation-email": [
+      "On-boarding",
+      "On-Boaring"
     ]
   },
   "metaValues": {
@@ -1911,15 +2000,15 @@
     "conversion:essentials:source": "Product Page Essentials",
     "conversion-multi-range:multi-range:definition": "Customer browsing the catalog to build an order with multiple different products.",
     "conversion-multi-range:multi-range:source": "Catalog",
-    "post-purchase-mycuure:box:definition": "Customer who ordered a personalised MyCuure box, going through the post-purchase experience (delivery, unboxing, app onboarding).",
+    "post-purchase-mycuure:box:definition": "Customer who just purchased 1 box MyCuure.",
     "post-purchase-mycuure:box:source": "Confirmation Page / Email",
     "post-purchase-mycuure:reload:definition": "Customer who ordered a MyCuure Reload (refill of their box), following the same post-purchase flow.",
     "post-purchase-mycuure:reload:source": "Confirmation Page / Email",
-    "post-purchase-fs3b:bottle:definition": "Customer who ordered a 1-month FS-3B bottle, going through the post-purchase flow.",
+    "post-purchase-fs3b:bottle:definition": "A customer who just purchased FS-3B 1-month bottle.",
     "post-purchase-fs3b:bottle:source": "Confirmation Page / Email",
-    "post-purchase-fs3b:pack:definition": "Customer who ordered a 3-month FS-3B pack, same post-purchase flow.",
+    "post-purchase-fs3b:pack:definition": "A customer who just purchased FS-3B 3-months pack.",
     "post-purchase-fs3b:pack:source": "Confirmation Page / Email",
-    "post-purchase-fs3b:refill:definition": "Customer who ordered a 1-month FS-3B refill.",
+    "post-purchase-fs3b:refill:definition": "A customer who just purchased FS-3B 1-month reload.",
     "post-purchase-fs3b:refill:source": "Confirmation Page / Email",
     "repurchase-otp:same-products-refiller:definition": "OTP customer looking to reorder the exact same products as before.",
     "repurchase-otp:same-products-refiller:source": "Direct / Organic",
@@ -1956,7 +2045,25 @@
     "engagement-loyalty:rewards-seeker:definition": "Customer actively looking to earn or redeem their loyalty rewards.",
     "engagement-loyalty:rewards-seeker:source": "To be defined",
     "engagement-loyalty:coupon-chaser:definition": "Customer primarily motivated by coupons and discounts from the loyalty program.",
-    "engagement-loyalty:coupon-chaser:source": "To be defined"
+    "engagement-loyalty:coupon-chaser:source": "To be defined",
+    "post-purchase-mycuure:multi-box:source": "Confirmation Page / Email",
+    "post-purchase-mycuure:multi-box:definition": "Customer who just purchased several boxes\n MyCuure.",
+    "post-purchase-ma05:bottle:source": "Confirmation Page / Email",
+    "post-purchase-ma05:pack-3m:source": "Confirmation Page / Email",
+    "post-purchase-ma05:pack-6m:source": "Confirmation Page / Email",
+    "post-purchase-ma05:refill:source": "Confirmation Page / Email",
+    "post-purchase-onely:kit:source": "Confirmation Page / Email",
+    "post-purchase-onely:reload:source": "Confirmation Page / Email",
+    "post-purchase-essentials:essentials:source": "Confirmation Page / Email",
+    "post-purchase-multi-range:multi-range:source": "Confirmation Page / Email",
+    "post-purchase-multi-range:multi-range:definition": "A customer who just purchased multiple ranges in a single order.",
+    "post-purchase-essentials:essentials:definition": "A customer who just purchased Essentials.",
+    "post-purchase-onely:kit:definition": "A customer who just purchased the onely 1-month kit.",
+    "post-purchase-onely:reload:definition": "A customer who just purchased the onely reload.",
+    "post-purchase-ma05:pack-3m:definition": "A customer who just purchased MA-05 3-month pack.",
+    "post-purchase-ma05:bottle:definition": "A customer who just purchased MA-05 1-month bottle.",
+    "post-purchase-ma05:pack-6m:definition": "A customer who just purchased MA-05 6-month pack.",
+    "post-purchase-ma05:refill:definition": "A customer who just purchased MA-05 1-month reload."
   },
   "cellJourneyLinks": {
     "conversion:essentials:format": [],
