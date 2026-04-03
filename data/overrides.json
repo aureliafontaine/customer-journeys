@@ -323,7 +323,19 @@
     "repurchase-active-subscriber:subscription-delayer:step-3:Delay Subscription": "moyen",
     "repurchase-active-subscriber:pause-subscription:step-3:Delay Subscription": "moyen",
     "repurchase-active-subscriber:subscription-delayer:step-1:Account": "ok",
-    "repurchase-active-subscriber:pause-subscription:step-1:Account": "ok"
+    "repurchase-active-subscriber:pause-subscription:step-1:Account": "ok",
+    "discovery-prospects:product-innovation:step-1:LP MyCuure": "ok",
+    "discovery-prospects:product-innovation:step-2:Survey MyCuure": "bon",
+    "discovery-prospects:product-innovation:step-3:Recos Mycuure": "ok",
+    "discovery-prospects:product-innovation:step-1:LP FS-3B": "bon",
+    "discovery-prospects:product-innovation:step-2:Survey FS-3B": "bon",
+    "discovery-prospects:product-innovation:step-3:Recos FS-3B": "ok",
+    "discovery-prospects:product-innovation:step-1:LP MA-05": "bon",
+    "discovery-prospects:product-innovation:step-2:Survey MA-05": "bon",
+    "discovery-prospects:product-innovation:step-3:Recos MA-05": "bon",
+    "discovery-prospects:product-innovation:step-1:LP Onely": "moyen",
+    "discovery-prospects:product-innovation:step-2:Survey Onely": "ok",
+    "discovery-prospects:product-innovation:step-3:Recos Onely": "ok"
   },
   "chipAdditions": {
     "conversion:fs3b:add-to-cart": [
@@ -545,7 +557,11 @@
     "discovery-prospects:product-innovation:step-1": [
       "Product LP",
       "Dedicated LP",
-      "LP MyCuure"
+      "LP MyCuure",
+      "LP onely",
+      "LP FS-3B",
+      "LP MA-05",
+      "LP Onely"
     ],
     "discovery-returning:crm-led:step-1": [
       "Product Page",
@@ -839,10 +855,19 @@
       "Dedicated Survey"
     ],
     "discovery-prospects:product-innovation:step-2": [
-      "Dedicated Survey"
+      "Dedicated Survey",
+      "Survey MyCuure",
+      "Survey FS-3B",
+      "Survey MA-05",
+      "Survey Onely"
     ],
     "discovery-prospects:product-innovation:step-3": [
-      "Dedicated Recos"
+      "Dedicated Recos",
+      "Recos Mycuure",
+      "Recos FS-3B",
+      "REcos MA-05",
+      "Recos MA-05",
+      "Recos Onely"
     ],
     "discovery-returning:information-seekers:step-2": [
       "Secondary Page"
@@ -1096,7 +1121,8 @@
     "discovery-prospects:product-innovation:step-1": [
       "Scroll Landing Page",
       "Product LP",
-      "Dedicated LP"
+      "Dedicated LP",
+      "LP onely"
     ],
     "discovery-prospects:product-innovation:step-2": [
       "Navigate through FS-3B pages",
@@ -1104,7 +1130,8 @@
     ],
     "discovery-prospects:product-innovation:step-3": [
       "Add To Cart",
-      "Dedicated Recos"
+      "Dedicated Recos",
+      "REcos MA-05"
     ],
     "discovery-returning:crm-led:step-1": [
       "Range experience",
