@@ -376,6 +376,13 @@ window.JOURNEYS = [
           "tracking-email": ["Tracking E-mail"], "unboxing": ["Unboxing"],
           "brochure": ["Personalised Brochure"], "app-download": ["App Download"],
           "first-intake": ["First Intake"], "next-order": ["Next Order Planned"] } },
+      { id: "multi-box", label: "Multi-box", type: "text", cells: {
+          definition: "",
+          source:     "",
+          "confirmation-page": [], "confirmation-email": [],
+          "tracking-email": [], "unboxing": [],
+          "brochure": [], "app-download": [],
+          "first-intake": [], "next-order": [] } },
     ]
   },
 
