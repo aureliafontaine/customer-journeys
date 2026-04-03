@@ -10,7 +10,7 @@
     "conversion:fs3b:format:LP FS-3B": "bon",
     "conversion:fs3b:purchase-option:Recos FS-3B": "ok",
     "conversion:fs3b:purchase-option:Recos FS-3B (Optional)": "ok",
-    "conversion:fs3b:purchase:View Cart": "bon",
+    "conversion:fs3b:purchase:View Cart": "ok",
     "conversion:fs3b:quantity:Select Purchase Option": "bon",
     "conversion:fs3b:step-10:Purchase": "bon",
     "conversion:fs3b:step-9:Checkout": "bon",
@@ -24,7 +24,7 @@
     "conversion:ma05:checkout:Add To Cart": "bon",
     "conversion:ma05:format:LP MA-05": "bon",
     "conversion:ma05:purchase-option:Recos MA-05 (Optional)": "bon",
-    "conversion:ma05:purchase:View Cart": "bon",
+    "conversion:ma05:purchase:View Cart": "ok",
     "conversion:ma05:quantity:Select Purchase Option": "ok",
     "conversion:ma05:step-10:Purchase": "bon",
     "conversion:ma05:step-9:Checkout": "bon",
@@ -38,19 +38,19 @@
     "conversion:mycuure:quantity:Catalog MyCuure (Optional)": "bon",
     "conversion:mycuure:step-10:Checkout": "bon",
     "conversion:mycuure:step-11:Purchase": "bon",
-    "conversion:mycuure:step-9:View Cart": "bon",
+    "conversion:mycuure:step-9:View Cart": "ok",
     "conversion:mycuure:view-cart:Choose Quantity (1, 2, 3)": "bon",
     "conversion:onely:add-to-cart:Select Format": "bon",
     "conversion:onely:addon:Product Page Onely (Optional)": "ok",
     "conversion:onely:addon:Survey Onely": "ok",
     "conversion:onely:addon:Survey Onely (Optional)": "ok",
-    "conversion:onely:checkout:View Cart": "bon",
+    "conversion:onely:checkout:View Cart": "ok",
     "conversion:onely:format:LP Onely": "ok",
     "conversion:onely:purchase-option:Recos Onely (Optional)": "ok",
     "conversion:onely:purchase:Checkout": "bon",
     "conversion:onely:quantity:Add To Cart": "bon",
     "conversion:onely:step-9:Purchase": "bon",
-    "conversion:onely:view-cart:Select Purchase Option": "ok",
+    "conversion:onely:view-cart:Select Purchase Option": "moyen",
     "conversion-multi-range:multi-range:step-1:Catalog": "bon",
     "conversion-multi-range:multi-range:step-1:Search": "bon",
     "conversion-multi-range:multi-range:step-2:Filters & Sort": "bon",
@@ -93,12 +93,12 @@
     "discovery-returning:crm-led:step-1:Product LP": "bon",
     "discovery-returning:crm-led:step-1:Product Page": "bon",
     "discovery-returning:information-seekers:step-1:Landing Page": "bon",
-    "discovery-returning:information-seekers:step-1:Product Page": "bon",
+    "discovery-returning:information-seekers:step-1:Product Page": "moyen",
     "discovery-returning:reviews-seekers:step-1:Catalog Filtered by Rating": "bon",
     "discovery-returning:reviews-seekers:step-1:Product Page": "bon",
     "discovery-returning:reviews-seekers:step-1:Product Page Reviews": "bon",
-    "discovery-returning:reviews-seekers:step-1:Reviews Page": "bon",
-    "discovery-returning:reviews-seekers:step-2:Product Page": "bon",
+    "discovery-returning:reviews-seekers:step-1:Reviews Page": "moyen",
+    "discovery-returning:reviews-seekers:step-2:Product Page": "ok",
     "post-purchase-mycuure:box:confirmation-page:Confirmation Page": "bon",
     "post-purchase-mycuure:box:confirmation-email:Confirmation E-mail": "bon",
     "post-purchase-mycuure:box:tracking-email:Tracking E-mail": "bon",
@@ -270,23 +270,66 @@
     "repurchase-otp:change-seekers:step-1:Browse Website": "bon",
     "repurchase-otp:change-seekers:step-2:Dedicated Survey": "bon",
     "repurchase-otp:change-seekers:step-5:Purchase": "bon",
-    "repurchase-otp:same-products-refiller:step-1:Order History": "mauvais",
+    "repurchase-otp:same-products-refiller:step-1:Order History": "non existant",
     "repurchase-otp:convinced-to-subscription:step-2:Add To Cart": "bon",
     "repurchase-otp:convinced-to-subscription:step-3:View Cart": "bon",
     "repurchase-otp:convinced-to-subscription:step-4:Add Upsell (Optional)": "bon",
     "repurchase-otp:convinced-to-subscription:step-5:Activate Subscription": "bon",
     "repurchase-otp:convinced-to-subscription:step-6:Purchase": "bon",
     "repurchase-otp:convinced-to-subscription:step-6:Plan Next Order": "bon",
-    "repurchase-otp:same-products-refiller:step-2:Add To Cart": "mauvais",
-    "repurchase-otp:same-products-refiller:step-4:Add Upsell (Optional)": "mauvais",
-    "repurchase-otp:convinced-to-subscription:step-1:Order History": "mauvais",
-    "repurchase-otp:change-seekers:step-1:Master Survey": "mauvais",
-    "repurchase-otp:change-seekers:step-2:Master Recos": "mauvais"
+    "repurchase-otp:same-products-refiller:step-2:Add To Cart": "non existant",
+    "repurchase-otp:same-products-refiller:step-4:Add Upsell (Optional)": "non existant",
+    "repurchase-otp:convinced-to-subscription:step-1:Order History": "non existant",
+    "repurchase-otp:change-seekers:step-1:Master Survey": "non existant",
+    "repurchase-otp:change-seekers:step-2:Master Recos": "non existant",
+    "discovery-prospects:general-curious:step-2:Survey MyCuure": "bon",
+    "discovery-prospects:general-curious:step-2:Master Survey": "mauvais",
+    "discovery-prospects:general-curious:step-3:Master Recos": "mauvais",
+    "discovery-prospects:need-driven:step-1:Burger Menu (Optional)": "ok",
+    "discovery-prospects:need-driven:step-2:Need Page": "moyen",
+    "discovery-prospects:need-driven:step-3:Product Page": "bon",
+    "discovery-prospects:need-driven:step-3:Dedicated Survey": "bon",
+    "discovery-prospects:general-health:step-2:Survey MyCuure": "bon",
+    "discovery-prospects:general-health:step-3:Recos MyCuure": "ok",
+    "discovery-prospects:product-innovation:step-3:Dedicated Recos": "ok",
+    "discovery-prospects:product-innovation:step-2:Dedicated Survey": "ok",
+    "discovery-prospects:product-innovation:step-1:Dedicated LP": "ok",
+    "discovery-returning:crm-led:step-1:Dedicated LP": "ok",
+    "discovery-returning:information-seekers:step-1:Secondary Pages": "moyen",
+    "discovery-returning:information-seekers:step-1:Home Page": "ok",
+    "discovery-returning:information-seekers:step-2:Secondary Page": "moyen",
+    "discovery-returning:information-seekers:step-3:Product Page": "moyen",
+    "conversion:fs3b:add-to-cart:Select Add-on": "bon",
+    "conversion:fs3b:view-cart:Select Add-on": "ok",
+    "conversion-multi-range:multi-range:step-1:Add to Cart": "bon",
+    "conversion-multi-range:multi-range:step-3:Catalog": "bon",
+    "conversion:essentials:add-to-cart:View Cart": "ok",
+    "conversion:essentials:format:Select Format / Flavour": "bon",
+    "conversion:essentials:addon:Select Quantity": "bon",
+    "conversion:essentials:purchase-option:Add To Cart": "bon",
+    "conversion:essentials:checkout:Purchase": "bon",
+    "conversion:essentials:quantity:Checkout": "bon",
+    "conversion-multi-range:multi-range:step-2:View Cart": "ok",
+    "conversion-multi-range:multi-range:step-1:Filters": "bon",
+    "conversion-multi-range:multi-range:step-2:Add To Cart": "bon",
+    "conversion-multi-range:multi-range:step-3:View Cart": "ok",
+    "conversion-multi-range:multi-range:step-4:Checkout": "bon",
+    "conversion-multi-range:multi-range:step-5:Purchase": "bon",
+    "post-purchase-mycuure:box:tracking-email:Shipping Tracking": "mauvais",
+    "post-purchase-mycuure:reload:tracking-email:Shipping Tracking": "mauvais",
+    "post-purchase-mycuure:box:confirmation-email:On-boarding": "bon",
+    "post-purchase-mycuure:reload:confirmation-email:On-boarding": "bon",
+    "repurchase-active-subscriber:repeat-auto:step-1:Email Reminder": "ok",
+    "repurchase-active-subscriber:subscription-delayer:step-3:Delay Subscription": "moyen",
+    "repurchase-active-subscriber:pause-subscription:step-3:Delay Subscription": "moyen",
+    "repurchase-active-subscriber:subscription-delayer:step-1:Account": "ok",
+    "repurchase-active-subscriber:pause-subscription:step-1:Account": "ok"
   },
   "chipAdditions": {
     "conversion:fs3b:add-to-cart": [
       "Product Page FS-3B",
-      "Select Format"
+      "Select Format",
+      "Select Add-on"
     ],
     "conversion:fs3b:addon": [
       "Survey FS-3B (Optional)",
@@ -315,10 +358,12 @@
     ],
     "conversion:fs3b:view-cart": [
       "Add-to-cart",
-      "Add Add-On"
+      "Add Add-On",
+      "Select Add-on"
     ],
     "conversion:ma05:add-to-cart": [
-      "Select Format"
+      "Select Format",
+      "Select Add-on"
     ],
     "conversion:ma05:addon": [
       "Survey MA-05 (Optional)",
@@ -346,7 +391,8 @@
       "Checkout"
     ],
     "conversion:ma05:view-cart": [
-      "Add Add-On"
+      "Add Add-On",
+      "Select Add-on"
     ],
     "conversion:mycuure:add-to-cart": [
       "View Cart"
@@ -411,20 +457,28 @@
     ],
     "conversion-multi-range:multi-range:step-1": [
       "Catalog",
-      "Search"
+      "Search",
+      "Add to Cart",
+      "Filters"
     ],
     "conversion-multi-range:multi-range:step-2": [
       "Filters & Sort",
-      "Product Page"
+      "Product Page",
+      "View Cart",
+      "Add To Cart"
     ],
     "conversion-multi-range:multi-range:step-3": [
-      "Product Page"
+      "Product Page",
+      "Catalog",
+      "View Cart"
     ],
     "conversion-multi-range:multi-range:step-4": [
-      "Select Format / Flavour"
+      "Select Format / Flavour",
+      "Checkout"
     ],
     "conversion-multi-range:multi-range:step-5": [
-      "Add Add-On"
+      "Add Add-On",
+      "Purchase"
     ],
     "conversion-multi-range:multi-range:step-6": [
       "Select Purchase Option"
@@ -452,16 +506,20 @@
     ],
     "discovery-prospects:general-curious:step-3": [
       "Recommendations MyCuure",
-      "Other Recommendations"
+      "Other Recommendations",
+      "Master Recos"
     ],
     "discovery-prospects:general-health:step-1": [
       "Home Page"
     ],
     "discovery-prospects:general-health:step-2": [
-      "Survey"
+      "Survey",
+      "Master Survey",
+      "Survey MyCuure"
     ],
     "discovery-prospects:general-health:step-3": [
-      "Recommendations MyCuure"
+      "Recommendations MyCuure",
+      "Recos MyCuure"
     ],
     "discovery-prospects:general-health:step-4": [
       "Product Information"
@@ -470,31 +528,37 @@
       "Secondary Information"
     ],
     "discovery-prospects:need-driven:step-1": [
-      "Burger Menu Navigation (via Need)"
+      "Burger Menu Navigation (via Need)",
+      "Burger Menu (Optional)"
     ],
     "discovery-prospects:need-driven:step-2": [
       "Product LP",
       "Dedicated LP",
       "Dedicated PP",
       "Dedicated Survey",
-      "Dedicated PLP"
+      "Dedicated PLP",
+      "Need Page"
     ],
     "discovery-prospects:product-comparator:step-1": [
       "Product Page"
     ],
     "discovery-prospects:product-innovation:step-1": [
-      "Product LP"
+      "Product LP",
+      "Dedicated LP",
+      "LP MyCuure"
     ],
     "discovery-returning:crm-led:step-1": [
       "Product Page",
       "Product LP",
       "Offer Banner",
-      "Offer Page"
+      "Offer Page",
+      "Dedicated LP"
     ],
     "discovery-returning:information-seekers:step-1": [
       "Landing Page",
       "Product Page",
-      "Secondary Pages"
+      "Secondary Pages",
+      "Home Page"
     ],
     "discovery-returning:reviews-seekers:step-1": [
       "Reviews Page",
@@ -692,16 +756,20 @@
       "View Cart"
     ],
     "repurchase-active-subscriber:subscription-delayer:step-1": [
-      "View Cart"
+      "View Cart",
+      "Account"
     ],
     "repurchase-active-subscriber:subscription-delayer:step-2": [
-      "Delay Subscription"
+      "Delay Subscription",
+      "Subscription Page"
     ],
     "repurchase-active-subscriber:pause-subscription:step-1": [
-      "View Cart"
+      "View Cart",
+      "Account"
     ],
     "repurchase-active-subscriber:pause-subscription:step-2": [
-      "Pause Subscription"
+      "Pause Subscription",
+      "Subscription Page"
     ],
     "repurchase-active-subscriber:order-cancel:step-1": [
       "Account"
@@ -761,24 +829,102 @@
     "repurchase-otp:convinced-to-subscription:step-6": [
       "Purchase",
       "Plan Next Order"
+    ],
+    "discovery-prospects:general-curious:step-2": [
+      "Survey MyCuure",
+      "Master Survey"
+    ],
+    "discovery-prospects:need-driven:step-3": [
+      "Product Page",
+      "Dedicated Survey"
+    ],
+    "discovery-prospects:product-innovation:step-2": [
+      "Dedicated Survey"
+    ],
+    "discovery-prospects:product-innovation:step-3": [
+      "Dedicated Recos"
+    ],
+    "discovery-returning:information-seekers:step-2": [
+      "Secondary Page"
+    ],
+    "discovery-returning:information-seekers:step-3": [
+      "Product Page"
+    ],
+    "conversion:essentials:format": [
+      "Add To Cart",
+      "Select Format / Flavour"
+    ],
+    "conversion:essentials:addon": [
+      "Select Format / Flavour",
+      "Select Quantity"
+    ],
+    "conversion:essentials:purchase-option": [
+      "Add To Cart"
+    ],
+    "conversion:essentials:add-to-cart": [
+      "View Cart"
+    ],
+    "conversion:essentials:view-cart": [
+      "Add Upsell"
+    ],
+    "conversion:essentials:quantity": [
+      "Checkout"
+    ],
+    "conversion:essentials:checkout": [
+      "Purchase"
+    ],
+    "post-purchase-mycuure:box:tracking-email": [
+      "Tracking Whatsapp",
+      "Tracking Notification",
+      "Shipping Tracking"
+    ],
+    "post-purchase-mycuure:reload:tracking-email": [
+      "Tracking Whatsapp",
+      "Tracking Notification",
+      "Shipping Tracking"
+    ],
+    "post-purchase-mycuure:box:confirmation-email": [
+      "On-boarding"
+    ],
+    "post-purchase-mycuure:reload:confirmation-email": [
+      "On-boarding"
+    ],
+    "repurchase-active-subscriber:repeat-auto:step-1": [
+      "Email Reminder"
+    ],
+    "repurchase-active-subscriber:subscription-delayer:step-3": [
+      "Delay Subscription"
+    ],
+    "repurchase-active-subscriber:pause-subscription:step-3": [
+      "Delay Subscription"
+    ],
+    "repurchase-paused-subscriber:reactivate-same-cart:step-1": [
+      "Account"
+    ],
+    "repurchase-paused-subscriber:reactivate-same-cart:step-2": [
+      "Subscription Page"
     ]
   },
   "chipDeletions": {
     "conversion:fs3b:add-to-cart": [
       "Select Quantity",
-      "Product Page FS-3B"
+      "Product Page FS-3B",
+      "Select Add-on"
     ],
     "conversion:fs3b:addon": [
       "Select Add-on",
       "Survey FS-3B",
-      "Product Page FS-3B"
+      "Product Page FS-3B",
+      "Survey FS-3B (Optional)",
+      "Product Page FS-3B (Optional)"
     ],
     "conversion:fs3b:checkout": [
       "Checkout"
     ],
     "conversion:fs3b:format": [
       "Select Format Option",
-      "__table__"
+      "__table__",
+      "LP FS-3B"
     ],
     "conversion:fs3b:purchase": [
       "Purchase"
@@ -786,47 +932,58 @@
     "conversion:fs3b:purchase-option": [
       "__table__",
       "Select Purchase Option",
-      "Recos FS-3B"
+      "Recos FS-3B",
+      "Recos FS-3B (Optional)"
     ],
     "conversion:fs3b:quantity": [
       "View Cart"
     ],
     "conversion:fs3b:view-cart": [
-      "Add To Cart"
+      "Add To Cart",
+      "Add Add-On",
+      "Add-to-cart"
     ],
     "conversion:ma05:add-to-cart": [
-      "Add To Cart"
+      "Add To Cart",
+      "Select Add-on"
     ],
     "conversion:ma05:addon": [
       "__table__",
       "Select Purchase Option",
       "Product Page MA-05",
-      "Survey MA-05"
+      "Survey MA-05",
+      "Survey MA-05 (Optional)",
+      "Product Page MA-05 (Optional)"
     ],
     "conversion:ma05:checkout": [
       "Purchase"
     ],
     "conversion:ma05:format": [
       "__table__",
-      "Select Format Option"
+      "Select Format Option",
+      "LP MA-05"
     ],
     "conversion:ma05:purchase-option": [
-      "Select Quantity"
+      "Select Quantity",
+      "Recos MA-05 (Optional)"
     ],
     "conversion:ma05:quantity": [
       "Checkout"
     ],
     "conversion:ma05:view-cart": [
-      "View Cart"
+      "View Cart",
+      "Add Add-On"
     ],
     "conversion:mycuure:add-to-cart": [
       "Checkout"
     ],
     "conversion:mycuure:addon": [
-      "View Cart"
+      "View Cart",
+      "Recos MyCuure"
     ],
     "conversion:mycuure:format": [
-      "Select Products"
+      "Select Products",
+      "Survey MyCuure"
     ],
     "conversion:mycuure:purchase-option": [
       "Select Quantity"
@@ -841,7 +998,9 @@
     "conversion:onely:addon": [
       "Select Quantity",
       "Survey onely",
-      "Survey Onely"
+      "Survey Onely",
+      "Survey Onely (Optional)",
+      "Product Page Onely (Optional)"
     ],
     "conversion:onely:add-to-cart": [
       "View Cart"
@@ -852,10 +1011,12 @@
     "conversion:onely:format": [
       "Select Format & Purchase Option",
       "__table__",
-      "LP onely"
+      "LP onely",
+      "LP Onely"
     ],
     "conversion:onely:purchase-option": [
-      "Add To Cart"
+      "Add To Cart",
+      "Recos Onely (Optional)"
     ],
     "conversion:onely:purchase": [
       "Purchase"
@@ -870,76 +1031,96 @@
       "Add To Cart"
     ],
     "conversion:essentials:addon": [
-      "Select Purchase Option"
+      "Select Purchase Option",
+      "Select Format / Flavour"
     ],
-    "conversion:essentials:checkout": [
-      "Purchase"
-    ],
+    "conversion:essentials:checkout": [],
     "conversion:essentials:format": [
       "Select Format",
-      "Select Flavour"
+      "Select Flavour",
+      "Add To Cart"
     ],
     "conversion:essentials:purchase-option": [
       "Select Quantity"
     ],
-    "conversion:essentials:quantity": [
-      "Checkout"
-    ],
+    "conversion:essentials:quantity": [],
     "conversion:essentials:view-cart": [
       "View Cart"
     ],
     "conversion-multi-range:multi-range:step-5": [
-      "Select Purchase Option"
+      "Select Purchase Option",
+      "Add Add-On"
     ],
     "conversion-multi-range:multi-range:step-6": [
-      "Add To Cart"
+      "Add To Cart",
+      "Select Purchase Option"
     ],
     "conversion-multi-range:multi-range:step-7": [
-      "View Cart"
+      "View Cart",
+      "Select Quantity"
     ],
     "discovery-prospects:general-curious:step-1": [
       "Scroll HP"
     ],
     "discovery-prospects:general-curious:step-3": [
-      "Recommendations"
+      "Recommendations",
+      "Other Recommendations",
+      "Recommendations MyCuure"
     ],
     "discovery-prospects:general-health:step-1": [
       "Survey"
     ],
     "discovery-prospects:general-health:step-2": [
-      "Recommendations"
+      "Recommendations",
+      "Survey",
+      "Master Survey"
     ],
     "discovery-prospects:general-health:step-3": [
-      "Product information"
+      "Product information",
+      "Recommendations MyCuure"
     ],
     "discovery-prospects:general-health:step-4": [
-      "Secondary information"
+      "Secondary information",
+      "Product Information"
     ],
     "discovery-prospects:need-driven:step-1": [
       "Select NPD",
       "Select Essential",
-      "Select Survey"
+      "Select Survey",
+      "Burger Menu Navigation (via Need)"
     ],
     "discovery-prospects:product-comparator:step-2": [
-      "Scroll Product Page"
-    ],
-    "discovery-prospects:product-innovation:step-1": [
-      "Scroll Landing Page"
-    ],
-    "discovery-prospects:product-innovation:step-2": [
-      "Navigate through FS-3B pages"
-    ],
-    "discovery-prospects:product-innovation:step-3": [
+      "Scroll Product Page",
       "Add To Cart"
     ],
+    "discovery-prospects:product-innovation:step-1": [
+      "Scroll Landing Page",
+      "Product LP",
+      "Dedicated LP"
+    ],
+    "discovery-prospects:product-innovation:step-2": [
+      "Navigate through FS-3B pages",
+      "Dedicated Survey"
+    ],
+    "discovery-prospects:product-innovation:step-3": [
+      "Add To Cart",
+      "Dedicated Recos"
+    ],
     "discovery-returning:crm-led:step-1": [
-      "Range experience"
+      "Range experience",
+      "Offer Banner",
+      "Product Page",
+      "Product LP",
+      "Offer Page"
     ],
     "discovery-returning:crm-led:step-2": [
       "Add To Cart"
     ],
     "discovery-returning:information-seekers:step-1": [
-      "Scroll PP"
+      "Scroll PP",
+      "Landing Page",
+      "Product Page",
+      "Secondary Pages"
     ],
     "discovery-returning:information-seekers:step-2": [
       "Scroll Secondary Pages"
@@ -949,7 +1130,9 @@
     ],
     "discovery-returning:reviews-seekers:step-1": [
       "PP > Scroll to Reviews",
-      "Product Page"
+      "Product Page",
+      "Product Page Reviews",
+      "Catalog Filtered by Rating"
     ],
     "discovery-returning:reviews-seekers:step-2": [
       "Add to cart"
@@ -1186,21 +1369,23 @@
     "repurchase-active-subscriber:subscription-delayer:step-1": [
       "Email Reminder",
       "Open App",
-      "Open Website"
-    ],
-    "repurchase-active-subscriber:subscription-delayer:step-2": [
+      "Open Website",
       "View Cart"
     ],
-    "repurchase-active-subscriber:subscription-delayer:step-3": [
+    "repurchase-active-subscriber:subscription-delayer:step-2": [
+      "View Cart",
       "Delay Subscription"
     ],
+    "repurchase-active-subscriber:subscription-delayer:step-3": [],
     "repurchase-active-subscriber:pause-subscription:step-1": [
       "Email Reminder",
       "Open App",
-      "Open Website"
+      "Open Website",
+      "View Cart"
     ],
     "repurchase-active-subscriber:pause-subscription:step-2": [
-      "View Cart"
+      "View Cart",
+      "Pause Subscription"
     ],
     "repurchase-active-subscriber:pause-subscription:step-3": [
       "Pause Subscription"
@@ -1257,26 +1442,98 @@
     ],
     "discovery-prospects:need-driven:step-2": [
       "Product LP",
-      "Dedicated PLP"
+      "Dedicated PLP",
+      "Dedicated Survey",
+      "Dedicated PP",
+      "Dedicated LP"
+    ],
+    "discovery-prospects:general-curious:step-2": [
+      "Survey",
+      "Survey MyCuure"
+    ],
+    "discovery-prospects:general-health:step-5": [
+      "Secondary Information"
+    ],
+    "discovery-prospects:product-comparator:step-1": [
+      "Scroll Product Page"
+    ],
+    "discovery-prospects:product-comparator:step-3": [
+      "Related Product",
+      "Catalog Filter",
+      "Search Product"
+    ],
+    "conversion-multi-range:multi-range:step-1": [
+      "Catalog",
+      "Search",
+      "Add to Cart"
+    ],
+    "conversion-multi-range:multi-range:step-2": [
+      "Filters & Sort",
+      "Product Page",
+      "View Cart"
+    ],
+    "conversion-multi-range:multi-range:step-3": [
+      "Product Page",
+      "Catalog"
+    ],
+    "conversion-multi-range:multi-range:step-4": [
+      "Select Format / Flavour"
+    ],
+    "conversion-multi-range:multi-range:step-8": [
+      "Add To Cart"
+    ],
+    "conversion-multi-range:multi-range:step-9": [
+      "View Cart"
+    ],
+    "post-purchase-mycuure:box:tracking-email": [
+      "Tracking E-mail",
+      "Tracking Whatsapp",
+      "Tracking Notification"
+    ],
+    "post-purchase-mycuure:reload:tracking-email": [
+      "Tracking E-mail",
+      "Tracking Whatsapp",
+      "Tracking Notification"
+    ],
+    "post-purchase-mycuure:box:app-download": [
+      "App Download"
+    ],
+    "post-purchase-mycuure:reload:app-download": [
+      "App Download"
+    ],
+    "repurchase-active-subscriber:upseller:step-1": [
+      "View Cart"
+    ],
+    "repurchase-active-subscriber:upseller:step-2": [
+      "View Upsell"
+    ],
+    "repurchase-active-subscriber:upseller:step-3": [
+      "Add Upsell"
+    ],
+    "repurchase-active-subscriber:order-cancel:step-6": [
+      "Cancel order"
+    ],
+    "repurchase-active-subscriber:order-cancel:step-7": [
+      "Order Cancel Confirmation"
     ]
   },
   "metaValues": {
     "discovery-prospects:general-curious:definition": "Visitor entering the Cuure ecosystem with no specific purchase intent, driven by curiosity or brand discovery.",
-    "discovery-prospects:general-curious:source": "Search \"Cuure\" on Google / Home Page",
+    "discovery-prospects:general-curious:source": "Organic",
     "discovery-prospects:need-driven:definition": "Visitor arriving with an identified health need, looking for a specific solution.",
-    "discovery-prospects:need-driven:source": "Need-based Ad / SEO (e.g. \"sleep supplement\")",
+    "discovery-prospects:need-driven:source": "SEA / SEO",
     "discovery-prospects:general-health:definition": "Visitor motivated by an overall health approach, with no specific product in mind.",
-    "discovery-prospects:general-health:source": "General Ad / SEO — health & wellness",
+    "discovery-prospects:general-health:source": "SEA / SEO",
     "discovery-prospects:product-comparator:definition": "Already-informed visitor comparing specific products before making a decision.",
-    "discovery-prospects:product-comparator:source": "Product-based Ad / SEO / Search > Product Page",
+    "discovery-prospects:product-comparator:source": "SEA / SEO",
     "discovery-prospects:product-innovation:definition": "Visitor attracted by an innovative or newly launched Cuure product.",
-    "discovery-prospects:product-innovation:source": "Search \"FS-3B\" on Google / HP or Burger Menu > FS-3B",
+    "discovery-prospects:product-innovation:source": "Social Ads / Influence",
     "discovery-returning:crm-led:definition": "Visitor returning after a CRM communication (email, SMS) featuring a promotional offer.",
-    "discovery-returning:crm-led:source": "Offer-specific communication",
+    "discovery-returning:crm-led:source": "Email",
     "discovery-returning:reviews-seekers:definition": "Visitor returning to read customer reviews before (re)ordering.",
-    "discovery-returning:reviews-seekers:source": "Search \"Cuure avis\" on Google / PP > Scroll to Reviews",
-    "discovery-returning:information-seekers:definition": "Visitor returning to find additional information (ingredients, usage, FAQ…).",
-    "discovery-returning:information-seekers:source": "Any channel / Burger Menu > PP or Secondary Pages",
+    "discovery-returning:reviews-seekers:source": "SEA / SEO",
+    "discovery-returning:information-seekers:definition": "Visitor returning to find additional information (ingredients, usage, FAQ\u2026).",
+    "discovery-returning:information-seekers:source": "Organic",
     "conversion:mycuure:definition": "Customer going through the personalised MyCuure recommendation flow to find the right supplements.",
     "conversion:mycuure:source": "Home Page (banner, solutions) /\nBurger Menu / \nCatalog",
     "conversion:fs3b:definition": "Customer interested in the FS-3B product, following its dedicated conversion funnel.",
@@ -1286,9 +1543,9 @@
     "conversion:onely:definition": "Customer interested in the onely product, following its specific conversion path.",
     "conversion:onely:source": "LP onely / Survey / Product Page",
     "conversion:essentials:definition": "Customer looking to complete their order with essential products via the Multi-range path.",
-    "conversion:essentials:source": "Multi-range redirect",
+    "conversion:essentials:source": "Product Page Essentials",
     "conversion-multi-range:multi-range:definition": "Customer browsing the catalog to build an order with multiple different products.",
-    "conversion-multi-range:multi-range:source": "Catalog / Search / Filters",
+    "conversion-multi-range:multi-range:source": "Catalog",
     "post-purchase-mycuure:box:definition": "Customer who ordered a personalised MyCuure box, going through the post-purchase experience (delivery, unboxing, app onboarding).",
     "post-purchase-mycuure:box:source": "Confirmation Page / Email",
     "post-purchase-mycuure:reload:definition": "Customer who ordered a MyCuure Reload (refill of their box), following the same post-purchase flow.",
@@ -1337,59 +1594,14 @@
     "engagement-loyalty:coupon-chaser:source": "To be defined"
   },
   "cellJourneyLinks": {
-    "conversion:essentials:format": [
-      {
-        "journeyId": "conversion-multi-range",
-        "journeyName": "Multi-range"
-      }
-    ],
-    "discovery-prospects:general-curious:step-4": [
-      {
-        "journeyId": "conversion",
-        "journeyName": "Single-range"
-      }
-    ],
-    "discovery-prospects:general-health:step-3": [
-      {
-        "journeyId": "conversion",
-        "journeyName": "Single-range"
-      }
-    ],
-    "discovery-prospects:need-driven:step-3": [
-      {
-        "journeyId": "conversion",
-        "journeyName": "Single-range"
-      }
-    ],
-    "discovery-prospects:product-comparator:step-4": [
-      {
-        "journeyId": "conversion-multi-range",
-        "journeyName": "Multi-range"
-      }
-    ],
-    "discovery-prospects:product-innovation:step-2": [
-      {
-        "journeyId": "conversion",
-        "journeyName": "Single-range"
-      }
-    ],
-    "discovery-returning:crm-led:step-2": [
-      {
-        "journeyId": "conversion",
-        "journeyName": "Single-range"
-      }
-    ],
-    "discovery-returning:information-seekers:step-2": [
-      {
-        "journeyId": "conversion",
-        "journeyName": "Single-range"
-      }
-    ],
-    "discovery-returning:reviews-seekers:step-3": [
-      {
-        "journeyId": "conversion",
-        "journeyName": "Single-range"
-      }
-    ]
+    "conversion:essentials:format": [],
+    "discovery-prospects:general-curious:step-4": [],
+    "discovery-prospects:general-health:step-3": [],
+    "discovery-prospects:need-driven:step-3": [],
+    "discovery-prospects:product-comparator:step-4": [],
+    "discovery-prospects:product-innovation:step-2": [],
+    "discovery-returning:crm-led:step-2": [],
+    "discovery-returning:information-seekers:step-2": [],
+    "discovery-returning:reviews-seekers:step-3": []
   }
 }
