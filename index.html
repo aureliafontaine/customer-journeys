@@ -37,7 +37,6 @@
   <script src="data/journeys.js?v=24"></script>
 
   <!-- Auth -->
-  <script src="https://accounts.google.com/gsi/client" async defer></script>
   <script src="data/auth-config.js"></script>
 
   <style>
@@ -921,78 +920,47 @@
       );
     }
 
-    // ─── APP ─────────────────────────────────────────────────────────────────
-
     // ─── AUTH ──────────────────────────────────────────────────────────────────
 
     const AUTH_DURATION_MS = 7 * 24 * 60 * 60 * 1000; // 7 jours
 
-    function decodeJwt(token) {
-      try {
-        const b64 = token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/');
-        return JSON.parse(atob(b64));
-      } catch { return null; }
+    async function sha256(str) {
+      const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+      return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
     }
 
-    function getStoredUser() {
+    function getStoredAuth() {
       try {
         const raw = localStorage.getItem('cuure-auth');
         if (!raw) return null;
-        const user = JSON.parse(raw);
-        if (Date.now() > user.storedExp) {
-          localStorage.removeItem('cuure-auth');
-          return null;
-        }
-        return user;
+        const data = JSON.parse(raw);
+        if (Date.now() > data.exp) { localStorage.removeItem('cuure-auth'); return null; }
+        return data;
       } catch { return null; }
     }
 
     function LoginScreen({ onSuccess }) {
+      const [code, setCode] = React.useState('');
       const [error, setError] = React.useState('');
-      const [ready, setReady] = React.useState(false);
+      const [loading, setLoading] = React.useState(false);
 
-      React.useEffect(() => {
-        let attempts = 0;
-        const init = () => {
-          if (window.google && window.GOOGLE_CLIENT_ID && !window.GOOGLE_CLIENT_ID.startsWith('VOTRE')) {
-            google.accounts.id.initialize({
-              client_id: window.GOOGLE_CLIENT_ID,
-              hd: 'cuure.com',
-              callback: (response) => {
-                const payload = decodeJwt(response.credential);
-                if (!payload) { setError('Erreur de connexion.'); return; }
-                if (!payload.email || !payload.email.endsWith('@cuure.com')) {
-                  setError('Accès réservé aux comptes @cuure.com.');
-                  google.accounts.id.disableAutoSelect();
-                  return;
-                }
-                const user = {
-                  email: payload.email,
-                  name: payload.name,
-                  picture: payload.picture,
-                  storedExp: Date.now() + AUTH_DURATION_MS,
-                };
-                localStorage.setItem('cuure-auth', JSON.stringify(user));
-                onSuccess(user);
-              }
-            });
-            setReady(true);
-          } else if (attempts < 40) {
-            attempts++;
-            setTimeout(init, 250);
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (!code.trim()) return;
+        setLoading(true);
+        setError('');
+        try {
+          const hash = await sha256(code.trim());
+          if (hash === window.ACCESS_CODE_HASH) {
+            const data = { exp: Date.now() + AUTH_DURATION_MS };
+            localStorage.setItem('cuure-auth', JSON.stringify(data));
+            onSuccess(data);
+          } else {
+            setError('Code incorrect. Demande-le à ton équipe !');
           }
-        };
-        init();
-      }, []);
-
-      React.useEffect(() => {
-        if (!ready) return;
-        google.accounts.id.renderButton(
-          document.getElementById('google-signin-btn'),
-          { theme: 'outline', size: 'large', text: 'signin_with', shape: 'rectangular', width: 280, locale: 'fr' }
-        );
-        google.accounts.id.prompt();
-      }, [ready]);
+        } catch { setError('Erreur inattendue, réessaie.'); }
+        setLoading(false);
+      };
 
       return (
         <div style={{
@@ -1000,10 +968,9 @@
           fontFamily: 'Montserrat, -apple-system, BlinkMacSystemFont, sans-serif'
         }}>
           <div style={{
-            background: 'white', borderRadius: '16px', padding: '48px 40px', width: '360px',
+            background: 'white', borderRadius: '16px', padding: '48px 40px', width: '340px',
             boxShadow: '0 4px 24px rgba(0,0,0,0.08)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px'
           }}>
-            {/* Logo / titre */}
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
               <div style={{
                 width: '48px', height: '48px', borderRadius: '12px', background: '#EF7A1A',
@@ -1014,41 +981,51 @@
               <span style={{ fontWeight: '700', fontSize: '18px', color: '#111827', letterSpacing: '-0.01em' }}>
                 Customer Journey
               </span>
-              <span style={{ fontSize: '13px', color: '#6b7280', fontWeight: '500' }}>
-                Cuure — Interne
+              <span style={{ fontSize: '12px', color: '#9ca3af', fontWeight: '500' }}>
+                Outil interne Cuure
               </span>
             </div>
 
-            {/* Séparateur */}
             <div style={{ width: '100%', height: '1px', background: '#f3f4f6' }} />
 
-            {/* Bouton Google */}
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px', width: '100%' }}>
-              <span style={{ fontSize: '12px', color: '#9ca3af', fontWeight: '500' }}>
-                Connexion réservée aux comptes @cuure.com
-              </span>
-              <div id="google-signin-btn" style={{ minHeight: '44px' }} />
-              {!ready && (
-                <span style={{ fontSize: '12px', color: '#d1d5db' }}>Chargement…</span>
-              )}
+            <form onSubmit={handleSubmit} style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <input
+                type="password"
+                placeholder="Code d'accès"
+                value={code}
+                onChange={e => setCode(e.target.value)}
+                autoFocus
+                style={{
+                  width: '100%', padding: '10px 14px', fontSize: '14px', fontFamily: 'inherit',
+                  border: '1px solid #e5e7eb', borderRadius: '8px', outline: 'none', boxSizing: 'border-box',
+                  color: '#111827', background: '#f9fafb'
+                }}
+              />
+              <button type="submit" disabled={loading || !code.trim()} style={{
+                width: '100%', padding: '10px', background: loading || !code.trim() ? '#fed7aa' : '#EF7A1A',
+                color: 'white', border: 'none', borderRadius: '8px', fontSize: '14px',
+                fontWeight: '600', cursor: loading || !code.trim() ? 'default' : 'pointer',
+                fontFamily: 'inherit', transition: 'background 0.15s'
+              }}>
+                {loading ? 'Vérification…' : 'Accéder'}
+              </button>
               {error && (
                 <div style={{
                   background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: '8px',
-                  padding: '10px 14px', fontSize: '12px', color: '#991B1B', textAlign: 'center', width: '100%',
-                  boxSizing: 'border-box'
+                  padding: '10px 14px', fontSize: '12px', color: '#991B1B', textAlign: 'center'
                 }}>
                   {error}
                 </div>
               )}
-            </div>
+            </form>
           </div>
         </div>
       );
     }
 
     function Root() {
-      const [user, setUser] = React.useState(() => getStoredUser());
-      if (!user) return <LoginScreen onSuccess={setUser} />;
+      const [auth, setAuth] = React.useState(() => getStoredAuth());
+      if (!auth) return <LoginScreen onSuccess={setAuth} />;
       return <App />;
     }
 
