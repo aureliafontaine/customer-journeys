@@ -20,54 +20,53 @@ window.DATA_PAGES = [
   {
     id: "cx-monthly",
     name: "CX Monthly",
-    title: "CX Monthly — Améliorations identifiées",
-    subtitle: "Liste des problèmes repérés, solutions et état d'avancement",
+    title: "CX Monthly",
     sections: [
       {
         type: "issues-list",
         groups: [
           {
-            quarter: "Q1",
+            type: "Purchase",
             items: [
-              { type: "Purchase",           subject: "Button that removes the entire box from the cart is sometimes done by mistake", solution: "Add a double check", owner: "Digital Product", status: "to-do",   comments: "" },
-              { type: "Product experience", subject: "Difficulty in differentiation Magnesium, Zinc, L-Tyrosine", solution: "Provide information on capsule size on leaflet", owner: "Digital Product", status: "to-do",   comments: "" },
-              { type: "Product experience", subject: "Credit purchases not counted in the loyalty program", solution: "The option will be removed (commercial gesture).", owner: "Digital Product", status: "to-do",   comments: "" },
-              { type: "Product experience", subject: "Drilled Hydrolyzed proteins", solution: "New packaging", owner: "Operations", status: "to-do",   comments: "New batch still have the error // OPS : new check at Paragon." },
-              { type: "Purchase",           subject: "Total credits in app not available", solution: "Add in account and cart", owner: "Digital Product", status: "done",    comments: "" },
-              { type: "Shipping",           subject: "Stock risk : shortage FS-3B +6 working days", solution: "Add packaging tracking to our weekly tracking", owner: "Operations", status: "done",    comments: "" },
-              { type: "Shipping",           subject: "Orders dropped off directly at a pickup point without contacting the customer", solution: "Monitoring the process of these issues with carriers", owner: "Operations", status: "done",    comments: "" },
-              { type: "Unboxing",           subject: "Broken FS-3B bottles when 3 bottles in the package", solution: "Increase protection", owner: "Operations", status: "done",    comments: "" },
-              { type: "Unboxing",           subject: "Boost received open and leaked into the package", solution: "Have a cap that closes better", owner: "Operations", status: "done",    comments: "Feedback to Bewell + sorting at Paragon + new batch more qualitative." },
-              { type: "Shipping",           subject: "Chronopost QR code resend email not received by customers", solution: "Check with Shipup to see how to handle this specific notification.", owner: "Support", status: "done",    comments: "" },
-              { type: "Product experience", subject: "Vit C liposomale explodes when exposed to moisture", solution: "Wait and see if we need to remove from catalog and get a new formula", owner: "Support", status: "done",    comments: "" },
-              { type: "Product experience", subject: "Mobile App bug regularly: freeze, crash", solution: "Have a stable version", owner: "Tech", status: "done",    comments: "" },
-              { type: "Purchase",           subject: "On the app, you can only see the FS-3B bottle.", solution: "Add FS-3B formats to the app", owner: "Digital Product", status: "done",    comments: "" },
+              { subject: "Button that removes the entire box from the cart is sometimes done by mistake", solution: "Add a double check",                                                                                         owner: "Digital Product", eta: "Q1", status: "to-do",   comments: "" },
+              { subject: "Total credits in app not available",                                            solution: "Add in account and cart",                                                                                   owner: "Digital Product", eta: "Q1", status: "done",    comments: "" },
+              { subject: "On the app, you can only see the FS-3B bottle.",                               solution: "Add FS-3B formats to the app",                                                                              owner: "Digital Product", eta: "Q1", status: "done",    comments: "" },
+              { subject: "When you want to order just Onely, FS-3B, or another range, you have to delete your entire My Cuure box.", solution: "Add a reorder button",                                                          owner: "Digital Product", eta: "Q2", status: "to-do",   comments: "" },
+              { subject: "Invalid email address, email is not being resent",                             solution: "Auto detect and correct wrong emails at validation",                                                        owner: "Tech",            eta: "Q2", status: "started", comments: "" },
+              { subject: "Have a spoon in the protein and whey doypacks",                                solution: "Digital : addon also for spoons / Ops : have a spoon for creatine",                                        owner: "Digital Product", eta: "Q2", status: "to-do",   comments: "" },
             ]
           },
           {
-            quarter: "Q2",
+            type: "Product experience",
             items: [
-              { type: "Purchase",           subject: "When you want to order just Onely, FS-3B, or another range, you have to delete your entire My Cuure box.", solution: "Add a reorder button", owner: "Digital Product", status: "to-do",   comments: "" },
-              { type: "Purchase",           subject: "Invalid email address, email is not being resent", solution: "Auto detect and correct wrong emails at validation", owner: "Tech", status: "started", comments: "" },
-              { type: "Product experience", subject: "The closure on the Doypack Onely does not work.", solution: "New packaging", owner: "Operations", status: "started", comments: "En attente proposition Nutrisun. OPS : pas d'avancée depuis." },
-              { type: "Product experience", subject: "The handle of the Onely jar lid breaks.", solution: "New jar", owner: "Operations", status: "started", comments: "New batch to monitor. OPS : 250 still to use - less problems." },
-              { type: "Product experience", subject: "Onely taste", solution: "New formula", owner: "R&D", status: "started", comments: "" },
-              { type: "Purchase",           subject: "Have a spoon in the protein and whey doypacks", solution: "Digital : addon also for spoons / Ops : have a spoon for creatine", owner: "Digital Product", status: "to-do",   comments: "" },
-              { type: "Shipping",           subject: "Consistent and relevant delivery information", solution: "Auto-updated shipping info in case of delays / Swiss customs fees / Clarify checkout for all shipping-related topics", owner: "Digital Product", status: "to-do",   comments: "" },
-              { type: "Unboxing",           subject: "Label on the essentials different from those on the website", solution: "A single data source", owner: "Operations", status: "to-do",   comments: "" },
-              { type: "Unboxing",           subject: "Having complete control over the items sent (e.g., a stress boost was sent instead of a sleep item)", solution: "A single data source", owner: "Operations", status: "to-do",   comments: "" },
+              { subject: "Difficulty in differentiation Magnesium, Zinc, L-Tyrosine",    solution: "Provide information on capsule size on leaflet",                    owner: "Digital Product", eta: "Q1",        status: "to-do",   comments: "" },
+              { subject: "Credit purchases not counted in the loyalty program",           solution: "The option will be removed (commercial gesture).",                  owner: "Digital Product", eta: "Q1",        status: "to-do",   comments: "" },
+              { subject: "Drilled Hydrolyzed proteins",                                  solution: "New packaging",                                                     owner: "Operations",      eta: "Q1",        status: "to-do",   comments: "New batch still have the error // OPS : new check at Paragon." },
+              { subject: "Vit C liposomale explodes when exposed to moisture",           solution: "Wait and see if we need to remove from catalog and get a new formula", owner: "Support",      eta: "Q1",        status: "done",    comments: "" },
+              { subject: "Mobile App bug regularly: freeze, crash",                      solution: "Have a stable version",                                             owner: "Tech",            eta: "Q1",        status: "done",    comments: "" },
+              { subject: "The closure on the Doypack Onely does not work.",              solution: "New packaging",                                                     owner: "Operations",      eta: "Q2",        status: "started", comments: "En attente proposition Nutrisun. OPS : pas d'avancée depuis." },
+              { subject: "The handle of the Onely jar lid breaks.",                      solution: "New jar",                                                           owner: "Operations",      eta: "Q2",        status: "started", comments: "New batch to monitor. OPS : 250 still to use - less problems." },
+              { subject: "Onely taste",                                                  solution: "New formula",                                                       owner: "R&D",             eta: "Q2",        status: "started", comments: "" },
+              { subject: "Empty capsules in pouches",                                    solution: "Capsule checking process",                                          owner: "Operations",      eta: "À vérifier",status: "started", comments: "Tracké mais pas encore remonté." },
             ]
           },
           {
-            quarter: "Q3",
+            type: "Shipping",
             items: [
-              { type: "Unboxing",           subject: "Broken Onely water bottle, damaged jar", solution: "Increase protection", owner: "Operations", status: "started", comments: "Sticks pas suffisants, pending new Welcome Kit. Reste 1k." },
+              { subject: "Stock risk : shortage FS-3B +6 working days",                                     solution: "Add packaging tracking to our weekly tracking",                                                                              owner: "Operations",     eta: "Q1", status: "done",  comments: "" },
+              { subject: "Orders dropped off directly at a pickup point without contacting the customer",    solution: "Monitoring the process of these issues with carriers",                                                                       owner: "Operations",     eta: "Q1", status: "done",  comments: "" },
+              { subject: "Chronopost QR code resend email not received by customers",                        solution: "Check with Shipup to see how to handle this specific notification.",                                                         owner: "Support",        eta: "Q1", status: "done",  comments: "" },
+              { subject: "Consistent and relevant delivery information",                                     solution: "Auto-updated shipping info in case of delays / Swiss customs fees / Clarify checkout for all shipping-related topics",      owner: "Digital Product",eta: "Q2", status: "to-do", comments: "" },
             ]
           },
           {
-            quarter: "À vérifier",
+            type: "Unboxing",
             items: [
-              { type: "Product experience", subject: "Empty capsules in pouches", solution: "Capsule checking process", owner: "Operations", status: "started", comments: "Tracké mais pas encore remonté." },
+              { subject: "Broken FS-3B bottles when 3 bottles in the package",                                                                        solution: "Increase protection",        owner: "Operations", eta: "Q1", status: "done",    comments: "" },
+              { subject: "Boost received open and leaked into the package",                                                                            solution: "Have a cap that closes better", owner: "Operations", eta: "Q1", status: "done",    comments: "Feedback to Bewell + sorting at Paragon + new batch more qualitative." },
+              { subject: "Label on the essentials different from those on the website",                                                               solution: "A single data source",       owner: "Operations", eta: "Q2", status: "to-do",   comments: "" },
+              { subject: "Having complete control over the items sent (e.g., a stress boost was sent instead of a sleep item)",                        solution: "A single data source",       owner: "Operations", eta: "Q2", status: "to-do",   comments: "" },
+              { subject: "Broken Onely water bottle, damaged jar",                                                                                    solution: "Increase protection",        owner: "Operations", eta: "Q3", status: "started", comments: "Sticks pas suffisants, pending new Welcome Kit. Reste 1k." },
             ]
           },
         ]
