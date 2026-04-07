@@ -151,18 +151,14 @@
     }
 
     function ChipWithPicker({ text, chipKey, chipOverrides, updateChipStatus, onRemove }) {
-      const { useState } = React;
       const key = chipKey || text;
       const sName = chipOverrides[key] || chipStatusName(text);
       const st = CHIP_STATUSES[sName];
-      const [open, setOpen] = useState(false);
       return (
         <div style={{ position: 'relative', display: 'inline-flex', alignItems: 'center' }}>
-          {open && <div style={{ position: 'fixed', inset: 0, zIndex: 40 }} onClick={() => setOpen(false)} />}
           <span
-            onClick={() => setOpen(o => !o)}
             className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium w-fit"
-            style={{ background: st.bg, color: st.text, border: `1px ${st.dashed ? 'dashed' : 'solid'} ${st.border}`, cursor: 'pointer', userSelect: 'none', gap: '4px' }}
+            style={{ background: st.bg, color: st.text, border: `1px ${st.dashed ? 'dashed' : 'solid'} ${st.border}`, userSelect: 'none', gap: '4px' }}
           >
             <span style={st.grayEmoji ? { filter: 'grayscale(1)' } : {}}>{st.emoji}</span>{text}
             {onRemove && (
@@ -173,32 +169,6 @@
               >×</span>
             )}
           </span>
-          {open && (
-            <div style={{
-              position: 'absolute', top: 'calc(100% + 4px)', left: 0, zIndex: 50,
-              background: 'white', border: '1px solid #e5e7eb', borderRadius: '10px',
-              boxShadow: '0 4px 16px rgba(0,0,0,0.12)', padding: '4px',
-              display: 'flex', flexDirection: 'column', minWidth: '130px',
-            }}>
-              {CHIP_STATUS_LIST.map(sn => {
-                const s = CHIP_STATUSES[sn];
-                const isActive = sn === sName;
-                return (
-                  <button key={sn}
-                    onClick={() => { updateChipStatus(key, sn); setOpen(false); }}
-                    style={{
-                      display: 'flex', alignItems: 'center', gap: '8px', padding: '6px 10px',
-                      borderRadius: '6px', border: 'none', cursor: 'pointer', fontSize: '12px',
-                      fontWeight: isActive ? '600' : '500', textAlign: 'left', width: '100%',
-                      background: isActive ? s.bg : 'transparent', color: isActive ? s.text : '#374151',
-                    }}
-                  >
-                    <span style={s.grayEmoji ? { filter: 'grayscale(1)' } : {}}>{s.emoji}</span><span style={{ textTransform: 'capitalize', marginLeft: '4px' }}>{sn}</span>
-                  </button>
-                );
-              })}
-            </div>
-          )}
         </div>
       );
     }
