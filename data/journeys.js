@@ -149,8 +149,6 @@ window.JOURNEYS = [
       { id: "step-1",      label: "Step 1"      },
       { id: "step-2",      label: "Step 2"      },
       { id: "step-3",      label: "Step 3"      },
-      { id: "step-4",      label: "Step 4"      },
-      { id: "step-5",      label: "Step 5"      },
     ],
     lanes: [
       {
@@ -162,8 +160,6 @@ window.JOURNEYS = [
           "step-1": "Step 1",
           "step-2": "Step 2",
           "step-3": "Step 3",
-          "step-4": "Step 4",
-          "step-5": "Step 5",
         }
       },
       {
@@ -176,8 +172,6 @@ window.JOURNEYS = [
           "step-1": ["Scroll HP"],
           "step-2": ["Survey"],
           "step-3": ["Recommendations"],
-          "step-4": [],
-          "step-5": [],
         }
       },
       {
@@ -190,8 +184,6 @@ window.JOURNEYS = [
           "step-1": ["Select NPD", "Select Essential", "Select Survey"],
           "step-2": [],
           "step-3": [],
-          "step-4": [],
-          "step-5": [],
         }
       },
       {
@@ -204,8 +196,6 @@ window.JOURNEYS = [
           "step-1": ["Survey"],
           "step-2": ["Recommendations"],
           "step-3": ["Product information"],
-          "step-4": ["Secondary information"],
-          "step-5": [],
         }
       },
       {
@@ -218,8 +208,6 @@ window.JOURNEYS = [
           "step-1": ["Scroll Product Page"],
           "step-2": ["Add To Cart"],
           "step-3": ["Related Product", "Catalog Filter", "Search Product"],
-          "step-4": [],
-          "step-5": [],
         }
       },
       {
@@ -232,8 +220,6 @@ window.JOURNEYS = [
           "step-1": ["Scroll Landing Page"],
           "step-2": ["Navigate through FS-3B pages"],
           "step-3": ["Add To Cart"],
-          "step-4": [],
-          "step-5": [],
         }
       },
     ]
@@ -255,16 +241,12 @@ window.JOURNEYS = [
       { id: "quantity",        label: "Step 6" },
       { id: "checkout",        label: "Step 7" },
       { id: "purchase",        label: "Step 8" },
-      { id: "step-9",          label: "Step 9" },
-      { id: "step-10",         label: "Step 10" },
-      { id: "step-11",         label: "Step 11" },
     ],
     lanes: [
       { id: "step-header", label: "Étape", type: "step", cells: {
           "format": "Step 1", "addon": "Step 2", "purchase-option": "Step 3",
           "add-to-cart": "Step 4", "view-cart": "Step 5", "quantity": "Step 6",
           "checkout": "Step 7", "purchase": "Step 8",
-          "step-9": "Step 9", "step-10": "Step 10", "step-11": "Step 11",
       }},
       { id: "mycuure", label: "MyCuure", type: "text", cells: {
           definition: "A visitor in the process of purchasing a single Cuure product range (MyCuure, FS-3B, MA-05, onely, Essentials).",
@@ -354,25 +336,16 @@ window.JOURNEYS = [
       { id: "step-3", label: "Step 3" },
       { id: "step-4", label: "Step 4" },
       { id: "step-5", label: "Step 5" },
-      { id: "step-6", label: "Step 6" },
-      { id: "step-7",  label: "Step 7" },
-      { id: "step-8",  label: "Step 8" },
-      { id: "step-9",  label: "Step 9" },
-      { id: "step-10", label: "Step 10" },
-      { id: "step-11", label: "Step 11" },
-      { id: "step-12", label: "Step 12" },
     ],
     lanes: [
       { id: "step-header", label: "Étape", type: "step", cells: {
           "step-1": "Step 1", "step-2": "Step 2", "step-3": "Step 3", "step-4": "Step 4",
-          "step-5": "Step 5", "step-6": "Step 6", "step-7": "Step 7", "step-8": "Step 8",
-          "step-9": "Step 9", "step-10": "Step 10", "step-11": "Step 11", "step-12": "Step 12" } },
+          "step-5": "Step 5" } },
       { id: "multi-range", label: "Multi-range", type: "text", cells: {
           definition: "A visitor purchasing multiple Cuure product ranges in a single order.",
           source:     "Catalog, survey, recommendation engine",
           "step-1": [], "step-2": [], "step-3": [], "step-4": [],
-          "step-5": [], "step-6": [], "step-7": [], "step-8": [],
-          "step-9": [], "step-10": [], "step-11": [], "step-12": [] } },
+          "step-5": [] } },
     ]
   },
 
@@ -391,15 +364,13 @@ window.JOURNEYS = [
       { id: "unboxing",           label: "Step 5" },
       { id: "brochure",           label: "Step 6" },
       { id: "app-download",       label: "Step 7" },
-      { id: "first-intake",       label: "Step 8" },
-      { id: "next-order",         label: "Step 9" },
     ],
     lanes: [
       { id: "step-header", label: "Étape", type: "step", cells: {
           "confirmation-page": "Step 1", "confirmation-email": "Step 2",
           "onboarding-email": "Step 3", "tracking-email": "Step 4", "unboxing": "Step 5",
           "brochure": "Step 6", "app-download": "Step 7",
-          "first-intake": "Step 8", "next-order": "Step 9" } },
+} },
       { id: "box",    label: "Box",    type: "text", cells: {
           definition: "A customer who just purchased the MyCuure personalized nutrition box.",
           source:     "Confirmation page → App",
@@ -439,15 +410,13 @@ window.JOURNEYS = [
       { id: "unboxing",           label: "Step 5" },
       { id: "brochure",           label: "Step 6" },
       { id: "app-download",       label: "Step 7" },
-      { id: "first-intake",       label: "Step 8" },
-      { id: "next-order",         label: "Step 9" },
     ],
     lanes: [
       { id: "step-header", label: "Étape", type: "step", cells: {
           "confirmation-page": "Step 1", "confirmation-email": "Step 2",
           "onboarding-email": "Step 3", "tracking-email": "Step 4", "unboxing": "Step 5",
           "brochure": "Step 6", "app-download": "Step 7",
-          "first-intake": "Step 8", "next-order": "Step 9" } },
+} },
       { id: "bottle", label: "Bottle — 1 month",  type: "text", cells: {
           definition: "A customer who just purchased the FS-3B collagen product (Bottle, Pack or Refill).",
           source:     "Confirmation page → App",
@@ -487,15 +456,13 @@ window.JOURNEYS = [
       { id: "unboxing",           label: "Step 5" },
       { id: "brochure",           label: "Step 6" },
       { id: "app-download",       label: "Step 7" },
-      { id: "first-intake",       label: "Step 8" },
-      { id: "next-order",         label: "Step 9" },
     ],
     lanes: [
       { id: "step-header", label: "Étape", type: "step", cells: {
           "confirmation-page": "Step 1", "confirmation-email": "Step 2",
           "onboarding-email": "Step 3", "tracking-email": "Step 4", "unboxing": "Step 5",
           "brochure": "Step 6", "app-download": "Step 7",
-          "first-intake": "Step 8", "next-order": "Step 9" } },
+} },
       { id: "bottle",  label: "Bottle — 1 month",  type: "text", cells: {
           definition: "A customer who just purchased MA-05 (Bottle, Pack 3M/6M or Refill).",
           source:     "Confirmation page → App",
@@ -542,15 +509,13 @@ window.JOURNEYS = [
       { id: "unboxing",           label: "Step 5" },
       { id: "brochure",           label: "Step 6" },
       { id: "app-download",       label: "Step 7" },
-      { id: "first-intake",       label: "Step 8" },
-      { id: "next-order",         label: "Step 9" },
     ],
     lanes: [
       { id: "step-header", label: "Étape", type: "step", cells: {
           "confirmation-page": "Step 1", "confirmation-email": "Step 2",
           "onboarding-email": "Step 3", "tracking-email": "Step 4", "unboxing": "Step 5",
           "brochure": "Step 6", "app-download": "Step 7",
-          "first-intake": "Step 8", "next-order": "Step 9" } },
+} },
       { id: "kit",    label: "Kit",    type: "text", cells: {
           definition: "A customer who just purchased the onely product (Kit or Reload).",
           source:     "Confirmation page → App",
@@ -583,15 +548,13 @@ window.JOURNEYS = [
       { id: "unboxing",           label: "Step 5" },
       { id: "brochure",           label: "Step 6" },
       { id: "app-download",       label: "Step 7" },
-      { id: "first-intake",       label: "Step 8" },
-      { id: "next-order",         label: "Step 9" },
     ],
     lanes: [
       { id: "step-header", label: "Étape", type: "step", cells: {
           "confirmation-page": "Step 1", "confirmation-email": "Step 2",
           "onboarding-email": "Step 3", "tracking-email": "Step 4", "unboxing": "Step 5",
           "brochure": "Step 6", "app-download": "Step 7",
-          "first-intake": "Step 8", "next-order": "Step 9" } },
+} },
       { id: "essentials", label: "Essentials", type: "text", cells: {
           definition: "A customer who just purchased an Essentials product.",
           source:     "Confirmation page → App",
@@ -618,15 +581,13 @@ window.JOURNEYS = [
       { id: "unboxing",           label: "Step 5" },
       { id: "brochure",           label: "Step 6" },
       { id: "app-download",       label: "Step 7" },
-      { id: "first-intake",       label: "Step 8" },
-      { id: "next-order",         label: "Step 9" },
     ],
     lanes: [
       { id: "step-header", label: "Étape", type: "step", cells: {
           "confirmation-page": "Step 1", "confirmation-email": "Step 2",
           "onboarding-email": "Step 3", "tracking-email": "Step 4", "unboxing": "Step 5",
           "brochure": "Step 6", "app-download": "Step 7",
-          "first-intake": "Step 8", "next-order": "Step 9" } },
+} },
       { id: "multi-range", label: "Multi-range", type: "text", cells: {
           definition: "A customer who just purchased multiple ranges in a single order.",
           source:     "Confirmation page → App",
@@ -714,15 +675,11 @@ window.JOURNEYS = [
       { id: "step-4",  label: "Step 4"  },
       { id: "step-5",  label: "Step 5"  },
       { id: "step-6",  label: "Step 6"  },
-      { id: "step-7",  label: "Step 7"  },
-      { id: "step-8",  label: "Step 8"  },
-      { id: "step-9",  label: "Step 9"  },
-      { id: "step-10", label: "Step 10" },
     ],
     lanes: [
       { id: "step-header", label: "Étape", type: "step", cells: {
           "step-1": "Step 1", "step-2": "Step 2", "step-3": "Step 3", "step-4": "Step 4", "step-5": "Step 5",
-          "step-6": "Step 6", "step-7": "Step 7", "step-8": "Step 8", "step-9": "Step 9", "step-10": "Step 10" } },
+          "step-6": "Step 6" } },
       { id: "same-products-refiller", label: "Same products Refiller", type: "text", cells: {
           definition: "A customer who purchased once (one-time payment) and returns to buy again.",
           source:     "App, website, CRM re-engagement",
@@ -731,11 +688,7 @@ window.JOURNEYS = [
           "step-3":  ["Visit Catalog"],
           "step-4":  ["Search Known Product"],
           "step-5":  ["View PDP"],
-          "step-6":  ["Add to cart"],
-          "step-7":  ["View Cart"],
-          "step-8":  ["Adjust Quantity"],
-          "step-9":  ["Order now"],
-          "step-10": [] } },
+          "step-6":  ["Add to cart"] } },
       { id: "upseller", label: "Upseller", type: "text", cells: {
           definition: "A customer who purchased once (one-time payment) and returns to buy again.",
           source:     "App, website, CRM re-engagement",
@@ -744,11 +697,7 @@ window.JOURNEYS = [
           "step-3":  ["Visit Catalog"],
           "step-4":  ["Search Known Product"],
           "step-5":  ["View PDP"],
-          "step-6":  ["Add to cart"],
-          "step-7":  ["View Cart"],
-          "step-8":  ["Adjust Quantity"],
-          "step-9":  ["Add upsell product"],
-          "step-10": ["Order now"] } },
+          "step-6":  ["Add to cart"] } },
       { id: "change-seekers", label: "Change seekers", type: "text", cells: {
           definition: "A customer who purchased once (one-time payment) and returns to buy again.",
           source:     "App, website, CRM re-engagement",
@@ -757,11 +706,7 @@ window.JOURNEYS = [
           "step-3":  ["Take a test", "Visit «Products of the moment»"],
           "step-4":  ["View PDP"],
           "step-5":  ["Add to cart"],
-          "step-6":  ["View Cart"],
-          "step-7":  ["Adjust Quantity"],
-          "step-8":  ["Order now"],
-          "step-9":  [],
-          "step-10": [] } },
+          "step-6":  ["View Cart"] } },
       { id: "convinced-to-subscription", label: "Convinced to subscription", type: "text", cells: {
           definition: "A customer who purchased once (one-time payment) and returns to buy again.",
           source:     "App, website, CRM re-engagement",
@@ -770,11 +715,7 @@ window.JOURNEYS = [
           "step-3":  ["Visit Catalog"],
           "step-4":  ["Search Known Product"],
           "step-5":  ["View PDP"],
-          "step-6":  ["Add to cart"],
-          "step-7":  ["View Cart"],
-          "step-8":  ["Adjust Quantity"],
-          "step-9":  ["Plan next order", "Activate subscription > Order Now"],
-          "step-10": [] } },
+          "step-6":  ["Add to cart"] } },
     ]
   },
 
@@ -791,19 +732,17 @@ window.JOURNEYS = [
       { id: "step-3", label: "Step 3" },
       { id: "step-4", label: "Step 4" },
       { id: "step-5", label: "Step 5" },
-      { id: "step-6", label: "Step 6" },
-      { id: "step-7", label: "Step 7" },
     ],
     lanes: [
       { id: "step-header", label: "Étape", type: "step", cells: {
           "step-1": "Step 1", "step-2": "Step 2", "step-3": "Step 3", "step-4": "Step 4",
-          "step-5": "Step 5", "step-6": "Step 6", "step-7": "Step 7" } },
+          "step-5": "Step 5" } },
       { id: "repeat-auto", label: "Repeat auto", type: "text", cells: {
           definition: "A customer with an active subscription managing their recurring order.",
           source:     "Email reminder, app, website",
           "step-1": ["Email reminder"],
           "step-2": ["Email confirmation"],
-          "step-3": [], "step-4": [], "step-5": [], "step-6": [], "step-7": [] } },
+          "step-3": [], "step-4": [], "step-5": [] } },
       { id: "upseller", label: "Upseller", type: "text", cells: {
           definition: "A customer with an active subscription managing their recurring order.",
           source:     "Email reminder, app, website",
@@ -811,20 +750,18 @@ window.JOURNEYS = [
           "step-2": ["Login"],
           "step-3": ["Visit Catalog"],
           "step-4": ["Search Known Product"],
-          "step-5": ["View PDP"],
-          "step-6": ["Add to cart"],
-          "step-7": ["View Cart"] } },
+          "step-5": ["View PDP"] } },
       { id: "change-seekers", label: "Change seekers", type: "text", cells: {
           definition: "A customer with an active subscription managing their recurring order.",
           source:     "Email reminder, app, website",
-          "step-1": [], "step-2": [], "step-3": [], "step-4": [], "step-5": [], "step-6": [], "step-7": [] } },
+          "step-1": [], "step-2": [], "step-3": [], "step-4": [], "step-5": [] } },
       { id: "subscription-delayer", label: "Subscription Delayer", type: "text", cells: {
           definition: "A customer with an active subscription managing their recurring order.",
           source:     "Email reminder, app, website",
           "step-1": ["Email Reminder", "Open App", "Open Website"],
           "step-2": ["View Cart"],
           "step-3": ["Delay Subscription"],
-          "step-4": [], "step-5": [], "step-6": [], "step-7": [] } },
+          "step-4": [], "step-5": [] } },
       { id: "pause-subscription", label: "Pause subscription", type: "text", cells: {
           definition: "A customer with an active subscription managing their recurring order.",
           source:     "Email reminder, app, website",
@@ -832,7 +769,7 @@ window.JOURNEYS = [
           "step-2": ["View Cart"],
           "step-3": ["Pause Subscription"],
           "step-4": ["Email Subscription Pause"],
-          "step-5": [], "step-6": [], "step-7": [] } },
+          "step-5": [] } },
       { id: "order-cancel", label: "Order Cancel", type: "text", cells: {
           definition: "A customer with an active subscription managing their recurring order.",
           source:     "Email reminder, app, website",
@@ -840,9 +777,7 @@ window.JOURNEYS = [
           "step-2": ["Open App", "Open Website"],
           "step-3": ["Login"],
           "step-4": ["Go to account"],
-          "step-5": ["Go to order history"],
-          "step-6": ["Cancel order"],
-          "step-7": ["Order Cancel Confirmation"] } },
+          "step-5": ["Go to order history"] } },
     ]
   },
 
@@ -859,20 +794,18 @@ window.JOURNEYS = [
       { id: "step-3", label: "Step 3" },
       { id: "step-4", label: "Step 4" },
       { id: "step-5", label: "Step 5" },
-      { id: "step-6", label: "Step 6" },
-      { id: "step-7", label: "Step 7" },
     ],
     lanes: [
       { id: "step-header", label: "Étape", type: "step", cells: {
           "step-1": "Step 1", "step-2": "Step 2", "step-3": "Step 3", "step-4": "Step 4",
-          "step-5": "Step 5", "step-6": "Step 6", "step-7": "Step 7" } },
+          "step-5": "Step 5" } },
       { id: "reactivate-same-cart", label: "Reactivate same cart", type: "text", cells: {
           definition: "A customer whose subscription is paused, returning to reactivate it.",
           source:     "Email re-engagement, app, website",
           "step-1": ["View Cart"],
           "step-2": ["Activate Subscription"],
           "step-3": ["Pick new Date", "Order Now"],
-          "step-4": [], "step-5": [], "step-6": [], "step-7": [] } },
+          "step-4": [], "step-5": [] } },
       { id: "reactivate-upsell", label: "Reactivate with upsell", type: "text", cells: {
           definition: "A customer whose subscription is paused, returning to reactivate it.",
           source:     "Email re-engagement, app, website",
@@ -880,7 +813,7 @@ window.JOURNEYS = [
           "step-2": ["Add upsell"],
           "step-3": ["Activate Subscription"],
           "step-4": ["Pick new Date", "Order Now"],
-          "step-5": [], "step-6": [], "step-7": [] } },
+          "step-5": [] } },
       { id: "reactivate-other", label: "Change seekers", type: "text", cells: {
           definition: "A customer whose subscription is paused, returning to reactivate it.",
           source:     "Email re-engagement, app, website",
@@ -888,9 +821,7 @@ window.JOURNEYS = [
           "step-2": ["View PDP"],
           "step-3": ["Add to cart"],
           "step-4": ["View Cart"],
-          "step-5": ["Remove products"],
-          "step-6": ["Activate Subscription"],
-          "step-7": ["Pick new Date", "Order Now"] } },
+          "step-5": ["Remove products"] } },
     ]
   },
 
