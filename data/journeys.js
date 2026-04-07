@@ -794,18 +794,19 @@ window.JOURNEYS = [
       { id: "step-3", label: "Step 3" },
       { id: "step-4", label: "Step 4" },
       { id: "step-5", label: "Step 5" },
+      { id: "step-6", label: "Step 6" },
     ],
     lanes: [
       { id: "step-header", label: "Étape", type: "step", cells: {
           "step-1": "Step 1", "step-2": "Step 2", "step-3": "Step 3", "step-4": "Step 4",
-          "step-5": "Step 5" } },
+          "step-5": "Step 5", "step-6": "Step 6" } },
       { id: "reactivate-same-cart", label: "Reactivate same cart", type: "text", cells: {
           definition: "A customer whose subscription is paused, returning to reactivate it.",
           source:     "Email re-engagement, app, website",
           "step-1": ["View Cart"],
           "step-2": ["Activate Subscription"],
           "step-3": ["Pick new Date", "Order Now"],
-          "step-4": [], "step-5": [] } },
+          "step-4": [], "step-5": [], "step-6": [] } },
       { id: "reactivate-upsell", label: "Reactivate with upsell", type: "text", cells: {
           definition: "A customer whose subscription is paused, returning to reactivate it.",
           source:     "Email re-engagement, app, website",
@@ -813,7 +814,7 @@ window.JOURNEYS = [
           "step-2": ["Add upsell"],
           "step-3": ["Activate Subscription"],
           "step-4": ["Pick new Date", "Order Now"],
-          "step-5": [] } },
+          "step-5": [], "step-6": [] } },
       { id: "reactivate-other", label: "Change seekers", type: "text", cells: {
           definition: "A customer whose subscription is paused, returning to reactivate it.",
           source:     "Email re-engagement, app, website",
@@ -821,7 +822,8 @@ window.JOURNEYS = [
           "step-2": ["View PDP"],
           "step-3": ["Add to cart"],
           "step-4": ["View Cart"],
-          "step-5": ["Remove products"] } },
+          "step-5": ["Remove products"],
+          "step-6": [] } },
     ]
   },
 
