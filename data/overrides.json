@@ -434,7 +434,14 @@
     "repurchase-active-subscriber:upseller:step-2:Product Page": "bon",
     "repurchase-active-subscriber:upseller:step-5:Purchase": "bon",
     "repurchase-active-subscriber:upseller:step-4:View Cart": "bon",
-    "repurchase-active-subscriber:upseller:step-3:Add To Cart": "bon"
+    "repurchase-active-subscriber:upseller:step-3:Add To Cart": "bon",
+    "repurchase-paused-subscriber:reactivate-other:step-1:Searchbar (Optional)": "bon",
+    "repurchase-paused-subscriber:reactivate-other:step-2:Product Page": "bon",
+    "repurchase-paused-subscriber:reactivate-other:step-3:Add To Cart": "bon",
+    "repurchase-paused-subscriber:reactivate-other:step-4:View Cart": "ok",
+    "repurchase-paused-subscriber:reactivate-other:step-5:Activate Subscription": "moyen",
+    "repurchase-paused-subscriber:reactivate-other:step-6:Order Now": "bon",
+    "repurchase-paused-subscriber:reactivate-other:step-6:Plan Next Order": "bon"
   },
   "chipAdditions": {
     "conversion:fs3b:add-to-cart": [
@@ -870,23 +877,30 @@
       "Plan Next Order"
     ],
     "repurchase-paused-subscriber:reactivate-other:step-1": [
-      "Catalog"
+      "Catalog",
+      "Searchbar (Optional)"
     ],
     "repurchase-paused-subscriber:reactivate-other:step-2": [
       "Filters / Sort",
-      "Searchbar"
-    ],
-    "repurchase-paused-subscriber:reactivate-other:step-3": [
+      "Searchbar",
       "Product Page"
     ],
-    "repurchase-paused-subscriber:reactivate-other:step-4": [
+    "repurchase-paused-subscriber:reactivate-other:step-3": [
+      "Product Page",
       "Add To Cart"
     ],
-    "repurchase-paused-subscriber:reactivate-other:step-5": [
+    "repurchase-paused-subscriber:reactivate-other:step-4": [
+      "Add To Cart",
       "View Cart"
     ],
-    "repurchase-paused-subscriber:reactivate-other:step-6": [
+    "repurchase-paused-subscriber:reactivate-other:step-5": [
+      "View Cart",
       "Activate Subscription"
+    ],
+    "repurchase-paused-subscriber:reactivate-other:step-6": [
+      "Activate Subscription",
+      "Order Now",
+      "Plan Next Order"
     ],
     "repurchase-paused-subscriber:reactivate-other:step-7": [
       "Order Now",
@@ -1633,7 +1647,6 @@
       "Product Page"
     ],
     "repurchase-paused-subscriber:reactivate-other:step-4": [
-      "View Cart",
       "Add To Cart"
     ],
     "repurchase-paused-subscriber:reactivate-other:step-5": [
@@ -1976,6 +1989,15 @@
     ],
     "repurchase-active-subscriber:upseller:step-7": [
       "View Cart"
+    ],
+    "conversion-multi-range:multi-range:step-10": [
+      "Upsell"
+    ],
+    "conversion-multi-range:multi-range:step-11": [
+      "Checkout"
+    ],
+    "conversion-multi-range:multi-range:step-12": [
+      "Purchase"
     ]
   },
   "metaValues": {
